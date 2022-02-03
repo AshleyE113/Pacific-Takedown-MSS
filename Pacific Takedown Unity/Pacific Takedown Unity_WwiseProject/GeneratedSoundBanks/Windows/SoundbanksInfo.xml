@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1229948536" Language="SFX" Hash="3387212696">
+			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
+			<ShortName>Environment</ShortName>
+			<Path>Environment.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
