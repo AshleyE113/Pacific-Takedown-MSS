@@ -15,24 +15,32 @@ public class PlayerController : MonoBehaviour
     Vector2 playerFacing;
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
+
+    //Player States
+    public enum State
+    {
+      Unspecified, // Should never be used
+      Ready,
+      Attacking,
+      Dashing,
+    }
     // Start is called before the first frame update
-  void Start()
+    public static State CurrentState { get; private set; }
+    void Start()
     {
       rb = gameObject.GetComponent<Rigidbody2D>();
       animator = gameObject.GetComponent<Animator>();
-
-      //when it starts it sets the default facing to North
-      playerFacing.x = 0;
-      playerFacing.y = 1;
+      ChangeState(State.Ready);
     }
 
-    // Update is called once per frame
-    void Update()
+
+  // Update is called once per frame
+  void Update()
     {
+    //If playing on Keyboard use GetAxisRaw , Else use GetAxis
       //input
       movement.x = Input.GetAxisRaw("Horizontal");
       movement.y = Input.GetAxisRaw("Vertical");
-
       if (movement.x == 0 && movement.y == 0)
       {
         //if there is no input, it does nothing...
@@ -73,29 +81,39 @@ public class PlayerController : MonoBehaviour
   }
 
   private void FixedUpdate()
+  {
+    switch (CurrentState)
     {
-
-    if (movement.x == 0 && movement.y == 0)
-    {
-
-      ChangeAnimationState("Stop");
-    }
-    else
-    {
-      //movement
-      rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-      ChangeAnimationState("Movement");
-      Debug.Log(movement);
-      Debug.Log(playerFacing);
+      //State Ready: Player is able to control character
+      case State.Ready:
+        if (movement.x == 0 && movement.y == 0)
+        {
+          ChangeAnimationState("Stop");
+        }
+        else
+        {
+          //movement
+          rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+          ChangeAnimationState("Movement");
+        }
+       break;
     }
   }
 
   private void ChangeAnimationState(string newState)
     {
       if (currentState == newState) return;
-
       animator.Play(newState);
-
       currentState = newState;
     }
+  private static void ChangeState(State state)
+  {
+    CurrentState = state;
+
+    switch (state)
+    {
+
+    }
+  }
+
 }
