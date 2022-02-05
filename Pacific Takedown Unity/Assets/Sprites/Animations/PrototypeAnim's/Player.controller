@@ -401,7 +401,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 9ab9927d23901d244a5a3735c3c5e0e0, type: 2}
-    m_Threshold: 0.14285715
+    m_Threshold: 0.06666667
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -409,7 +409,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 5736b5cdda5874d4bb070a1dfaf556c9, type: 2}
-    m_Threshold: 0.2857143
+    m_Threshold: 0.13333334
     m_Position: {x: 1, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -417,7 +417,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 03507a160ef1f0c499cc4b51e901540b, type: 2}
-    m_Threshold: 0.42857143
+    m_Threshold: 0.2
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -425,7 +425,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: f91eafddb83e9894e9ca09d022a3fe04, type: 2}
-    m_Threshold: 0.5714286
+    m_Threshold: 0.26666668
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -433,7 +433,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 5d4a70cae2f902e4f9c700dd8e4b02c2, type: 2}
-    m_Threshold: 0.71428573
+    m_Threshold: 0.33333334
     m_Position: {x: -1, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -441,7 +441,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: b0633c314842bdb43945af5c689da394, type: 2}
-    m_Threshold: 0.85714287
+    m_Threshold: 0.4
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -449,8 +449,72 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 0ac7ec3bb4e12c74bac805d1773ed7b5, type: 2}
-    m_Threshold: 1
+    m_Threshold: 0.46666667
     m_Position: {x: 1, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: af556d10bd098734580991fbb9eeb4ec, type: 2}
+    m_Threshold: 0.53333336
+    m_Position: {x: -0.25, y: -0.25}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: b1fb4bb72d695ee4da11bab4efcf8392, type: 2}
+    m_Threshold: 0.6
+    m_Position: {x: 0, y: -0.25}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 78fd7133b37ec7a49bed33f1f05c5abb, type: 2}
+    m_Threshold: 0.6666667
+    m_Position: {x: 0.2, y: -0.25}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: a8d0eafe6feedcc43be7cce8f458839b, type: 2}
+    m_Threshold: 0.73333335
+    m_Position: {x: -0.25, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 76b72a06e73d10b4b82daa8ddfb7ed16, type: 2}
+    m_Threshold: 0.8
+    m_Position: {x: 0.25, y: 0}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: fda5a0042e24d8346b4853d448c885a6, type: 2}
+    m_Threshold: 0.8666667
+    m_Position: {x: -0.25, y: 0.25}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 71c15ca801bc7b2419b986d56acc723f, type: 2}
+    m_Threshold: 0.93333334
+    m_Position: {x: 0, y: 0.25}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 117f2f02709ac504593f31b49d10505e, type: 2}
+    m_Threshold: 1
+    m_Position: {x: 0.25, y: 0.25}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
