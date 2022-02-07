@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class InputManager : MonoBehaviour
     //Input
     private InputMaster controls;
     public static Vector2 directionVector;
+
+    public static bool mouseClicked;
     //Declare our inputMaster script
     void Awake()
     {
@@ -22,7 +25,13 @@ public class InputManager : MonoBehaviour
     {
         controls.Disable();
     }
-    
+
+    private void Update()
+    {
+        //Debug.Log(mouseClicked);
+        mouseClicked = false;
+    }
+
     //when Move is detected in our input system, call this
     public void OnMove(InputValue input)
     {
@@ -37,4 +46,6 @@ public class InputManager : MonoBehaviour
             directionVector.Normalize();
         }
     }
+
+
 }
