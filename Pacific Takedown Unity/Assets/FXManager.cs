@@ -14,7 +14,9 @@ public class FXManager : MonoBehaviour
         if (effect == "meleeEffect")
         {
             var spawnLocation = spawn.transform.position;
-            var Effect = Instantiate(meleeEffect, new Vector3(spawnLocation.x+offset.x, spawnLocation.y+offset.y, 0f), rotation);
+            Debug.Log(rotation);
+            var Effect = Instantiate(meleeEffect, new Vector3(spawnLocation.x+offset.x, spawnLocation.y+offset.y, 0f), quaternion.identity);
+            Effect.transform.Rotate(0f,0f,rotation.z,Space.World);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;

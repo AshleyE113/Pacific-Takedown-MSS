@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_1");
-        Vector2 offset = new Vector2(-meleeRange, -meleeRange);
+        Vector2 offset = new Vector2(-meleeRange*1.5f, -meleeRange*1.5f);
         meleeEffect(false, 135f,offset);
       }
       else
@@ -214,38 +214,92 @@ public class PlayerController : MonoBehaviour
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_3");
-        Vector2 offset = new Vector2(meleeRange, -meleeRange);
+        Vector2 offset = new Vector2(meleeRange*1.5f, -meleeRange*1.5f);
         meleeEffect(false, 225f,offset);
       }
       else
       {
         ChangeAnimationState("Lea_Attack_0_3 Flip");
-        Vector2 offset = new Vector2(meleeRange, -meleeRange);
+        Vector2 offset = new Vector2(meleeRange*1.5f, -meleeRange*1.5f);
         meleeEffect(true, 225f,offset);
       }
     }
-    /*
-    else if (playerFacing.x == -1 && playerFacing.y == 0) //Facing Middle Left
+    else if (previousFacing.x == -1 && previousFacing.y == 0) //Facing Middle Left
     {
-     
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_4");
+        Vector2 offset = new Vector2(-meleeRange*2, 0);
+        meleeEffect(true, 90f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_4 Flip");
+        Vector2 offset = new Vector2(-meleeRange*2,0);
+        meleeEffect(false, 90f,offset);
+      }
     }
-    else if (playerFacing.x == 1 && playerFacing.y == 0) //Facing Middle Right
+    else if (previousFacing.x == 1 && previousFacing.y == 0) //Facing Middle Right
     {
-   
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_6");
+        Vector2 offset = new Vector2(meleeRange*2, 0);
+        meleeEffect(false, 270f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_6 Flip");
+        Vector2 offset = new Vector2(meleeRange*2,0);
+        meleeEffect(true, 270f,offset);
+      }
     }
-    else if (playerFacing.x == -1 && playerFacing.y == 1) //Facing Top Left
+    else if (previousFacing.x == -1 && previousFacing.y == 1) //Facing Top Left
     {
-      
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_7");
+        Vector2 offset = new Vector2(-meleeRange*2, meleeRange*2);
+        meleeEffect(true, 45f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_7 Flip");
+        Vector2 offset = new Vector2(-meleeRange*2, meleeRange*2);
+        meleeEffect(false, 45f,offset);
+      }
     }
-    else if (playerFacing.x == 0 && playerFacing.y == 1) //Facing Top Middle
+    else if (previousFacing.x == 0 && previousFacing.y == 1) //Facing Top Middle
     {
-      
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_8");
+        Vector2 offset = new Vector2(-meleeRange*2, meleeRange*2);
+        meleeEffect(false, 0,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_8 Flip");
+        Vector2 offset = new Vector2(0, meleeRange);
+        meleeEffect(true, 0f,offset);
+      }
     }
-    else if (playerFacing.x == 1 && playerFacing.y == 1) //Facing Top Right
+    else if (previousFacing.x == 1 && previousFacing.y == 1) //Facing Top Right
     {
-      
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_9");
+        Vector2 offset = new Vector2(meleeRange*2, meleeRange*2);
+        meleeEffect(false, 315f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_9 Flip");
+        Vector2 offset = new Vector2(meleeRange*2, meleeRange*2);
+        meleeEffect(true, 315f,offset);
+      }
     }
-    */
+    
   }
 
   public void meleeEffect(bool flipped,float zRotation,Vector2 offset)
@@ -253,11 +307,11 @@ public class PlayerController : MonoBehaviour
     if (!fxSpawned) {
       if (!flipped)
       {
-        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,0f),false,offset);
+        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,1f),false,offset);
       }
       else
       {
-        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,0f),true,offset);
+        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,1f),true,offset);
       }
 
       fxSpawned = true;
