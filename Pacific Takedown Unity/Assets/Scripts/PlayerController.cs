@@ -14,9 +14,9 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private string currentState;
     private bool safeToUpdateDir = true;
-    Vector2 movement;
+    public Vector2 movement;
     private Vector2 playerFacing;
-    private Vector2 previousFacing;
+    public Vector2 previousFacing;
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
     private string directionFacing;
@@ -78,10 +78,10 @@ public class PlayerController : MonoBehaviour
     //Wait to see if we can update our previous direction
     if (safeToUpdateDir)
     {
-      previousFacing.x = playerFacing.x;
-      previousFacing.y = playerFacing.y;
       animator.SetFloat("PreviousHorizontal", playerFacing.x);
       animator.SetFloat("PreviousVertical", playerFacing.y);
+      previousFacing.x = Mathf.Round(movement.x);
+      previousFacing.y = Mathf.Round(movement.y);
     }
     //Set it to False
     safeToUpdateDir = false;
@@ -115,27 +115,10 @@ public class PlayerController : MonoBehaviour
        break;
       //State Ready: Player is able to control character
       case State.Attacking:
-        if (attackIndex == 0)
-        {
-          Debug.Log("Playing Attack Animation 0");
-          attackDirection();
-        }
-        else if (attackIndex == 1)
-        {
-          Debug.Log("Playing Attack Animation 1");
-          attackDirection();
-        }
-        else if (attackIndex == 2)
-        {
-          Debug.Log("Playing Attack Animation 2");
-          attackDirection();
-        }
+        
         //Cap at 3 Hits
         if (attackIndex >= 3)
         { attackIndex = 3;}
-        
-        
-        Debug.Log("In the attack state");
         break;
     }
   }
@@ -163,14 +146,16 @@ public class PlayerController : MonoBehaviour
     if (CurrentState == State.Ready)
     {
       ChangeState(State.Attacking);
+      attackDirection();
     }
     if (CurrentState == State.Attacking)
     {
-      if (canCombo)
+      if (canCombo && attackIndex < 2)
       {
         canCombo = false;
         fxSpawned = false;
         attackIndex += 1;
+        attackDirection();
       }
     }
   }
@@ -193,11 +178,8 @@ public class PlayerController : MonoBehaviour
 
   public void attackDirection()
   {
-   Debug.Log("Running Attack Direction");
     if (previousFacing.x == -1 && previousFacing.y == -1) //Facing Bottom Left
     {
-      Debug.Log("Swinging Bottom Left");
-
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_1");
@@ -213,7 +195,6 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 0 && previousFacing.y == -1) //Facing Bottom Middle
     {
-      Debug.Log("Swinging Bottom Middle");
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_2");
@@ -230,8 +211,6 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 1 && previousFacing.y == -1) //Facing Bottom Right
     {
-      Debug.Log("Swinging Bottom Right");
-
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_3");
