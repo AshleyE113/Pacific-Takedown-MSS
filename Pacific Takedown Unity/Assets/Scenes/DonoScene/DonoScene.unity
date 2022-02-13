@@ -500,9 +500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 12
-  playerFacing: {x: 0, y: 0}
   directionResetTime: 0.125
   attackIndex: 0
+  meleeRange: 0.25
   myFX: {fileID: 1313388119}
 --- !u!50 &1868619660
 Rigidbody2D:
