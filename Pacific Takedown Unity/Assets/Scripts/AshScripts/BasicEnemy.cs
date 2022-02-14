@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 //1 hour doing this so far
 //The enmy should die after the player hits them 3x (for now)
@@ -11,11 +13,15 @@ public class BasicEnemy : MonoBehaviour
     [SerializeField] Transform target;
     NavMeshAgent agent;
     private Rigidbody2D rb;
-    private bool isDead = false; 
+    private bool isDead = false;
+    public float speed;
+    public float recievedKnockback=100f;
+    private bool returning;
 
     public enum State{
         Idle,
         Attack,
+        Hit,
         Bounce,
         Dead,
     }
@@ -28,14 +34,8 @@ public class BasicEnemy : MonoBehaviour
     {
         state = State.Idle;
 
-        //For Pathfinding with NavMesh
-        agent = GetComponent<NavMeshAgent>();
-		agent.updateRotation = false;
-		agent.updateUpAxis = false;
-
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(9.8f * 25f, 9.8f * 25f));
     }
 
     // Update is called once per frame
@@ -47,14 +47,24 @@ public class BasicEnemy : MonoBehaviour
         switch (state){
             case State.Idle:
             //Stay in place. If player is in range, go towards them
-            if (target.position.x < transform.position.x - 5f || target.position.y < transform.position.y - 5f ){
-                agent.SetDestination(target.position);
-            }
+            transform.position = Vector2.MoveTowards(transform.position,target.position, speed * Time.deltaTime);
             break;
             case State.Attack:
             //Attack player. Do damage if hits player
             //OnCollisionEnter2D(Collision2D other);
             break;
+            case State.Hit:
+                //If player attacks, it bounces off objs.
+                //It can't attack player in this state
+                //BUT it can DAMAGE the player!
+                rb.velocity = rb.velocity * 0.9f;
+                if (!returning)
+                {
+                    StartCoroutine(ReturnToIdle());
+                    returning = true;
+                }
+                Debug.Log("We Got Hit");
+                break;
             case State.Bounce:
             //If player attacks, it bounces off objs.
             //It can't attack player in this state
@@ -67,6 +77,13 @@ public class BasicEnemy : MonoBehaviour
             
         }
     }
+
+    IEnumerator ReturnToIdle()
+    {
+        yield return new WaitForSeconds(2f);
+        state = State.Idle;
+        returning = false;
+    }
     //Like this for now since Nick is handling the loss of health code
     void OnCollisionEnter2D(Collision2D other) {
        if (other.gameObject.tag == "Player"){
@@ -76,6 +93,18 @@ public class BasicEnemy : MonoBehaviour
        if (other.gameObject.tag == "BouncableObjs"){
            Debug.Log("BOUNCE!");
        }
-   }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        state = State.Hit;
+        Vector2 newDirection = new Vector2(0*recievedKnockback, 1*recievedKnockback);
+        Knockback(newDirection,recievedKnockback);
+    }
+
+    private void Knockback(Vector2 direction, float knockback)
+    {
+        rb.AddForce(((transform.up*direction.y)+(transform.right*direction.x)),ForceMode2D.Impulse);
+    }
+
 
 }
