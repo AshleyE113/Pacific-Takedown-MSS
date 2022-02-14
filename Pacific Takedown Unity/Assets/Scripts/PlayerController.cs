@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     public int attackIndex;
     private bool canCombo;
     public float meleeRange;
-    
+
+    private float lungeSpeed=50;
     //FX
     public FXManager myFX;
 
@@ -115,7 +116,16 @@ public class PlayerController : MonoBehaviour
        break;
       //State Ready: Player is able to control character
       case State.Attacking:
-        
+
+        if (canCombo)
+        {
+          rb.velocity=Vector2.zero;
+        }
+
+        if (rb.velocity != Vector2.zero)
+        {
+          rb.velocity = rb.velocity * .5f;
+        }
         //Cap at 3 Hits
         if (attackIndex >= 3)
         { attackIndex = 3;}
@@ -134,7 +144,7 @@ public class PlayerController : MonoBehaviour
   private static void ChangeState(State state)
   {
     CurrentState = state;
-
+    
     switch (state)
     {
 
@@ -180,6 +190,7 @@ public class PlayerController : MonoBehaviour
   {
     if (previousFacing.x == -1 && previousFacing.y == -1) //Facing Bottom Left
     {
+      rb.AddForce((-transform.up-transform.right)*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_1");
@@ -195,6 +206,7 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 0 && previousFacing.y == -1) //Facing Bottom Middle
     {
+      rb.AddForce((-transform.up)*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_2");
@@ -211,6 +223,7 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 1 && previousFacing.y == -1) //Facing Bottom Right
     {
+      rb.AddForce((-transform.up+transform.right)*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_3");
@@ -226,6 +239,7 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == -1 && previousFacing.y == 0) //Facing Middle Left
     {
+      rb.AddForce(-transform.right*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_4");
@@ -241,6 +255,7 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 1 && previousFacing.y == 0) //Facing Middle Right
     {
+      rb.AddForce(transform.right*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_6");
@@ -256,6 +271,7 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == -1 && previousFacing.y == 1) //Facing Top Left
     {
+      rb.AddForce((transform.up-transform.right)*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_7");
@@ -271,10 +287,11 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 0 && previousFacing.y == 1) //Facing Top Middle
     {
+      rb.AddForce(transform.up*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_8");
-        Vector2 offset = new Vector2(-meleeRange*2, meleeRange*2);
+        Vector2 offset = new Vector2(0, meleeRange*2);
         meleeEffect(false, 0,offset);
       }
       else
@@ -286,6 +303,7 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 1 && previousFacing.y == 1) //Facing Top Right
     {
+      rb.AddForce((transform.up+transform.right)*lungeSpeed,ForceMode2D.Impulse);
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_9");
