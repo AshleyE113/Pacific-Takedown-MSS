@@ -9,15 +9,18 @@ using UnityEngine.UI;
 //The enmy should die after the player hits them 3x (for now)
 public class BasicEnemy : MonoBehaviour
 {
-    //int HP = 3;
+    int Health = 3;
     [SerializeField] Transform target;
     NavMeshAgent agent;
     private Rigidbody2D rb;
     private bool isDead = false;
     public float speed;
-    public float recievedKnockback=100f;
-    private bool returning;
 
+    //Knockback
+    public float recievedKnockback=5f;
+    private int recoveryTimer;
+    public int recoveryMax=90;
+    public float knockbackDrag;
     public enum State{
         Idle,
         Attack,
@@ -54,16 +57,26 @@ public class BasicEnemy : MonoBehaviour
             //OnCollisionEnter2D(Collision2D other);
             break;
             case State.Hit:
-                //If player attacks, it bounces off objs.
+                //If player attacks, it gets knocked back
                 //It can't attack player in this state
                 //BUT it can DAMAGE the player!
-                rb.velocity = rb.velocity * 0.9f;
-                if (!returning)
+                rb.velocity *= knockbackDrag;
+                if (recoveryTimer<recoveryMax)
                 {
-                    StartCoroutine(ReturnToIdle());
-                    returning = true;
+                    recoveryTimer += 1;
                 }
-                Debug.Log("We Got Hit");
+                else
+                {
+                    if (Health > 0)
+                    {
+                        state = State.Idle;
+                    }
+                    else
+                    {
+                        state = State.Dead;
+                    }
+                    recoveryTimer = 0;
+                }
                 break;
             case State.Bounce:
             //If player attacks, it bounces off objs.
@@ -78,12 +91,6 @@ public class BasicEnemy : MonoBehaviour
         }
     }
 
-    IEnumerator ReturnToIdle()
-    {
-        yield return new WaitForSeconds(2f);
-        state = State.Idle;
-        returning = false;
-    }
     //Like this for now since Nick is handling the loss of health code
     void OnCollisionEnter2D(Collision2D other) {
        if (other.gameObject.tag == "Player"){
@@ -97,7 +104,9 @@ public class BasicEnemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         state = State.Hit;
+        Health -= 1;
         Vector2 newDirection = new Vector2(0*recievedKnockback, 1*recievedKnockback);
+        recoveryTimer = 0;
         Knockback(newDirection,recievedKnockback);
     }
 
