@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
       rb = gameObject.GetComponent<Rigidbody2D>();
+      playerFacing = new Vector2(0f, -1f);
+      previousFacing = new Vector2(0f, -1f);
       animator = gameObject.GetComponent<Animator>();
       ChangeState(State.Ready);
     }
