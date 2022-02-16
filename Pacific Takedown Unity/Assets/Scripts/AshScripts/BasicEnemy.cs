@@ -9,7 +9,8 @@ using UnityEngine.UI;
 //The enmy should die after the player hits them 3x (for now)
 public class BasicEnemy : MonoBehaviour
 {
-    int Health = 3;
+    public int healthMax=6;
+    private int Health;
     [SerializeField] Transform target;
     NavMeshAgent agent;
     private Rigidbody2D rb;
@@ -21,6 +22,7 @@ public class BasicEnemy : MonoBehaviour
     private int recoveryTimer;
     public int recoveryMax=90;
     public float knockbackDrag;
+    private Vector2 direction;
     public enum State{
         Idle,
         Attack,
@@ -36,7 +38,7 @@ public class BasicEnemy : MonoBehaviour
     void Start()
     {
         state = State.Idle;
-
+        Health = healthMax;
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
     }
@@ -105,14 +107,49 @@ public class BasicEnemy : MonoBehaviour
     {
         state = State.Hit;
         Health -= 1;
-        Vector2 newDirection = new Vector2(0*recievedKnockback, 1*recievedKnockback);
         recoveryTimer = 0;
-        Knockback(newDirection,recievedKnockback);
+        int direction = (int)other.gameObject.transform.localEulerAngles.z;
+        Knockback(recievedKnockback,direction);
     }
 
-    private void Knockback(Vector2 direction, float knockback)
+    private void Knockback(float knockback, int zRotation)
     {
-        rb.AddForce(((transform.up*direction.y)+(transform.right*direction.x)),ForceMode2D.Impulse);
+        Debug.Log(zRotation);
+
+        if (zRotation == 135f) //Facing Bottom Left
+        {
+            rb.AddForce((-transform.right*recievedKnockback)+(-transform.up*recievedKnockback),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 180f) //Facing Bottom Middle
+        {
+            rb.AddForce(((-transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 225f) //Facing Bottom Right
+        {
+            rb.AddForce(((transform.right*recievedKnockback)+(-transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 90f) //Facing Left
+        {
+            rb.AddForce(((-transform.right*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 270f) //Facing Right
+        {
+            rb.AddForce(((transform.right*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 45f) //Facing Top Left
+        {
+            rb.AddForce(((-transform.right*recievedKnockback)+(transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 0f) //Facing Top Middle
+        {
+            rb.AddForce(((transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 315f) //Facing Top Right
+        {
+            rb.AddForce(((transform.right*recievedKnockback)+(transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+
+        //
     }
 
 

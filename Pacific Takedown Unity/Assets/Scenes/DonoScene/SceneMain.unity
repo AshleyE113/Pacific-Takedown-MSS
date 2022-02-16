@@ -858,6 +858,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1166437017150653335, guid: 4050393193d3f4432888d85eb361791b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.1666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166437017150653335, guid: 4050393193d3f4432888d85eb361791b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1166437017150653337, guid: 4050393193d3f4432888d85eb361791b, type: 3}
       propertyPath: speed
       value: 3
@@ -867,12 +875,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868619658}
     - target: {fileID: 1166437017150653337, guid: 4050393193d3f4432888d85eb361791b, type: 3}
+      propertyPath: recoveryMax
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166437017150653337, guid: 4050393193d3f4432888d85eb361791b, type: 3}
       propertyPath: knockbackDrag
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1166437017150653337, guid: 4050393193d3f4432888d85eb361791b, type: 3}
       propertyPath: recievedKnockback
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1166437017150653339, guid: 4050393193d3f4432888d85eb361791b, type: 3}
       propertyPath: m_Name
