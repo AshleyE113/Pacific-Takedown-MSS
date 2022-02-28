@@ -17,12 +17,18 @@ public class BasicEnemy : MonoBehaviour
     private bool isDead = false;
     public float speed;
 
+    //Animations
+    private Animator animator;
+    private string animCurrentState;
     //Knockback
     public float recievedKnockback=5f;
     private int recoveryTimer;
     public int recoveryMax=90;
     public float knockbackDrag;
     private Vector2 direction;
+    //FX
+    public FXManager myFX;
+    private bool fxSpawned;
     public enum State{
         Idle,
         Attack,
@@ -39,6 +45,7 @@ public class BasicEnemy : MonoBehaviour
     {
         state = State.Idle;
         Health = healthMax;
+        animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
     }
@@ -46,8 +53,6 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //posX = transform.position.x;
-        //posY = transform.position.y;
 
         switch (state){
             case State.Idle:
@@ -93,16 +98,14 @@ public class BasicEnemy : MonoBehaviour
         }
     }
 
-    //Like this for now since Nick is handling the loss of health code
-    void OnCollisionEnter2D(Collision2D other) {
-       if (other.gameObject.tag == "Player"){
-           Debug.Log("Ow!");
-       }
-
-       if (other.gameObject.tag == "BouncableObjs"){
-           Debug.Log("BOUNCE!");
-       }
+    //Change our current animation
+    private void ChangeAnimationState(string newState) //Change title of currentState
+    {
+        if (animCurrentState == newState) return;
+        animator.Play(newState);
+        animCurrentState = newState;
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         state = State.Hit;

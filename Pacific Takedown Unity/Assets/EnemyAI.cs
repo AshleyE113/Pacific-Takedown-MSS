@@ -25,10 +25,22 @@ public class EnemyAI : MonoBehaviour
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
+    
+    //FX
+    public FXManager myFX;
+    private bool fxSpawned;
+    
+    //Attack
+    public int attackRange;
 
+    private Vector2 launchDirection;
+    //Animations
+    private Animator animator;
+    private string animCurrentState;
     public enum State
     {
         Idle,
+        PreparingAttack,
         Attack,
         Hit,
         Bounce,
@@ -49,6 +61,8 @@ public class EnemyAI : MonoBehaviour
         Health = healthMax;
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
+        animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
+
     }
 
     void UpdatePath()
@@ -80,6 +94,12 @@ public class EnemyAI : MonoBehaviour
                     return;
                 }
 
+                if (Vector2.Distance(rb.position, target.position) < attackRange)
+                {
+                    //When in Range, Prepare your attack
+                    state = State.PreparingAttack;
+                }
+
                 if (currentWaypoint >= path.vectorPath.Count)
                 {
                     reachedEndOfPath = true;
@@ -101,9 +121,13 @@ public class EnemyAI : MonoBehaviour
                 }
 
                 break;
+            case State.PreparingAttack:
+                //Once in Range Prepare the Attack
+                ChangeAnimationState("DroneMeleePrep");
+                break;
             case State.Attack:
                 //Attack player. Do damage if hits player
-                //OnCollisionEnter2D(Collision2D other);
+                Debug.Log("Currently Attacking");
                 break;
             case State.Hit:
                 //If player attacks, it gets knocked back
@@ -139,28 +163,44 @@ public class EnemyAI : MonoBehaviour
 
         }
     }
-     //Like this for now since Nick is handling the loss of health code
-    void OnCollisionEnter2D(Collision2D other) {
-       if (other.gameObject.tag == "Player"){
-           Debug.Log("Ow!");
-       }
 
-       if (other.gameObject.tag == "BouncableObjs"){
-           Debug.Log("BOUNCE!");
-       }
+    public void CommenceAttack()
+    {
+        rb.AddForce((target.position - transform.position) * (speed/3));
+        Vector2 player = new Vector2(target.transform.position.x, target.transform.position.y);
+        Vector2 launchDirection = (player - rb.position).normalized;
+        var lookPos = target.position - transform.position;
+        Vector2 effectOffset = new Vector2(0, 0);
+        myFX.spawnEffect("enemyMeleeEffect1",gameObject,Quaternion.LookRotation(lookPos), false,effectOffset);
+
+        Debug.Log("Player Direction Vector 2"+launchDirection);
+        state = State.Attack;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        state = State.Hit;
-        Health -= 1;
-        recoveryTimer = 0;
-        int direction = (int)other.gameObject.transform.localEulerAngles.z;
-        Knockback(recievedKnockback,direction);
+        if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("Hitbox"))
+        {
+            state = State.Hit;
+            Health -= 1;
+            recoveryTimer = 0;
+            int direction = (int)other.gameObject.transform.localEulerAngles.z;
+            //Change Animation to Drone Hit
+            ChangeAnimationState("DroneIdle");
+
+            Knockback(recievedKnockback,direction);
+        }
+    }
+    //Change our current animation
+    private void ChangeAnimationState(string newState) //Change title of currentState
+    {
+        if (animCurrentState == newState) return;
+        animator.Play(newState);
+        animCurrentState = newState;
     }
 
     private void Knockback(float knockback, int zRotation)
     {
-        Debug.Log(zRotation);
+        Debug.Log("Applying Knockback from Hit");
 
         if (zRotation == 135f) //Facing Bottom Left
         {
