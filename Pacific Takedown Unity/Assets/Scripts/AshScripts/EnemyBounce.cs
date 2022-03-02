@@ -7,11 +7,16 @@ public class EnemyBounce : MonoBehaviour
 
     //If the player is in a certain state and hits the robot, then it bounces (this is just a note!)
     private Rigidbody2D rb;
-    Vector3 last_vel;
+    public Vector3 last_vel; //works in X, Y,  (0, 0, 0)
+    /// </summary>
+    //public float testRBVelocity;
+    public float testX; //Whatever X val you 
+    public float testY;
 
     // Start is called before the first frame update
    private void Awake() {
         rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(testX, testY); //
    }
 
     // Update is called once per frame
