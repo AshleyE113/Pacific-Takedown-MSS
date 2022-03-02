@@ -27,7 +27,7 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(enemyMeleeEffect, new Vector3(spawnLocation.x+offset.x, spawnLocation.y+offset.y, 0f), Quaternion.identity);
-            Vector3 direction = spawnLocation - target.position;
+            Vector3 direction = target.position-spawnLocation;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Effect.transform.parent = spawn.transform;
             Effect.transform.up = direction;

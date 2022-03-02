@@ -130,7 +130,6 @@ public class EnemyAI : MonoBehaviour
                 break;
             case State.Attack:
                 //Attack player. Do damage if hits player
-                Debug.Log("Currently Attacking");
                 ChangeAnimationState("DroneIdle");
                 if (attackCoroutineStarted == false)
                 {
@@ -195,13 +194,11 @@ public class EnemyAI : MonoBehaviour
         var lookPos = target.position - transform.position;
         Vector2 effectOffset = new Vector2(0, 0);
         myFX.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
-
-        Debug.Log("Player Direction Vector 2"+launchDirection);
         state = State.Attack;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("Hitbox"))
+        if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
             state = State.Hit;
             Health -= 1;

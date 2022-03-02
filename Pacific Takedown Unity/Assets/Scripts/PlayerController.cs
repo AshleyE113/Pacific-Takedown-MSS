@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private bool canCombo;
     public float meleeRange;
     private float lungeSpeed=50;
+
+    private bool invulnerable = false;
     //FX
     public FXManager myFX;
     private bool fxSpawned;
@@ -34,6 +37,7 @@ public class PlayerController : MonoBehaviour
       Unspecified, // Should never be used
       Ready,
       Attacking,
+      Hit,
       Dashing,
     }
     // Start is called before the first frame update
@@ -69,9 +73,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
       }
-      //Check for Attack Input
-      
-    }
+  }
   //Update our Player's Direction
   void updatePlayerDir(Vector2 movement)
   {
@@ -127,6 +129,12 @@ public class PlayerController : MonoBehaviour
         if (attackIndex >= 3)
         { attackIndex = 3;}
         break;
+      case State.Hit:
+        if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
+        {
+          rb.velocity = rb.velocity * .5f;
+        }
+        break;
     }
   }
   //Change our current animation
@@ -178,7 +186,27 @@ public class PlayerController : MonoBehaviour
       ChangeState(State.Ready);
     }
   }
-  
+
+  private void OnTriggerEnter2D(Collider2D other) //If Hit
+  {
+    if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
+    {
+      ChangeState(State.Hit);
+      //Change Animation to Player Hit
+      ChangeAnimationState("Lea_Hit_2");
+      //Make THem Invulnerable
+      invulnerable = true;
+      rb.AddForce(transform.right*lungeSpeed/2,ForceMode2D.Impulse); //Lunge us in said direction
+    }
+  }
+
+  public void ExitHitState()
+  {
+    ChangeState(State.Ready);
+    rb.velocity=Vector2.zero;
+    invulnerable = false;
+  }
+
   public void CanCombo()
   {
     canCombo = true;
