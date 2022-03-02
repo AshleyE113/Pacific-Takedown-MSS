@@ -323,11 +323,11 @@ public class PlayerController : MonoBehaviour
     if (!fxSpawned) {
       if (!flipped)
       {
-        myFX.spawnEffect("playerMeleeEffect1",gameObject,new Quaternion(0f,0f,zRotation,1f),false,offset);
+        myFX.spawnEffect("playerMeleeEffect1",gameObject,null,new Quaternion(0f,0f,zRotation,1f),false,offset);
       }
       else
       {
-        myFX.spawnEffect("playerMeleeEffect1",gameObject,new Quaternion(0f,0f,zRotation,1f),true,offset);
+        myFX.spawnEffect("playerMeleeEffect1",gameObject,null, new Quaternion(0f,0f,zRotation,1f),true,offset);
       }
 
       fxSpawned = true;

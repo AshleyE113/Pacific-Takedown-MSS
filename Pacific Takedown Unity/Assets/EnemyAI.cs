@@ -32,6 +32,9 @@ public class EnemyAI : MonoBehaviour
     
     //Attack
     public int attackRange;
+    public float attackRecoverTime;
+    bool attackCoroutineStarted = false;
+
 
     private Vector2 launchDirection;
     //Animations
@@ -128,6 +131,18 @@ public class EnemyAI : MonoBehaviour
             case State.Attack:
                 //Attack player. Do damage if hits player
                 Debug.Log("Currently Attacking");
+                ChangeAnimationState("DroneIdle");
+                if (attackCoroutineStarted == false)
+                {
+                    StartCoroutine(AttackRecovery());
+                    attackCoroutineStarted = true;
+                }
+
+                if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
+                {
+                    rb.velocity = rb.velocity * .9f;
+                }
+                //Start Couretine to return to Idle State
                 break;
             case State.Hit:
                 //If player attacks, it gets knocked back
@@ -163,7 +178,15 @@ public class EnemyAI : MonoBehaviour
 
         }
     }
-
+    
+    
+    IEnumerator AttackRecovery()
+    { 
+        
+        yield return new WaitForSeconds(attackRecoverTime);
+        attackCoroutineStarted = false;
+        state = State.Idle;
+    }
     public void CommenceAttack()
     {
         rb.AddForce((target.position - transform.position) * (speed/3));
@@ -171,7 +194,7 @@ public class EnemyAI : MonoBehaviour
         Vector2 launchDirection = (player - rb.position).normalized;
         var lookPos = target.position - transform.position;
         Vector2 effectOffset = new Vector2(0, 0);
-        myFX.spawnEffect("enemyMeleeEffect1",gameObject,Quaternion.LookRotation(lookPos), false,effectOffset);
+        myFX.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
 
         Debug.Log("Player Direction Vector 2"+launchDirection);
         state = State.Attack;
