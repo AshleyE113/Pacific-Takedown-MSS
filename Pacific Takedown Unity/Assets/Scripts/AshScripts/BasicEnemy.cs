@@ -1,21 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 //1 hour doing this so far
 //The enmy should die after the player hits them 3x (for now)
 public class BasicEnemy : MonoBehaviour
 {
-    //int HP = 3;
+    public int healthMax=6;
+    private int Health;
     [SerializeField] Transform target;
     NavMeshAgent agent;
     private Rigidbody2D rb;
-    private bool isDead = false; 
+    private bool isDead = false;
+    public float speed;
 
+    //Knockback
+    public float recievedKnockback=5f;
+    private int recoveryTimer;
+    public int recoveryMax=90;
+    public float knockbackDrag;
+    private Vector2 direction;
     public enum State{
         Idle,
         Attack,
+        Hit,
         Bounce,
         Dead,
     }
@@ -27,15 +38,9 @@ public class BasicEnemy : MonoBehaviour
     void Start()
     {
         state = State.Idle;
-
-        //For Pathfinding with NavMesh
-        agent = GetComponent<NavMeshAgent>();
-		agent.updateRotation = false;
-		agent.updateUpAxis = false;
-
+        Health = healthMax;
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(new Vector2(9.8f * 25f, 9.8f * 25f));
     }
 
     // Update is called once per frame
@@ -47,14 +52,34 @@ public class BasicEnemy : MonoBehaviour
         switch (state){
             case State.Idle:
             //Stay in place. If player is in range, go towards them
-            if (target.position.x < transform.position.x - 5f || target.position.y < transform.position.y - 5f ){
-                agent.SetDestination(target.position);
-            }
+            transform.position = Vector2.MoveTowards(transform.position,target.position, speed * Time.deltaTime);
             break;
             case State.Attack:
             //Attack player. Do damage if hits player
             //OnCollisionEnter2D(Collision2D other);
             break;
+            case State.Hit:
+                //If player attacks, it gets knocked back
+                //It can't attack player in this state
+                //BUT it can DAMAGE the player!
+                rb.velocity *= knockbackDrag;
+                if (recoveryTimer<recoveryMax)
+                {
+                    recoveryTimer += 1;
+                }
+                else
+                {
+                    if (Health > 0)
+                    {
+                        state = State.Idle;
+                    }
+                    else
+                    {
+                        state = State.Dead;
+                    }
+                    recoveryTimer = 0;
+                }
+                break;
             case State.Bounce:
             //If player attacks, it bounces off objs.
             //It can't attack player in this state
@@ -67,6 +92,7 @@ public class BasicEnemy : MonoBehaviour
             
         }
     }
+
     //Like this for now since Nick is handling the loss of health code
     void OnCollisionEnter2D(Collision2D other) {
        if (other.gameObject.tag == "Player"){
@@ -76,6 +102,55 @@ public class BasicEnemy : MonoBehaviour
        if (other.gameObject.tag == "BouncableObjs"){
            Debug.Log("BOUNCE!");
        }
-   }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        state = State.Hit;
+        Health -= 1;
+        recoveryTimer = 0;
+        int direction = (int)other.gameObject.transform.localEulerAngles.z;
+        Knockback(recievedKnockback,direction);
+    }
+
+    private void Knockback(float knockback, int zRotation)
+    {
+        Debug.Log(zRotation);
+
+        if (zRotation == 135f) //Facing Bottom Left
+        {
+            rb.AddForce((-transform.right*recievedKnockback)+(-transform.up*recievedKnockback),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 180f) //Facing Bottom Middle
+        {
+            rb.AddForce(((-transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 225f) //Facing Bottom Right
+        {
+            rb.AddForce(((transform.right*recievedKnockback)+(-transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 90f) //Facing Left
+        {
+            rb.AddForce(((-transform.right*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 270f) //Facing Right
+        {
+            rb.AddForce(((transform.right*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 45f) //Facing Top Left
+        {
+            rb.AddForce(((-transform.right*recievedKnockback)+(transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 0f) //Facing Top Middle
+        {
+            rb.AddForce(((transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+        else if (zRotation == 315f) //Facing Top Right
+        {
+            rb.AddForce(((transform.right*recievedKnockback)+(transform.up*recievedKnockback)),ForceMode2D.Impulse);
+        }
+
+        //
+    }
+
 
 }

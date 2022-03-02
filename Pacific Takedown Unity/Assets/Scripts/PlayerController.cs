@@ -14,21 +14,19 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private string currentState;
     private bool safeToUpdateDir = true;
-    Vector2 movement;
+    public Vector2 movement;
     private Vector2 playerFacing;
-    private Vector2 previousFacing;
+    public Vector2 previousFacing;
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
     private string directionFacing;
-    
     //Combat
     public int attackIndex;
     private bool canCombo;
     public float meleeRange;
-    
+    private float lungeSpeed=50;
     //FX
     public FXManager myFX;
-
     private bool fxSpawned;
     //Player States
     public enum State
@@ -44,6 +42,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
       rb = gameObject.GetComponent<Rigidbody2D>();
+      playerFacing = new Vector2(0f, -1f);
+      previousFacing = new Vector2(0f, -1f);
       animator = gameObject.GetComponent<Animator>();
       ChangeState(State.Ready);
     }
@@ -78,10 +78,10 @@ public class PlayerController : MonoBehaviour
     //Wait to see if we can update our previous direction
     if (safeToUpdateDir)
     {
-      previousFacing.x = playerFacing.x;
-      previousFacing.y = playerFacing.y;
       animator.SetFloat("PreviousHorizontal", playerFacing.x);
       animator.SetFloat("PreviousVertical", playerFacing.y);
+      previousFacing.x = Mathf.Round(movement.x);
+      previousFacing.y = Mathf.Round(movement.y);
     }
     //Set it to False
     safeToUpdateDir = false;
@@ -115,27 +115,17 @@ public class PlayerController : MonoBehaviour
        break;
       //State Ready: Player is able to control character
       case State.Attacking:
-        if (attackIndex == 0)
+        if (canCombo) //If we can combo, Make our lunge velocity Zero
         {
-          Debug.Log("Playing Attack Animation 0");
-          attackDirection();
+          rb.velocity=Vector2.zero;
         }
-        else if (attackIndex == 1)
+        if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
         {
-          Debug.Log("Playing Attack Animation 1");
-          attackDirection();
-        }
-        else if (attackIndex == 2)
-        {
-          Debug.Log("Playing Attack Animation 2");
-          attackDirection();
+          rb.velocity = rb.velocity * .5f;
         }
         //Cap at 3 Hits
         if (attackIndex >= 3)
         { attackIndex = 3;}
-        
-        
-        Debug.Log("In the attack state");
         break;
     }
   }
@@ -151,32 +141,35 @@ public class PlayerController : MonoBehaviour
   private static void ChangeState(State state)
   {
     CurrentState = state;
-
+    
     switch (state)
     {
 
     }
   }
   
-  public void OnAttack(InputValue input)
+  public void OnAttack(InputValue input) //When the player presses the Attack Button
   {
-    if (CurrentState == State.Ready)
+    if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
     {
       ChangeState(State.Attacking);
+      attackDirection();
     }
-    if (CurrentState == State.Attacking)
+    if (CurrentState == State.Attacking) //If already in Attack State, Do Nothing, Unless they Can Combo
     {
-      if (canCombo)
+      if (canCombo && attackIndex < 2)
       {
         canCombo = false;
         fxSpawned = false;
         attackIndex += 1;
+        attackDirection();
       }
     }
   }
 
   public void endAttack()
   {
+    //This is Called within our animation to signal our attack has ended
     if (CurrentState == State.Attacking)
     {
       fxSpawned = false;
@@ -191,17 +184,15 @@ public class PlayerController : MonoBehaviour
     canCombo = true;
   }
 
-  public void attackDirection()
+  public void attackDirection() //This Controls what animation plays when we attack
   {
-   Debug.Log("Running Attack Direction");
     if (previousFacing.x == -1 && previousFacing.y == -1) //Facing Bottom Left
     {
-      Debug.Log("Swinging Bottom Left");
-
+      rb.AddForce((-transform.up-transform.right)*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_1");
-        Vector2 offset = new Vector2(-meleeRange, -meleeRange);
+        Vector2 offset = new Vector2(-meleeRange*1.5f, -meleeRange*1.5f); //Offset our Swing Effect
         meleeEffect(false, 135f,offset);
       }
       else
@@ -213,60 +204,118 @@ public class PlayerController : MonoBehaviour
     }
     else if (previousFacing.x == 0 && previousFacing.y == -1) //Facing Bottom Middle
     {
-      Debug.Log("Swinging Bottom Middle");
+      rb.AddForce((-transform.up)*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_2");
-        Vector2 offset = new Vector2(0, -meleeRange);
+        Vector2 offset = new Vector2(0, -meleeRange); //Offset our Swing Effect
         meleeEffect(false, 180f,offset);
       }
       else
       {
         ChangeAnimationState("Lea_Attack_0_2 Flip");
-        Vector2 offset = new Vector2(0, -meleeRange);
+        Vector2 offset = new Vector2(0, -meleeRange); //Offset our Swing Effect
         meleeEffect(true, 180f,offset);
       }
       
     }
     else if (previousFacing.x == 1 && previousFacing.y == -1) //Facing Bottom Right
     {
-      Debug.Log("Swinging Bottom Right");
-
+      rb.AddForce((-transform.up+transform.right)*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
       if (attackIndex != 1)
       {
         ChangeAnimationState("Lea_Attack_0_3");
-        Vector2 offset = new Vector2(meleeRange, -meleeRange);
+        Vector2 offset = new Vector2(meleeRange*1.5f, -meleeRange*1.5f); //Offset our Swing Effect
         meleeEffect(false, 225f,offset);
       }
       else
       {
         ChangeAnimationState("Lea_Attack_0_3 Flip");
-        Vector2 offset = new Vector2(meleeRange, -meleeRange);
+        Vector2 offset = new Vector2(meleeRange*1.5f, -meleeRange*1.5f); //Offset our Swing Effect
         meleeEffect(true, 225f,offset);
       }
     }
-    /*
-    else if (playerFacing.x == -1 && playerFacing.y == 0) //Facing Middle Left
+    else if (previousFacing.x == -1 && previousFacing.y == 0) //Facing Middle Left
     {
-     
+      rb.AddForce(-transform.right*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_4");
+        Vector2 offset = new Vector2(-meleeRange*2, 0); //Offset our Swing Effect
+        meleeEffect(true, 90f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_4 Flip");
+        Vector2 offset = new Vector2(-meleeRange*2,0); //Offset our Swing Effect
+        meleeEffect(false, 90f,offset);
+      }
     }
-    else if (playerFacing.x == 1 && playerFacing.y == 0) //Facing Middle Right
+    else if (previousFacing.x == 1 && previousFacing.y == 0) //Facing Middle Right
     {
-   
+      rb.AddForce(transform.right*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_6");
+        Vector2 offset = new Vector2(meleeRange*2, 0); //Offset our Swing Effect
+        meleeEffect(false, 270f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_6 Flip");
+        Vector2 offset = new Vector2(meleeRange*2,0); //Offset our Swing Effect
+        meleeEffect(true, 270f,offset);
+      }
     }
-    else if (playerFacing.x == -1 && playerFacing.y == 1) //Facing Top Left
+    else if (previousFacing.x == -1 && previousFacing.y == 1) //Facing Top Left
     {
-      
+      rb.AddForce((transform.up-transform.right)*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_7");
+        Vector2 offset = new Vector2(-meleeRange*2, meleeRange*2); //Offset our Swing Effect
+        meleeEffect(true, 45f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_7 Flip");
+        Vector2 offset = new Vector2(-meleeRange*2, meleeRange*2); //Offset our Swing Effect
+        meleeEffect(false, 45f,offset);
+      }
     }
-    else if (playerFacing.x == 0 && playerFacing.y == 1) //Facing Top Middle
+    else if (previousFacing.x == 0 && previousFacing.y == 1) //Facing Top Middle
     {
-      
+      rb.AddForce(transform.up*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_8");
+        Vector2 offset = new Vector2(0, meleeRange*2); //Offset our Swing Effect
+        meleeEffect(false, 0,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_8 Flip");
+        Vector2 offset = new Vector2(0, meleeRange); //Offset our Swing Effect
+        meleeEffect(true, 0f,offset);
+      }
     }
-    else if (playerFacing.x == 1 && playerFacing.y == 1) //Facing Top Right
+    else if (previousFacing.x == 1 && previousFacing.y == 1) //Facing Top Right
     {
-      
+      rb.AddForce((transform.up+transform.right)*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+      if (attackIndex != 1)
+      {
+        ChangeAnimationState("Lea_Attack_0_9");
+        Vector2 offset = new Vector2(meleeRange*2, meleeRange*2);
+        meleeEffect(false, 315f,offset);
+      }
+      else
+      {
+        ChangeAnimationState("Lea_Attack_0_9 Flip");
+        Vector2 offset = new Vector2(meleeRange*2, meleeRange*2);
+        meleeEffect(true, 315f,offset);
+      }
     }
-    */
+    
   }
 
   public void meleeEffect(bool flipped,float zRotation,Vector2 offset)
@@ -274,11 +323,11 @@ public class PlayerController : MonoBehaviour
     if (!fxSpawned) {
       if (!flipped)
       {
-        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,0f),false,offset);
+        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,1f),false,offset);
       }
       else
       {
-        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,0f),true,offset);
+        myFX.spawnEffect("meleeEffect",gameObject,new Quaternion(0f,0f,zRotation,1f),true,offset);
       }
 
       fxSpawned = true;
