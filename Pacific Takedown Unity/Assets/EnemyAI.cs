@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
     bool attackCoroutineStarted = false;
 
 
-    private Vector2 launchDirection;
+    public Vector2 launchDirection;
     //Animations
     private Animator animator;
     private string animCurrentState;
@@ -190,7 +190,7 @@ public class EnemyAI : MonoBehaviour
     {
         rb.AddForce((target.position - transform.position) * (speed/3));
         Vector2 player = new Vector2(target.transform.position.x, target.transform.position.y);
-        Vector2 launchDirection = (player - rb.position).normalized;
+        launchDirection = (player - rb.position).normalized;
         var lookPos = target.position - transform.position;
         Vector2 effectOffset = new Vector2(0, 0);
         myFX.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);

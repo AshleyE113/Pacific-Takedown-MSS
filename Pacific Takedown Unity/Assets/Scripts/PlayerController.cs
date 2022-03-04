@@ -1,10 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = UnityEngine.Vector2;
 
 
 public class PlayerController : MonoBehaviour
@@ -132,7 +133,7 @@ public class PlayerController : MonoBehaviour
       case State.Hit:
         if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
         {
-          rb.velocity = rb.velocity * .5f;
+          rb.velocity = rb.velocity * .8f;
         }
         break;
     }
@@ -196,7 +197,8 @@ public class PlayerController : MonoBehaviour
       ChangeAnimationState("Lea_Hit_2");
       //Make THem Invulnerable
       invulnerable = true;
-      rb.AddForce(transform.right*lungeSpeed/2,ForceMode2D.Impulse); //Lunge us in said direction
+      Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
+      rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
     }
   }
 
