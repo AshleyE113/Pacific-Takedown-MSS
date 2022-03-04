@@ -7395,6 +7395,14 @@ PrefabInstance:
       propertyPath: myFX
       value: 
       objectReference: {fileID: 1313388119}
+    - target: {fileID: 4552299704260418018, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: dashForce
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552299704260418018, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: dashDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4552299704260418019, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
       propertyPath: m_RootOrder
       value: 2

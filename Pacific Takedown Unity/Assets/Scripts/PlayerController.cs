@@ -27,8 +27,12 @@ public class PlayerController : MonoBehaviour
     private bool canCombo;
     public float meleeRange;
     [HideInInspector] public float lungeSpeed=50;
-
     private bool invulnerable = false;
+    //Dashing
+    public int dashForce=100;
+    public int dashDistance = 30;
+
+    private int dashTimer;
     //FX
     private bool fxSpawned;
     //Player States
@@ -135,6 +139,20 @@ public class PlayerController : MonoBehaviour
           rb.velocity = rb.velocity * .8f;
         }
         break;
+      case State.Dashing:
+        if (dashTimer < dashDistance)
+        {
+          dashTimer += 1;
+          rb.velocity = rb.velocity * .5f;
+        }
+        else
+        {
+          rb.velocity = Vector2.zero;
+            ChangeState(State.Ready);
+            dashTimer = 0;
+        }
+
+        break;
     }
   }
   //Change our current animation
@@ -155,7 +173,16 @@ public class PlayerController : MonoBehaviour
 
     }
   }
-  
+
+  public void OnDash(InputValue input)
+  {
+    if (CurrentState == State.Ready || CurrentState == State.Attacking) //If in the ready state, and they attack. Go to Attack State
+    {
+      Debug.Log("Dashing");
+      PlayerDirection.callDirection("Dash",previousFacing,GetComponent<PlayerController>());
+      ChangeState(State.Dashing);
+    }
+  }
   public void OnAttack(InputValue input) //When the player presses the Attack Button
   {
     if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
