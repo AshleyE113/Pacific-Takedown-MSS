@@ -121,12 +121,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 12
-  movement: {x: 0, y: 0}
-  previousFacing: {x: 0, y: 0}
+  rb: {fileID: 0}
   directionResetTime: 0.125
   attackIndex: 0
   meleeRange: 0.5
-  myFX: {fileID: 0}
+  lungeSpeed: 50
+  dashForce: 250
+  dashDistance: 3
 --- !u!95 &4552299704260418020
 Animator:
   serializedVersion: 3

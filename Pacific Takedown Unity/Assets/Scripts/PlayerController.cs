@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour
 
     }
   }
-
+/*
   public void OnDash(InputValue input)
   {
     if (CurrentState == State.Ready || CurrentState == State.Attacking) //If in the ready state, and they attack. Go to Attack State
@@ -183,6 +183,7 @@ public class PlayerController : MonoBehaviour
       ChangeState(State.Dashing);
     }
   }
+  */
   public void OnAttack(InputValue input) //When the player presses the Attack Button
   {
     if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State

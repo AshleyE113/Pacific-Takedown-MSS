@@ -114,7 +114,8 @@ public class PlayerDirection : MonoBehaviour
           }
           else if (call == "Dash")
           {
-            
+            player.rb.AddForce(-player.transform.right*player.dashForce,ForceMode2D.Impulse); //Lunge us in said direction
+
           }
         }
           else if (playerFacing.x == 1 && playerFacing.y == 0) //Facing Middle Right
@@ -141,7 +142,7 @@ public class PlayerDirection : MonoBehaviour
           }
           else if (call == "Dash")
           {
-            
+            player.rb.AddForce(player.transform.right*player.dashForce,ForceMode2D.Impulse); //Lunge us in said direction
           }
         }
         else if (playerFacing.x == -1 && playerFacing.y == 1) //Facing Top Left
@@ -168,7 +169,7 @@ public class PlayerDirection : MonoBehaviour
           }
           else if (call == "Dash")
           {
-            
+            player.rb.AddForce((player.transform.up-player.transform.right)*player.dashForce,ForceMode2D.Impulse); //Lunge us in said direction
           }
         }
         else if (playerFacing.x == 0 && playerFacing.y == 1) //Facing Top Middle
@@ -195,7 +196,8 @@ public class PlayerDirection : MonoBehaviour
           }
           else if (call == "Dash")
           {
-            
+            player.rb.AddForce(player.transform.up*player.dashForce,ForceMode2D.Impulse); //Lunge us in said direction
+
           }
         }
         else if (playerFacing.x == 1 && playerFacing.y == 1) //Facing Top Right
@@ -222,7 +224,8 @@ public class PlayerDirection : MonoBehaviour
           }
           else if (call == "Dash")
           {
-            
+            player.rb.AddForce((player.transform.up+player.transform.right)*player.dashForce,ForceMode2D.Impulse); //Lunge us in said direction
+
           }
         }
       }
