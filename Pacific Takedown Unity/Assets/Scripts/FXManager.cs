@@ -6,11 +6,22 @@ using UnityEngine;
 
 public class FXManager : MonoBehaviour
 {
+    //Non-Static
+    public GameObject playerMeleeEffectNS;
+    public GameObject enemyMeleeEffectNS;
 
-    public GameObject playerMeleeEffect;
-    public GameObject enemyMeleeEffect;
+    //Static Versions
+    public static GameObject playerMeleeEffect;
+    public static GameObject enemyMeleeEffect;
 
-    public void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)
+    private void Awake()
+    {
+        //Declare Effects on Awake
+        playerMeleeEffect = playerMeleeEffectNS;
+        enemyMeleeEffect = enemyMeleeEffectNS;
+    }
+
+    public static void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)
     {
         if (effect == "playerMeleeEffect1")
         {

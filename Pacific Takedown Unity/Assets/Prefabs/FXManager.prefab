@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf8f3693a779a849b099f66e9e8b539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meleeEffect: {fileID: 3006254756446209033, guid: 6ae0fdbf916e7b2409dd800e772fab7f, type: 3}
+  playerMeleeEffectNS: {fileID: 3006254756446209033, guid: 6ae0fdbf916e7b2409dd800e772fab7f, type: 3}
+  enemyMeleeEffectNS: {fileID: 3006254756446209033, guid: 70f189bab4c1e4eb0b43e55b866b0b7c, type: 3}

@@ -193,7 +193,7 @@ public class EnemyAI : MonoBehaviour
         launchDirection = (player - rb.position).normalized;
         var lookPos = target.position - transform.position;
         Vector2 effectOffset = new Vector2(0, 0);
-        myFX.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
+        FXManager.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
         state = State.Attack;
     }
     private void OnTriggerEnter2D(Collider2D other)
