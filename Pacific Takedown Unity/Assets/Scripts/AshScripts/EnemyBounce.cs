@@ -13,35 +13,53 @@ public class EnemyBounce : MonoBehaviour
 
     //public float timeStop; //The amount of seconds you want the bouncing to stop
    /// public float timer; // Keeps track of how much time is passing
-    private Rigidbody2D rb;
+    private Rigidbody2D bounceRB;
     public Vector3 last_vel; //works in X, Y,  (0, 0, 0)
 
     //Test things out with these varis
     public float testX;
     public float testY;
-    public float testDrag; //I used 1 and 1.5 already
+    public float testDrag=3; //I used 1 and 1.5 already
+    public bool isBouncing = false;
+    public int bounceLimit=5;
 
    private void Awake() {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(testX, testY); //
+    bounceRB = GetComponent<Rigidbody2D>();
+    //bounceRB.velocity = new Vector2(testX, testY); //
    }
 
     void Update()
     { 
         //Due to the drag variable in the inspector, time isn't needed! Linear drag is what it is in the inspector. drag is what it is in the script
         //Try it out like this for now. I can add time in the next sprint (if needed)
-          last_vel = rb.velocity;
-          rb.drag = testDrag; //Play with this value to test this.
-       
+        if (bounceRB != null && isBouncing)
+        {
+         last_vel = bounceRB.velocity;
+         bounceRB.drag = testDrag; //Play with this value to test this.
+        }
+
+        if (bounceRB.velocity == Vector2.zero)
+        {
+         isBouncing = false;
+         gameObject.GetComponent<EnemyAI>().state = EnemyAI.State.Idle;
+        }
         //Debug.Log(rb.drag);
+    }
+
+    public void BounceEnemy(Rigidbody2D enemy, float directionX, float directionY, float drag)
+    {
+     enemy.velocity = new Vector2(directionX, directionY);
+     Debug.Log("Calling Bounce Enemy Poop");
     }
 
     //When it collides with the wall at a certain speed it will hit it, then reflect off of the surface. DON'T TOUCH UNTIL YOU HAVE TO!
      void OnCollisionEnter2D(Collision2D other) {
+        if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
          var speed = last_vel.magnitude;
          var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
-         rb.velocity = direction * Mathf.Max(speed, 0f);
-        Debug.Log(speed);
+         bounceRB.velocity = direction * Mathf.Max(speed, 0f);
+        }
      }
 }
 //Scrap work for timer. DO NOT TOUCH!!!
