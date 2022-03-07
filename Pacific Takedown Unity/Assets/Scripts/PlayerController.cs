@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
       case State.Ready:
         if (movement.x == 0 && movement.y == 0)
         {
-          ChangeAnimationState("Stop");
+          ChangeAnimationState("Idle");
         }
         else
         {
