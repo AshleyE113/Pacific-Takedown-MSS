@@ -17,12 +17,16 @@ public class PlayerController : MonoBehaviour
     private string currentState;
     private bool safeToUpdateDir = true;
     private Vector2 movement;
-    private Vector2 playerFacing;
+    public Vector2 playerFacing;
     private Vector2 previousFacing;
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
     private string directionFacing;
     public int playerHealth = 3; //Ashley: Player health vari, the changes I make will be formatted like this! 
+    //Mouses
+    public Vector2 mousePos;
+    public Vector2 lookDir;
+    public Camera cam; //Optimize Later
     //Combat
     public int attackIndex;
     private bool canCombo;
@@ -54,6 +58,7 @@ public class PlayerController : MonoBehaviour
       playerFacing = new Vector2(0f, -1f);
       previousFacing = new Vector2(0f, -1f);
       animator = gameObject.GetComponent<Animator>();
+      mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
       ChangeState(State.Ready);
     }
 
@@ -62,6 +67,10 @@ public class PlayerController : MonoBehaviour
   {
       //Grab our Current Input from Input Manager
       movement = InputManager.directionVector;
+      mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      //Set the Directon we are facing
+      playerFacing.x = Mathf.Round(lookDir.x);
+      playerFacing.y = Mathf.Round(lookDir.y);
       if (movement.x == 0 && movement.y == 0)
       {
         //if there is no input, it does nothing...
@@ -70,9 +79,6 @@ public class PlayerController : MonoBehaviour
       {
         //set direction before normalising
         updatePlayerDir(movement);
-        //Set the Directon we are facing
-        playerFacing.x = Mathf.Round(movement.x);
-        playerFacing.y = Mathf.Round(movement.y);
         //Update the Parameters in our Animator
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
@@ -95,8 +101,8 @@ public class PlayerController : MonoBehaviour
     {
       animator.SetFloat("PreviousHorizontal", playerFacing.x);
       animator.SetFloat("PreviousVertical", playerFacing.y);
-      previousFacing.x = Mathf.Round(movement.x);
-      previousFacing.y = Mathf.Round(movement.y);
+      previousFacing.x = Mathf.Round(lookDir.x);
+      previousFacing.y = Mathf.Round(lookDir.y);
     }
     //Set it to False
     safeToUpdateDir = false;
@@ -113,6 +119,12 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
+    lookDir = mousePos - rb.position;
+    lookDir = lookDir.normalized;
+    //angle = Mathf.Atan2(lookDir.y, lookDir.x)*Mathf.Rad2Deg;
+    animator.SetFloat("MouseHorizontal", lookDir.x);
+    animator.SetFloat("MouseVertical", lookDir.y);
+
     switch (CurrentState)
     {
       //State Ready: Player is able to control character
@@ -253,7 +265,7 @@ public class PlayerController : MonoBehaviour
 
   public void attackDirection() //This Controls what animation plays when we attack
   {
-    PlayerDirection.callDirection("AttackDirection",previousFacing,GetComponent<PlayerController>());
+    PlayerDirection.callDirection("AttackDirection",playerFacing,GetComponent<PlayerController>());
   }
 
   public void meleeEffect(bool flipped,float zRotation,Vector2 offset)

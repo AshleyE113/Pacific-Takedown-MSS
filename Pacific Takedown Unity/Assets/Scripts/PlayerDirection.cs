@@ -75,13 +75,13 @@ public class PlayerDirection : MonoBehaviour
             {
               player.ChangeAnimationState("Lea_Attack_0_3");
               Vector2 offset = new Vector2(player.meleeRange*1.5f, -player.meleeRange*1.5f); //Offset our Swing Effect
-              player.meleeEffect(false, 225f,offset);
+              player.meleeEffect(true, 225f,offset);
             }
             else
             {
               player.ChangeAnimationState("Lea_Attack_0_3 Flip");
               Vector2 offset = new Vector2(player.meleeRange*1.5f, -player.meleeRange*1.5f); //Offset our Swing Effect
-              player.meleeEffect(true, 225f,offset);
+              player.meleeEffect(false, 225f,offset);
             }
           }
           else if (call == "Dash")
