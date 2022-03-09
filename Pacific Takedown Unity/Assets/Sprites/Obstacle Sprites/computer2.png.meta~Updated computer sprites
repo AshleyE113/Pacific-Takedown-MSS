@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: cd1f6b1bcf7446a4aaa0063f67bb1326
+guid: d4a216f99b418b14ca545f4374cf4eb6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1152356169552002576
-    second: computer_0
+      213: 7353515168790064060
+    second: computer2_0
   - first:
-      213: -8796642946680004667
-    second: computer_1
+      213: 1309242303302600455
+    second: computer2_1
   - first:
-      213: -6682465662091931926
-    second: computer_2
+      213: -3212897651041448288
+    second: computer2_2
   - first:
-      213: -7319677003180022380
-    second: computer_3
+      213: 811567146722948234
+    second: computer2_3
   - first:
-      213: -7957628697472392279
-    second: computer_4
+      213: 3142875305425428456
+    second: computer2_4
   - first:
-      213: 6774277999510416888
-    second: computer_5
+      213: -4030958523109977921
+    second: computer2_5
+  - first:
+      213: 3940537562060472578
+    second: computer2_6
+  - first:
+      213: -8699441277927611774
+    second: computer2_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: computer_0
+      name: computer2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -123,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e70eca4ddfdff00800000000000000
-      internalID: 1152356169552002576
+      spriteID: cbbad2ed51fec0660800000000000000
+      internalID: 7353515168790064060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer_1
+      name: computer2_1
       rect:
         serializedVersion: 2
         x: 64
@@ -144,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cf513bb8db0ce580800000000000000
-      internalID: -8796642946680004667
+      spriteID: 707044d20fc5b2210800000000000000
+      internalID: 1309242303302600455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer_2
+      name: computer2_2
       rect:
         serializedVersion: 2
         x: 128
@@ -165,14 +171,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeec343b2ec1343a0800000000000000
-      internalID: -6682465662091931926
+      spriteID: 0aeccf9eb9e7963d0800000000000000
+      internalID: -3212897651041448288
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer_3
+      name: computer2_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a847cc32504434b00800000000000000
+      internalID: 811567146722948234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: computer2_4
       rect:
         serializedVersion: 2
         x: 0
@@ -186,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 495ebd20c884b6a90800000000000000
-      internalID: -7319677003180022380
+      spriteID: 8efda39407cbd9b20800000000000000
+      internalID: 3142875305425428456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer_4
+      name: computer2_5
       rect:
         serializedVersion: 2
         x: 64
@@ -207,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a324b86cd2d09190800000000000000
-      internalID: -7957628697472392279
+      spriteID: fb052b584982f08c0800000000000000
+      internalID: -4030958523109977921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer_5
+      name: computer2_6
       rect:
         serializedVersion: 2
         x: 128
@@ -228,8 +255,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fdef8ae2f1130e50800000000000000
-      internalID: 6774277999510416888
+      spriteID: 201c2bae80a9fa630800000000000000
+      internalID: 3940537562060472578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: computer2_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28221c4df30654780800000000000000
+      internalID: -8699441277927611774
       vertices: []
       indices: 
       edges: []
