@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DonoScene/SceneMain2.unity
     guid: 4fbb6e5455f00e442a39a41afad75fc8
+  - enabled: 1
+    path: Assets/Scenes/DonoScene/DonoScene3.unity
+    guid: 8183a32d8d5f6c14fbb8b0206fa4ec1e
   m_configObjects: {}

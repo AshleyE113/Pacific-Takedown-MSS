@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
     private string directionFacing;
+    public int playerHealth = 3; //Ashley: Player health vari, the changes I make will be formatted like this! 
     //Combat
     public int attackIndex;
     private bool canCombo;
@@ -76,6 +77,14 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+      }
+      if (CurrentState == State.Hit)
+        {
+
+        }
+      if (playerHealth <= 0)
+      {
+            Debug.Log("Dead");
       }
   }
   //Update our Player's Direction
@@ -136,7 +145,7 @@ public class PlayerController : MonoBehaviour
       case State.Hit:
         if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
         {
-          rb.velocity = rb.velocity * .8f;
+          rb.velocity = rb.velocity * .8f; //Ashley: I'm assuming that this is the player knockback after the enemy strikes
         }
         break;
       case State.Dashing:
@@ -220,6 +229,7 @@ public class PlayerController : MonoBehaviour
     if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
     {
       ChangeState(State.Hit);
+      playerHealth--; //Ashley: Takes away health
       //Change Animation to Player Hit
       PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
       //Make THem Invulnerable

@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     public void RestartGame(){
-        SceneManager.LoadScene("EmptyScene");
+        SceneManager.LoadScene("DonoScene3");
     }
 }
