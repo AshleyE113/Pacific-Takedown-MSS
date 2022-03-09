@@ -46,9 +46,9 @@ public class EnemyBounce : MonoBehaviour
         //Debug.Log(rb.drag);
     }
 
-    public void BounceEnemy(Rigidbody2D enemy, float directionX, float directionY, float drag)
+    public void BounceEnemy(Rigidbody2D enemy, float directionX, float directionY, float force)
     {
-     enemy.velocity = new Vector2(directionX, directionY);
+     enemy.velocity = new Vector2(directionX*force, directionY*force);
      Debug.Log("Calling Bounce Enemy Poop");
     }
 

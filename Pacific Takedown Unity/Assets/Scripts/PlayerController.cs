@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public int playerHealth = 3; //Ashley: Player health vari, the changes I make will be formatted like this! 
     //Mouses
     public Vector2 mousePos;
-    public Vector2 lookDir;
+    public static Vector2 lookDir;
     public Camera cam; //Optimize Later
     //Combat
     public int attackIndex;

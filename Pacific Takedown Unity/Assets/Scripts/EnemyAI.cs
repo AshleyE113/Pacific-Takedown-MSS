@@ -212,7 +212,7 @@ public class EnemyAI : MonoBehaviour
             //Change Animation to Drone Hit
             ChangeAnimationState("DroneIdle");
 
-            Knockback(recievedKnockback,direction,false);
+            Knockback(recievedKnockback,direction,false,other.gameObject);
         }
     }
     //Change our current animation
@@ -223,79 +223,47 @@ public class EnemyAI : MonoBehaviour
         animCurrentState = newState;
     }
 
-    private void Knockback(float knockback, int zRotation, bool bounce)
+    private void Knockback(float knockback, int zRotation, bool bounce,GameObject attack)
     {
         Debug.Log("Applying Knockback from Hit");
         if (bounce)
         {
             if (zRotation == 135f) //Facing Bottom Left
             {
-                rb.AddForce((-transform.right*recievedKnockback)+(-transform.up*recievedKnockback),ForceMode2D.Impulse);
+                rb.AddForce((attack.transform.up*recievedKnockback),ForceMode2D.Impulse);
             }
             else if (zRotation == 180f) //Facing Bottom Middle
             {
-                rb.AddForce(((-transform.up*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
             else if (zRotation == 225f) //Facing Bottom Right
             {
-                rb.AddForce(((transform.right*recievedKnockback)+(-transform.up*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
             else if (zRotation == 90f) //Facing Left
             {
-                rb.AddForce(((-transform.right*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
             else if (zRotation == 270f) //Facing Right
             {
-                rb.AddForce(((transform.right*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
             else if (zRotation == 45f) //Facing Top Left
             {
-                rb.AddForce(((-transform.right*recievedKnockback)+(transform.up*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
             else if (zRotation == 0f) //Facing Top Middle
             {
-                rb.AddForce(((transform.up*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
             else if (zRotation == 315f) //Facing Top Right
             {
-                rb.AddForce(((transform.right*recievedKnockback)+(transform.up*recievedKnockback)),ForceMode2D.Impulse);
+                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
             }
         }
         else
         {
-            if (zRotation == 135f) //Facing Bottom Left
-            {
-               gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,-bounceKnockback,-bounceKnockback,0f);
-            }
-            else if (zRotation == 180f) //Facing Bottom Middle
-            {
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,0,-bounceKnockback,0f);
-            }
-            else if (zRotation == 225f) //Facing Bottom Right
-            {
-                Debug.Log(("Hitting Bottom Right"));
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,bounceKnockback,-bounceKnockback,0f);
-            }
-            else if (zRotation == 90f) //Facing Left
-            {
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,-bounceKnockback,0,0f);
-            }
-            else if (zRotation == 270f) //Facing Right
-            {
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,bounceKnockback,0,0f);
-            }
-            else if (zRotation == 45f) //Facing Top Left
-            {
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,-bounceKnockback,bounceKnockback,0f);
-            }
-            else if (zRotation == 0f) //Facing Top Middle
-            {
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,0,bounceKnockback,0f);
-            }
-            else if (zRotation == 315f) //Facing Top Right
-            {
-                gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,bounceKnockback,bounceKnockback,0f);
-            }
+            gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,PlayerController.lookDir.x,PlayerController.lookDir.y,bounceKnockback);
         }
 
 
