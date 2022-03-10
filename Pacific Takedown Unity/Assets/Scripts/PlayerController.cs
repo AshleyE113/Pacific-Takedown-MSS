@@ -23,10 +23,12 @@ public class PlayerController : MonoBehaviour
     private bool resetDirCooldownRunning;
     private string directionFacing;
     public int playerHealth = 3; //Ashley: Player health vari, the changes I make will be formatted like this! 
-    //Mouses
-    public Vector2 mousePos;
-    public static Vector2 lookDir;
+    //Mouse
+    private Vector2 mousePos;
+    [HideInInspector] public static Vector2 lookDir;
     public Camera cam; //Optimize Later
+    private float angle;
+    public GameObject rotationObject;
     //Combat
     public int attackIndex;
     private bool canCombo;
@@ -36,7 +38,6 @@ public class PlayerController : MonoBehaviour
     //Dashing
     public int dashForce=100;
     public int dashDistance = 30;
-
     private int dashTimer;
     //FX
     private bool fxSpawned;
@@ -68,6 +69,10 @@ public class PlayerController : MonoBehaviour
       //Grab our Current Input from Input Manager
       movement = InputManager.directionVector;
       mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      lookDir = mousePos - rb.position;
+      lookDir = lookDir.normalized;
+      angle = Mathf.Atan2(lookDir.y, lookDir.x)*Mathf.Rad2Deg-90f;
+
       //Set the Directon we are facing
       playerFacing.x = Mathf.Round(lookDir.x);
       playerFacing.y = Mathf.Round(lookDir.y);
@@ -119,12 +124,10 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
-    lookDir = mousePos - rb.position;
-    lookDir = lookDir.normalized;
-    //angle = Mathf.Atan2(lookDir.y, lookDir.x)*Mathf.Rad2Deg;
     animator.SetFloat("MouseHorizontal", lookDir.x);
     animator.SetFloat("MouseVertical", lookDir.y);
-
+    //Change Position of Swing Point
+    rotationObject.transform.rotation = Quaternion.Euler(0f, 0f, angle);
     switch (CurrentState)
     {
       //State Ready: Player is able to control character
@@ -273,12 +276,13 @@ public class PlayerController : MonoBehaviour
     if (!fxSpawned) {
       if (!flipped)
       {
-        FXManager.spawnEffect("playerMeleeEffect1",gameObject,null,new Quaternion(0f,0f,zRotation,1f),false,offset);
+        FXManager.spawnEffect("playerMeleeEffect1",gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject,null,new Quaternion(0f,0f,rotationObject.gameObject.transform.rotation.eulerAngles.z
+          ,1f),false,offset);
       }
       else
       {
-        FXManager.spawnEffect("playerMeleeEffect1",gameObject,null, new Quaternion(0f,0f,zRotation,1f),true,offset);
-      }
+        FXManager.spawnEffect("playerMeleeEffect1",gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject,null,new Quaternion(0f,0f,rotationObject.gameObject.transform.rotation.eulerAngles.z
+          ,1f),true,offset);      }
 
       fxSpawned = true;
     }
