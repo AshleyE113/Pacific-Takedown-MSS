@@ -602,12 +602,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1868619658}
-  testTimePast: 0
-  testX_x: 0
-  testY_x: 0
-  testX_y: 0
-  testY_y: 0
-  magnitude: 0
+  testTimePast: 5
+  testX_x: -2
+  testY_x: 2
+  testX_y: -2
+  testY_y: 2
+  magnitude: 1
 --- !u!1 &575535177
 GameObject:
   m_ObjectHideFlags: 0
@@ -8241,6 +8241,10 @@ PrefabInstance:
       propertyPath: attackRange
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6880577857888963441, guid: c05f8a043f25c474a955e929e6749070, type: 3}
+      propertyPath: camController
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 6880577857888963441, guid: c05f8a043f25c474a955e929e6749070, type: 3}
       propertyPath: attackRecoverTime
       value: 1

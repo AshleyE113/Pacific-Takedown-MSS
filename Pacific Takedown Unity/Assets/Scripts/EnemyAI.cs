@@ -225,7 +225,7 @@ public class EnemyAI : MonoBehaviour
         {
             state = State.Bounce;
             //Debug
-            camController.ScreenShake(camController.testTimePast, camController.magnitude); //Ashley: Like this until I an work out the stuff to make it work when the class is static
+            StartCoroutine(camController.ScreenShake(camController.testTimePast, camController.magnitude)); //Ashley: Like this until I an work out the stuff to make it work when the class is static
             gameObject.GetComponent<EnemyBounce>().isBouncing = true;
             Health -= 1;
             Debug.Log(Health);
