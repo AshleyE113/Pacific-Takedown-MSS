@@ -5,8 +5,6 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    //For now!
-    public CameraController camController;
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -16,7 +14,7 @@ public class EnemyAI : MonoBehaviour
     private bool reachedEndOfPath = false;
 
     private Seeker seeker;
-    public int healthMax = 12; //Ashley: changing the health varis!
+    public int healthMax = 6;
     private int Health;
     private Rigidbody2D rb;
     private bool isDead = false;
@@ -27,14 +25,14 @@ public class EnemyAI : MonoBehaviour
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
-    
+
     //Bounce
     public int bounceKnockback = 50;
-    
+
     //FX
     public FXManager myFX;
     private bool fxSpawned;
-    
+
     //Attack
     public int attackRange;
     public float attackRecoverTime;
@@ -116,7 +114,7 @@ public class EnemyAI : MonoBehaviour
                     reachedEndOfPath = false;
                 }
 
-                Vector2 direction = ((Vector2) path.vectorPath[currentWaypoint] - rb.position).normalized;
+                Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
                 Vector2 force = direction * speed * Time.deltaTime;
                 rb.AddForce(force);
                 float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -151,7 +149,7 @@ public class EnemyAI : MonoBehaviour
                 //It can't attack player in this state
                 //BUT it can DAMAGE the player!
                 rb.velocity *= knockbackDrag;
-                if (recoveryTimer<recoveryMax)
+                if (recoveryTimer < recoveryMax)
                 {
                     recoveryTimer += 1;
                 }
@@ -172,50 +170,43 @@ public class EnemyAI : MonoBehaviour
                 //If player attacks, it bounces off objs.
                 //It can't attack player in this state
                 //BUT it can DAMAGE the player!
-                
+
                 break;
             case State.Dead:
                 //if hit 3 or more times by player, destory it
-                Debug.Log("DEAD!!!!");
                 Destroy(gameObject);
                 break;
 
         }
     }
-    
-    
+
+
     IEnumerator AttackRecovery()
-    { 
-        
+    {
+
         yield return new WaitForSeconds(attackRecoverTime);
         attackCoroutineStarted = false;
         state = State.Idle;
     }
     public void CommenceAttack()
     {
-        rb.AddForce((target.position - transform.position) * (speed/3));
+        rb.AddForce((target.position - transform.position) * (speed / 3));
         Vector2 player = new Vector2(target.transform.position.x, target.transform.position.y);
         launchDirection = (player - rb.position).normalized;
         var lookPos = target.position - transform.position;
         Vector2 effectOffset = new Vector2(0, 0);
-        FXManager.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
+        FXManager.spawnEffect("enemyMeleeEffect1", gameObject, target, Quaternion.LookRotation(lookPos), false, effectOffset);
         state = State.Attack;
     }
-<<<<<<< HEAD
 
     private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-=======
-    private void OnTriggerEnter2D(Collider2D other) //This is specifically for the player
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
->>>>>>> AshBranch
         {
             state = State.Bounce;
-            CameraController.Shake(10f,50f,0.1f,0.1f);
+            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback,direction,false,other.gameObject);
+            Knockback(recievedKnockback, direction, false, other.gameObject);
             BouncedOffWall(1);
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
@@ -224,13 +215,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback,direction,true,other.gameObject);
+            Knockback(recievedKnockback, direction, true, other.gameObject);
             BouncedOffWall(1);
         }
     }
@@ -245,25 +235,6 @@ public class EnemyAI : MonoBehaviour
         //Change Animation to Drone Hit
         ChangeAnimationState("DroneIdle");
 
-=======
-    private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-        {
-            state = State.Bounce;
-            //Debug
-            StartCoroutine(camController.ScreenShake(camController.testTimePast, camController.magnitude)); //Ashley: Like this until I an work out the stuff to make it work when the class is static
-            gameObject.GetComponent<EnemyBounce>().isBouncing = true;
-            Health -= 1;
-            Debug.Log(Health);
-            recoveryTimer = 0;
-            int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            //Change Animation to Drone Hit
-            ChangeAnimationState("DroneIdle");
-
-            Knockback(recievedKnockback, direction, false);
-        }
->>>>>>> AshBranch
     }
     //Change our current animation
     private void ChangeAnimationState(string newState) //Change title of currentState
@@ -273,16 +244,16 @@ public class EnemyAI : MonoBehaviour
         animCurrentState = newState;
     }
 
-    private void Knockback(float knockback, int zRotation, bool bounce,GameObject attack)
+    private void Knockback(float knockback, int zRotation, bool bounce, GameObject attack)
     {
         Debug.Log("Applying Knockback from Hit");
         if (!bounce)
         {
-            rb.AddForce((attack.transform.up*recievedKnockback),ForceMode2D.Impulse);
+            rb.AddForce((attack.transform.up * recievedKnockback), ForceMode2D.Impulse);
         }
         else
         {
-            gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb,PlayerController.lookDir.x,PlayerController.lookDir.y,bounceKnockback);
+            gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb, PlayerController.lookDir.x, PlayerController.lookDir.y, bounceKnockback);
         }
 
 
