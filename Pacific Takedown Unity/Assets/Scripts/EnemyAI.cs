@@ -5,6 +5,8 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+    //For now!
+    public CameraController camController;
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -14,7 +16,7 @@ public class EnemyAI : MonoBehaviour
     private bool reachedEndOfPath = false;
 
     private Seeker seeker;
-    public int healthMax = 6;
+    public int healthMax = 12; //Ashley: changing the health varis!
     private int Health;
     private Rigidbody2D rb;
     private bool isDead = false;
@@ -174,6 +176,7 @@ public class EnemyAI : MonoBehaviour
                 break;
             case State.Dead:
                 //if hit 3 or more times by player, destory it
+                Debug.Log("DEAD!!!!");
                 Destroy(gameObject);
                 break;
 
@@ -198,10 +201,16 @@ public class EnemyAI : MonoBehaviour
         FXManager.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
         state = State.Attack;
     }
+<<<<<<< HEAD
 
     private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+=======
+    private void OnTriggerEnter2D(Collider2D other) //This is specifically for the player
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
+>>>>>>> AshBranch
         {
             state = State.Bounce;
             CameraController.Shake(10f,50f,0.1f,0.1f);
@@ -215,6 +224,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
@@ -235,6 +245,25 @@ public class EnemyAI : MonoBehaviour
         //Change Animation to Drone Hit
         ChangeAnimationState("DroneIdle");
 
+=======
+    private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            state = State.Bounce;
+            //Debug
+            StartCoroutine(camController.ScreenShake(camController.testTimePast, camController.magnitude)); //Ashley: Like this until I an work out the stuff to make it work when the class is static
+            gameObject.GetComponent<EnemyBounce>().isBouncing = true;
+            Health -= 1;
+            Debug.Log(Health);
+            recoveryTimer = 0;
+            int direction = (int)other.gameObject.transform.localEulerAngles.z;
+            //Change Animation to Drone Hit
+            ChangeAnimationState("DroneIdle");
+
+            Knockback(recievedKnockback, direction, false);
+        }
+>>>>>>> AshBranch
     }
     //Change our current animation
     private void ChangeAnimationState(string newState) //Change title of currentState

@@ -5,16 +5,24 @@ using EZCameraShake;
 
 public class CameraController : MonoBehaviour{
 
+    //public static CameraController CamController; //So it can be accessed by other classes
+
+    //For Camera Movement Code
     public Transform player;
-
     Vector3 target, mousePos, refVel, shakeOffset;
-
     float cameraDist = 3.5f;
-
     float smoothTime = 0.2f, zStart;
+<<<<<<< HEAD
     //Screenshake code, includes text varis
     
     // Start is called before the first frame update
+=======
+
+    //Screenshake code, includes text varis
+    public float testTimePast, testX_x, testY_x, testX_y, testY_y, magnitude; //Declaring all the varis like this for testing!
+
+
+>>>>>>> AshBranch
     void Start() {
         target = player.position;
         zStart = transform.position.z;
@@ -54,6 +62,30 @@ public class CameraController : MonoBehaviour{
         tempPos = Vector3.SmoothDamp(transform.position, target, ref refVel, smoothTime);
         transform.position = tempPos;
     }
+<<<<<<< HEAD
     
+=======
+
+    public IEnumerator ScreenShake(float shakeTime, float magnitude)
+    {
+        Vector3 originalPos = new Vector3(player.position.x, player.position.y, player.position.z); //Can be anything really, it's like this for testing purposes
+
+        float timePast = testTimePast; //Puts testing vari in
+
+        while (timePast < shakeTime)
+        {
+            float xOffset = Random.Range(testX_x, testY_x) * magnitude; //determinds the offset by the test values
+
+            float yOffset = Random.Range(testX_y, testY_y) * magnitude;
+
+            transform.localPosition = new Vector3(xOffset, yOffset, originalPos.z); //Shakes based on the 
+        
+            timePast = Time.deltaTime;
+            yield return null; //Waits a frame
+        }
+            transform.localPosition = originalPos;
+    }
+
+>>>>>>> AshBranch
 
 }
