@@ -124,6 +124,17 @@
                 },
                 {
                     "name": "",
+                    "id": "709c708a-10fa-4c21-9005-afc26be1a03d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d921676e-aa11-4005-a638-31bca3b644ef",
                     "path": "<Keyboard>/shift",
                     "interactions": "",

@@ -210,6 +210,7 @@ public class PlayerController : MonoBehaviour
   */
   public void OnAttack(InputValue input) //When the player presses the Attack Button
   {
+    Debug.Log("Clicking mouse lole");
     if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
     {
       ChangeState(State.Attacking);

@@ -199,21 +199,43 @@ public class EnemyAI : MonoBehaviour
         FXManager.spawnEffect("enemyMeleeEffect1",gameObject,target,Quaternion.LookRotation(lookPos), false,effectOffset);
         state = State.Attack;
     }
+
+    private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            state = State.Bounce;
+            CameraController.CallScreenShake();
+            int direction = (int)other.gameObject.transform.localEulerAngles.z;
+            Knockback(recievedKnockback,direction,false,other.gameObject);
+            BouncedOffWall(1);
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
+        {
+
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
-            state = State.Bounce;
-            //Debug
-            gameObject.GetComponent<EnemyBounce>().isBouncing = true;
-            Health -= 1;
-            recoveryTimer = 0;
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            //Change Animation to Drone Hit
-            ChangeAnimationState("DroneIdle");
-
             Knockback(recievedKnockback,direction,false,other.gameObject);
+            BouncedOffWall(1);
         }
+    }
+
+    private void BouncedOffWall(int damage)
+    {
+        state = State.Bounce;
+        //Debug
+        gameObject.GetComponent<EnemyBounce>().isBouncing = true;
+        Health -= damage;
+        recoveryTimer = 0;
+        //Change Animation to Drone Hit
+        ChangeAnimationState("DroneIdle");
+
     }
     //Change our current animation
     private void ChangeAnimationState(string newState) //Change title of currentState
