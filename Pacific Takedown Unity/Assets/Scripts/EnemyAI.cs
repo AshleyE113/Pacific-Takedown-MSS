@@ -37,8 +37,7 @@ public class EnemyAI : MonoBehaviour
     public int attackRange;
     public float attackRecoverTime;
     bool attackCoroutineStarted = false;
-
-
+    public bool canBounce;
     public Vector2 launchDirection;
     //Animations
     private Animator animator;
@@ -205,7 +204,7 @@ public class EnemyAI : MonoBehaviour
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
             state = State.Bounce;
-            CameraController.CallScreenShake();
+            CameraController.Shake(10f,50f,0.1f,0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             Knockback(recievedKnockback,direction,false,other.gameObject);
             BouncedOffWall(1);
@@ -221,7 +220,7 @@ public class EnemyAI : MonoBehaviour
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback,direction,false,other.gameObject);
+            Knockback(recievedKnockback,direction,true,other.gameObject);
             BouncedOffWall(1);
         }
     }
@@ -248,40 +247,9 @@ public class EnemyAI : MonoBehaviour
     private void Knockback(float knockback, int zRotation, bool bounce,GameObject attack)
     {
         Debug.Log("Applying Knockback from Hit");
-        if (bounce)
+        if (!bounce)
         {
-            if (zRotation == 135f) //Facing Bottom Left
-            {
-                rb.AddForce((attack.transform.up*recievedKnockback),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 180f) //Facing Bottom Middle
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 225f) //Facing Bottom Right
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 90f) //Facing Left
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 270f) //Facing Right
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 45f) //Facing Top Left
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 0f) //Facing Top Middle
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
-            else if (zRotation == 315f) //Facing Top Right
-            {
-                rb.AddForce(((attack.transform.up*recievedKnockback)),ForceMode2D.Impulse);
-            }
+            rb.AddForce((attack.transform.up*recievedKnockback),ForceMode2D.Impulse);
         }
         else
         {
