@@ -89,94 +89,96 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch (state)
+        if (Manager.gameManager._isdead == false)
         {
-            case State.Idle:
-                //Stay in place. If player is in range, go towards them
-                if (path == null)
-                {
-                    return;
-                }
-
-                if (Vector2.Distance(rb.position, target.position) < attackRange)
-                {
-                    //When in Range, Prepare your attack
-                    state = State.PreparingAttack;
-                }
-
-                if (currentWaypoint >= path.vectorPath.Count)
-                {
-                    reachedEndOfPath = true;
-                    return;
-                }
-                else
-                {
-                    reachedEndOfPath = false;
-                }
-
-                Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-                Vector2 force = direction * speed * Time.deltaTime;
-                rb.AddForce(force);
-                float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
-                if (distance < nextWaypointDistance)
-                {
-                    currentWaypoint++;
-                }
-
-                break;
-            case State.PreparingAttack:
-                //Once in Range Prepare the Attack
-                ChangeAnimationState("DroneMeleePrep");
-                break;
-            case State.Attack:
-                //Attack player. Do damage if hits player
-                ChangeAnimationState("DroneIdle");
-                if (attackCoroutineStarted == false)
-                {
-                    StartCoroutine(AttackRecovery());
-                    attackCoroutineStarted = true;
-                }
-
-                if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
-                {
-                    rb.velocity = rb.velocity * .9f;
-                }
-                //Start Couretine to return to Idle State
-                break;
-            case State.Hit:
-                //If player attacks, it gets knocked back
-                //It can't attack player in this state
-                //BUT it can DAMAGE the player!
-                rb.velocity *= knockbackDrag;
-                if (recoveryTimer < recoveryMax)
-                {
-                    recoveryTimer += 1;
-                }
-                else
-                {
-                    if (Health > 0)
+            switch (state)
+            {
+                case State.Idle:
+                    //Stay in place. If player is in range, go towards them
+                    if (path == null)
                     {
-                        state = State.Idle;
+                        return;
+                    }
+
+                    if (Vector2.Distance(rb.position, target.position) < attackRange)
+                    {
+                        //When in Range, Prepare your attack
+                        state = State.PreparingAttack;
+                    }
+
+                    if (currentWaypoint >= path.vectorPath.Count)
+                    {
+                        reachedEndOfPath = true;
+                        return;
                     }
                     else
                     {
-                        state = State.Dead;
+                        reachedEndOfPath = false;
                     }
-                    recoveryTimer = 0;
-                }
-                break;
-            case State.Bounce:
-                //If player attacks, it bounces off objs.
-                //It can't attack player in this state
-                //BUT it can DAMAGE the player!
 
-                break;
-            case State.Dead:
-                //if hit 3 or more times by player, destory it
-                Destroy(gameObject);
-                break;
+                    Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+                    Vector2 force = direction * speed * Time.deltaTime;
+                    rb.AddForce(force);
+                    float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
+                    if (distance < nextWaypointDistance)
+                    {
+                        currentWaypoint++;
+                    }
+
+                    break;
+                case State.PreparingAttack:
+                    //Once in Range Prepare the Attack
+                    ChangeAnimationState("DroneMeleePrep");
+                    break;
+                case State.Attack:
+                    //Attack player. Do damage if hits player
+                    ChangeAnimationState("DroneIdle");
+                    if (attackCoroutineStarted == false)
+                    {
+                        StartCoroutine(AttackRecovery());
+                        attackCoroutineStarted = true;
+                    }
+
+                    if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
+                    {
+                        rb.velocity = rb.velocity * .9f;
+                    }
+                    //Start Couretine to return to Idle State
+                    break;
+                case State.Hit:
+                    //If player attacks, it gets knocked back
+                    //It can't attack player in this state
+                    //BUT it can DAMAGE the player!
+                    rb.velocity *= knockbackDrag;
+                    if (recoveryTimer < recoveryMax)
+                    {
+                        recoveryTimer += 1;
+                    }
+                    else
+                    {
+                        if (Health > 0)
+                        {
+                            state = State.Idle;
+                        }
+                        else
+                        {
+                            state = State.Dead;
+                        }
+                        recoveryTimer = 0;
+                    }
+                    break;
+                case State.Bounce:
+                    //If player attacks, it bounces off objs.
+                    //It can't attack player in this state
+                    //BUT it can DAMAGE the player!
+
+                    break;
+                case State.Dead:
+                    //if hit 3 or more times by player, destory it
+                    Destroy(gameObject);
+                    break;
+            }
         }
     }
 
@@ -211,7 +213,11 @@ public class EnemyAI : MonoBehaviour
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
         {
-
+            state = State.Bounce;
+            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
+            int direction = (int)other.gameObject.transform.localEulerAngles.z;
+            Knockback(recievedKnockback, direction, false, other.gameObject);
+            BouncedOffWall(3);
         }
     }
 

@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AshleyScene/AshScene3.unity
     guid: 8183a32d8d5f6c14fbb8b0206fa4ec1e
+  - enabled: 1
+    path: Assets/Scenes/DonoScene/DonoScene3 1.unity
+    guid: 5d0e372d1f1c0cd488497e02679aa1f4
   m_configObjects: {}

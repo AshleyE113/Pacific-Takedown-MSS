@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     public void RestartGame(){
-        SceneManager.LoadScene("DonoScene3");
+        SceneManager.LoadScene("AshScene3");
+        //Manager.gameManager.displayCanvas.enabled = false;
+        Manager.gameManager._isdead = false;
+    }
+
+    private void Update()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 }
