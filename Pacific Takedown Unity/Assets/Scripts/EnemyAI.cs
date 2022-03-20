@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,12 @@ public class EnemyAI : MonoBehaviour
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
-
+    private bool safeToUpdateDir = true;
+    private bool resetDirCooldownRunning;
     private Path path;
     private int currentWaypoint;
     private bool reachedEndOfPath = false;
-
+    private Vector2 previousFacing;
     private Seeker seeker;
     public int healthMax = 6;
     private int Health;
@@ -25,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
+    
 
     //Bounce
     public int bounceKnockback = 50;
@@ -94,7 +97,6 @@ public class EnemyAI : MonoBehaviour
             case State.Idle:
                 //Stay in place. If player is in range, go towards them
                 rb.drag = 3; //Play with this value to test this.
-
                 if (path == null)
                 {
                     return;
@@ -116,7 +118,7 @@ public class EnemyAI : MonoBehaviour
                     reachedEndOfPath = false;
                 }
 
-                Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+                direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
                 Vector2 force = direction * speed * Time.deltaTime;
                 rb.AddForce(force);
                 float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -125,11 +127,13 @@ public class EnemyAI : MonoBehaviour
                 {
                     currentWaypoint++;
                 }
+                
+                ChangeAnimationState("Movement");
 
                 break;
             case State.PreparingAttack:
                 //Once in Range Prepare the Attack
-                ChangeAnimationState("DroneMeleePrep");
+                ChangeAnimationState("AttackWindup");
                 break;
             case State.Attack:
                 //Attack player. Do damage if hits player
@@ -151,8 +155,8 @@ public class EnemyAI : MonoBehaviour
                 //It can't attack player in this state
                 //BUT it can DAMAGE the player!
                 //rb.velocity *= knockbackDrag;
-                rb.drag = 100; //Play with this value to test this.
-
+                rb.drag = 0; //Play with this value to test this.
+                rb.velocity = rb.velocity * .5f;
                 if (recoveryTimer < recoveryMax)
                 {
                     recoveryTimer += 1;
@@ -183,8 +187,38 @@ public class EnemyAI : MonoBehaviour
 
         }
     }
+    
+    
+    private void Update()
+    {
+        //set direction before normalising
+        updateEnemyDir(direction);
+    }
 
-
+    //Update our Player's Direction
+    void updateEnemyDir(Vector2 movement)
+    {
+        //Wait to see if we can update our previous direction
+        if (safeToUpdateDir)
+        {
+            //animations
+            animator.SetFloat("MovementHorizontal",previousFacing.x);
+            animator.SetFloat("MovementVertical",previousFacing.y);
+            previousFacing.x = Mathf.Round(direction.x);
+            previousFacing.y = Mathf.Round(direction.y);
+        }
+        //Set it to False
+        safeToUpdateDir = false;
+        //Start Coroutine
+        if (resetDirCooldownRunning == false) { StartCoroutine(resetDirCooldown()); resetDirCooldownRunning = true; }
+    }
+    //Reset the cooldown on updatePlayerDir
+    IEnumerator resetDirCooldown()
+    {
+        yield return new WaitForSeconds(0.15f);
+        safeToUpdateDir = true;
+        resetDirCooldownRunning = false;
+    }
     IEnumerator AttackRecovery()
     {
 
@@ -241,6 +275,7 @@ public class EnemyAI : MonoBehaviour
                 Health -= 1;
                 recoveryTimer = 0;
                 ChangeAnimationState("DroneIdle");
+                CameraController.Shake(1f, 1f, 0.1f, 0.1f);
             }
         }
     }
