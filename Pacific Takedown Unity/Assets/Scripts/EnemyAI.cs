@@ -93,6 +93,8 @@ public class EnemyAI : MonoBehaviour
         {
             case State.Idle:
                 //Stay in place. If player is in range, go towards them
+                rb.drag = 3; //Play with this value to test this.
+
                 if (path == null)
                 {
                     return;
@@ -148,7 +150,9 @@ public class EnemyAI : MonoBehaviour
                 //If player attacks, it gets knocked back
                 //It can't attack player in this state
                 //BUT it can DAMAGE the player!
-                rb.velocity *= knockbackDrag;
+                //rb.velocity *= knockbackDrag;
+                rb.drag = 100; //Play with this value to test this.
+
                 if (recoveryTimer < recoveryMax)
                 {
                     recoveryTimer += 1;
@@ -203,11 +207,14 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
-            state = State.Bounce;
-            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
-            int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback, direction, false, other.gameObject);
-            BouncedOffWall(1);
+            if (canBounce)
+            {
+                state = State.Bounce;
+                CameraController.Shake(10f, 50f, 0.1f, 0.1f);
+                int direction = (int)other.gameObject.transform.localEulerAngles.z;
+                Knockback(recievedKnockback, direction, false, other.gameObject);
+                BouncedOffWall(1);
+            }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
         {
@@ -220,8 +227,21 @@ public class EnemyAI : MonoBehaviour
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback, direction, true, other.gameObject);
-            BouncedOffWall(1);
+            if (canBounce)
+            {
+                rb.velocity = Vector2.zero;
+                Knockback(recievedKnockback, direction, true, other.gameObject);
+                BouncedOffWall(1);
+            }
+            else
+            {
+                rb.velocity = Vector2.zero;
+                Knockback(recievedKnockback, direction, false, other.gameObject);
+                state = State.Hit;
+                Health -= 1;
+                recoveryTimer = 0;
+                ChangeAnimationState("DroneIdle");
+            }
         }
     }
 
