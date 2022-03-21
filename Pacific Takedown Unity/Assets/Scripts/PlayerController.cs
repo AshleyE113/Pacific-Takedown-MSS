@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     //Mouse
     private Vector2 mousePos;
     [HideInInspector] public static Vector2 lookDir;
+    private Vector2 stickDir;
     public Camera cam; //Optimize Later
     private float angle;
     public GameObject rotationObject;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
       rb = gameObject.GetComponent<Rigidbody2D>();
       playerFacing = new Vector2(0f, -1f);
       previousFacing = new Vector2(0f, -1f);
+      stickDir = new Vector2(0f, -1f);
       animator = gameObject.GetComponent<Animator>();
       mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
       ChangeState(State.Ready);
@@ -72,7 +74,8 @@ public class PlayerController : MonoBehaviour
         //Grab our Current Input from Input Manager
         movement = InputManager.directionVector;
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        lookDir = mousePos - rb.position;
+        lookDir = mousePos - rb.position; //If on Mouse
+        //lookDir = stickDir; //If on GamePad
         lookDir = lookDir.normalized;
         angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
 
@@ -234,6 +237,16 @@ public class PlayerController : MonoBehaviour
       }
     }
   }
+
+  public void OnRotate(InputValue input) //When the player Rotates the Left Stick
+  {
+    if (input.Get<Vector2>().x != 0 && input.Get<Vector2>().y != 0)
+    {
+      stickDir = input.Get<Vector2>();
+    }
+    
+  }
+  
 
   public void endAttack()
   {
