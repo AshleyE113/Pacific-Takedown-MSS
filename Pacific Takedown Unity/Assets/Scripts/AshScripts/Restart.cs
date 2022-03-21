@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class Restart : MonoBehaviour
 {
     public void RestartGame(){
+        Manager.gameManager._isdead = false;
         SceneManager.LoadScene("AshScene3");
         //Manager.gameManager.displayCanvas.enabled = false;
-        Manager.gameManager._isdead = false;
+        
     }
 
     private void Update()

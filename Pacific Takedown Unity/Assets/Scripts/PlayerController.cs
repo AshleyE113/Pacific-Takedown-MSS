@@ -101,6 +101,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Dead");
         }
       }
+
+        DontDestroyOnLoad(this.gameObject);
   }
   //Update our Player's Direction
   void updatePlayerDir(Vector2 movement)
@@ -115,6 +117,7 @@ public class PlayerController : MonoBehaviour
     }
     //Set it to False
     safeToUpdateDir = false;
+       
     //Start Coroutine
     if (resetDirCooldownRunning == false) { StartCoroutine(resetDirCooldown()); resetDirCooldownRunning = true; }
   }

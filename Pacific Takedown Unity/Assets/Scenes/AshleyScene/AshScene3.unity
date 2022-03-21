@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5562548454615888625, guid: 03e7a107ebe9ecd40a067c09545c7bd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e7a107ebe9ecd40a067c09545c7bd9, type: 3}
 --- !u!1001 &272167746

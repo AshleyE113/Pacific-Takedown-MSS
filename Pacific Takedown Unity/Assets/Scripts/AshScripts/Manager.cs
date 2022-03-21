@@ -39,24 +39,25 @@ public class Manager : MonoBehaviour
     {
         if (player != null)
         {
+            Debug.Log("Exists");
             transform.position = player.transform.position; //Follows the player
             if (pController.playerHealth <= 0){
                 _isdead = true;
+                deathText.text = "You died, idiot.";
+                displayCanvas.enabled = true;
+                Debug.Log("is true");
             }
             else
             {
                 _isdead = false;
-            }
-
-            if (_isdead == true)
-            {
-                deathText.text = "You died, idiot.";
-                displayCanvas.enabled = true;
-            }
-            else
-            {
                 displayCanvas.enabled = false;
+                Debug.Log("Dead ool: " + _isdead);
+                Debug.Log(displayCanvas.enabled);
             }
+        }
+        else
+        {
+            Debug.Log("GONE!");
         }
         DontDestroyOnLoad(this.gameObject);
     }
