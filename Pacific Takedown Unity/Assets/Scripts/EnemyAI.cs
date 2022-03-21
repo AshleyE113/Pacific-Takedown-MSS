@@ -217,7 +217,23 @@ public class EnemyAI : MonoBehaviour
             CameraController.Shake(10f, 50f, 0.1f, 0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             Knockback(recievedKnockback, direction, false, other.gameObject);
-            BouncedOffWall(3);
+            BouncedOffWall(6); //Extra Knockback
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper"))
+        {
+            state = State.Bounce;
+            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
+            int direction = (int)other.gameObject.transform.localEulerAngles.z;
+            Knockback(recievedKnockback, direction, false, other.gameObject);
+            BouncedOffWall(3); //Bumper damage 
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") && gameObject.GetComponent<EnemyBounce>().isBouncing == true) //Not sure if this works yet. WILL MAKE THIS A FUNCION!!!!
+        {
+            state = State.Bounce;
+            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
+            int direction = (int)other.gameObject.transform.localEulerAngles.z;
+            Knockback(recievedKnockback, direction, false, other.gameObject);
+            BouncedOffWall(3); // subject to change 
         }
     }
 
