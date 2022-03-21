@@ -94,13 +94,15 @@ public class EnemyAI : MonoBehaviour
     {
         if (Manager.gameManager._isdead == false)
         {
-            case State.Idle:
-                //Stay in place. If player is in range, go towards them
-                rb.drag = 3; //Play with this value to test this.
-                if (path == null)
-                {
-                    return;
-                }
+            switch (state)
+            {
+                case State.Idle:
+                    //Stay in place. If player is in range, go towards them
+                    rb.drag = 3; //Play with this value to test this.
+                    if (path == null)
+                    {
+                        return;
+                    }
 
                     if (Vector2.Distance(rb.position, target.position) < attackRange)
                     {
@@ -118,62 +120,46 @@ public class EnemyAI : MonoBehaviour
                         reachedEndOfPath = false;
                     }
 
-                direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-                Vector2 force = direction * speed * Time.deltaTime;
-                rb.AddForce(force);
-                float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+                    direction = ((Vector2) path.vectorPath[currentWaypoint] - rb.position).normalized;
+                    Vector2 force = direction * speed * Time.deltaTime;
+                    rb.AddForce(force);
+                    float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-                if (distance < nextWaypointDistance)
-                {
-                    currentWaypoint++;
-                }
-                
-                ChangeAnimationState("Movement");
+                    if (distance < nextWaypointDistance)
+                    {
+                        currentWaypoint++;
+                    }
 
-                break;
-            case State.PreparingAttack:
-                //Once in Range Prepare the Attack
-                ChangeAnimationState("AttackWindup");
-                break;
-            case State.Attack:
-                //Attack player. Do damage if hits player
-                ChangeAnimationState("DroneIdle");
-                if (attackCoroutineStarted == false)
-                {
-                    StartCoroutine(AttackRecovery());
-                    attackCoroutineStarted = true;
-                }
+                    ChangeAnimationState("Movement");
 
-                if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
-                {
-                    rb.velocity = rb.velocity * .9f;
-                }
-                //Start Couretine to return to Idle State
-                break;
-            case State.Hit:
-                //If player attacks, it gets knocked back
-                //It can't attack player in this state
-                //BUT it can DAMAGE the player!
-                //rb.velocity *= knockbackDrag;
-                rb.drag = 0; //Play with this value to test this.
-                rb.velocity = rb.velocity * .5f;
-                if (recoveryTimer < recoveryMax)
-                {
-                    recoveryTimer += 1;
-                }
-                else
-                {
-                    if (Health > 0)
+                    break;
+                case State.PreparingAttack:
+                    //Once in Range Prepare the Attack
+                    ChangeAnimationState("AttackWindup");
+                    break;
+                case State.Attack:
+                    //Attack player. Do damage if hits player
+                    ChangeAnimationState("DroneIdle");
+                    if (attackCoroutineStarted == false)
+                    {
+                        StartCoroutine(AttackRecovery());
+                        attackCoroutineStarted = true;
+                    }
+
+                    if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
                     {
                         rb.velocity = rb.velocity * .9f;
                     }
+
                     //Start Couretine to return to Idle State
                     break;
                 case State.Hit:
                     //If player attacks, it gets knocked back
                     //It can't attack player in this state
                     //BUT it can DAMAGE the player!
-                    rb.velocity *= knockbackDrag;
+                    //rb.velocity *= knockbackDrag;
+                    rb.drag = 0; //Play with this value to test this.
+                    rb.velocity = rb.velocity * .5f;
                     if (recoveryTimer < recoveryMax)
                     {
                         recoveryTimer += 1;
@@ -182,27 +168,23 @@ public class EnemyAI : MonoBehaviour
                     {
                         if (Health > 0)
                         {
-                            state = State.Idle;
+                            rb.velocity = rb.velocity * .9f;
                         }
-                        else
-                        {
-                            state = State.Dead;
-                        }
-                        recoveryTimer = 0;
                     }
-                    break;
+                    //Start Couretine to return to Idle State
+                        break;
                 case State.Bounce:
-                    //If player attacks, it bounces off objs.
-                    //It can't attack player in this state
-                    //BUT it can DAMAGE the player!
+                        //If player attacks, it bounces off objs.
+                        //It can't attack player in this state
+                        //BUT it can DAMAGE the player!
 
-                    break;
-                case State.Dead:
-                    //if hit 3 or more times by player, destory it
-                    Destroy(gameObject);
-                    break;
+                        break;
+                        case State.Dead:
+                        //if hit 3 or more times by player, destory it
+                        Destroy(gameObject);
+                        break;
+                    }
             }
-        }
     }
     
     
