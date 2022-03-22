@@ -66,8 +66,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
   void Update()
   {
-     if (Manager.gameManager._isdead == false)
-     {
+     //if (Manager.gameManager._isdead == false)
+     //{
 
         //Grab our Current Input from Input Manager
         movement = InputManager.directionVector;
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Dead");
         }
-      }
+     // }
   }
   //Update our Player's Direction
   void updatePlayerDir(Vector2 movement)
@@ -128,8 +128,8 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
-        if (Manager.gameManager._isdead == false)
-        {
+       // if (Manager.gameManager._isdead == false)
+        //{
             animator.SetFloat("MouseHorizontal", lookDir.x);
             animator.SetFloat("MouseVertical", lookDir.y);
             //Change Position of Swing Point
@@ -184,7 +184,7 @@ public class PlayerController : MonoBehaviour
 
                     break;
             }
-        }
+        //}
   }
   //Change our current animation
   public void ChangeAnimationState(string newState) //Change title of currentState

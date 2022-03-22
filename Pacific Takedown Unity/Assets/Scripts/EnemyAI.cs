@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
     public int attackRange;
     public float attackRecoverTime;
     bool attackCoroutineStarted = false;
-    public bool canBounce;
+    public bool canBounce = true;
     public Vector2 launchDirection;
     //Animations
     private Animator animator;
@@ -92,8 +92,8 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Manager.gameManager._isdead == false)
-        {
+        //if (Manager.gameManager._isdead == false)
+        //{
             switch (state)
             {
                 case State.Idle:
@@ -108,6 +108,8 @@ public class EnemyAI : MonoBehaviour
                     {
                         //When in Range, Prepare your attack
                         state = State.PreparingAttack;
+                       
+                        
                     }
 
                     if (currentWaypoint >= path.vectorPath.Count)
@@ -130,16 +132,20 @@ public class EnemyAI : MonoBehaviour
                         currentWaypoint++;
                     }
 
-                    ChangeAnimationState("Movement");
+                    //ChangeAnimationState("Movement");
 
                     break;
                 case State.PreparingAttack:
-                    //Once in Range Prepare the Attack
-                    ChangeAnimationState("AttackWindup");
-                    break;
+                //Once in Range Prepare the Attack
+                Debug.Log("Prepping");
+                Debug.Log("RB pos :" + rb.position + ", target pos: " + target.position + ", " + "ATTRange: " + attackRange);
+                //state = State.Attack;
+                CommenceAttack();
+                // ChangeAnimationState("AttackWindup");
+                break;
                 case State.Attack:
                     //Attack player. Do damage if hits player
-                    ChangeAnimationState("DroneIdle");
+                    //ChangeAnimationState("DroneIdle");
                     if (attackCoroutineStarted == false)
                     {
                         StartCoroutine(AttackRecovery());
@@ -184,7 +190,7 @@ public class EnemyAI : MonoBehaviour
                         Destroy(gameObject);
                         break;
                     }
-            }
+           // }
     }
     
     
