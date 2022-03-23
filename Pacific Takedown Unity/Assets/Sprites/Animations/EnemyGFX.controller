@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DroneMeleePrep
+  m_Name: AttackWindup
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -37,13 +37,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8739534114245180378}
-    m_Position: {x: 80, y: 410, z: 0}
+    m_Position: {x: 110, y: 410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5755988769585157521}
     m_Position: {x: 406.47076, y: -83.96985, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8687485480075477771}
-    m_Position: {x: 441.47076, y: -18.969849, z: 0}
+    m_Position: {x: 430, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -109,7 +109,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DroneIdle
+  m_Name: Movement
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

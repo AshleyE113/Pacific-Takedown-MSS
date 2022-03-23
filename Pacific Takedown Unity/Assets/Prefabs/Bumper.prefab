@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6104453809145228785}
   - component: {fileID: 6104453809145228784}
   - component: {fileID: 6104453809145228787}
-  - component: {fileID: 1125013654251713590}
-  - component: {fileID: 6238958493150168564}
+  - component: {fileID: -2512197281521050092}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Bumper
@@ -104,21 +103,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1125013654251713590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6104453809145228786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 227b41d22005f9848b46a19acd6f5bf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wasHit: 0
---- !u!61 &6238958493150168564
-BoxCollider2D:
+--- !u!58 &-2512197281521050092
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,15 +117,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 4, y: 4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
-  m_EdgeRadius: 0
+  m_Radius: 1.6690788

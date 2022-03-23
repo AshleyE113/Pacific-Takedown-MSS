@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: c27d7c5e56b8948948f78b2d8c1a5d20
+guid: a475d352d66f9684eb3db08f068b0b3d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3917342530514090406
-    second: AtkSE-Sheet_0
+      213: 2498210833870245246
+    second: AtkE-Sheet_0
   - first:
-      213: 3868597142543313878
-    second: AtkSE-Sheet_1
-  - first:
-      213: 7993242824456276761
-    second: AtkSE-Sheet_2
+      213: -8420331283773279913
+    second: AtkE-Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AtkSE-Sheet_0
+      name: AtkE-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,20 +105,20 @@ TextureImporter:
         width: 52
         height: 40
       alignment: 9
-      pivot: {x: 0.5175439, y: 0.106579125}
+      pivot: {x: 0.49999997, y: 0.06286542}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a568d2539bdc2a9c0800000000000000
-      internalID: -3917342530514090406
+      spriteID: e7d4ede648d6ba220800000000000000
+      internalID: 2498210833870245246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtkSE-Sheet_1
+      name: AtkE-Sheet_1
       rect:
         serializedVersion: 2
         x: 52
@@ -129,35 +126,14 @@ TextureImporter:
         width: 52
         height: 40
       alignment: 9
-      pivot: {x: 0.5263158, y: 0.07807036}
+      pivot: {x: 0.4912281, y: 0.08947361}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dba26cba9400b530800000000000000
-      internalID: 3868597142543313878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtkSE-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 0
-        width: 52
-        height: 40
-      alignment: 9
-      pivot: {x: 0.5350879, y: 0.11798246}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91b0823bff3bdee60800000000000000
-      internalID: 7993242824456276761
+      spriteID: 751b59b6f49f42b80800000000000000
+      internalID: -8420331283773279913
       vertices: []
       indices: 
       edges: []
