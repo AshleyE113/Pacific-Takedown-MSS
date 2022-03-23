@@ -176,10 +176,11 @@ GameObject:
   - component: {fileID: 4552299704260418019}
   - component: {fileID: 4552299704260418016}
   - component: {fileID: 4552299704260418021}
-  - component: {fileID: 4552299704260418018}
   - component: {fileID: 4552299704260418020}
   - component: {fileID: 4552299704260418023}
   - component: {fileID: 4552299704260418022}
+  - component: {fileID: 4590134388559260250}
+  - component: {fileID: 1872623200451236152}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -275,30 +276,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4552299704260418018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4552299704260418017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c51ad599e1a5544439eda610c210c5e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 12
-  rb: {fileID: 0}
-  playerFacing: {x: 0, y: 0}
-  directionResetTime: 0.125
-  playerHealth: 3
-  cam: {fileID: 0}
-  rotationObject: {fileID: 3657015674010336250}
-  attackIndex: 0
-  meleeRange: 0
-  lungeSpeed: 50
-  dashForce: 250
-  dashDistance: 3
 --- !u!95 &4552299704260418020
 Animator:
   serializedVersion: 3
@@ -374,6 +351,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7052087, y: 0.45056787}
   m_EdgeRadius: 0
+--- !u!114 &4590134388559260250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552299704260418017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19a0f20e87065e4e9212fbcb97b18c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  rb: {fileID: 0}
+  playerFacing: {x: 0, y: 0}
+  directionResetTime: 0.25
+  playerHealth: 3
+  cam: {fileID: 0}
+  rotationObject: {fileID: 3657015674010336250}
+  attackIndex: 0
+  meleeRange: 0
+  lungeSpeed: 50
+  dashForce: 100
+  dashDistance: 30
+--- !u!114 &1872623200451236152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552299704260418017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f0b9fb86d9616438158bbd3eb88d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8371670226818428478
 GameObject:
   m_ObjectHideFlags: 0

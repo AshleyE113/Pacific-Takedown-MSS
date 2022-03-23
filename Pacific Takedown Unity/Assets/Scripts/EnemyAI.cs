@@ -6,6 +6,9 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+
+    //Class call for now
+    public ChangeColor bumperChange;
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -27,7 +30,7 @@ public class EnemyAI : MonoBehaviour
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
-    
+
 
     //Bounce
     public int bounceKnockback = 50;
@@ -40,7 +43,7 @@ public class EnemyAI : MonoBehaviour
     public int attackRange;
     public float attackRecoverTime;
     bool attackCoroutineStarted = false;
-    public bool canBounce = true;
+    public bool canBounce;
     public Vector2 launchDirection;
     //Animations
     private Animator animator;
@@ -92,8 +95,8 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if (Manager.gameManager._isdead == false)
-        //{
+        if (Manager.gameManager._isdead == false)
+        {
             switch (state)
             {
                 case State.Idle:
@@ -108,8 +111,6 @@ public class EnemyAI : MonoBehaviour
                     {
                         //When in Range, Prepare your attack
                         state = State.PreparingAttack;
-                       
-                        
                     }
 
                     if (currentWaypoint >= path.vectorPath.Count)
@@ -122,7 +123,7 @@ public class EnemyAI : MonoBehaviour
                         reachedEndOfPath = false;
                     }
 
-                    direction = ((Vector2) path.vectorPath[currentWaypoint] - rb.position).normalized;
+                    direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
                     Vector2 force = direction * speed * Time.deltaTime;
                     rb.AddForce(force);
                     float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -132,20 +133,16 @@ public class EnemyAI : MonoBehaviour
                         currentWaypoint++;
                     }
 
-                    //ChangeAnimationState("Movement");
+                    ChangeAnimationState("Movement");
 
                     break;
                 case State.PreparingAttack:
-                //Once in Range Prepare the Attack
-                Debug.Log("Prepping");
-                Debug.Log("RB pos :" + rb.position + ", target pos: " + target.position + ", " + "ATTRange: " + attackRange);
-                //state = State.Attack;
-                CommenceAttack();
-                // ChangeAnimationState("AttackWindup");
-                break;
+                    //Once in Range Prepare the Attack
+                    ChangeAnimationState("AttackWindup");
+                    break;
                 case State.Attack:
                     //Attack player. Do damage if hits player
-                    //ChangeAnimationState("DroneIdle");
+                    ChangeAnimationState("DroneIdle");
                     if (attackCoroutineStarted == false)
                     {
                         StartCoroutine(AttackRecovery());
@@ -178,22 +175,22 @@ public class EnemyAI : MonoBehaviour
                         }
                     }
                     //Start Couretine to return to Idle State
-                        break;
+                    break;
                 case State.Bounce:
-                        //If player attacks, it bounces off objs.
-                        //It can't attack player in this state
-                        //BUT it can DAMAGE the player!
+                    //If player attacks, it bounces off objs.
+                    //It can't attack player in this state
+                    //BUT it can DAMAGE the player!
 
-                        break;
-                        case State.Dead:
-                        //if hit 3 or more times by player, destory it
-                        Destroy(gameObject);
-                        break;
-                    }
-           // }
+                    break;
+                case State.Dead:
+                    //if hit 3 or more times by player, destory it
+                    Destroy(gameObject);
+                    break;
+            }
+        }
     }
-    
-    
+
+
     private void Update()
     {
         //set direction before normalising
@@ -207,8 +204,8 @@ public class EnemyAI : MonoBehaviour
         if (safeToUpdateDir)
         {
             //animations
-            animator.SetFloat("MovementHorizontal",previousFacing.x);
-            animator.SetFloat("MovementVertical",previousFacing.y);
+            animator.SetFloat("MovementHorizontal", previousFacing.x);
+            animator.SetFloat("MovementVertical", previousFacing.y);
             previousFacing.x = Mathf.Round(direction.x);
             previousFacing.y = Mathf.Round(direction.y);
         }
@@ -263,9 +260,10 @@ public class EnemyAI : MonoBehaviour
             Knockback(recievedKnockback, direction, false, other.gameObject);
             BouncedOffWall(6); //Extra Knockback
         }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper"))
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && gameObject.GetComponent<EnemyBounce>().isBouncing == true)
         {
             state = State.Bounce;
+            bumperChange.wasHit = true; //Tells the button to change colors
             CameraController.Shake(10f, 50f, 0.1f, 0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             Knockback(recievedKnockback, direction, false, other.gameObject);
