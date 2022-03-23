@@ -136,13 +136,13 @@ public class EnemyAI : MonoBehaviour
                         currentWaypoint++;
                     }
 
-                    //ChangeAnimationState("Movement");
+                    ChangeAnimationState("Movement");
 
                     break;
                 case State.PreparingAttack:
                     //Once in Range Prepare the Attack
-                    //ChangeAnimationState("AttackWindup");
-                    CommenceAttack();
+                    ChangeAnimationState("AttackWindup");
+                    //CommenceAttack();
                     break;
                 case State.Attack:
                     //Attack player. Do damage if hits player

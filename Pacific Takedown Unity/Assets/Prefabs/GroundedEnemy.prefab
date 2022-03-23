@@ -293,8 +293,8 @@ GameObject:
   - component: {fileID: 6407205619561486535}
   - component: {fileID: 6407205619561486534}
   - component: {fileID: 6407205619561486555}
-  - component: {fileID: 6407205619561486552}
   - component: {fileID: 546710764697909685}
+  - component: {fileID: 333625998}
   m_Layer: 7
   m_Name: GroundedEnemy
   m_TagString: Untagged
@@ -382,32 +382,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6407205619561486552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6407205619561486554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577060d06e9c4455c95d5673fff82267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 800
-  nextWaypointDistance: 2
-  healthMax: 15
-  recievedKnockback: 50
-  recoveryMax: 30
-  knockbackDrag: 0.75
-  bounceKnockback: 50
-  myFX: {fileID: 0}
-  attackRange: 4
-  attackRecoverTime: 1
-  canBounce: 0
-  launchDirection: {x: 0, y: 0}
-  state: 0
 --- !u!114 &546710764697909685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,3 +400,32 @@ MonoBehaviour:
   testDrag: 3
   isBouncing: 0
   bounceLimit: 5
+--- !u!114 &333625998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407205619561486554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daedbe0f84463c147838dc9f78216024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bumperChange: {fileID: 0}
+  hitPause: {fileID: 0}
+  HiPaVal: 1
+  target: {fileID: 0}
+  speed: 1200
+  nextWaypointDistance: 3
+  healthMax: 20
+  recievedKnockback: 75
+  recoveryMax: 90
+  knockbackDrag: 0
+  bounceKnockback: 50
+  myFX: {fileID: 0}
+  attackRange: 4
+  attackRecoverTime: 5
+  canBounce: 0
+  launchDirection: {x: 0, y: 0}
+  state: 0
