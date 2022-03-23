@@ -46,7 +46,7 @@ public class EnemyAI : MonoBehaviour
     public int attackRange;
     public float attackRecoverTime;
     bool attackCoroutineStarted = false;
-    public bool canBounce;
+    public bool canBounce = true;
     public Vector2 launchDirection;
     //Animations
     private Animator animator;
@@ -98,8 +98,8 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Manager.gameManager._isdead == false)
-        {
+        //if (Manager.gameManager._isdead == false)
+        //{
             switch (state)
             {
                 case State.Idle:
@@ -191,7 +191,7 @@ public class EnemyAI : MonoBehaviour
                     Destroy(gameObject);
                     break;
             }
-        }
+       // }
     }
 
 
