@@ -9,16 +9,19 @@ public class FXManager : MonoBehaviour
     //Non-Static
     public GameObject playerMeleeEffectNS;
     public GameObject enemyMeleeEffectNS;
+    public GameObject explosionEffectNS;
 
     //Static Versions
     public static GameObject playerMeleeEffect;
     public static GameObject enemyMeleeEffect;
+    public static GameObject explosionEffect;
 
     private void Awake()
     {
         //Declare Effects on Awake
         playerMeleeEffect = playerMeleeEffectNS;
         enemyMeleeEffect = enemyMeleeEffectNS;
+        explosionEffect = explosionEffectNS;
     }
 
     public static void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)
@@ -42,6 +45,16 @@ public class FXManager : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Effect.transform.parent = spawn.transform;
             Effect.transform.up = direction;
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "explosionEffect")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(enemyMeleeEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
+            Effect.transform.parent = spawn.transform;
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;

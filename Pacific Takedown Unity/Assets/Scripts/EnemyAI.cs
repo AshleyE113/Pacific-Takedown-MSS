@@ -69,7 +69,7 @@ public class EnemyAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, 0.5f);
-
+        //FXManager.explosionEffect.SetActive(false);
         state = State.Idle;
         Health = healthMax;
         //Important variables for bounce
@@ -346,8 +346,25 @@ public class EnemyAI : MonoBehaviour
             gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb, PlayerController.lookDir.x, PlayerController.lookDir.y, bounceKnockback);
         }
 
-
-        //
     }
+    /*
+    public void ExplosionPEffect(bool flipped, float zRotation, Vector2 offset)
+    {
+        if (!fxSpawned)
+        {
+            if (!flipped)
+            {
+                FXManager.spawnEffect("explosionEffect", this.gameObject.transform.position, null, new Quaternion(0f, 0f, gameObject.transform.rotation.eulerAngles.z
+                  , 1f), false, offset);
+            }
+            else
+            {
+                FXManager.spawnEffect("explosionEffect", gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject, null, new Quaternion(0f, 0f, gameObject.transform.rotation.eulerAngles.z
+                  , 1f), true, offset);
+            }
+
+            fxSpawned = true;
+        }
+    }*/
 
 }
