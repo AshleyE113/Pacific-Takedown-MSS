@@ -19,7 +19,6 @@ public class ChangeColor : MonoBehaviour
         if (wasHit == true)
         {
             bumperHitCol.color = Color.magenta;
-            Debug.Log("HITTT");
             wasHit = false;
         }
         else

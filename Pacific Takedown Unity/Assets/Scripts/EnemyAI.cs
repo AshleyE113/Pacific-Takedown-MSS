@@ -9,6 +9,9 @@ public class EnemyAI : MonoBehaviour
 
     //Class call for now
     public ChangeColor bumperChange;
+    public HitStop hitPause;
+    public float HiPaVal;
+
     public Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -133,16 +136,17 @@ public class EnemyAI : MonoBehaviour
                         currentWaypoint++;
                     }
 
-                    ChangeAnimationState("Movement");
+                    //ChangeAnimationState("Movement");
 
                     break;
                 case State.PreparingAttack:
                     //Once in Range Prepare the Attack
-                    ChangeAnimationState("AttackWindup");
+                    //ChangeAnimationState("AttackWindup");
+                    CommenceAttack();
                     break;
                 case State.Attack:
                     //Attack player. Do damage if hits player
-                    ChangeAnimationState("DroneIdle");
+                    //ChangeAnimationState("DroneIdle");
                     if (attackCoroutineStarted == false)
                     {
                         StartCoroutine(AttackRecovery());
@@ -286,6 +290,8 @@ public class EnemyAI : MonoBehaviour
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             if (canBounce)
             {
+                hitPause.Stop(HiPaVal);
+                Debug.Log("Hit/STOP");
                 rb.velocity = Vector2.zero;
                 Knockback(recievedKnockback, direction, true, other.gameObject);
                 BouncedOffWall(1);
@@ -324,7 +330,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Knockback(float knockback, int zRotation, bool bounce, GameObject attack)
     {
-        Debug.Log("Applying Knockback from Hit");
+        //Debug.Log("Applying Knockback from Hit");
         if (!bounce)
         {
             rb.AddForce((attack.transform.up * recievedKnockback), ForceMode2D.Impulse);

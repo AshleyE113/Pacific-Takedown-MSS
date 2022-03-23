@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5562548454550127696}
-  - component: {fileID: 5562548454550127697}
+  - component: {fileID: 7447645335330043201}
   m_Layer: 0
   m_Name: ToRestartScene
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 5562548454615888589}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5562548454550127697
+--- !u!114 &7447645335330043201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5562548454550127699}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd2b5280c6b2e5b40b2b98ade6dfdf8c, type: 3}
+  m_Script: {fileID: 11500000, guid: a55c34bb2c36e8743938b775f6c23a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5562548454615888625
@@ -55,7 +55,6 @@ GameObject:
   - component: {fileID: 5562548454615888588}
   - component: {fileID: 5562548454615888591}
   - component: {fileID: 5562548454615888590}
-  - component: {fileID: 5562548454615888586}
   m_Layer: 5
   m_Name: DeathCanvas
   m_TagString: Untagged
@@ -146,18 +145,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5562548454615888586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5562548454615888625}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf220ac804ad77498c72d35a483b8f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5562548455788714714
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +265,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5562548454550127697}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Restart, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
