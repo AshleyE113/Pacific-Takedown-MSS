@@ -199,6 +199,11 @@ public class EnemyAI : MonoBehaviour
     {
         //set direction before normalising
         updateEnemyDir(direction);
+
+        if (Health <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 
     //Update our Player's Direction
