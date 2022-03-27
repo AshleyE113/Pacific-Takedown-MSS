@@ -202,6 +202,8 @@ public class EnemyAI : MonoBehaviour
 
         if (Health <= 0)
         {
+            //Screenshake and play explosion here
+            CameraController.Shake(1f, 1f, 0.1f, 0.1f);
             this.gameObject.SetActive(false);
         }
     }
@@ -255,7 +257,6 @@ public class EnemyAI : MonoBehaviour
             if (canBounce)
             {
                 state = State.Bounce;
-                CameraController.Shake(10f, 50f, 0.1f, 0.1f);
                 int direction = (int)other.gameObject.transform.localEulerAngles.z;
                 Knockback(recievedKnockback, direction, false, other.gameObject);
                 BouncedOffWall(1);
@@ -282,7 +283,6 @@ public class EnemyAI : MonoBehaviour
         {
             state = State.Bounce;
             Debug.Log("WE Hit!");
-            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             Knockback(recievedKnockback, direction, false, other.gameObject);
             BouncedOffWall(3); // subject to change 
@@ -297,7 +297,6 @@ public class EnemyAI : MonoBehaviour
             if (canBounce)
             {
                 hitPause.Stop(HiPaVal);
-                Debug.Log("Hit/STOP");
                 rb.velocity = Vector2.zero;
                 Knockback(recievedKnockback, direction, true, other.gameObject);
                 BouncedOffWall(1);
@@ -310,7 +309,6 @@ public class EnemyAI : MonoBehaviour
                 Health -= 1;
                 recoveryTimer = 0;
                 ChangeAnimationState("DroneIdle");
-                CameraController.Shake(1f, 1f, 0.1f, 0.1f);
             }
         }
     }
