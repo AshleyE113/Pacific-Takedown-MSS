@@ -259,13 +259,13 @@ public class EnemyAI : MonoBehaviour
                 state = State.Bounce;
                 int direction = (int)other.gameObject.transform.localEulerAngles.z;
                 Knockback(recievedKnockback, direction, false, other.gameObject);
-                BouncedOffWall(1);
+                //BouncedOffWall(1);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
         {
             state = State.Bounce;
-            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
+            CameraController.Shake(100f, 50f, 0.1f, 0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             Knockback(recievedKnockback, direction, false, other.gameObject);
             BouncedOffWall(6); //Extra Knockback
