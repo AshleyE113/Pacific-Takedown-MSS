@@ -30,7 +30,11 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c751f051f2b292926237f07260e3bd1e33136e7b378fce9332b25
       flags: 0
     RecentlyUsedScenePath-8:
+<<<<<<< refs/remotes/origin/aribranch2
       value: 22424703114646680e0b0227036c7b1f18182b292926237f1e2a183de7cd3531eca812e6e9350c3f3c0cea684a2b0f36e613
+=======
+      value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece262a7f234362820
+>>>>>>> //Fixed Enemy Rigidbody, Cleaned Player Code
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

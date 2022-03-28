@@ -21,12 +21,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 previousFacing;
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
-    private string directionFacing;
-    public int playerHealth = 3; //Ashley: Player health vari, the changes I make will be formatted like this! 
+    public int playerHealth = 3;
     //Mouse
     private Vector2 mousePos;
     [HideInInspector] public static Vector2 lookDir;
-    private Vector2 stickDir;
+    private Vector2 stickDir; //for controller
     public Camera cam; //Optimize Later
     private float angle;
     public GameObject rotationObject;
@@ -82,11 +81,8 @@ public class PlayerController : MonoBehaviour
         //Set the Directon we are facing
         playerFacing.x = Mathf.Round(lookDir.x);
         playerFacing.y = Mathf.Round(lookDir.y);
-        if (movement.x == 0 && movement.y == 0)
-        {
-            //if there is no input, it does nothing...
-        }
-        else
+
+        if (movement.x != 0 && movement.y != 0)
         {
             //set direction before normalising
             updatePlayerDir(movement);
@@ -94,14 +90,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
-        if (CurrentState == State.Hit)
-        {
-
-        }
-        if (playerHealth <= 0)
-        {
-            Debug.Log("Dead");
         }
      // }
   }
@@ -201,26 +189,9 @@ public class PlayerController : MonoBehaviour
   private static void ChangeState(State state)
   {
     CurrentState = state;
-    
-    switch (state)
-    {
-
-    }
   }
-/*
-  public void OnDash(InputValue input)
-  {
-    if (CurrentState == State.Ready || CurrentState == State.Attacking) //If in the ready state, and they attack. Go to Attack State
-    {
-      Debug.Log("Dashing");
-      PlayerDirection.callDirection("Dash",previousFacing,GetComponent<PlayerController>());
-      ChangeState(State.Dashing);
-    }
-  }
-  */
   public void OnAttack(InputValue input) //When the player presses the Attack Button
   {
-    Debug.Log("Clicking mouse lole");
     if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
     {
       ChangeState(State.Attacking);
@@ -244,7 +215,6 @@ public class PlayerController : MonoBehaviour
     {
       stickDir = input.Get<Vector2>();
     }
-    
   }
   
 
@@ -265,7 +235,7 @@ public class PlayerController : MonoBehaviour
     if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
     {
       ChangeState(State.Hit);
-      playerHealth--; //Ashley: Takes away health
+      playerHealth--;
       //Change Animation to Player Hit
       PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
       //Make THem Invulnerable
