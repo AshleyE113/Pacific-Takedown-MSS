@@ -8,7 +8,6 @@ public class EnemyAI : MonoBehaviour
 {
 
     //Class call for now
-    public ChangeColor bumperChange;
     public HitStop hitPause;
     public float HiPaVal;
 
@@ -23,13 +22,13 @@ public class EnemyAI : MonoBehaviour
     private Vector2 previousFacing;
     private Seeker seeker;
     public int healthMax = 6;
-    private int Health;
-    private Rigidbody2D rb;
+    public int Health;
+    public Rigidbody2D rb;
     private bool isDead = false;
 
     //Knockback
     public float recievedKnockback = 5f;
-    private int recoveryTimer;
+    public int recoveryTimer;
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
@@ -62,8 +61,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     [SerializeField] public State state;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -249,71 +247,27 @@ public class EnemyAI : MonoBehaviour
         FXManager.spawnEffect("enemyMeleeEffect1", gameObject, target, Quaternion.LookRotation(lookPos), false, effectOffset);
         state = State.Attack;
     }
+    
+    //Change our current state
+    public void ChangeState(State newState)
+    {
+        state = newState;
+    }
 
     private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
-        {
-            if (canBounce)
-            {
-                state = State.Bounce;
-                int direction = (int)other.gameObject.transform.localEulerAngles.z;
-                Knockback(recievedKnockback, direction, false, other.gameObject);
-                //BouncedOffWall(1);
-            }
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
-        {
-            state = State.Bounce;
-            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
-            int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback, direction, false, other.gameObject);
-            BouncedOffWall(6); //Extra Knockback
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && gameObject.GetComponent<EnemyBounce>().isBouncing == true)
-        {
-            state = State.Bounce;
-            bumperChange.wasHit = true; //Tells the button to change colors
-            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
-            int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback, direction, false, other.gameObject);
-            BouncedOffWall(3); //Bumper damage 
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") /*&& gameObject.GetComponent<EnemyBounce>().isBouncing == true*/) //Not sure if this works yet. WILL MAKE THIS A FUNCION!!!!
-        {
-            state = State.Bounce;
-            Debug.Log("WE Hit!");
-            int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            Knockback(recievedKnockback, direction, false, other.gameObject);
-            BouncedOffWall(3); // subject to change 
-        }
+        EnemyCollision.SpecifiedCollision(other,gameObject);
+        int direction = (int)other.gameObject.transform.localEulerAngles.z;
+        Knockback(recievedKnockback, direction, false, other.gameObject);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
-        {
-            int direction = (int)other.gameObject.transform.localEulerAngles.z;
-            if (canBounce)
-            {
-                hitPause.Stop(HiPaVal);
-                rb.velocity = Vector2.zero;
-                Knockback(recievedKnockback, direction, true, other.gameObject);
-                BouncedOffWall(1);
-            }
-            else
-            {
-                rb.velocity = Vector2.zero;
-                Knockback(recievedKnockback, direction, false, other.gameObject);
-                state = State.Hit;
-                Health -= 1;
-                recoveryTimer = 0;
-                ChangeAnimationState("DroneIdle");
-            }
-        }
+        EnemyCollision.specifiedTrigger(other,gameObject);
     }
 
-    private void BouncedOffWall(int damage)
+    public void BouncedOffWall(int damage)
     {
         state = State.Bounce;
         //Debug
@@ -325,14 +279,14 @@ public class EnemyAI : MonoBehaviour
 
     }
     //Change our current animation
-    private void ChangeAnimationState(string newState) //Change title of currentState
+    public void ChangeAnimationState(string newState) //Change title of currentState
     {
         if (animCurrentState == newState) return;
         animator.Play(newState);
         animCurrentState = newState;
     }
 
-    private void Knockback(float knockback, int zRotation, bool bounce, GameObject attack)
+    public void Knockback(float knockback, int zRotation, bool bounce, GameObject attack)
     {
         //Debug.Log("Applying Knockback from Hit");
         if (!bounce)
