@@ -203,7 +203,7 @@ public class EnemyAI : MonoBehaviour
         if (Health <= 0)
         {
             //Screenshake and play explosion here
-            CameraController.Shake(1f, 1f, 0.1f, 0.1f);
+            CameraController.Shake(50f, 100f, 0.1f, 0.1f);
             this.gameObject.SetActive(false);
         }
     }
@@ -265,7 +265,7 @@ public class EnemyAI : MonoBehaviour
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
         {
             state = State.Bounce;
-            CameraController.Shake(100f, 50f, 0.1f, 0.1f);
+            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
             int direction = (int)other.gameObject.transform.localEulerAngles.z;
             Knockback(recievedKnockback, direction, false, other.gameObject);
             BouncedOffWall(6); //Extra Knockback
