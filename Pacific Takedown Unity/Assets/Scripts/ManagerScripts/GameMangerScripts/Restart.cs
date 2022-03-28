@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Pacific Takedown Unity/Assets/Scripts/AshScripts/Restart.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,21 +16,3 @@ public class Restart : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 }
-=======
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CanvasKeeper : MonoBehaviour
-{
-    
-    private void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
-
-    }
-    void Update()
-    {
-    }
-}
->>>>>>> AshBranch:Pacific Takedown Unity/Assets/CanvasKeeper.cs
