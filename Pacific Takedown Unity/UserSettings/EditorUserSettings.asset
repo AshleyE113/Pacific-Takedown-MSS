@@ -24,12 +24,13 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c751f051f2b292926237f07260e3bd1e33136e7b378fce9332b25
       flags: 0
     RecentlyUsedScenePath-6:
-      value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece262a7f234362820
-      flags: 0
-    RecentlyUsedScenePath-7:
       value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece278fce9332b25
       flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece264a7f234362820
+      flags: 0
     RecentlyUsedScenePath-8:
+<<<<<<< refs/remotes/origin/aribranch2
 <<<<<<< refs/remotes/origin/aribranch2
 <<<<<<< refs/remotes/origin/aribranch2
 <<<<<<< refs/remotes/origin/aribranch2
@@ -50,6 +51,12 @@ EditorUserSettings:
     RecentlyUsedScenePath-9:
       value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece265a7f234362820
 >>>>>>> //Housekeeping!
+=======
+      value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece265a7f234362820
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c7e031e1b1d331f2b233e28663c20ead3373dece262a7f234362820
+>>>>>>> //Screenshake Update
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

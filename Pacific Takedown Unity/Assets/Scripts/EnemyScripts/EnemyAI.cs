@@ -201,7 +201,7 @@ public class EnemyAI : MonoBehaviour
         if (Health <= 0)
         {
             //Screenshake and play explosion here
-            CameraController.Shake(50f, 100f, 0.1f, 0.1f);
+            CameraController.Shake(50f, 10f, 0.1f, 0.1f);
             this.gameObject.SetActive(false);
         }
     }
