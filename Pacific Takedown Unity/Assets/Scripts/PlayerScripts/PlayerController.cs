@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Quaternion = UnityEngine.Quaternion;
@@ -255,6 +256,7 @@ public class PlayerController : MonoBehaviour
     if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
     {
       ChangeState(State.Hit);
+      FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
       playerHealth--;
       //Change Animation to Player Hit
       PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());

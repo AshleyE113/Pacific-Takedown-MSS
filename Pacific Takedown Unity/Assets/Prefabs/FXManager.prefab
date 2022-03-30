@@ -47,6 +47,7 @@ MonoBehaviour:
   enemyMeleeEffectNS: {fileID: 3006254756446209033, guid: 70f189bab4c1e4eb0b43e55b866b0b7c, type: 3}
   explosionEffectNS: {fileID: 0}
   oilEffectNS: {fileID: 2159858475428378111, guid: 2bb0ae7ce14484e4586feb8c63fceff0, type: 3}
+  bloodEffectNS: {fileID: 2159858475428378111, guid: 25c9f6ceccdd44bdaa581155ff731cc5, type: 3}
   defaultMaterialNS: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   flashMaterialNS: {fileID: 2100000, guid: 98ee1df0add373448b1babea3b5fafab, type: 2}
   flashDurationNS: 2

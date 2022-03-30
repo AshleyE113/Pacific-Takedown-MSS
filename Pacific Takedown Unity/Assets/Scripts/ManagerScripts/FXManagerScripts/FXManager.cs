@@ -11,12 +11,16 @@ public class FXManager : MonoBehaviour
     public GameObject enemyMeleeEffectNS;
     public GameObject explosionEffectNS;
     public GameObject oilEffectNS;
+    public GameObject bloodEffectNS;
+
 
     //Static Versions
     public static GameObject playerMeleeEffect;
     public static GameObject enemyMeleeEffect;
     public static GameObject explosionEffect;
     public static GameObject oilEffect;
+    public static GameObject bloodEffect;
+
 
     //Flash
     private static Material flashMaterial;
@@ -37,7 +41,7 @@ public class FXManager : MonoBehaviour
         defaultMaterial = defaultMaterialNS;
         flashDuration = flashDurationNS;
         oilEffect = oilEffectNS;
-
+        bloodEffect = bloodEffectNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -105,6 +109,15 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(oilEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "blood")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(bloodEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
