@@ -50,6 +50,8 @@ public class EnemyCollision : MonoBehaviour
         int direction = (int) other.gameObject.transform.localEulerAngles.z;
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
+            Debug.Log("Hit By Trigger");
+
             script.canAttack = false;
             CameraController.Shake(10f, 10f, 0.1f, 0.1f);
             GameObject thisRotationObject = PlayerController.rotationObject.transform.GetChild(1).gameObject;
