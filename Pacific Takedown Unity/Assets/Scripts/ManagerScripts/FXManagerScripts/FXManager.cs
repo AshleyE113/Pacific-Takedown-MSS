@@ -21,7 +21,7 @@ public class FXManager : MonoBehaviour
     public Material defaultMaterialNS;
     public Material flashMaterialNS;
     public static int flashDuration;
-
+    public static GameObject currentPlayerMelee;
     public int flashDurationNS;
     //
     private void Awake()
@@ -48,13 +48,30 @@ public class FXManager : MonoBehaviour
     {
         if (effect == "playerMeleeEffect1")
         {
-            var spawnLocation = spawn.transform.position;
-            var Effect = Instantiate(playerMeleeEffect, new Vector3(spawnLocation.x+offset.x, spawnLocation.y+offset.y, 0f), quaternion.identity);
-            Effect.transform.parent = spawn.transform;
-            Effect.transform.Rotate(0f,0f,rotation.z,Space.World);
-            if (flipped)
+            if (currentPlayerMelee == null)
             {
-                Effect.GetComponent<SpriteRenderer>().flipX = true;
+                var spawnLocation = spawn.transform.position;
+                var Effect = Instantiate(playerMeleeEffect, new Vector3(spawnLocation.x+offset.x, spawnLocation.y+offset.y, 0f), quaternion.identity);
+                currentPlayerMelee = Effect;
+                Effect.transform.parent = spawn.transform;
+                Effect.transform.Rotate(0f,0f,rotation.z,Space.World);
+                if (flipped)
+                {
+                    Effect.GetComponent<SpriteRenderer>().flipX = true;
+                }
+            }
+            else
+            {
+                Destroy(currentPlayerMelee);
+                var spawnLocation = spawn.transform.position;
+                var Effect = Instantiate(playerMeleeEffect, new Vector3(spawnLocation.x+offset.x, spawnLocation.y+offset.y, 0f), quaternion.identity);
+                currentPlayerMelee = Effect;
+                Effect.transform.parent = spawn.transform;
+                Effect.transform.Rotate(0f,0f,rotation.z,Space.World);
+                if (flipped)
+                {
+                    Effect.GetComponent<SpriteRenderer>().flipX = true;
+                }
             }
         }
         if (effect == "enemyMeleeEffect1")

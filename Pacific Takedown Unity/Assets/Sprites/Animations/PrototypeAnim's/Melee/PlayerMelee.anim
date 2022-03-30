@@ -30,7 +30,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.05882353
+        time: 0.0625
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -39,7 +39,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.11764706
+        time: 0.09375
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -48,7 +48,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.20588236
+        time: 0.25
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -67,27 +67,25 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -1037701409474942112, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.029411765
+    - time: 0.03125
       value: {fileID: -3888841618129851034, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.05882353
+    - time: 0.0625
       value: {fileID: -4513119667898804606, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.0882353
+    - time: 0.09375
       value: {fileID: -8231285386944941373, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.11764706
+    - time: 0.125
       value: {fileID: 2752109875283145492, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.14705883
+    - time: 0.15625
       value: {fileID: -4200569980790533557, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.1764706
+    - time: 0.1875
       value: {fileID: -1728876714802531996, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.20588236
-      value: {fileID: 6596811214705079025, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - time: 0.23529412
+    - time: 0.21875
       value: {fileID: 6596811214705079025, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 34
+  m_SampleRate: 32
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -117,13 +115,12 @@ AnimationClip:
     - {fileID: -4200569980790533557, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
     - {fileID: -1728876714802531996, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
     - {fileID: 6596811214705079025, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
-    - {fileID: 6596811214705079025, guid: bd611fa5d97aa8c4bb93e6718b35bb96, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.2647059
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -152,7 +149,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.05882353
+        time: 0.0625
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -161,7 +158,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.11764706
+        time: 0.09375
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -170,7 +167,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.20588236
+        time: 0.25
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -189,7 +186,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.23529412
+  - time: 0.21875
     functionName: DestroySelf
     data: 
     objectReferenceParameter: {fileID: 0}

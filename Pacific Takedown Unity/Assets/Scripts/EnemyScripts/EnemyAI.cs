@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
     //Attack
     public int attackRange;
     public float attackRecoverTime;
-    public bool canAttack;
+    [HideInInspector] public bool canAttack=true;
     bool attackCoroutineStarted = false;
     public bool canBounce = true;
     public Vector2 launchDirection;
@@ -112,6 +112,7 @@ public class EnemyAI : MonoBehaviour
                 case State.Idle:
                     //Stay in place. If player is in range, go towards them
                     rb.drag = 3; //Play with this value to test this.
+                    canAttack = true;
                     if (path == null)
                     {
                         return;
@@ -293,8 +294,6 @@ public class EnemyAI : MonoBehaviour
     {
         EnemyCollision.SpecifiedCollision(other,gameObject);
         int direction = (int)other.gameObject.transform.localEulerAngles.z;
-        Knockback(recievedKnockback, direction, false, other.gameObject);
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)

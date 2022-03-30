@@ -8,6 +8,7 @@ public class PlayerDirection : MonoBehaviour
 
     public static void callDirection(string call, Vector2 playerFacing, PlayerController player)
     {
+      player.ChangeAnimationSpeed(player.attackspeed);
       if (playerFacing.x == -1 && playerFacing.y == -1) //Facing Bottom Left
         {
           if (call == "HitDirection")

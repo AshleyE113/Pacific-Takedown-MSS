@@ -18,6 +18,7 @@ public class SwingParticle : MonoBehaviour
 
     public void DestroySelf()
     {
+        FXManager.currentPlayerMelee = null;
         Destroy(gameObject);
     }
 }

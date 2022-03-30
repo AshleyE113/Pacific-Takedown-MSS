@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public float meleeRange;
     [HideInInspector] public float lungeSpeed=50;
     private bool invulnerable = false;
+    public float attackspeed;
     //Dashing
     public int dashForce=100;
     public int dashDistance = 30;
@@ -195,6 +196,10 @@ public class PlayerController : MonoBehaviour
       animator.Play(newState);
       currentState = newState;
     }
+  public void ChangeAnimationSpeed(float newSpeed) //Change title of currentState
+  {
+    animator.speed = newSpeed;
+  }
 
   //Change our current state
   private static void ChangeState(State state)
@@ -212,6 +217,7 @@ public class PlayerController : MonoBehaviour
     {
       if (canCombo && attackIndex < 2)
       {
+        FXManager.currentPlayerMelee = null;
         canCombo = false;
         fxSpawned = false;
         attackIndex += 1;
