@@ -67,11 +67,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
   void Update()
   {
-     //if (Manager.gameManager._isdead == false)
-     //{
+        if (playerHealth <= 0)
+        {
+            Debug.Log("Here!");
+            Manager.instance.GameOver();
+            
+        }
 
-        //Grab our Current Input from Input Manager
-        movement = InputManager.directionVector;
+       //if (Manager.instance.GameOver(true))
+      // {
+
+            //Grab our Current Input from Input Manager
+            movement = InputManager.directionVector;
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         lookDir = mousePos - rb.position; //If on Mouse
         //lookDir = stickDir; //If on GamePad
@@ -119,7 +126,7 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
-       // if (Manager.gameManager._isdead == false)
+        //if (Manager.instance.GameOver(true))
         //{
             animator.SetFloat("MouseHorizontal", lookDir.x);
             animator.SetFloat("MouseVertical", lookDir.y);
@@ -174,8 +181,8 @@ public class PlayerController : MonoBehaviour
                     }
 
                     break;
-            }
-        //}
+           // }
+        }
   }
   //Change our current animation
   public void ChangeAnimationState(string newState) //Change title of currentState
