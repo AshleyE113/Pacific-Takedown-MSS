@@ -13,21 +13,17 @@ public class CameraController : MonoBehaviour
     float cameraDist = 3.5f;
 
     float smoothTime = 0.2f, zStart;
-    //Screenshake code, includes text varis
-
-    // Start is called before the first frame update
-    void Start()
+    void LateUpdate()
     {
         target = player.position;
         zStart = transform.position.z;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         mousePos = CaptureMousePos();
         target = UpdateTargetPos();
         UpdateCameraPosition();
+    }
+    void Update()
+    {
+
     }
     Vector3 CaptureMousePos()
     {
@@ -41,7 +37,6 @@ public class CameraController : MonoBehaviour
         }
         return ret;
     }
-
     Vector3 UpdateTargetPos()
     {
         Vector3 mouseOffset = mousePos * cameraDist;
@@ -49,12 +44,6 @@ public class CameraController : MonoBehaviour
         ret.z = zStart;
         return ret;
     }
-
-    public static void Shake(float magn, float rough, float fadeIn, float fadeOut)
-    {
-        CameraShaker.Instance.ShakeOnce(magn, rough, fadeIn, fadeOut);
-    }
-
     void UpdateCameraPosition()
     {
         Vector3 tempPos;
@@ -62,5 +51,8 @@ public class CameraController : MonoBehaviour
         transform.position = tempPos;
     }
 
-
+    public static void Shake(float magn, float rough, float fadeIn, float fadeOut)
+    {
+        CameraShaker.Instance.ShakeOnce(magn, rough, fadeIn, fadeOut);
+    }
 }

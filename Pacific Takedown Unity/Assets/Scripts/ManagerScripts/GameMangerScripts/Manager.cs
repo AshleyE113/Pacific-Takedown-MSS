@@ -35,18 +35,18 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
-
         DontDestroyOnLoad(this.gameObject);
     }
-
     public void GameOver()
     {
-        Time.timeScale = 0.0f;
-        //displayCanvas.gameObject.SetActive(true);
+        //Time.timeScale = 0.0f;
+        displayCanvas.gameObject.SetActive(true);
         Debug.Log("GOver");
     }
     public void RestartScene()
     {
+        //Time.timeScale = 1.0f;
+        displayCanvas.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     

@@ -6,6 +6,10 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    void Update()
+    {
+        DontDestroyOnLoad(this.gameObject);    
+    }
     /*
     public Canvas displayCanvas;
     public TMP_Text deathText;
