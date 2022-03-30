@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: d4a216f99b418b14ca545f4374cf4eb6
+guid: b7d2392c2135f724c8ab16aee9d43c96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7353515168790064060
-    second: computer2_0
+      213: 1698380382897973746
+    second: tablechair_0
   - first:
-      213: -3212897651041448288
-    second: computer2_2
+      213: 5228942566011103145
+    second: tablechair_1
   - first:
-      213: -7831578951126108815
-    second: computer2_10
+      213: -8093818329445246261
+    second: tablechair_3
   - first:
-      213: -3542221548640503126
-    second: computer2_11
+      213: -6960068455369638406
+    second: tablechair_4
   - first:
-      213: 622124061265260927
-    second: computer2_18
+      213: 1325134438988340810
+    second: tablechair_5
   - first:
-      213: 1590966511229683872
-    second: computer2_21
+      213: -5874102322114338479
+    second: tablechair_8
   - first:
-      213: -7202482230418648659
-    second: computer2_22
+      213: -677612146441385378
+    second: tablechair_9
   - first:
-      213: 1372580761484010475
-    second: computer2_23
+      213: -7100151897905905424
+    second: tablechair_10
+  - first:
+      213: -8045958778955445595
+    second: tablechair_11
+  - first:
+      213: -8220584020517895676
+    second: tablechair_12
+  - first:
+      213: -2528906609276897032
+    second: tablechair_13
+  - first:
+      213: 6534470658841840834
+    second: tablechair_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +127,76 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: computer2_0
+      name: tablechair_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f92028b5fbd19710800000000000000
+      internalID: 1698380382897973746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7e2064f8fe09840800000000000000
+      internalID: 5228942566011103145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcadedcbc1bfcaf80800000000000000
+      internalID: -8093818329445246261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_4
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,39 +204,81 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbbad2ed51fec0660800000000000000
-      internalID: 7353515168790064060
+      spriteID: afd7a49ad9ed86f90800000000000000
+      internalID: -6960068455369638406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_2
+      name: tablechair_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e598b50c2d36210800000000000000
+      internalID: 1325134438988340810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151e3147f0ffa7ea0800000000000000
+      internalID: -5874102322114338479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a0fdbc753a896f0800000000000000
+      internalID: -677612146441385378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_10
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aeccf9eb9e7963d0800000000000000
-      internalID: -3212897651041448288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
+        y: 32
         width: 32
         height: 64
       alignment: 0
@@ -171,18 +288,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 175b3bbff64a05390800000000000000
-      internalID: -7831578951126108815
+      spriteID: 0f0c0029771377d90800000000000000
+      internalID: -7100151897905905424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_11
+      name: tablechair_11
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 96
+        y: 32
         width: 32
         height: 64
       alignment: 0
@@ -192,20 +309,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaa7c8dd44087dec0800000000000000
-      internalID: -3542221548640503126
+      spriteID: 5aacceeae13075090800000000000000
+      internalID: -8045958778955445595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_18
+      name: tablechair_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +330,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7170fd998a32a800800000000000000
-      internalID: 622124061265260927
+      spriteID: 40247ca436e9aed80800000000000000
+      internalID: -8220584020517895676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_21
+      name: tablechair_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8b9eb66d487ecd0800000000000000
+      internalID: -2528906609276897032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_14
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,50 +372,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a84367dc9f341610800000000000000
-      internalID: 1590966511229683872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_22
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da155d26294ab0c90800000000000000
-      internalID: -7202482230418648659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_23
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be32ac92ee26c0310800000000000000
-      internalID: 1372580761484010475
+      spriteID: 2cc0b7f617a1faa50800000000000000
+      internalID: 6534470658841840834
       vertices: []
       indices: 
       edges: []
