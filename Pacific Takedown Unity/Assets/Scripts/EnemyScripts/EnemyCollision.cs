@@ -13,6 +13,7 @@ public class EnemyCollision : MonoBehaviour
             if (script.canBounce)
             {
                 script.ChangeState(EnemyAI.State.Bounce);
+                CameraController.Shake(2f, 2f, 0.1f, 0.1f);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
@@ -23,7 +24,6 @@ public class EnemyCollision : MonoBehaviour
         else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && enemy.GetComponent<EnemyBounce>().isBouncing == true)
         {
             script.ChangeState(EnemyAI.State.Bounce);
-            CameraController.Shake(10f, 50f, 0.1f, 0.1f);
             script.BouncedOffWall(3); //Bumper damage 
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") /*&& gameObject.GetComponent<EnemyBounce>().isBouncing == true*/) //Not sure if this works yet. WILL MAKE THIS A FUNCION!!!!
@@ -39,6 +39,9 @@ public class EnemyCollision : MonoBehaviour
         int direction = (int) other.gameObject.transform.localEulerAngles.z;
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
+            script.canAttack = false;
+            CameraController.Shake(10f, 10f, 0.1f, 0.1f);
+            FXManager.flashEffect(enemy);
             if (script.canBounce)
             {
                 script.hitPause.Stop(script.HiPaVal);
@@ -57,4 +60,6 @@ public class EnemyCollision : MonoBehaviour
             }
         }
     }
+    
+
 }

@@ -40,10 +40,12 @@ public class EnemyAI : MonoBehaviour
     //FX
     public FXManager myFX;
     private bool fxSpawned;
+    public int flashingTime;
 
     //Attack
     public int attackRange;
     public float attackRecoverTime;
+    public bool canAttack;
     bool attackCoroutineStarted = false;
     public bool canBounce = true;
     public Vector2 launchDirection;
@@ -92,6 +94,13 @@ public class EnemyAI : MonoBehaviour
             currentWaypoint = 0;
         }
     }
+    
+    IEnumerator FlashDuration(SpriteRenderer spriteRender,float flashDuration, Material defaultMaterial)
+    {
+
+        yield return new WaitForSeconds(flashDuration);
+        spriteRender.material = defaultMaterial;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -111,7 +120,10 @@ public class EnemyAI : MonoBehaviour
                     if (Vector2.Distance(rb.position, target.position) < attackRange)
                     {
                         //When in Range, Prepare your attack
-                        state = State.PreparingAttack;
+                        if (canAttack)
+                        {
+                            state = State.PreparingAttack;
+                        }
                     }
 
                     if (currentWaypoint >= path.vectorPath.Count)
@@ -165,6 +177,9 @@ public class EnemyAI : MonoBehaviour
                     //rb.velocity *= knockbackDrag;
                     rb.drag = 0; //Play with this value to test this.
                     rb.velocity = rb.velocity * .5f;
+                    FlashEffectTimer();
+
+
                     if (recoveryTimer < recoveryMax)
                     {
                         recoveryTimer += 1;
@@ -182,6 +197,8 @@ public class EnemyAI : MonoBehaviour
                     //If player attacks, it bounces off objs.
                     //It can't attack player in this state
                     //BUT it can DAMAGE the player!
+                    FlashEffectTimer();
+
 
                     break;
                 case State.Dead:
@@ -190,6 +207,19 @@ public class EnemyAI : MonoBehaviour
                     break;
             }
        // }
+    }
+
+    private void FlashEffectTimer()
+    {
+        //Flash Duration
+        if (flashingTime <= 0)
+        {
+            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
+        }
+        else
+        {
+            flashingTime -= 1;
+        }
     }
 
 
@@ -223,6 +253,10 @@ public class EnemyAI : MonoBehaviour
         //Start Coroutine
         if (resetDirCooldownRunning == false) { StartCoroutine(resetDirCooldown()); resetDirCooldownRunning = true; }
     }
+    IEnumerator FlashDuration()
+    {
+        yield return new WaitForSeconds(FXManager.flashDuration);
+    }
     //Reset the cooldown on updatePlayerDir
     IEnumerator resetDirCooldown()
     {
@@ -235,6 +269,7 @@ public class EnemyAI : MonoBehaviour
 
         yield return new WaitForSeconds(attackRecoverTime);
         attackCoroutineStarted = false;
+        canAttack = true;
         state = State.Idle;
     }
     public void CommenceAttack()
@@ -272,6 +307,7 @@ public class EnemyAI : MonoBehaviour
         state = State.Bounce;
         //Debug
         gameObject.GetComponent<EnemyBounce>().isBouncing = true;
+        hitPause.Stop(HiPaVal);
         Health -= damage;
         recoveryTimer = 0;
         //Change Animation to Drone Hit

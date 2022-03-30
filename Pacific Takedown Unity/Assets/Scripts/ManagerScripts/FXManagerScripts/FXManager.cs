@@ -15,13 +15,33 @@ public class FXManager : MonoBehaviour
     public static GameObject playerMeleeEffect;
     public static GameObject enemyMeleeEffect;
     public static GameObject explosionEffect;
+    //Flash
+    private static Material flashMaterial;
+    public static Material defaultMaterial;
+    public Material defaultMaterialNS;
+    public Material flashMaterialNS;
+    public static int flashDuration;
 
+    public int flashDurationNS;
+    //
     private void Awake()
     {
         //Declare Effects on Awake
         playerMeleeEffect = playerMeleeEffectNS;
         enemyMeleeEffect = enemyMeleeEffectNS;
         explosionEffect = explosionEffectNS;
+        flashMaterial = flashMaterialNS;
+        defaultMaterial = defaultMaterialNS;
+        flashDuration = flashDurationNS;
+
+    }
+
+    public static void flashEffect(GameObject instance)
+    {
+        SpriteRenderer myRender = instance.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        myRender.material = flashMaterial;
+        instance.GetComponent<EnemyAI>().flashingTime = flashDuration;
+
     }
 
     public static void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)

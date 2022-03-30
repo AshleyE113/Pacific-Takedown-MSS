@@ -89,14 +89,18 @@ public class PlayerController : MonoBehaviour
         playerFacing.x = Mathf.Round(lookDir.x);
         playerFacing.y = Mathf.Round(lookDir.y);
 
-        if (movement.x != 0 && movement.y != 0)
+        if (movement.x == 0 && movement.y == 0)
         {
-            //set direction before normalising
-            updatePlayerDir(movement);
-            //Update the Parameters in our Animator
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        }
+        else
+        {
+          //set direction before normalising
+          updatePlayerDir(movement);
+          //Update the Parameters in our Animator
+          animator.SetFloat("Horizontal", movement.x);
+          animator.SetFloat("Vertical", movement.y);
+          animator.SetFloat("Speed", movement.sqrMagnitude);
         }
      // }
   }
