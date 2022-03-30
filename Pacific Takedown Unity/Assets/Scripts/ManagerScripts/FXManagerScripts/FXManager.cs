@@ -12,6 +12,8 @@ public class FXManager : MonoBehaviour
     public GameObject explosionEffectNS;
     public GameObject oilEffectNS;
     public GameObject bloodEffectNS;
+    public GameObject sparkEffectNS;
+
 
 
     //Static Versions
@@ -20,6 +22,8 @@ public class FXManager : MonoBehaviour
     public static GameObject explosionEffect;
     public static GameObject oilEffect;
     public static GameObject bloodEffect;
+    public static GameObject sparkEffect;
+
 
 
     //Flash
@@ -42,6 +46,8 @@ public class FXManager : MonoBehaviour
         flashDuration = flashDurationNS;
         oilEffect = oilEffectNS;
         bloodEffect = bloodEffectNS;
+        sparkEffect = sparkEffectNS;
+
     }
 
     public static void flashEffect(GameObject instance)
@@ -118,6 +124,15 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(bloodEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "spark")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(sparkEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;

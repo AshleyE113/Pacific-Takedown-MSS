@@ -55,7 +55,11 @@ public class EnemyCollision : MonoBehaviour
             script.canAttack = false;
             CameraController.Shake(10f, 10f, 0.1f, 0.1f);
             GameObject thisRotationObject = PlayerController.rotationObject.transform.GetChild(1).gameObject;
-            FXManager.spawnEffect("oil",thisRotationObject,thisRotationObject.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
+            PlayerController.rotationObject.transform.GetChild(0).gameObject.transform.localScale =
+                new Vector3(3f, 3f, 3f);
+            FXManager.spawnEffect("oil",enemy,thisRotationObject.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
+            FXManager.spawnEffect("spark",thisRotationObject,thisRotationObject.transform,other.gameObject.transform.rotation, false,new Vector2(0f,0f));
+
             script.ChangeAnimationState("Movement");
             FXManager.flashEffect(enemy);
             if (script.canBounce)
