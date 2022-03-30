@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using Unity.Mathematics;
 
 public class EnemyCollision : MonoBehaviour
 {
@@ -51,6 +52,8 @@ public class EnemyCollision : MonoBehaviour
         {
             script.canAttack = false;
             CameraController.Shake(10f, 10f, 0.1f, 0.1f);
+            GameObject thisRotationObject = PlayerController.rotationObject.transform.GetChild(1).gameObject;
+            FXManager.spawnEffect("oil",thisRotationObject,thisRotationObject.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
             script.ChangeAnimationState("Movement");
             FXManager.flashEffect(enemy);
             if (script.canBounce)

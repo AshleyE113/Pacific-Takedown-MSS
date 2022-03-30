@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6880577857888963443, guid: c05f8a043f25c474a955e929e6749070, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8717686972764130671, guid: c05f8a043f25c474a955e929e6749070, type: 3}
       propertyPath: myFX
@@ -8369,7 +8369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6880577857888963443, guid: c05f8a043f25c474a955e929e6749070, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8717686972764130671, guid: c05f8a043f25c474a955e929e6749070, type: 3}
       propertyPath: myFX
@@ -9959,6 +9959,10 @@ PrefabInstance:
     - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
       propertyPath: moveSpeed
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: attackspeed
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
       propertyPath: dashDistance

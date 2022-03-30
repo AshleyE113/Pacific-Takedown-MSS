@@ -28,7 +28,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 stickDir; //for controller
     public Camera cam; //Optimize Later
     private float angle;
-    public GameObject rotationObject;
+    public static GameObject rotationObject;
+    public GameObject rotationObjectNS;
+
     //Combat
     public int attackIndex;
     private bool canCombo;
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
       stickDir = new Vector2(0f, -1f);
       animator = gameObject.GetComponent<Animator>();
       mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+      rotationObject = rotationObjectNS;
       ChangeState(State.Ready);
     }
 
