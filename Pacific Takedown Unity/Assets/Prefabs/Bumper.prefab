@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 6104453809145228784}
   - component: {fileID: 6104453809145228787}
   - component: {fileID: -2512197281521050092}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bumper
   m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6104453809145228785
 Transform:
   m_ObjectHideFlags: 0
