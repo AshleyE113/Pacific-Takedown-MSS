@@ -6,6 +6,20 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
+
+    private void Awake()
+    {
+
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
     void Update()
     {
         DontDestroyOnLoad(this.gameObject);    

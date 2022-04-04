@@ -11,9 +11,11 @@ public class Manager : MonoBehaviour
     //private static Manager _instance;
     //public bool _isGameOver;
     public static Manager instance;
+    Button button;
+    [SerializeField] GameObject deathCanvas;
+    bool spawned = false;
     //[SerializeField] UIManager uiManager;
-    PlayerController pController;
-    public Canvas displayCanvas;
+    //public Canvas displayCanvas;
 
     private void Awake()
     {
@@ -30,27 +32,45 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
-        displayCanvas.gameObject.SetActive(false);
+        //displayCanvas.gameObject.SetActive(false);
+        button = deathCanvas.GetComponentInChildren<Button>();
+       button.onClick.AddListener(() => TaskOnClick());
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartScene();
+        }
         DontDestroyOnLoad(this.gameObject);
     }
     public void GameOver()
     {
-        //Time.timeScale = 0.0f;
-        displayCanvas.gameObject.SetActive(true);
+        if (spawned == false)
+        {
+            Instantiate(deathCanvas);
+            spawned = true;
+        }
+            
         Debug.Log("GOver");
+    }
+
+    public void TaskOnClick()
+    {
+        spawned = false;
+        Destroy(deathCanvas);
+
+        //deathCanvas.SetActive(false);
+        Debug.Log("Gone.");
     }
     public void RestartScene()
     {
-        //Time.timeScale = 1.0f;
-        displayCanvas.gameObject.SetActive(false);
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
 
+    
 
     /*public Canvas displayCanvas;
      public TMP_Text deathText;
