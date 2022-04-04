@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 7d5666035be92f046a72c45cb1c1553c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4360311423220399839
+    second: crab move sprite_0
+  - first:
+      213: 9177283987011281328
+    second: crab move sprite_1
+  - first:
+      213: -1498062164718148755
+    second: crab move sprite_2
+  - first:
+      213: 2509862395633680201
+    second: crab move sprite_3
+  - first:
+      213: 6505042834477048596
+    second: crab move sprite_4
+  - first:
+      213: -7442180903023077415
+    second: crab move sprite_5
+  - first:
+      213: -7527516579505741497
+    second: crab move sprite_6
+  - first:
+      213: 1545046240270218554
+    second: crab move sprite_7
+  - first:
+      213: -6408384146795781566
+    second: crab move sprite_8
+  - first:
+      213: 1659591809483893388
+    second: crab move sprite_9
+  - first:
+      213: -607884686681366809
+    second: crab move sprite_10
+  - first:
+      213: 8493816098670947573
+    second: crab move sprite_11
+  - first:
+      213: -5510671497316244416
+    second: crab move sprite_12
+  - first:
+      213: 1160705861327951486
+    second: crab move sprite_13
+  - first:
+      213: 4910863348437987054
+    second: crab move sprite_14
+  - first:
+      213: 2166130136562135833
+    second: crab move sprite_15
+  - first:
+      213: -26006993427157933
+    second: crab move sprite_16
+  - first:
+      213: -1284211739682041039
+    second: crab move sprite_17
+  - first:
+      213: -2203101900347347768
+    second: crab move sprite_18
+  - first:
+      213: -1751834440693493840
+    second: crab move sprite_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crab move sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5331856, y: 0.31416216}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121cedcccdf0d73c0800000000000000
+      internalID: -4360311423220399839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 124
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.55774295, y: 0.30752462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b120b0b9234c5f70800000000000000
+      internalID: 9177283987011281328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 124
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5663715, y: 0.27433935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63a584f560d53be0800000000000000
+      internalID: -1498062164718148755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 124
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.56637126, y: 0.32035625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f3bde0d82d4d220800000000000000
+      internalID: 2509862395633680201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 93
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5066372, y: 0.26106498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41364b52efd864a50800000000000000
+      internalID: 6505042834477048596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 93
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5331856, y: 0.26261368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d71d1926ef08b890800000000000000
+      internalID: -7442180903023077415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_6
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 93
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.50663733, y: 0.28097638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74162bdad83e88790800000000000000
+      internalID: -7527516579505741497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 93
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.50000054, y: 0.3011088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35fbd89e5b117510800000000000000
+      internalID: 1545046240270218554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5398227, y: 0.28761318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2422ef15298d017a0800000000000000
+      internalID: -6408384146795781566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_9
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 62
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.52654845, y: 0.3011088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a6f6435fd080710800000000000000
+      internalID: 1659591809483893388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 62
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.50000024, y: 0.26106474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee15f1291c5097f0800000000000000
+      internalID: -607884686681366809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 62
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.52654874, y: 0.3011088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fca6c45db810e570800000000000000
+      internalID: 8493816098670947573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.3340729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044689058792683b0800000000000000
+      internalID: -5510671497316244416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 31
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.49336296, y: 0.2946926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e769a29c4d7ab1010800000000000000
+      internalID: 1160705861327951486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_14
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 31
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.51991165, y: 0.280976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeea1205234e62440800000000000000
+      internalID: 4910863348437987054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_15
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 31
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.50000054, y: 0.26902923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913fd0fe1e3af0e10800000000000000
+      internalID: 2166130136562135833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5066372, y: 0.2677018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c291bf6ca93aff0800000000000000
+      internalID: -26006993427157933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_17
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.50663716, y: 0.26902914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1339ddf0a309d2ee0800000000000000
+      internalID: -1284211739682041039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_18
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.50663733, y: 0.29425022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cceec18e720d61e0800000000000000
+      internalID: -2203101900347347768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab move sprite_19
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 0
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5132746, y: 0.32677194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf4b299bdb30b7e0800000000000000
+      internalID: -1751834440693493840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

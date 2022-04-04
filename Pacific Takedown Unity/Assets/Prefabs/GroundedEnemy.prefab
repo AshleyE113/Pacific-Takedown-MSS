@@ -412,20 +412,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daedbe0f84463c147838dc9f78216024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bumperChange: {fileID: 0}
   hitPause: {fileID: 0}
   HiPaVal: 1
   target: {fileID: 0}
   speed: 1200
   nextWaypointDistance: 3
   healthMax: 20
+  Health: 0
+  rb: {fileID: 6407205619561486555}
   recievedKnockback: 75
+  recoveryTimer: 0
   recoveryMax: 90
   knockbackDrag: 0
   bounceKnockback: 50
   myFX: {fileID: 0}
+  flashingTime: 0
   attackRange: 4
   attackRecoverTime: 5
+  canAttack: 0
   canBounce: 0
   launchDirection: {x: 0, y: 0}
   state: 0
