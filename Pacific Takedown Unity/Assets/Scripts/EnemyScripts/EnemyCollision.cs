@@ -68,7 +68,7 @@ public class EnemyCollision : MonoBehaviour
                 script.hitPause.Stop(script.HiPaVal);
                 script.rb.velocity = Vector2.zero;
                 script.Knockback(script.recievedKnockback, direction, true, other.gameObject);
-                script.BouncedOffWall(1);
+                script.BouncedOffWall(20);
             }
             else
             {
@@ -76,7 +76,7 @@ public class EnemyCollision : MonoBehaviour
                 script.rb.velocity = Vector2.zero;
                 script.Knockback(script.recievedKnockback, direction, false, other.gameObject);
                 script.ChangeState(EnemyAI.State.Hit);
-                script.Health -= 1;
+                script.Health -= 20;
                 script.recoveryTimer = 0;
                 //script.ChangeAnimationState("DroneIdle");
                 script.FreezeAnimation();

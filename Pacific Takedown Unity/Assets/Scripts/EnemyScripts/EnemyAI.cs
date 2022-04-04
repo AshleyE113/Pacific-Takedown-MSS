@@ -75,6 +75,9 @@ public class EnemyAI : MonoBehaviour
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
         animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
+        //World Objects
+        target = GameObject.Find("Player").transform;
+        hitPause = GameObject.Find("HitPauseObj").GetComponent<HitStop>();
 
     }
 
@@ -317,6 +320,10 @@ public class EnemyAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyCollision.specifiedTrigger(other,gameObject);
+        if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
+        {
+            gameObject.GetComponent<EnemyHealth>().TakeDamage(20);
+        }
     }
 
     public void BouncedOffWall(int damage)

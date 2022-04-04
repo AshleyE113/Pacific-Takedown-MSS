@@ -13,6 +13,8 @@ public class FXManager : MonoBehaviour
     public GameObject oilEffectNS;
     public GameObject bloodEffectNS;
     public GameObject sparkEffectNS;
+    public GameObject playerHitFXNS;
+
 
 
 
@@ -23,6 +25,7 @@ public class FXManager : MonoBehaviour
     public static GameObject oilEffect;
     public static GameObject bloodEffect;
     public static GameObject sparkEffect;
+    public static GameObject playerHitFX;
 
 
 
@@ -47,7 +50,7 @@ public class FXManager : MonoBehaviour
         oilEffect = oilEffectNS;
         bloodEffect = bloodEffectNS;
         sparkEffect = sparkEffectNS;
-
+        playerHitFX = playerHitFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -146,6 +149,17 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+        /*
+        if (effect == "playerHit")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(playerHitFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        */
     }
 
 }
