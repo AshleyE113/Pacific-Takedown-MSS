@@ -3497,9 +3497,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1868619658}
     - target: {fileID: 333625998, guid: 560481bcdc2248841911630c1efa4283, type: 3}
+      propertyPath: HiPaVal
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 333625998, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: hitPause
       value: 
       objectReference: {fileID: 1267137596}
+    - target: {fileID: 333625998, guid: 560481bcdc2248841911630c1efa4283, type: 3}
+      propertyPath: flashingTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_RootOrder
       value: 1

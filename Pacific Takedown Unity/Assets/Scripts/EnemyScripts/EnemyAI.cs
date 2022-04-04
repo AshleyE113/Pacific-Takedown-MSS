@@ -111,6 +111,7 @@ public class EnemyAI : MonoBehaviour
             {
                 case State.Idle:
                     //Stay in place. If player is in range, go towards them
+                    ResumeAnimation();
                     rb.drag = 3; //Play with this value to test this.
                     canAttack = true;
                     if (path == null)
@@ -283,7 +284,15 @@ public class EnemyAI : MonoBehaviour
         FXManager.spawnEffect("enemyMeleeEffect1", gameObject, target, Quaternion.LookRotation(lookPos), false, effectOffset);
         state = State.Attack;
     }
-    
+
+    public void FreezeAnimation()
+    {
+        animator.speed = 0;
+    }
+    public void ResumeAnimation()
+    {
+        animator.speed = 1;
+    }
     //Change our current state
     public void ChangeState(State newState)
     {
@@ -310,7 +319,8 @@ public class EnemyAI : MonoBehaviour
         Health -= damage;
         recoveryTimer = 0;
         //Change Animation to Drone Hit
-        ChangeAnimationState("DroneIdle");
+        //ChangeAnimationState("DroneIdle");
+        FreezeAnimation();
 
     }
     //Change our current animation

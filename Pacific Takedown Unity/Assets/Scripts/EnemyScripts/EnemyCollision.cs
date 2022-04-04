@@ -72,12 +72,14 @@ public class EnemyCollision : MonoBehaviour
             }
             else
             {
+                script.hitPause.Stop(script.HiPaVal);
                 script.rb.velocity = Vector2.zero;
                 script.Knockback(script.recievedKnockback, direction, false, other.gameObject);
                 script.ChangeState(EnemyAI.State.Hit);
                 script.Health -= 1;
                 script.recoveryTimer = 0;
-                script.ChangeAnimationState("DroneIdle");
+                //script.ChangeAnimationState("DroneIdle");
+                script.FreezeAnimation();
             }
         }
     }

@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: e5dbb399933010d48bf8a801e6739e3c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2605845928311829426
+    second: crab gets damaged sprite_0
+  - first:
+      213: -5410547868590320835
+    second: crab gets damaged sprite_1
+  - first:
+      213: 7421295091606037429
+    second: crab gets damaged sprite_2
+  - first:
+      213: 507681136195406490
+    second: crab gets damaged sprite_3
+  - first:
+      213: 8865062988051070324
+    second: crab gets damaged sprite_4
+  - first:
+      213: -651612730323610492
+    second: crab gets damaged sprite_5
+  - first:
+      213: 6706390923025390558
+    second: crab gets damaged sprite_6
+  - first:
+      213: -5862587042049022717
+    second: crab gets damaged sprite_7
+  - first:
+      213: -3842397349180962535
+    second: crab gets damaged sprite_8
+  - first:
+      213: -3634204722132378743
+    second: crab gets damaged sprite_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +119,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: crab gets damaged sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c439f3fec26dbd0800000000000000
+      internalID: -2605845928311829426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 123
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d335d6c316fd9e4b0800000000000000
+      internalID: -5410547868590320835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b3278ce09cbdf660800000000000000
+      internalID: 7421295091606037429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 91
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a0816bd45ab0700800000000000000
+      internalID: 507681136195406490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 65
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d3f3a81d7070b70800000000000000
+      internalID: 8865062988051070324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 64
+        width: 39
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48450f59ca105f6f0800000000000000
+      internalID: -651612730323610492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb15d33303e11d50800000000000000
+      internalID: 6706390923025390558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_7
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 30
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3052cd58528e3aea0800000000000000
+      internalID: -5862587042049022717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9198a2408ff0daac0800000000000000
+      internalID: -3842397349180962535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab gets damaged sprite_9
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 35
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b90406f06b09dc0800000000000000
+      internalID: -3634204722132378743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
