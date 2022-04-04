@@ -60,7 +60,7 @@ public class Manager : MonoBehaviour
     {
         spawned = false;
         Destroy(deathCanvas);
-
+        RestartScene();
         //deathCanvas.SetActive(false);
         Debug.Log("Gone.");
     }
