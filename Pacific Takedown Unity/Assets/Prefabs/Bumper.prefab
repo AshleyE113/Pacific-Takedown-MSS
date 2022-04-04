@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6104453809145228784}
   - component: {fileID: 6104453809145228787}
   - component: {fileID: -2512197281521050092}
+  - component: {fileID: 1154390682}
   m_Layer: 6
   m_Name: Bumper
   m_TagString: Bumper
@@ -70,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1494674695
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 2086976579309540767, guid: 5c2150fd5c0599a46b5c83005985e7fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -116,6 +117,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.53038096}
   serializedVersion: 2
-  m_Radius: 1.6690788
+  m_Radius: 1.3570898
+--- !u!114 &1154390682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6104453809145228786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227b41d22005f9848b46a19acd6f5bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasHit: 0
