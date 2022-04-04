@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: baa548399efe59349ba4f07b0b064b6f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4111620093195366842
+    second: crab three fourths attack front-Sheet_0
+  - first:
+      213: 730072987131815263
+    second: crab three fourths attack front-Sheet_1
+  - first:
+      213: -614641281406565008
+    second: crab three fourths attack front-Sheet_2
+  - first:
+      213: -416152929862633348
+    second: crab three fourths attack front-Sheet_3
+  - first:
+      213: 613617513703511962
+    second: crab three fourths attack front-Sheet_4
+  - first:
+      213: 4658043272271425337
+    second: crab three fourths attack front-Sheet_5
+  - first:
+      213: -3234385726518307785
+    second: crab three fourths attack front-Sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +110,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 30
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5418101, y: 0.23868878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e4bbd3f4790f6c0800000000000000
+      internalID: -4111620093195366842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 0
+        width: 34
+        height: 106
+      alignment: 9
+      pivot: {x: 0.4815548, y: 0.2870065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55a912838db12a00800000000000000
+      internalID: 730072987131815263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 37
+        height: 105
+      alignment: 9
+      pivot: {x: 0.50000083, y: 0.23122257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0758875d20b5877f0800000000000000
+      internalID: -614641281406565008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78bc4b7d17893af0800000000000000
+      internalID: -416152929862633348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97914ca0e1048800800000000000000
+      internalID: 613617513703511962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 10
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fe2204da1b4a040800000000000000
+      internalID: 4658043272271425337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab three fourths attack front-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734584871572d13d0800000000000000
+      internalID: -3234385726518307785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

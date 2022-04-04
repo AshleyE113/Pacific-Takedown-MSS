@@ -1,7 +1,40 @@
 fileFormatVersion: 2
 guid: c155d2134c2c29c4cac33a1ea7900998
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2965860387016409198
+    second: crab attack front-Sheet_0
+  - first:
+      213: -3875311688076211297
+    second: crab attack front-Sheet_1
+  - first:
+      213: -3798159730462586681
+    second: crab attack front-Sheet_2
+  - first:
+      213: 9176616032366676673
+    second: crab attack front-Sheet_3
+  - first:
+      213: 111658570199640730
+    second: crab attack front-Sheet_4
+  - first:
+      213: 3338627571363537508
+    second: crab attack front-Sheet_5
+  - first:
+      213: 8826787031152831527
+    second: crab attack front-Sheet_6
+  - first:
+      213: 5006486355092657603
+    second: crab attack front-Sheet_7
+  - first:
+      213: -2574115371309197085
+    second: crab attack front-Sheet_8
+  - first:
+      213: 4726585820613508033
+    second: crab attack front-Sheet_9
+  - first:
+      213: 3921900055422578675
+    second: crab attack front-Sheet_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +122,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: crab attack front-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 53
+        height: 109
+      alignment: 9
+      pivot: {x: 0.5089909, y: 0.6245896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b4c4e4d80283ac0800000000000000
+      internalID: -3875311688076211297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab attack front-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 0
+        width: 19
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462e27c5610355e20800000000000000
+      internalID: 3338627571363537508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab attack front-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 55
+        height: 99
+      alignment: 9
+      pivot: {x: 0.4956687, y: 0.41095707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ca3ebd90c0f7a70800000000000000
+      internalID: 8826787031152831527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab attack front-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 6
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5532080dc9a7540800000000000000
+      internalID: 5006486355092657603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab attack front-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e81e3245b7e64cd0800000000000000
+      internalID: -2574115371309197085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab attack front-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 0
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbf016e2c4389140800000000000000
+      internalID: 4726585820613508033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crab attack front-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff2c0042536d6630800000000000000
+      internalID: 3921900055422578675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

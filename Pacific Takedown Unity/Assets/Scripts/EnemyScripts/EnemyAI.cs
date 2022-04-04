@@ -107,6 +107,8 @@ public class EnemyAI : MonoBehaviour
     {
         //if (Manager.gameManager._isdead == false)
         //{
+        direction = ((Vector2)target.position - rb.position).normalized;
+        
             switch (state)
             {
                 case State.Idle:
@@ -138,7 +140,7 @@ public class EnemyAI : MonoBehaviour
                         reachedEndOfPath = false;
                     }
 
-                    direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+                    //direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
                     Vector2 force = direction * speed * Time.deltaTime;
                     rb.AddForce(force);
                     float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
@@ -153,12 +155,14 @@ public class EnemyAI : MonoBehaviour
                     break;
                 case State.PreparingAttack:
                     //Once in Range Prepare the Attack
+                    safeToUpdateDir = false;
                     ChangeAnimationState("AttackWindup");
                     //CommenceAttack();
                     break;
                 case State.Attack:
                     //Attack player. Do damage if hits player
                     //ChangeAnimationState("DroneIdle");
+                    ChangeAnimationState("Attacking");
                     if (attackCoroutineStarted == false)
                     {
                         StartCoroutine(AttackRecovery());
@@ -271,17 +275,22 @@ public class EnemyAI : MonoBehaviour
 
         yield return new WaitForSeconds(attackRecoverTime);
         attackCoroutineStarted = false;
+        safeToUpdateDir = true;
         canAttack = true;
         state = State.Idle;
     }
     public void CommenceAttack()
     {
+        //animations
+        animator.SetFloat("MovementHorizontal", direction.x);
+        animator.SetFloat("MovementVertical", direction.y);
+
         rb.AddForce((target.position - transform.position) * (speed / 3));
         Vector2 player = new Vector2(target.transform.position.x, target.transform.position.y);
         launchDirection = (player - rb.position).normalized;
         var lookPos = target.position - transform.position;
         Vector2 effectOffset = new Vector2(0, 0);
-        FXManager.spawnEffect("enemyMeleeEffect1", gameObject, target, Quaternion.LookRotation(lookPos), false, effectOffset);
+        //FXManager.spawnEffect("enemyMeleeEffect1", gameObject, target, Quaternion.LookRotation(lookPos), false, effectOffset);
         state = State.Attack;
     }
 
