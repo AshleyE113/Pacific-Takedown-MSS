@@ -13,6 +13,7 @@ public class HitStop : MonoBehaviour
         Time.timeScale = 0.0f;
         StartCoroutine(Wait(stopTime));
     }
+    
 
     IEnumerator Wait(float waitTime)
     {

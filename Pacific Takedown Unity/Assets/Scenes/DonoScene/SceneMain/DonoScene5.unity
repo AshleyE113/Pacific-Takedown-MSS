@@ -9173,6 +9173,22 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 422464765
       objectReference: {fileID: 0}
+    - target: {fileID: 4552299704260418016, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552299704260418016, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552299704260418016, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552299704260418016, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4552299704260418017, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
       propertyPath: m_Name
       value: Player
@@ -9225,6 +9241,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: hitStop
+      value: 
+      objectReference: {fileID: 1267137595}
     - target: {fileID: 6734542752351984161, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5

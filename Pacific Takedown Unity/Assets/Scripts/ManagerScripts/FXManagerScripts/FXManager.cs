@@ -57,6 +57,14 @@ public class FXManager : MonoBehaviour
         instance.GetComponent<EnemyAI>().flashingTime = flashDuration;
 
     }
+    
+    public static void flashEffectPlayer(GameObject instance)
+    {
+        SpriteRenderer myRender = instance.GetComponent<SpriteRenderer>();
+        myRender.material = flashMaterial;
+        instance.GetComponent<PlayerController>().flashingTime = flashDuration;
+
+    }
 
     public static void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)
     {

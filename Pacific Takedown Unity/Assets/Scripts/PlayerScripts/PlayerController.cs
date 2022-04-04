@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     public float meleeRange;
     [HideInInspector] public float lungeSpeed=50;
     private bool invulnerable = false;
+    public float invulnerabilityDuration = 3f;
     public float attackspeed;
     //Dashing
     public int dashForce=100;
@@ -45,6 +46,11 @@ public class PlayerController : MonoBehaviour
     private int dashTimer;
     //FX
     private bool fxSpawned;
+    public int flashingTime;
+    private int flickerTimer = 0;
+    public int flickerRate = 15;
+    private int offFlicker = 0;
+    public GameObject hitStop;
     //Player States
     public enum State
     {
@@ -155,9 +161,20 @@ public class PlayerController : MonoBehaviour
                         rb.MovePosition(rb.position + (movement) * moveSpeed * Time.fixedDeltaTime);
                         ChangeAnimationState("Movement");
                     }
+
+                    if (invulnerable)
+                    {
+                      CheckFlicker();
+                    }
                     break;
                 //State Ready: Player is able to control character
                 case State.Attacking:
+                  
+                    if (invulnerable)
+                    {
+                      CheckFlicker();
+                    }
+                  
                     if (canCombo) //If we can combo, Make our lunge velocity Zero
                     {
                         rb.velocity = Vector2.zero;
@@ -171,6 +188,7 @@ public class PlayerController : MonoBehaviour
                     { attackIndex = 3; }
                     break;
                 case State.Hit:
+                  FlashEffectTimer();
                     if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
                     {
                         rb.velocity = rb.velocity * .8f; //Ashley: I'm assuming that this is the player knockback after the enemy strikes
@@ -192,6 +210,35 @@ public class PlayerController : MonoBehaviour
                     break;
            // }
         }
+  }
+
+  private void CheckFlicker()
+  {
+    if (flickerTimer >= flickerRate)
+    {
+      flicker();
+    }
+    else
+    {
+      flickerTimer++;
+      gameObject.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+  }
+  private void flicker()
+  {
+
+    gameObject.GetComponent<SpriteRenderer>().enabled = false;
+    if (offFlicker >= flickerRate)
+    {
+      offFlicker = 0;
+      flickerTimer = 0;
+    }
+    else
+    {
+      offFlicker += 1;
+    }
+
   }
   //Change our current animation
   public void ChangeAnimationState(string newState) //Change title of currentState
@@ -257,13 +304,29 @@ public class PlayerController : MonoBehaviour
     {
       ChangeState(State.Hit);
       FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
+      FXManager.flashEffectPlayer(gameObject);
+      hitStop.GetComponent<HitStop>().Stop(0.1f);
       playerHealth--;
       //Change Animation to Player Hit
       PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
       //Make THem Invulnerable
       invulnerable = true;
+      StartCoroutine(InvulnerableTimer());
       Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
       rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+    }
+  }
+  
+  private void FlashEffectTimer()
+  {
+    //Flash Duration
+    if (flashingTime <= 0)
+    {
+      gameObject.GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
+    }
+    else
+    {
+      flashingTime -= 1;
     }
   }
 
@@ -271,6 +334,13 @@ public class PlayerController : MonoBehaviour
   {
     ChangeState(State.Ready);
     rb.velocity=Vector2.zero;
+    //invulnerable = false;
+  }
+
+  IEnumerator InvulnerableTimer()
+  {
+    yield return new WaitForSeconds(invulnerabilityDuration);
+    gameObject.GetComponent<SpriteRenderer>().enabled = true;
     invulnerable = false;
   }
 
