@@ -45,9 +45,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMeleeEffectNS: {fileID: 3006254756446209033, guid: 6ae0fdbf916e7b2409dd800e772fab7f, type: 3}
   enemyMeleeEffectNS: {fileID: 3006254756446209033, guid: 70f189bab4c1e4eb0b43e55b866b0b7c, type: 3}
-  explosionEffectNS: {fileID: 0}
+  explosionEffectNS: {fileID: 4097953734669522533, guid: 539311d49d87eac4cbd1dd8a96ee6552, type: 3}
   oilEffectNS: {fileID: 2159858475428378111, guid: 2bb0ae7ce14484e4586feb8c63fceff0, type: 3}
   bloodEffectNS: {fileID: 2159858475428378111, guid: 25c9f6ceccdd44bdaa581155ff731cc5, type: 3}
+  sparkEffectNS: {fileID: 303744141661270310, guid: b3017bff2ddd1480c924537a6fcd7543, type: 3}
+  playerHitFXNS: {fileID: 0}
   defaultMaterialNS: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   flashMaterialNS: {fileID: 2100000, guid: 98ee1df0add373448b1babea3b5fafab, type: 2}
   flashDurationNS: 2
+  explosionFX: {fileID: 0}

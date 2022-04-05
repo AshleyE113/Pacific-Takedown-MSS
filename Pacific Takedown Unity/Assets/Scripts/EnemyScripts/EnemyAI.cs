@@ -41,6 +41,7 @@ public class EnemyAI : MonoBehaviour
     public FXManager myFX;
     private bool fxSpawned;
     public int flashingTime;
+    //[SerializeField] GameObject explosionFX;
 
     //Attack
     public int attackRange;
@@ -208,7 +209,6 @@ public class EnemyAI : MonoBehaviour
                     //BUT it can DAMAGE the player!
                     FlashEffectTimer();
 
-
                     break;
                 case State.Dead:
                     //if hit 3 or more times by player, destory it
@@ -239,10 +239,24 @@ public class EnemyAI : MonoBehaviour
 
         if (Health <= 0)
         {
-            //Screenshake and play explosion here
-            CameraController.Shake(50f, 10f, 0.1f, 0.1f);
-            this.gameObject.SetActive(false);
+            CameraController.Shake(40f, 10f, 0.1f, 0.1f);
+            isDead = true;
+            StartCoroutine(Death());
         }
+    }
+
+    IEnumerator Death()
+    {
+        bool spawned = false;
+        //Screenshake and play explosion here
+        if (!spawned)
+        {
+            FXManager.spawnEffect("explosionEffect", this.gameObject, this.gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
+            spawned = true;
+        }
+        yield return new WaitForSeconds(0.5f);
+        this.gameObject.SetActive(false);
+        isDead = false;
     }
 
     //Update our Player's Direction
@@ -275,7 +289,6 @@ public class EnemyAI : MonoBehaviour
     }
     IEnumerator AttackRecovery()
     {
-
         yield return new WaitForSeconds(attackRecoverTime);
         attackCoroutineStarted = false;
         safeToUpdateDir = true;
@@ -326,6 +339,8 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+   
+
     public void BouncedOffWall(int damage)
     {
         state = State.Bounce;
@@ -360,24 +375,4 @@ public class EnemyAI : MonoBehaviour
         }
 
     }
-    /*
-    public void ExplosionPEffect(bool flipped, float zRotation, Vector2 offset)
-    {
-        if (!fxSpawned)
-        {
-            if (!flipped)
-            {
-                FXManager.spawnEffect("explosionEffect", this.gameObject.transform.position, null, new Quaternion(0f, 0f, gameObject.transform.rotation.eulerAngles.z
-                  , 1f), false, offset);
-            }
-            else
-            {
-                FXManager.spawnEffect("explosionEffect", gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject, null, new Quaternion(0f, 0f, gameObject.transform.rotation.eulerAngles.z
-                  , 1f), true, offset);
-            }
-
-            fxSpawned = true;
-        }
-    }*/
-
 }

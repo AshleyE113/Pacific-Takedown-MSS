@@ -37,7 +37,9 @@ public class FXManager : MonoBehaviour
     public static int flashDuration;
     public static GameObject currentPlayerMelee;
     public int flashDurationNS;
-    //
+
+    //Particle Prefabs
+    public GameObject explosionFX;
     private void Awake()
     {
         //Declare Effects on Awake
@@ -115,8 +117,10 @@ public class FXManager : MonoBehaviour
         if (effect == "explosionEffect")
         {
             var spawnLocation = spawn.transform.position;
-            var Effect = Instantiate(enemyMeleeEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
+            var Effect = Instantiate(explosionEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             Effect.transform.parent = spawn.transform;
+            Effect.transform.localScale = new Vector2(100f, 100f);
+            Debug.Log("PLAYED");
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
@@ -149,17 +153,6 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
-        /*
-        if (effect == "playerHit")
-        {
-            var spawnLocation = spawn.transform.position;
-            var Effect = Instantiate(playerHitFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
-            if (flipped)
-            {
-                Effect.GetComponent<SpriteRenderer>().flipX = true;
-            }
-        }
-        */
     }
 
 }

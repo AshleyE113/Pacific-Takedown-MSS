@@ -9287,18 +9287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FXManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
-      propertyPath: playerHitFXNS
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
-      propertyPath: sparkEffectNS
-      value: 
-      objectReference: {fileID: 303744141661270310, guid: b3017bff2ddd1480c924537a6fcd7543, type: 3}
-    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
-      propertyPath: explosionEffectNS
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
 --- !u!1001 &4552299704551868009
