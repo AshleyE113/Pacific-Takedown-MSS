@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="3054664677">
+		<SoundBank Id="1229948536" Language="SFX" Hash="394830635">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
@@ -96,11 +96,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="9504." DurationMax="9504.">
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="593210015" Language="SFX">
 							<ShortName>BinaryWorld - Nycelly.wav</ShortName>
 							<Path>SFX\BinaryWorld - Nycelly_D79FB2B7.wem</Path>
+						</File>
+						<File Id="610524762" Language="SFX">
+							<ShortName>Nycelly ~ NothingCanStopUs (GameOff2021).wav</ShortName>
+							<Path>SFX\Nycelly ~ NothingCanStopUs (GameOff2021)_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
