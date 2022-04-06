@@ -18,6 +18,7 @@ public class EnemyCollision : MonoBehaviour
                 CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 //Sound
                 AkSoundEngine.PostEvent("Play_MetalBounce" , enemy);
+                //Change Health Bar
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
@@ -25,7 +26,9 @@ public class EnemyCollision : MonoBehaviour
             if (script.state == EnemyAI.State.Bounce)
             {
                 //script.ChangeState(EnemyAI.State.Bounce);
-                script.BouncedOffWall(6); //Extra Knockback
+                script.BouncedOffWall(25); //Extra Knockback
+                //Change Health Bar
+                enemy.GetComponent<EnemyHealth>().TakeDamage(25);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && enemy.GetComponent<EnemyBounce>().isBouncing == true)
