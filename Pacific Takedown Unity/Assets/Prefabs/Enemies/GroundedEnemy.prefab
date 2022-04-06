@@ -887,7 +887,7 @@ MonoBehaviour:
   recoveryTimer: 0
   recoveryMax: 90
   knockbackDrag: 0
-  detectionRange: 25
+  detectionRange: 15
   bounceKnockback: 50
   myFX: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
   flashingTime: 2
