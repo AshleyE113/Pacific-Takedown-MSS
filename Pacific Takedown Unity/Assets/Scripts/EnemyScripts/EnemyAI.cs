@@ -33,7 +33,8 @@ public class EnemyAI : MonoBehaviour
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
-
+    //Patrolling
+    public float detectionRange = 10f;
 
     //Bounce
     public int bounceKnockback = 50;
@@ -56,6 +57,7 @@ public class EnemyAI : MonoBehaviour
     private string animCurrentState;
     public enum State
     {
+        Patrolling,
         Idle,
         PreparingAttack,
         Attack,
@@ -67,13 +69,18 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] public State state;
     #endregion
 
+    private void Awake()
+    {
+        state = State.Patrolling;
+    }
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, 0.5f);
         //FXManager.explosionEffect.SetActive(false);
-        state = State.Idle;
+        //state = State.Patrolling;
         Health = healthMax;
         //Important variables for bounce
         rb = GetComponent<Rigidbody2D>();
@@ -141,6 +148,15 @@ public class EnemyAI : MonoBehaviour
         
             switch (state)
             {
+                case State.Patrolling:
+                    ChangeAnimationState("DroneIdle");
+                    
+                    if (Vector2.Distance(rb.position, target.position) < detectionRange)
+                    {
+                        state = State.Idle;
+                    }
+                    
+                    break;
                 case State.Idle:
                     //Stay in place. If player is in range, go towards them
                     ResumeAnimation();

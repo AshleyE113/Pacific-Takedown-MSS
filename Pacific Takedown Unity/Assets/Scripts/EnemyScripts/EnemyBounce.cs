@@ -38,7 +38,7 @@ public class EnemyBounce : MonoBehaviour
          bounceRB.drag = testDrag; //Play with this value to test this.
         }
 
-        if (bounceRB.velocity == Vector2.zero)
+        if (bounceRB.velocity == Vector2.zero && gameObject.GetComponent<EnemyAI>().state == EnemyAI.State.Bounce)
         {
          isBouncing = false;
          gameObject.GetComponent<EnemyAI>().state = EnemyAI.State.Idle;
