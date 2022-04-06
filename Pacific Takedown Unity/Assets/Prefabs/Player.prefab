@@ -303,7 +303,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -404,9 +404,13 @@ MonoBehaviour:
   attackIndex: 0
   meleeRange: 0
   lungeSpeed: 50
+  invulnerabilityDuration: 3
   attackspeed: 1.25
   dashForce: 250
   dashDistance: 3
+  flashingTime: 0
+  flickerRate: 15
+  hitStop: {fileID: 0}
 --- !u!114 &1872623200451236152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +434,7 @@ GameObject:
   - component: {fileID: 6734542752351984161}
   - component: {fileID: 4258597481442493083}
   - component: {fileID: 1766188729}
+  - component: {fileID: 3609914545982362049}
   m_Layer: 8
   m_Name: SwingPoint
   m_TagString: Untagged
@@ -503,6 +508,19 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1766188729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371670226818428478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b9a10ed3015434ea9674afceb89e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkTime: 0.05
+--- !u!114 &3609914545982362049
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
