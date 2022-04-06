@@ -118,8 +118,6 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(explosionEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
-            Effect.transform.parent = spawn.transform;
-            Effect.transform.localScale = new Vector2(100f, 100f);
             Debug.Log("PLAYED");
             if (flipped)
             {

@@ -238,6 +238,7 @@ public class EnemyAI : MonoBehaviour
                     break;
                 case State.Dead:
                     //if hit 3 or more times by player, destory it
+                    FXManager.spawnEffect("explosionEffect", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
                     Destroy(gameObject);
                     break;
             }
@@ -254,9 +255,10 @@ public class EnemyAI : MonoBehaviour
 
         if (Health <= 0)
         {
-            isDead = true;
-            StartCoroutine(Death(isDead));
+            state = State.Dead;
+            //StartCoroutine(Death(isDead));
         }
+        
     }
 
     IEnumerator Death(bool isDead)
