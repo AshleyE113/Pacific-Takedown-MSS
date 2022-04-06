@@ -1,6 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0F1EBEBD-371F-43DA-8762-180168E13FE7}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{0F1EBEBD-371F-43DA-8762-180168E13FE7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{0F1EBEBD-371F-43DA-8762-180168E13FE7}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="BackgroundMusic" ID="{CEBF8929-E895-45EE-8E24-CE5784AF3F4B}" ShortID="449414677">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="BinaryWorld - Nycelly" ID="{C6C45E17-4E07-4589-8B8C-CDBAEDCFC3B1}" ShortID="230342343">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="96000"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-22</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="BinaryWorld - Nycelly" ID="{BFBD9413-98C2-4C67-9469-5B5CDA3D5498}" ShortID="722923230">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BinaryWorld - Nycelly" ID="{8886E62E-FEC6-48EC-9293-FEE83FBA7328}">
+											<Language>SFX</Language>
+											<AudioFile>BinaryWorld - Nycelly.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="593210015"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{D91D91F6-98D0-452C-8BC7-6C1BFC9AE3EA}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{3B646AA0-AC10-4E04-A33D-53D173D89119}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="BinaryWorld - Nycelly" ID="{12410995-DB15-47E4-A6FA-A58867715A96}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="96000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="BinaryWorld - Nycelly" ID="{8886E62E-FEC6-48EC-9293-FEE83FBA7328}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{1A215857-609F-4D46-B3A4-7A6E770600CD}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{59483AA4-B00C-427A-83AF-1CE4E746B0E2}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="96000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{D19A6392-9561-4D54-AF1C-8BA84BFC8632}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{7DAC26E3-D965-4AEE-9578-724930CFCD2D}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ObjectLists/>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{02122E60-DF75-4B21-BD42-6654A316E8D2}" ShortID="955620135">
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{2017AFC1-41E9-47B2-9560-32CC60FA924D}" ShortID="912004294">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="99"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="BinaryWorld - Nycelly" ID="{C6C45E17-4E07-4589-8B8C-CDBAEDCFC3B1}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

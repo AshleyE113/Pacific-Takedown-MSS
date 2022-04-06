@@ -66,7 +66,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e897117b976fb549871438bb8df3a047
     GuidInternal: 
+<<<<<<< refs/remotes/origin/AshBranch
     m_lastTime: -8585571770527557978
+=======
+    m_lastTime: -8585523817303758144
+>>>>>>> Added Music and Some Sound Effects
     List:
     - name: Environment
       guid: 34e6029aa4526e48ac2a4c4aed579752
@@ -94,8 +98,81 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 72e74f783ce58a4589901a1b851e08b7
     GuidInternal: 
+<<<<<<< refs/remotes/origin/AshBranch
     m_lastTime: -8585571770528768296
     List: []
+=======
+    m_lastTime: -8585523817304605878
+    List:
+    - name: Play_BatSwing
+      guid: 4e0c5a1b61ee6844bef232aed8e77d5b
+      id: 111235887
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_BatSwing
+        ObjectType: 3
+        guid: 4e0c5a1b61ee6844bef232aed8e77d5b
+      Path: Events\Default Work Unit\Play_BatSwing
+      maxAttenuation: 0
+      maxDuration: 0.404461
+      minDuration: 0.310965
+    - name: Play_BotExplode
+      guid: 340759c63aff6d40b69b20883a871f52
+      id: 2129047272
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_BotExplode
+        ObjectType: 3
+        guid: 340759c63aff6d40b69b20883a871f52
+      Path: Events\Default Work Unit\Play_BotExplode
+      maxAttenuation: 0
+      maxDuration: 1.015629
+      minDuration: 0.846367
+    - name: Play_MetalBounce
+      guid: f55d29ad9e83694aaf3bbb0de94ad184
+      id: 3786027151
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_MetalBounce
+        ObjectType: 3
+        guid: f55d29ad9e83694aaf3bbb0de94ad184
+      Path: Events\Default Work Unit\Play_MetalBounce
+      maxAttenuation: 0
+      maxDuration: 0.669309
+      minDuration: 0.669309
+    - name: Play_MetalContact
+      guid: 66a6334e74be484685204d9a841267e9
+      id: 4122950737
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_MetalContact
+        ObjectType: 3
+        guid: 66a6334e74be484685204d9a841267e9
+      Path: Events\Default Work Unit\Play_MetalContact
+      maxAttenuation: 0
+      maxDuration: 0.595061
+      minDuration: 0.595061
+>>>>>>> Added Music and Some Sound Effects
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -153,7 +230,7 @@ MonoBehaviour:
     m_lastTime: -8585571770526917805
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0d0000000e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

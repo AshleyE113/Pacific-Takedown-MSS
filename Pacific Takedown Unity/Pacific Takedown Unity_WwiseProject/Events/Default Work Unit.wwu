@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{784FE772-E53C-458A-8990-1A1B851E08B7}" SchemaVersion="103">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{784FE772-E53C-458A-8990-1A1B851E08B7}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{784FE772-E53C-458A-8990-1A1B851E08B7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_BatSwing" ID="{1B5A0C4E-EE61-4468-BEF2-32AED8E77D5B}">
+					<ChildrenList>
+						<Action Name="" ID="{DEF91493-E270-4704-8BCB-03416601F4A7}" ShortID="714878179">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BatSwing" ID="{758A6EB1-3B42-40D2-8717-D803E0DC7D39}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BotExplode" ID="{C6590734-FF3A-406D-B69B-20883A871F52}">
+					<ChildrenList>
+						<Action Name="" ID="{67F462A3-5ACA-42C1-830A-8E94BDD8C3BD}" ShortID="1058729848">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BotExplode" ID="{64AAF65C-22C3-4852-8AE6-D44D42639237}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MetalBounce" ID="{AD295DF5-839E-4A69-AF3B-BB0DE94AD184}">
+					<ChildrenList>
+						<Action Name="" ID="{FF9AC2FE-6115-4525-B02B-B55A949EE536}" ShortID="554787024">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MetalBounce" ID="{7B9A2287-1B3F-467E-B3C1-2ED4E6D8B904}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MetalContact" ID="{4E33A666-BE74-4648-8520-4D9A841267E9}">
+					<ChildrenList>
+						<Action Name="" ID="{8E59C020-E439-481A-B89C-4917D6398D68}" ShortID="446786522">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MetalContact" ID="{C0F14B2B-5929-4122-987C-914380888E0F}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Music" ID="{B2ECAA66-A195-4CDD-A0E8-B8C2AC00510E}">
+					<ChildrenList>
+						<Action Name="" ID="{97AEDBA2-F023-45C1-9B83-79661C9FF4F2}" ShortID="739232571">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BackgroundMusic" ID="{CEBF8929-E895-45EE-8E24-CE5784AF3F4B}" WorkUnitID="{0F1EBEBD-371F-43DA-8762-180168E13FE7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

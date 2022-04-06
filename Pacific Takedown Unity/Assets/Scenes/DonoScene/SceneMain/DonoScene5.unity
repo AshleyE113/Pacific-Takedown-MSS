@@ -242,6 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244212220}
   - component: {fileID: 244212219}
+  - component: {fileID: 244212221}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -288,6 +289,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244212221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244212218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8bbe0068c2dcb4b8bab71582056048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 81ebb0447f650e546a5ae92a0b5a3e09, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &272167746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3067,6 +3092,10 @@ PrefabInstance:
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_Name
       value: GroundedEnemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -7636,6 +7665,10 @@ PrefabInstance:
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_Name
       value: FloatingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7715154224445994039, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_SortingOrder

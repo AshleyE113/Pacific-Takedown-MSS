@@ -261,6 +261,9 @@ public class PlayerController : MonoBehaviour
   {
     if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
     {
+      //Sound
+      AkSoundEngine.PostEvent("Play_BatSwing" , this.gameObject);
+
       ChangeState(State.Attacking);
       attackDirection();
     }
@@ -268,6 +271,9 @@ public class PlayerController : MonoBehaviour
     {
       if (canCombo && attackIndex < 2)
       {
+        //Sound
+        AkSoundEngine.PostEvent("Play_BatSwing" , this.gameObject);
+        
         FXManager.currentPlayerMelee = null;
         canCombo = false;
         fxSpawned = false;

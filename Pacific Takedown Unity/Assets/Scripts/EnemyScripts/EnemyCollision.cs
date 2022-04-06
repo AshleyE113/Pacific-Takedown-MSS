@@ -16,6 +16,8 @@ public class EnemyCollision : MonoBehaviour
             {
                 //script.ChangeState(EnemyAI.State.Bounce);
                 CameraController.Shake(2f, 2f, 0.1f, 0.1f);
+                //Sound
+                AkSoundEngine.PostEvent("Play_MetalBounce" , enemy);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
@@ -50,7 +52,8 @@ public class EnemyCollision : MonoBehaviour
         int direction = (int) other.gameObject.transform.localEulerAngles.z;
         if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
         {
-            Debug.Log("Hit By Trigger");
+            //Sound
+            AkSoundEngine.PostEvent("Play_MetalContact" , enemy);
 
             script.canAttack = false;
             CameraController.Shake(10f, 10f, 0.1f, 0.1f);

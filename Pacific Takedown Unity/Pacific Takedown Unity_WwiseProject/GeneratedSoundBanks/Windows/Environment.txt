@@ -1,0 +1,26 @@
+Event	ID	Name			Wwise Object Path	Notes
+	111235887	Play_BatSwing			\Default Work Unit\Play_BatSwing	
+	2129047272	Play_BotExplode			\Default Work Unit\Play_BotExplode	
+	2932040671	Play_Music			\Default Work Unit\Play_Music	
+	3786027151	Play_MetalBounce			\Default Work Unit\Play_MetalBounce	
+	4122950737	Play_MetalContact			\Default Work Unit\Play_MetalContact	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	126449396	BatSwing4	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatSwing4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing4		62712
+	142851640	MetalBounce3	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\MetalBounce3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalBounce\MetalBounce3		136472
+	203082265	BatContactMetal5	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatContactMetal5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal5		121340
+	217955580	MetalBounce2	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\MetalBounce2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalBounce\MetalBounce2		136472
+	279207744	BatSwing2	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatSwing2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing2		73276
+	352473675	BatContactMetal1	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatContactMetal1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal1		121340
+	420495556	BatContactMetal2	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatContactMetal2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal2		121340
+	450215729	BotExplosion1	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BotExplosion1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BotExplode\BotExplosion1		170576
+	462333147	MetalBounce1	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\MetalBounce1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalBounce\MetalBounce1		136472
+	514560133	BatSwing3	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatSwing3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing3		77240
+	593210015	BinaryWorld - Nycelly	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BinaryWorld - Nycelly_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\BackgroundMusic\BinaryWorld - Nycelly\BinaryWorld - Nycelly		16934464
+	764242744	BotExplosion2	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BotExplosion2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BotExplode\BotExplosion2		204676
+	782494090	BatSwing1	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatSwing1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing1		76528
+	831750733	BatContactMetal3	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatContactMetal3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal3		121340
+	926207731	BatContactMetal4	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatContactMetal4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal4		121340
+	996614880	BatSwing5	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BatSwing5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing5		81548
+	1069714118	BotExplosion3	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Windows\SFX\BotExplosion3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BotExplode\BotExplosion3		204676
+

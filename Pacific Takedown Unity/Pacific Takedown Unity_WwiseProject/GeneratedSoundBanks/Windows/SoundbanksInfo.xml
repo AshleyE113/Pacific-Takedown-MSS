@@ -11,10 +11,100 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="3387212696">
+		<SoundBank Id="1229948536" Language="SFX" Hash="3054664677">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
+			<IncludedEvents>
+				<Event Id="111235887" Name="Play_BatSwing" ObjectPath="\Events\Default Work Unit\Play_BatSwing" DurationType="OneShot" DurationMin="0.310965" DurationMax="0.404461">
+					<IncludedMemoryFiles>
+						<File Id="126449396" Language="SFX">
+							<ShortName>BatSwing4.wav</ShortName>
+							<Path>SFX\BatSwing4_10C4C929.wem</Path>
+						</File>
+						<File Id="279207744" Language="SFX">
+							<ShortName>BatSwing2.wav</ShortName>
+							<Path>SFX\BatSwing2_10C4C929.wem</Path>
+						</File>
+						<File Id="514560133" Language="SFX">
+							<ShortName>BatSwing3.wav</ShortName>
+							<Path>SFX\BatSwing3_10C4C929.wem</Path>
+						</File>
+						<File Id="782494090" Language="SFX">
+							<ShortName>BatSwing1.wav</ShortName>
+							<Path>SFX\BatSwing1_10C4C929.wem</Path>
+						</File>
+						<File Id="996614880" Language="SFX">
+							<ShortName>BatSwing5.wav</ShortName>
+							<Path>SFX\BatSwing5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2129047272" Name="Play_BotExplode" ObjectPath="\Events\Default Work Unit\Play_BotExplode" DurationType="OneShot" DurationMin="0.846367" DurationMax="1.015629">
+					<IncludedMemoryFiles>
+						<File Id="450215729" Language="SFX">
+							<ShortName>BotExplosion1.wav</ShortName>
+							<Path>SFX\BotExplosion1_10C4C929.wem</Path>
+						</File>
+						<File Id="764242744" Language="SFX">
+							<ShortName>BotExplosion2.wav</ShortName>
+							<Path>SFX\BotExplosion2_10C4C929.wem</Path>
+						</File>
+						<File Id="1069714118" Language="SFX">
+							<ShortName>BotExplosion3.wav</ShortName>
+							<Path>SFX\BotExplosion3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3786027151" Name="Play_MetalBounce" ObjectPath="\Events\Default Work Unit\Play_MetalBounce" DurationType="OneShot" DurationMin="0.669309" DurationMax="0.669309">
+					<IncludedMemoryFiles>
+						<File Id="142851640" Language="SFX">
+							<ShortName>MetalBounce3.wav</ShortName>
+							<Path>SFX\MetalBounce3_10C4C929.wem</Path>
+						</File>
+						<File Id="217955580" Language="SFX">
+							<ShortName>MetalBounce2.wav</ShortName>
+							<Path>SFX\MetalBounce2_10C4C929.wem</Path>
+						</File>
+						<File Id="462333147" Language="SFX">
+							<ShortName>MetalBounce1.wav</ShortName>
+							<Path>SFX\MetalBounce1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4122950737" Name="Play_MetalContact" ObjectPath="\Events\Default Work Unit\Play_MetalContact" DurationType="OneShot" DurationMin="0.595061" DurationMax="0.595061">
+					<IncludedMemoryFiles>
+						<File Id="203082265" Language="SFX">
+							<ShortName>BatContactMetal5.wav</ShortName>
+							<Path>SFX\BatContactMetal5_10C4C929.wem</Path>
+						</File>
+						<File Id="352473675" Language="SFX">
+							<ShortName>BatContactMetal1.wav</ShortName>
+							<Path>SFX\BatContactMetal1_10C4C929.wem</Path>
+						</File>
+						<File Id="420495556" Language="SFX">
+							<ShortName>BatContactMetal2.wav</ShortName>
+							<Path>SFX\BatContactMetal2_10C4C929.wem</Path>
+						</File>
+						<File Id="831750733" Language="SFX">
+							<ShortName>BatContactMetal3.wav</ShortName>
+							<Path>SFX\BatContactMetal3_10C4C929.wem</Path>
+						</File>
+						<File Id="926207731" Language="SFX">
+							<ShortName>BatContactMetal4.wav</ShortName>
+							<Path>SFX\BatContactMetal4_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="OneShot" DurationMin="9504." DurationMax="9504.">
+					<IncludedMemoryFiles>
+						<File Id="593210015" Language="SFX">
+							<ShortName>BinaryWorld - Nycelly.wav</ShortName>
+							<Path>SFX\BinaryWorld - Nycelly_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
 		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
 			<ObjectPath>Init</ObjectPath>

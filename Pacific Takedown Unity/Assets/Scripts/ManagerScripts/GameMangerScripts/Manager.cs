@@ -32,6 +32,9 @@ public class Manager : MonoBehaviour
 
     void Start()
     {
+        //Sound
+        AkSoundEngine.PostEvent("Play_Music" , gameObject);
+        
         //displayCanvas.gameObject.SetActive(false);
         button = deathCanvas.GetComponentInChildren<Button>();
        button.onClick.AddListener(() => TaskOnClick());
