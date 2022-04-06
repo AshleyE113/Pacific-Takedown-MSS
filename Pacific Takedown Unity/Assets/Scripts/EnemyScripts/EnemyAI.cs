@@ -6,6 +6,7 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+    #region Intializations
 
     //Class call for now
     public HitStop hitPause;
@@ -64,7 +65,8 @@ public class EnemyAI : MonoBehaviour
     }
 
     [SerializeField] public State state;
-    
+    #endregion
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -82,6 +84,8 @@ public class EnemyAI : MonoBehaviour
 
     }
 
+
+    #region Pathfinding functions
     void UpdatePath()
     {
         if (seeker.IsDone())
@@ -98,15 +102,37 @@ public class EnemyAI : MonoBehaviour
             currentWaypoint = 0;
         }
     }
-    
+    #endregion
+
+    #region FlashFX functions
     IEnumerator FlashDuration(SpriteRenderer spriteRender,float flashDuration, Material defaultMaterial)
     {
 
         yield return new WaitForSeconds(flashDuration);
         spriteRender.material = defaultMaterial;
     }
+    private void FlashEffectTimer()
+    {
+        //Flash Duration
+        if (flashingTime <= 0)
+        {
+            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
+        }
+        else
+        {
+            flashingTime -= 1;
+        }
+    }
 
-    // Update is called once per frame
+    IEnumerator FlashDuration()
+    {
+        yield return new WaitForSeconds(FXManager.flashDuration);
+    }
+
+
+    #endregion
+
+    #region FixedUpdate
     void FixedUpdate()
     {
         //if (Manager.gameManager._isdead == false)
@@ -217,21 +243,10 @@ public class EnemyAI : MonoBehaviour
             }
        // }
     }
-
-    private void FlashEffectTimer()
-    {
-        //Flash Duration
-        if (flashingTime <= 0)
-        {
-            gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
-        }
-        else
-        {
-            flashingTime -= 1;
-        }
-    }
+    #endregion
 
 
+    #region Update & Death IEnum
     private void Update()
     {
         //set direction before normalising
@@ -239,27 +254,31 @@ public class EnemyAI : MonoBehaviour
 
         if (Health <= 0)
         {
-            CameraController.Shake(40f, 10f, 0.1f, 0.1f);
             isDead = true;
-            StartCoroutine(Death());
+            StartCoroutine(Death(isDead));
         }
     }
 
-    IEnumerator Death()
+    IEnumerator Death(bool isDead)
     {
-        bool spawned = false;
-        //Screenshake and play explosion here
-        if (!spawned)
-        {
-            FXManager.spawnEffect("explosionEffect", this.gameObject, this.gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
+       bool spawned = false;
+       while (isDead)
+       {
+            FXManager.spawnEffect("explosionEffect", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
             spawned = true;
-        }
-        yield return new WaitForSeconds(0.5f);
-        this.gameObject.SetActive(false);
-        isDead = false;
-    }
 
-    //Update our Player's Direction
+            if (spawned == true)
+            {
+                CameraController.Shake(10f, 10f, 0.1f, 0.1f);
+                yield return new WaitForSeconds(1f);
+            }
+            isDead = false;
+        }
+        gameObject.SetActive(false); 
+    }
+    #endregion
+    #region UpdateDir and Cooldown
+    //Update our Enemy's Direction
     void updateEnemyDir(Vector2 movement)
     {
         //Wait to see if we can update our previous direction
@@ -276,10 +295,7 @@ public class EnemyAI : MonoBehaviour
         //Start Coroutine
         if (resetDirCooldownRunning == false) { StartCoroutine(resetDirCooldown()); resetDirCooldownRunning = true; }
     }
-    IEnumerator FlashDuration()
-    {
-        yield return new WaitForSeconds(FXManager.flashDuration);
-    }
+   
     //Reset the cooldown on updatePlayerDir
     IEnumerator resetDirCooldown()
     {
@@ -287,6 +303,9 @@ public class EnemyAI : MonoBehaviour
         safeToUpdateDir = true;
         resetDirCooldownRunning = false;
     }
+    #endregion
+
+    #region Attack functions
     IEnumerator AttackRecovery()
     {
         yield return new WaitForSeconds(attackRecoverTime);
@@ -309,7 +328,9 @@ public class EnemyAI : MonoBehaviour
         //FXManager.spawnEffect("enemyMeleeEffect1", gameObject, target, Quaternion.LookRotation(lookPos), false, effectOffset);
         state = State.Attack;
     }
+    #endregion
 
+    #region Animation functions
     public void FreezeAnimation()
     {
         animator.speed = 0;
@@ -318,18 +339,27 @@ public class EnemyAI : MonoBehaviour
     {
         animator.speed = 1;
     }
+    //Change our animation states
+    public void ChangeAnimationState(string newState) //Change title of currentState
+    {
+        if (animCurrentState == newState) return;
+        animator.Play(newState);
+        animCurrentState = newState;
+    }
+
+    #endregion
     //Change our current state
     public void ChangeState(State newState)
     {
         state = newState;
     }
 
+    #region Collision & Trigger functions
     private void OnCollisionEnter2D(Collision2D other) //Just a quick copy of the triggerEnter2D func
     {
         EnemyCollision.SpecifiedCollision(other,gameObject);
         int direction = (int)other.gameObject.transform.localEulerAngles.z;
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyCollision.specifiedTrigger(other,gameObject);
@@ -338,9 +368,9 @@ public class EnemyAI : MonoBehaviour
             gameObject.GetComponent<EnemyHealth>().TakeDamage(20);
         }
     }
+    #endregion
 
-   
-
+    #region Bouncing & Knockback functions
     public void BouncedOffWall(int damage)
     {
         state = State.Bounce;
@@ -353,13 +383,6 @@ public class EnemyAI : MonoBehaviour
         //ChangeAnimationState("DroneIdle");
         FreezeAnimation();
 
-    }
-    //Change our current animation
-    public void ChangeAnimationState(string newState) //Change title of currentState
-    {
-        if (animCurrentState == newState) return;
-        animator.Play(newState);
-        animCurrentState = newState;
     }
 
     public void Knockback(float knockback, int zRotation, bool bounce, GameObject attack)
@@ -375,4 +398,5 @@ public class EnemyAI : MonoBehaviour
         }
 
     }
+    #endregion
 }
