@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: 1a5b29f2d8acf0743bb49e98a8eb53ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7275110565430251448
+    second: FloatingPrototype_0
+  - first:
+      213: -6209219315307978214
+    second: FloatingPrototype_1
+  - first:
+      213: 2817623998947037923
+    second: FloatingPrototype_2
+  - first:
+      213: 5460132456874146773
+    second: FloatingPrototype_3
+  - first:
+      213: -535087473533123264
+    second: FloatingPrototype_4
+  - first:
+      213: -5233906638745079592
+    second: FloatingPrototype_5
+  - first:
+      213: -3140243627040436329
+    second: FloatingPrototype_6
+  - first:
+      213: -8802287214197395579
+    second: FloatingPrototype_7
+  - first:
+      213: -2514917074455922970
+    second: FloatingPrototype_8
+  - first:
+      213: -7951026559501628789
+    second: FloatingPrototype_9
+  - first:
+      213: -2575921809826547817
+    second: FloatingPrototype_10
+  - first:
+      213: 6358450751246621656
+    second: FloatingPrototype_11
+  - first:
+      213: -6574683508378689941
+    second: FloatingPrototype_12
+  - first:
+      213: 5722570627051438221
+    second: FloatingPrototype_13
+  - first:
+      213: -4549739719667238704
+    second: FloatingPrototype_14
+  - first:
+      213: -1929332443589415890
+    second: FloatingPrototype_15
+  - first:
+      213: 1059507109591747753
+    second: FloatingPrototype_16
+  - first:
+      213: -1699425136769313450
+    second: FloatingPrototype_17
+  - first:
+      213: -2798321794728092019
+    second: FloatingPrototype_18
+  - first:
+      213: 2201519588393757960
+    second: FloatingPrototype_19
+  - first:
+      213: 4588707621911550282
+    second: FloatingPrototype_20
+  - first:
+      213: 3765814639878775440
+    second: FloatingPrototype_21
+  - first:
+      213: -4626145174483857189
+    second: FloatingPrototype_22
+  - first:
+      213: 1854842898435402500
+    second: FloatingPrototype_23
+  - first:
+      213: -6697824965536384232
+    second: FloatingPrototype_24
+  - first:
+      213: -890379800453764835
+    second: FloatingPrototype_25
+  - first:
+      213: 6775914988180453013
+    second: FloatingPrototype_26
+  - first:
+      213: -2017951949090353278
+    second: FloatingPrototype_27
+  - first:
+      213: -2029341112256988656
+    second: FloatingPrototype_28
+  - first:
+      213: 1277370574132450267
+    second: FloatingPrototype_29
+  - first:
+      213: -3465953009603818220
+    second: FloatingPrototype_30
+  - first:
+      213: -5072415883351768813
+    second: FloatingPrototype_31
+  - first:
+      213: -7932269594408428853
+    second: FloatingPrototype_32
+  - first:
+      213: 4306467037987741610
+    second: FloatingPrototype_33
+  - first:
+      213: -3587956996612023281
+    second: FloatingPrototype_34
+  - first:
+      213: -517471197619460078
+    second: FloatingPrototype_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FloatingPrototype_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 149
+        width: 30
+        height: 39
+      alignment: 9
+      pivot: {x: 0.41072255, y: 0.16235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840b6d56c7d990b90800000000000000
+      internalID: -7275110565430251448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 150
+        width: 31
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4280024, y: 0.12997036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12e29a3eeb64d9a0800000000000000
+      internalID: -6209219315307978214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 148
+        width: 32
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4442017, y: 0.17379566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e29adf39163a1720800000000000000
+      internalID: 2817623998947037923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_3
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 145
+        width: 32
+        height: 41
+      alignment: 9
+      pivot: {x: 0.45815134, y: 0.19515173}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db709e5a8946cb40800000000000000
+      internalID: 5460132456874146773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 146
+        width: 31
+        height: 41
+      alignment: 9
+      pivot: {x: 0.47120076, y: 0.20603906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0450c4027ccf298f0800000000000000
+      internalID: -535087473533123264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 146
+        width: 31
+        height: 40
+      alignment: 9
+      pivot: {x: 0.43520182, y: 0.25448838}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d07a0a74ad6d57b0800000000000000
+      internalID: -5233906638745079592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 145
+        width: 46
+        height: 35
+      alignment: 9
+      pivot: {x: 0.60189223, y: 0.06636876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f02161f0d9b64d0800000000000000
+      internalID: -3140243627040436329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_7
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 137
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f2dca4a6ef7d580800000000000000
+      internalID: -8802287214197395579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_8
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 138
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e67d71de38391dd0800000000000000
+      internalID: -2514917074455922970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_9
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 138
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a8531787748a190800000000000000
+      internalID: -7951026559501628789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_10
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 98
+        width: 25
+        height: 46
+      alignment: 9
+      pivot: {x: 0.57546663, y: 0.21289875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7977b1403cc704cd0800000000000000
+      internalID: -2575921809826547817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_11
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 98
+        width: 26
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5829302, y: 0.23047638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbdedd0541cd3850800000000000000
+      internalID: 6358450751246621656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 97
+        width: 25
+        height: 46
+      alignment: 9
+      pivot: {x: 0.56468534, y: 0.19532129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e187cee2802c4a0800000000000000
+      internalID: -6574683508378689941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 96
+        width: 24
+        height: 46
+      alignment: 9
+      pivot: {x: 0.55615044, y: 0.23633559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d804c737aa7aa6f40800000000000000
+      internalID: 5722570627051438221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_14
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 96
+        width: 25
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5431232, y: 0.26488382}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d8bfbc94d31cd0c0800000000000000
+      internalID: -4549739719667238704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_15
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 96
+        width: 31
+        height: 44
+      alignment: 9
+      pivot: {x: 0.49130544, y: 0.26722977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c67365d52a935e0800000000000000
+      internalID: -1929332443589415890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_16
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 77
+        width: 38
+        height: 51
+      alignment: 9
+      pivot: {x: 0.47162908, y: 0.14063548}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac87384a1024be00800000000000000
+      internalID: 1059507109591747753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_17
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 73
+        width: 47
+        height: 55
+      alignment: 9
+      pivot: {x: 0.45791107, y: 0.1673104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655de7097dd6a68e0800000000000000
+      internalID: -1699425136769313450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_18
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 72
+        width: 46
+        height: 39
+      alignment: 9
+      pivot: {x: 0.4892485, y: 0.25273073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e9ff1672d5a29d0800000000000000
+      internalID: -2798321794728092019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_19
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 72
+        width: 43
+        height: 39
+      alignment: 9
+      pivot: {x: 0.49999928, y: 0.27809164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d2648c66e5d8e10800000000000000
+      internalID: 2201519588393757960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 52
+        width: 36
+        height: 41
+      alignment: 9
+      pivot: {x: 0.60199124, y: 0.2238777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a495a26254d5eaf30800000000000000
+      internalID: 4588707621911550282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_21
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 52
+        width: 37
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5661563, y: 0.2238777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092a0fb767cd24430800000000000000
+      internalID: 3765814639878775440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_22
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 50
+        width: 36
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5764934, y: 0.28873262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd090836971accfb0800000000000000
+      internalID: -4626145174483857189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_23
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 49
+        width: 35
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5349684, y: 0.25959232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40be56be9c9bdb910800000000000000
+      internalID: 1854842898435402500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_24
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 51
+        width: 35
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5699367, y: 0.20895228}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bf5713eab8c03a0800000000000000
+      internalID: -6697824965536384232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_25
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 49
+        width: 35
+        height: 38
+      alignment: 9
+      pivot: {x: 0.51748437, y: 0.29870185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1925c6f94cb4a3f0800000000000000
+      internalID: -890379800453764835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_26
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 10
+        width: 24
+        height: 53
+      alignment: 9
+      pivot: {x: 0.74222946, y: 0.27484983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596bdba08c2e80e50800000000000000
+      internalID: 6775914988180453013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_27
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 4
+        width: 47
+        height: 57
+      alignment: 9
+      pivot: {x: 0.51302, y: 0.24233812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f89a4d46bcef3e0800000000000000
+      internalID: -2017951949090353278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 30
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a73d3a20556d3e0800000000000000
+      internalID: -2029341112256988656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 28
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd393b5f4c12ab110800000000000000
+      internalID: 1277370574132450267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_30
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 31
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d4e56e91676efc0800000000000000
+      internalID: -3465953009603818220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_31
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 7
+        width: 29
+        height: 38
+      alignment: 9
+      pivot: {x: 0.563305, y: 0.16987093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311c4cff0a82b99b0800000000000000
+      internalID: -5072415883351768813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_32
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 14
+        width: 37
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05003887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca57a2b4daeae190800000000000000
+      internalID: -7932269594408428853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_33
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 7
+        width: 32
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4713149, y: 0.08603573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf103454f4a3cb30800000000000000
+      internalID: 4306467037987741610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_34
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 4
+        width: 42
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4927143, y: 0.32151547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c10931f14053ec0800000000000000
+      internalID: -3587956996612023281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FloatingPrototype_35
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 4
+        width: 42
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5145692, y: 0.31514105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218656cffa291d8f0800000000000000
+      internalID: -517471197619460078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

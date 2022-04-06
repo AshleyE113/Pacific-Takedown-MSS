@@ -6,13 +6,17 @@ public class DecalRandomizer : MonoBehaviour
 {
 
     public Sprite[] oilSprites;
+
+    public float minSize=.5f;
+
+    public float maxSize=1f;
     // Start is called before the first frame update
     void Start()
     {
         var random = Random.Range(0, oilSprites.Length-1);
         gameObject.GetComponent<SpriteRenderer>().sprite = oilSprites[random];
-        gameObject.transform.localScale = new Vector3(Random.Range(0.3f, 0.5f), Random.Range(0.3f, 0.5f),
-            Random.Range(0.3f, 0.5f));
+        gameObject.transform.localScale = new Vector3(Random.Range(minSize, maxSize), Random.Range(minSize, maxSize),
+            Random.Range(minSize, maxSize));
     }
 
     // Update is called once per frame
