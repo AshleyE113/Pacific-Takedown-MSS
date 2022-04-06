@@ -642,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.76
+      value: 27.85
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3169,7 +3169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.08
+      value: 29.38
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3206,10 +3206,6 @@ PrefabInstance:
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_Name
       value: GroundedEnemy (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
