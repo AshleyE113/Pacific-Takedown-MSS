@@ -25,10 +25,11 @@ public class EnemyCollision : MonoBehaviour
         {
             if (script.state == EnemyAI.State.Bounce)
             {
-                //script.ChangeState(EnemyAI.State.Bounce);
+                var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+                compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
                 script.BouncedOffWall(25); //Extra Knockback
                 //Change Health Bar
-                enemy.GetComponent<EnemyHealth>().TakeDamage(25);
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(25);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && enemy.GetComponent<EnemyBounce>().isBouncing == true)
