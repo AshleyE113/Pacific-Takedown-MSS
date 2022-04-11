@@ -14,11 +14,17 @@ public class EnemyCollision : MonoBehaviour
             //script.Knockback(script.recievedKnockback, script.direction, false, other.gameObject);
             if (script.state == EnemyAI.State.Bounce)
             {
+                //FOr now, will change
+                var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+                compSprite?.ChangeSprite();
                 //script.ChangeState(EnemyAI.State.Bounce);
                 CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 //Sound
                 AkSoundEngine.PostEvent("Play_MetalBounce" , enemy);
                 //Change Health Bar
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(3);
+
+                //Add an effect
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
