@@ -24615,6 +24615,18 @@ PrefabInstance:
       propertyPath: hitStop
       value: 
       objectReference: {fileID: 1267137595}
+    - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: dashTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: dashForce
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590134388559260250, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
+      propertyPath: dashCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6734542752351984161, guid: 4b4e59557b37348cda89284c9542eba3, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5

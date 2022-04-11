@@ -41,9 +41,13 @@ public class PlayerController : MonoBehaviour
     public float invulnerabilityDuration = 3f;
     public float attackspeed;
     //Dashing
-    public int dashForce=100;
-    public int dashDistance = 30;
-    private int dashTimer;
+    [Header("Dashing")]
+    public float dashForce=100f;
+    public float dashTime=1f;
+    private Vector2 dashDir;
+    private bool canDash=true;
+    private bool dashOnCooldown;
+    public float dashCooldown=1f;
     //FX
     private bool fxSpawned;
     public int flashingTime;
@@ -61,7 +65,7 @@ public class PlayerController : MonoBehaviour
       Dashing,
     }
     // Start is called before the first frame update
-    public static State CurrentState { get; private set; }
+    [SerializeField] public static State CurrentState { get; private set; }
     
     void Start()
     {
@@ -195,19 +199,8 @@ public class PlayerController : MonoBehaviour
                     }
                     break;
                 case State.Dashing:
-                    if (dashTimer < dashDistance)
-                    {
-                        dashTimer += 1;
-                        rb.velocity = rb.velocity * .5f;
-                    }
-                    else
-                    {
-                        rb.velocity = Vector2.zero;
-                        ChangeState(State.Ready);
-                        dashTimer = 0;
-                    }
-
-                    break;
+                  rb.velocity = dashDir.normalized * dashForce;
+                  break;
            // }
         }
   }
@@ -283,6 +276,52 @@ public class PlayerController : MonoBehaviour
     }
   }
 
+  public void OnDash(InputValue input) //When the player presses the Dash Button
+  {
+    if (canDash)
+    {
+      if (CurrentState == State.Ready)
+      {
+        CommenceDash();
+      }
+      if (CurrentState == State.Attacking && canCombo)
+      {
+        CommenceDash();
+      }
+      
+
+    }
+  }
+
+  private void CommenceDash()
+  {
+    ChangeState(State.Dashing);
+    StartCoroutine(StopDashing());
+    canDash = false;
+    dashDir = movement;
+    dashOnCooldown = true;
+    if (dashDir == Vector2.zero)
+    {
+      dashDir = playerFacing;
+    }
+  }
+
+  private IEnumerator StopDashing()
+  {
+    yield return new WaitForSeconds(dashTime);
+    rb.velocity = Vector2.zero;
+    StartCoroutine(DashCooldown());
+    ChangeState(State.Ready);
+  }
+
+  
+  private IEnumerator DashCooldown()
+  {
+    yield return new WaitForSeconds(dashCooldown);
+    dashOnCooldown = false;
+    canDash = true;
+  }
+
   public void OnRotate(InputValue input) //When the player Rotates the Left Stick
   {
     if (input.Get<Vector2>().x != 0 && input.Get<Vector2>().y != 0)
@@ -353,6 +392,10 @@ public class PlayerController : MonoBehaviour
   public void CanCombo()
   {
     canCombo = true;
+    if (!dashOnCooldown)
+    {
+      canDash = true;
+    }
   }
 
   public void attackDirection() //This Controls what animation plays when we attack
