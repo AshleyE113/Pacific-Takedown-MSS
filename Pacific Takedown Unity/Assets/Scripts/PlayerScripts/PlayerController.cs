@@ -346,10 +346,28 @@ public class PlayerController : MonoBehaviour
       ChangeState(State.Ready);
     }
   }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(CurrentState == State.Attacking)
+        {
+             if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
+             {
+                var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+                compSprite?.ChangeSprite();
+             }
 
-  private void OnTriggerEnter2D(Collider2D other) //If Hit
+            if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+            {
+                var obstacleSprite = other.gameObject.GetComponent<HitSpriteChange>();
+             obstacleSprite?.ChangeSprite();
+            }
+            
+        }
+       
+    }
+    private void OnTriggerEnter2D(Collider2D other) //If Hit
   {
-    if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
+    if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
     {
       ChangeState(State.Hit);
       FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
