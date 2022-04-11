@@ -48,6 +48,10 @@ public class PlayerController : MonoBehaviour
     private bool canDash=true;
     private bool dashOnCooldown;
     public float dashCooldown=1f;
+
+    private Vector2 lastImagePos;
+
+    public float distanceBetweenImages;
     //FX
     private bool fxSpawned;
     public int flashingTime;
@@ -200,6 +204,12 @@ public class PlayerController : MonoBehaviour
                     break;
                 case State.Dashing:
                   rb.velocity = dashDir.normalized * dashForce;
+                  invulnerable = true;
+                  if (Vector2.Distance(transform.position,lastImagePos) > distanceBetweenImages)
+                  {
+                    PlayerAfterImagePool.Instance.GetFromPool();
+                    lastImagePos = transform.position;
+                  }
                   break;
            // }
         }
@@ -280,22 +290,15 @@ public class PlayerController : MonoBehaviour
   {
     if (canDash)
     {
-      if (CurrentState == State.Ready)
-      {
-        CommenceDash();
-      }
-      if (CurrentState == State.Attacking && canCombo)
-      {
-        CommenceDash();
-      }
-      
-
+      CommenceDash();
     }
   }
 
   private void CommenceDash()
   {
     ChangeState(State.Dashing);
+    PlayerAfterImagePool.Instance.GetFromPool();
+    lastImagePos = transform.position;
     StartCoroutine(StopDashing());
     canDash = false;
     dashDir = movement;
@@ -310,6 +313,7 @@ public class PlayerController : MonoBehaviour
   {
     yield return new WaitForSeconds(dashTime);
     rb.velocity = Vector2.zero;
+    invulnerable = false;
     StartCoroutine(DashCooldown());
     ChangeState(State.Ready);
   }
