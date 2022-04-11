@@ -15,8 +15,8 @@ public class EnemyCollision : MonoBehaviour
             if (script.state == EnemyAI.State.Bounce)
             {
                 //FOr now, will change
-                var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
-                compSprite?.ChangeSprite();
+                var obstacleSprite = other.gameObject.GetComponent<HitSpriteChange>();
+                obstacleSprite?.ChangeSprite();
                 //script.ChangeState(EnemyAI.State.Bounce);
                 CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 //Sound
