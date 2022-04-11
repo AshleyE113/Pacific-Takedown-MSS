@@ -38,12 +38,14 @@ public class EnemyAI : MonoBehaviour
 
     //Bounce
     public int bounceKnockback = 50;
+    public float num_of_rays = 10;
+    public float totalAngle = 360;
+    public RaycastHit2D hit;
 
     //FX
     public FXManager myFX;
     private bool fxSpawned;
     public int flashingTime;
-    //[SerializeField] GameObject explosionFX;
 
     //Attack
     public int attackRange;
@@ -140,10 +142,21 @@ public class EnemyAI : MonoBehaviour
     #endregion
 
     #region FixedUpdate
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         //if (Manager.gameManager._isdead == false)
         //{
+        float delta = totalAngle / num_of_rays;
+        Vector3 pos = transform.position;
+        const float mag = 5;
+
+        for (int i = 0; i < num_of_rays; i++)
+        {
+            var dir = Quaternion.Euler(0, 0, delta * i) * transform.right;
+            hit = Physics2D.Raycast(transform.position, dir);
+            Debug.DrawRay(pos, dir, Color.magenta);
+        }
+
         direction = ((Vector2)target.position - rb.position).normalized;
         
             switch (state)
