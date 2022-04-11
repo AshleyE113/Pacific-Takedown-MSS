@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     private int flickerTimer = 0;
     public int flickerRate = 15;
     private int offFlicker = 0;
-    public GameObject hitStop;
+
     //Player States
     public enum State
     {
@@ -354,7 +354,6 @@ public class PlayerController : MonoBehaviour
       ChangeState(State.Hit);
       FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
       FXManager.flashEffectPlayer(gameObject);
-      hitStop.GetComponent<HitStop>().Stop(0.1f);
       playerHealth--;
       //Change Animation to Player Hit
       PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
