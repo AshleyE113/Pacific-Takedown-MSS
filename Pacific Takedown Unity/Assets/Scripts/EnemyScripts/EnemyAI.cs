@@ -146,7 +146,7 @@ public class EnemyAI : MonoBehaviour
     #region FixedUpdate
     public void FixedUpdate()
     {
-        while (Player.playerHealth > 0)
+        if (Player.playerHealth > 0)
         {
 
             float delta = totalAngle / num_of_rays;
@@ -282,7 +282,7 @@ public class EnemyAI : MonoBehaviour
     #region Update & Death IEnum
     private void Update()
     {
-        while (Player.playerHealth > 0)
+        if (Player.playerHealth > 0)
         {
             //set direction before normalising
             updateEnemyDir(direction);

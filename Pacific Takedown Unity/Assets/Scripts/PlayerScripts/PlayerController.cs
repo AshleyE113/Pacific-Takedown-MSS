@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             
         }
 
-       while (playerHealth > 0)
+       if (playerHealth > 0)
        {
 
             //Grab our Current Input from Input Manager
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
-        while (playerHealth > 0)
+        if (playerHealth > 0)
         {
             animator.SetFloat("MouseHorizontal", lookDir.x);
             animator.SetFloat("MouseVertical", lookDir.y);
