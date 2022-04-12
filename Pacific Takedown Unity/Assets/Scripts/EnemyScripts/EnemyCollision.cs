@@ -48,14 +48,10 @@ public class EnemyCollision : MonoBehaviour
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") /*&& gameObject.GetComponent<EnemyBounce>().isBouncing == true*/) //Not sure if this works yet. WILL MAKE THIS A FUNCION!!!!
         {
-
             if (script.state == EnemyAI.State.Bounce)
             {
-                //if (script.hit.collider != null)
-                //{
-                    script.BouncedOffWall(3); // subject to change 
+                script.BouncedOffWall(3); // subject to change 
                 Debug.Log("EnemyXEnemy Action");
-                //}
             }
         }
     }
@@ -95,7 +91,6 @@ public class EnemyCollision : MonoBehaviour
                 script.ChangeState(EnemyAI.State.Hit);
                 script.Health -= 20;
                 script.recoveryTimer = 0;
-                //script.ChangeAnimationState("DroneIdle");
                 script.FreezeAnimation();
             }
         }

@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     //Class call for now
     public HitStop hitPause;
     public float HiPaVal;
+    PlayerController Player;
 
     public Transform target;
     public float speed = 200f;
@@ -90,6 +91,7 @@ public class EnemyAI : MonoBehaviour
         //World Objects
         target = GameObject.Find("Player").transform;
         hitPause = GameObject.Find("HitPauseObj").GetComponent<HitStop>();
+        Player = GameObject.Find("Player").GetComponent<PlayerController>();
 
     }
 
@@ -144,134 +146,135 @@ public class EnemyAI : MonoBehaviour
     #region FixedUpdate
     public void FixedUpdate()
     {
-        //if (Manager.gameManager._isdead == false)
-        //{
-        float delta = totalAngle / num_of_rays;
-        Vector3 pos = transform.position;
-        const float mag = 5;
-
-        for (int i = 0; i < num_of_rays; i++)
+        while (Player.playerHealth > 0)
         {
-            var dir = Quaternion.Euler(0, 0, delta * i) * transform.right;
-            hit = Physics2D.Raycast(transform.position, dir);
-            Debug.DrawRay(pos, dir, Color.magenta);
-        }
 
-        direction = ((Vector2)target.position - rb.position).normalized;
-        
-            switch (state)
+            float delta = totalAngle / num_of_rays;
+            Vector3 pos = transform.position;
+            const float mag = 5;
+
+            for (int i = 0; i < num_of_rays; i++)
             {
-                case State.Patrolling:
-                    ChangeAnimationState("DroneIdle");
-                    
-                    if (Vector2.Distance(rb.position, target.position) < detectionRange)
-                    {
-                        state = State.Idle;
-                    }
-                    
-                    break;
-                case State.Idle:
-                    //Stay in place. If player is in range, go towards them
-                    ResumeAnimation();
-                    rb.drag = 3; //Play with this value to test this.
-                    canAttack = true;
-                    if (path == null)
-                    {
-                        return;
-                    }
+                var dir = Quaternion.Euler(0, 0, delta * i) * transform.right;
+                hit = Physics2D.Raycast(transform.position, dir);
+                Debug.DrawRay(pos, dir, Color.magenta);
+            }
 
-                    if (Vector2.Distance(rb.position, target.position) < attackRange)
-                    {
-                        //When in Range, Prepare your attack
-                        if (canAttack)
+            direction = ((Vector2)target.position - rb.position).normalized;
+        
+                switch (state)
+                {
+                    case State.Patrolling:
+                        ChangeAnimationState("DroneIdle");
+                    
+                        if (Vector2.Distance(rb.position, target.position) < detectionRange)
                         {
-                            state = State.PreparingAttack;
+                            state = State.Idle;
                         }
-                    }
+                    
+                        break;
+                    case State.Idle:
+                        //Stay in place. If player is in range, go towards them
+                        ResumeAnimation();
+                        rb.drag = 3; //Play with this value to test this.
+                        canAttack = true;
+                        if (path == null)
+                        {
+                            return;
+                        }
 
-                    if (currentWaypoint >= path.vectorPath.Count)
-                    {
-                        reachedEndOfPath = true;
-                        return;
-                    }
-                    else
-                    {
-                        reachedEndOfPath = false;
-                    }
+                        if (Vector2.Distance(rb.position, target.position) < attackRange)
+                        {
+                            //When in Range, Prepare your attack
+                            if (canAttack)
+                            {
+                                state = State.PreparingAttack;
+                            }
+                        }
 
-                    direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-                    Vector2 force = direction * speed * Time.deltaTime;
-                    rb.AddForce(force);
-                    float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+                        if (currentWaypoint >= path.vectorPath.Count)
+                        {
+                            reachedEndOfPath = true;
+                            return;
+                        }
+                        else
+                        {
+                            reachedEndOfPath = false;
+                        }
 
-                    if (distance < nextWaypointDistance)
-                    {
-                        currentWaypoint++;
-                    }
+                        direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+                        Vector2 force = direction * speed * Time.deltaTime;
+                        rb.AddForce(force);
+                        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-                    ChangeAnimationState("Movement");
+                        if (distance < nextWaypointDistance)
+                        {
+                            currentWaypoint++;
+                        }
 
-                    break;
-                case State.PreparingAttack:
-                    //Once in Range Prepare the Attack
-                    safeToUpdateDir = false;
-                    ChangeAnimationState("AttackWindup");
-                    //CommenceAttack();
-                    break;
-                case State.Attack:
-                    //Attack player. Do damage if hits player
-                    //ChangeAnimationState("DroneIdle");
-                    ChangeAnimationState("Attacking");
-                    if (attackCoroutineStarted == false)
-                    {
-                        StartCoroutine(AttackRecovery());
-                        attackCoroutineStarted = true;
-                    }
+                        ChangeAnimationState("Movement");
 
-                    if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
-                    {
-                        rb.velocity = rb.velocity * .9f;
-                    }
+                        break;
+                    case State.PreparingAttack:
+                        //Once in Range Prepare the Attack
+                        safeToUpdateDir = false;
+                        ChangeAnimationState("AttackWindup");
+                        //CommenceAttack();
+                        break;
+                    case State.Attack:
+                        //Attack player. Do damage if hits player
+                        //ChangeAnimationState("DroneIdle");
+                        ChangeAnimationState("Attacking");
+                        if (attackCoroutineStarted == false)
+                        {
+                            StartCoroutine(AttackRecovery());
+                            attackCoroutineStarted = true;
+                        }
 
-                    //Start Couretine to return to Idle State
-                    break;
-                case State.Hit:
-                    //If player attacks, it gets knocked back
-                    //It can't attack player in this state
-                    //BUT it can DAMAGE the player!
-                    //rb.velocity *= knockbackDrag;
-                    rb.drag = 0; //Play with this value to test this.
-                    rb.velocity = rb.velocity * .5f;
-                    FlashEffectTimer();
-
-
-                    if (recoveryTimer < recoveryMax)
-                    {
-                        recoveryTimer += 1;
-                    }
-                    else
-                    {
-                        if (Health > 0)
+                        if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
                         {
                             rb.velocity = rb.velocity * .9f;
                         }
-                    }
-                    //Start Couretine to return to Idle State
-                    break;
-                case State.Bounce:
-                    //If player attacks, it bounces off objs.
-                    //It can't attack player in this state
-                    //BUT it can DAMAGE the player!
-                    FlashEffectTimer();
 
-                    break;
-                case State.Dead:
-                    //if hit 3 or more times by player, destory it
-                    FXManager.spawnEffect("explosionEffect", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
-                    Destroy(gameObject);
-                    break;
-            }
-       // }
+                        //Start Couretine to return to Idle State
+                        break;
+                    case State.Hit:
+                        //If player attacks, it gets knocked back
+                        //It can't attack player in this state
+                        //BUT it can DAMAGE the player!
+                        //rb.velocity *= knockbackDrag;
+                        rb.drag = 0; //Play with this value to test this.
+                        rb.velocity = rb.velocity * .5f;
+                        FlashEffectTimer();
+
+
+                        if (recoveryTimer < recoveryMax)
+                        {
+                            recoveryTimer += 1;
+                        }
+                        else
+                        {
+                            if (Health > 0)
+                            {
+                                rb.velocity = rb.velocity * .9f;
+                            }
+                        }
+                        //Start Couretine to return to Idle State
+                        break;
+                    case State.Bounce:
+                        //If player attacks, it bounces off objs.
+                        //It can't attack player in this state
+                        //BUT it can DAMAGE the player!
+                        FlashEffectTimer();
+
+                        break;
+                    case State.Dead:
+                        //if hit 3 or more times by player, destory it
+                        FXManager.spawnEffect("explosionEffect", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
+                        Destroy(gameObject);
+                        break;
+                }
+        }
     }
     #endregion
 
@@ -279,15 +282,17 @@ public class EnemyAI : MonoBehaviour
     #region Update & Death IEnum
     private void Update()
     {
-        //set direction before normalising
-        updateEnemyDir(direction);
-
-        if (Health <= 0)
+        while (Player.playerHealth > 0)
         {
-            state = State.Dead;
-            //StartCoroutine(Death(isDead));
+            //set direction before normalising
+            updateEnemyDir(direction);
+
+            if (Health <= 0)
+            {
+                state = State.Dead;
+                //StartCoroutine(Death(isDead));
+            }
         }
-        
     }
 
     IEnumerator Death(bool isDead)

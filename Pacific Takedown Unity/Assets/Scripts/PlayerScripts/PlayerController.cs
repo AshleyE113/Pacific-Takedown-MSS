@@ -93,8 +93,8 @@ public class PlayerController : MonoBehaviour
             
         }
 
-       //if (Manager.instance.GameOver(true))
-      // {
+       while (playerHealth > 0)
+       {
 
             //Grab our Current Input from Input Manager
             movement = InputManager.directionVector;
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
           animator.SetFloat("Vertical", movement.y);
           animator.SetFloat("Speed", movement.sqrMagnitude);
         }
-     // }
+     }
   }
   //Update our Player's Direction
   void updatePlayerDir(Vector2 movement)
@@ -149,8 +149,8 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
-        //if (Manager.instance.GameOver(true))
-        //{
+        while (playerHealth > 0)
+        {
             animator.SetFloat("MouseHorizontal", lookDir.x);
             animator.SetFloat("MouseVertical", lookDir.y);
             //Change Position of Swing Point
@@ -335,17 +335,17 @@ public class PlayerController : MonoBehaviour
   }
   
 
-  public void endAttack()
-  {
-    //This is Called within our animation to signal our attack has ended
-    if (CurrentState == State.Attacking)
+    public void endAttack()
     {
-      fxSpawned = false;
-      attackIndex = 0;
-      canCombo = false;
-      ChangeState(State.Ready);
+    //This is Called within our animation to signal our attack has ended
+        if (CurrentState == State.Attacking)
+        {
+            fxSpawned = false;
+            attackIndex = 0;
+            canCombo = false;
+            ChangeState(State.Ready);
+        }
     }
-  }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(CurrentState == State.Attacking)
@@ -361,12 +361,10 @@ public class PlayerController : MonoBehaviour
                 var obstacleSprite = other.gameObject.GetComponent<HitSpriteChange>();
              obstacleSprite?.ChangeSprite();
             }
-            
         }
-       
     }
     private void OnTriggerEnter2D(Collider2D other) //If Hit
-  {
+    {
     if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
     {
       ChangeState(State.Hit);
