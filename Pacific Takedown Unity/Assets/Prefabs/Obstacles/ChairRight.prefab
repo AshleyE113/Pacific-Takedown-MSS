@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8689547166826927470}
   - component: {fileID: 8689547166826927457}
   m_Layer: 6
-  m_Name: tablechair_0 3
+  m_Name: ChairRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 1494674695
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1698380382897973746, guid: b7d2392c2135f724c8ab16aee9d43c96, type: 3}
+  m_Sprite: {fileID: 5228942566011103145, guid: b7d2392c2135f724c8ab16aee9d43c96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb78e6e0d22ee44ab34e79145af077c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherSprite: {fileID: -5874102322114338479, guid: b7d2392c2135f724c8ab16aee9d43c96, type: 3}
+  otherSprite: {fileID: -677612146441385378, guid: b7d2392c2135f724c8ab16aee9d43c96, type: 3}
 --- !u!61 &8689547166826927457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09222031, y: -0.59}
+  m_Offset: {x: -0.13, y: -0.59}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
