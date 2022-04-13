@@ -32,7 +32,7 @@ public class Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            RestartScene();
+            //RestartScene();
         }
         DontDestroyOnLoad(this.gameObject);
     }

@@ -14,7 +14,7 @@ public class GoToScenes : MonoBehaviour
     }
     public void LevelOne()
     {
-        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
     }
     private void Update()
     {
