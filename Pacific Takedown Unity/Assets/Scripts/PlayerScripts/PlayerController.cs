@@ -214,11 +214,11 @@ public class PlayerController : MonoBehaviour
                     lastImagePos = transform.position;
                   }
                   break;
-           // }
+            }
         }
   }
-
-  private void CheckFlicker()
+        
+    private void CheckFlicker()
   {
     if (flickerTimer >= flickerRate)
     {
@@ -373,6 +373,7 @@ public class PlayerController : MonoBehaviour
       ChangeState(State.Hit);
       FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
       FXManager.flashEffectPlayer(gameObject);
+      
       playerHealth--;
       //Change Animation to Player Hit
       PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
