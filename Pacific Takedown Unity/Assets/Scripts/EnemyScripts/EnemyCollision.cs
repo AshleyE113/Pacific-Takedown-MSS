@@ -75,8 +75,9 @@ public class EnemyCollision : MonoBehaviour
 
             script.ChangeAnimationState("Movement");
             FXManager.flashEffect(enemy);
-            if (script.canBounce)
+            if (script.canBounce || script.target.GetComponent<PlayerController>().attackIndex==2)
             {
+                script.canBounce = true;
                 script.state = EnemyAI.State.Bounce;
                 script.hitPause.Stop(script.HiPaVal);
                 script.rb.velocity = Vector2.zero;
@@ -93,6 +94,7 @@ public class EnemyCollision : MonoBehaviour
                 script.recoveryTimer = 0;
                 script.FreezeAnimation();
             }
+            
         }
     }
     
