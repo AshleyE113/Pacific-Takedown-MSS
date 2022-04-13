@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
     public int playerHealth = 3;
+    bool spawned;
     //Mouse
     private Vector2 mousePos;
     [HideInInspector] public static Vector2 lookDir;
@@ -80,16 +81,18 @@ public class PlayerController : MonoBehaviour
       animator = gameObject.GetComponent<Animator>();
       mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
       rotationObject = rotationObjectNS;
+      spawned = false;
       ChangeState(State.Ready);
     }
 
     // Update is called once per frame
   void Update()
   {
-        if (playerHealth <= 0)
+        if (playerHealth <= 0 && spawned == false)
         {
             Debug.Log("Here!");
             Manager.instance.GameOver();
+            spawned = true;
             
         }
 
