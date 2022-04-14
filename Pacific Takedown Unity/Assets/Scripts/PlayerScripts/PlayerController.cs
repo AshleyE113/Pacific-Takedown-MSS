@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool resetDirCooldownRunning;
     public int playerHealth = 3;
     bool spawned;
+    [SerializeField] AlarmController acScript;
     //Mouse
     private Vector2 mousePos;
     [HideInInspector] public static Vector2 lookDir;
@@ -364,6 +365,14 @@ public class PlayerController : MonoBehaviour
                 var obstacleSprite = other.gameObject.GetComponent<HitSpriteChange>();
              obstacleSprite?.ChangeSprite();
             }
+
+            if (other.gameObject.tag == "Alarm")
+            {
+                var alarm = other.gameObject.GetComponent<AlarmController>();
+                alarm.TurnOffAlarm();
+            }
+
+                
         }
     }
     private void OnTriggerEnter2D(Collider2D other) //If Hit
