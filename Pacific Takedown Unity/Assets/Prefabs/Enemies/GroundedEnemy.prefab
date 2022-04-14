@@ -887,13 +887,17 @@ MonoBehaviour:
   recoveryTimer: 0
   recoveryMax: 90
   knockbackDrag: 0
+  combo: 0
   detectionRange: 15
   bounceKnockback: 50
+  num_of_rays: 10
+  totalAngle: 360
   myFX: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
   flashingTime: 2
   attackRange: 4
   attackRecoverTime: 5
   canAttack: 0
+  isHeavy: 1
   canBounce: 0
   launchDirection: {x: 0, y: 0}
   state: 0

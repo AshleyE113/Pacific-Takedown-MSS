@@ -75,6 +75,28 @@ public class FXManager : MonoBehaviour
     {
         if (effect == "playerMeleeEffect1")
         {
+            
+            GameObject Effect = spawn.transform.GetChild(0).gameObject;
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            if (Effect.activeSelf==false)
+            {
+                Effect.SetActive(true);
+
+            }
+            else
+            {
+                Effect.SetActive(false);
+                Effect.SetActive(true);
+            }
+
+            /*
             if (currentPlayerMelee == null)
             {
                 var spawnLocation = spawn.transform.position;
@@ -100,6 +122,7 @@ public class FXManager : MonoBehaviour
                     Effect.GetComponent<SpriteRenderer>().flipX = true;
                 }
             }
+            */
         }
         if (effect == "enemyMeleeEffect1")
         {

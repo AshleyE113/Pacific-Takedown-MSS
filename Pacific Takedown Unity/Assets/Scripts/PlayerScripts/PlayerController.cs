@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public GameObject rotationObjectNS;
 
     //Combat
+    [Header("Combat")]
     public int attackIndex;
     private bool canCombo;
     public float meleeRange;
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     public float distanceBetweenImages;
     //FX
+    [Header("FX")]
     private bool fxSpawned;
     public int flashingTime;
     private int flickerTimer = 0;
