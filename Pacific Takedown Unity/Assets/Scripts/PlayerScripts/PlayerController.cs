@@ -365,36 +365,40 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
             {
                 var obstacleSprite = other.gameObject.GetComponent<HitSpriteChange>();
-             obstacleSprite?.ChangeSprite();
+                obstacleSprite?.ChangeSprite();
             }
-
-            if (other.gameObject.tag == "Alarm")
-            {
-                var alarm = other.gameObject.GetComponent<AlarmController>();
-                alarm.TurnOffAlarm();
-            }
-
-                
+       
         }
     }
     private void OnTriggerEnter2D(Collider2D other) //If Hit
     {
-    if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
-    {
-      ChangeState(State.Hit);
-      FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
-      FXManager.flashEffectPlayer(gameObject);
+        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
+        {
+          ChangeState(State.Hit);
+          FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
+          FXManager.flashEffectPlayer(gameObject);
       
-      playerHealth--;
-      //Change Animation to Player Hit
-      PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
-      //Make THem Invulnerable
-      invulnerable = true;
-      StartCoroutine(InvulnerableTimer());
-      Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
-      rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+          playerHealth--;
+          //Change Animation to Player Hit
+          PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
+          //Make THem Invulnerable
+          invulnerable = true;
+          StartCoroutine(InvulnerableTimer());
+          Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
+          rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+        }
+
+        if( CurrentState == State.Attacking)
+        {
+            if (other.gameObject.tag == "Alarm")
+            {
+                Debug.Log("In here");
+                var alarm = other.gameObject.GetComponent<AlarmController>();
+                alarm.TurnOffAlarm();
+            }
+        }
+       
     }
-  }
   
   private void FlashEffectTimer()
   {

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class AlarmClass : MonoBehaviour
 {
-    Color originalColor;
-    Color firstColor;
-    Color secColor;
     SpriteRenderer alarmSprite;
     [SerializeField] float timeVal;
     bool isChanging = false;
@@ -24,8 +21,6 @@ public class AlarmClass : MonoBehaviour
             isChanging = true;
             StartCoroutine(Flashing(timeVal));
         }
-            
-
     }
 
     IEnumerator Flashing(float duration)
@@ -37,7 +32,6 @@ public class AlarmClass : MonoBehaviour
         tempColor.a = 0.4f;
         alarmSprite.color = tempColor;
         yield return new WaitForSeconds(duration);
-        Debug.Log("Hmmm");
         isChanging = false;
     }
 

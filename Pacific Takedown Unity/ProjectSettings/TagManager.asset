@@ -21,7 +21,7 @@ TagManager:
   - EnemyHitbox
   - Bumper
   - Computer
-  - 
+  - DestructableObject
   - 
   - 
   - 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class AlarmController : MonoBehaviour
 {
     public GameObject Alarm;
-    PlayerController player;
 
     void Start()
     {

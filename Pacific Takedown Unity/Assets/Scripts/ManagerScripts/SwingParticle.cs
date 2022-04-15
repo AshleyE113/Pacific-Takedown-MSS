@@ -21,4 +21,20 @@ public class SwingParticle : MonoBehaviour
         //FXManager.currentPlayerMelee = null;
         gameObject.SetActive(false);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Collided");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Here");
+        if (other.gameObject.tag == "Alarm")
+        {
+            Debug.Log("Hit alarm");
+            var alarm = other.gameObject.GetComponent<AlarmController>();
+            alarm.TurnOffAlarm();
+        }
+    }
 }
