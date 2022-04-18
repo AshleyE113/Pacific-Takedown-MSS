@@ -15,7 +15,7 @@ public class FXManager : MonoBehaviour
     public GameObject sparkEffectNS;
     public GameObject playerHitFXNS;
     public GameObject wallImpactFXNS;
-
+    public GameObject wallOilFXNS;
 
 
 
@@ -28,7 +28,7 @@ public class FXManager : MonoBehaviour
     public static GameObject sparkEffect;
     public static GameObject playerHitFX;
     public static GameObject wallImpactFX;
-
+    public static GameObject wallOilFX;
 
 
     //Flash
@@ -56,6 +56,7 @@ public class FXManager : MonoBehaviour
         sparkEffect = sparkEffectNS;
         playerHitFX = playerHitFXNS;
         wallImpactFX = wallImpactFXNS;
+        wallOilFX = wallOilFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -154,6 +155,15 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(wallImpactFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "wallOil")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(wallOilFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;

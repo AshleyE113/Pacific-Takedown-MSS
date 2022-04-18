@@ -60,7 +60,7 @@ public class EnemyBounce : MonoBehaviour
          var speed = last_vel.magnitude;
          var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
          Debug.Log("Bounce Direction:"+direction);
-         if (direction.y <= -0.5f)
+         if (direction.y <= -0.70f)
          {
           FXManager.spawnEffect("wallImpact",gameObject,null,quaternion.identity, false,new Vector2(0f,2.5f));
          }
