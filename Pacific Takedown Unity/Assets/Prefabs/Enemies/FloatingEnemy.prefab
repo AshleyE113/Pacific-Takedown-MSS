@@ -896,9 +896,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.07317734, y: 0.19514704}
   serializedVersion: 2
-  m_Radius: 0.31744576
+  m_Radius: 0.8540993
 --- !u!114 &6407205619561486534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,13 +990,17 @@ MonoBehaviour:
   recoveryTimer: 0
   recoveryMax: 90
   knockbackDrag: 0
+  combo: 0
   detectionRange: 15
   bounceKnockback: 100
+  num_of_rays: 10
+  totalAngle: 360
   myFX: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
   flashingTime: 2
   attackRange: 4
   attackRecoverTime: 5
   canAttack: 0
+  isHeavy: 0
   canBounce: 1
   launchDirection: {x: 0, y: 0}
   state: 0
