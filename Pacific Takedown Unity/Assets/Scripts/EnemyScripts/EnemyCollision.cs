@@ -54,6 +54,17 @@ public class EnemyCollision : MonoBehaviour
                 Debug.Log("EnemyXEnemy Action");
             }
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("DestructableObject"))
+        {
+            if (script.state == EnemyAI.State.Bounce)
+            {
+                var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+                compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
+                script.BouncedOffWall(0); //Extra Knockback
+                //Change Health Bar
+                //enemy.GetComponent<EnemyHealth>()?.TakeDamage(25);
+            }
+        }
     }
 
     public static void specifiedTrigger(Collider2D other, GameObject enemy)

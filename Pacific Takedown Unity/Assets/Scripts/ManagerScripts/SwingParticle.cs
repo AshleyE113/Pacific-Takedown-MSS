@@ -41,5 +41,11 @@ public class SwingParticle : MonoBehaviour
         {
             other.GetComponent<ComputerSpriteChange>().ChangeSprite();
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("DestructableObject"))
+        {
+            other.GetComponent<ComputerSpriteChange>().ChangeSprite();
+        }
+
     }
 }

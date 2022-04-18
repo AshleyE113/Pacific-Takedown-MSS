@@ -26,7 +26,7 @@ public class GoToScenes : MonoBehaviour
     }
     public void RestartScene()
     {
-        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         Debug.Log("Back in Lvl1");
         Destroy(DeathCanvas);
     }
