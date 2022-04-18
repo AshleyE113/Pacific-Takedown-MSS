@@ -36,5 +36,10 @@ public class SwingParticle : MonoBehaviour
             var alarm = other.gameObject.GetComponent<AlarmController>();
             alarm.TurnOffAlarm();
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Computer"))
+        {
+            other.GetComponent<ComputerSpriteChange>().ChangeSprite();
+        }
     }
 }
