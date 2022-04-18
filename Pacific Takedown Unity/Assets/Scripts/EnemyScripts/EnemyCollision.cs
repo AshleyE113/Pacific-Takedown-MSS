@@ -34,6 +34,7 @@ public class EnemyCollision : MonoBehaviour
                 var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
                 compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
                 script.BouncedOffWall(25); //Extra Knockback
+                CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 //Change Health Bar
                 enemy.GetComponent<EnemyHealth>()?.TakeDamage(25);
             }

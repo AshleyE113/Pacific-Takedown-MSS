@@ -17,6 +17,7 @@ public class FXManager : MonoBehaviour
     public GameObject wallImpactFXNS;
     public GameObject wallOilFXNS;
     public GameObject debrisFXNS;
+    public GameObject ElectricFXNS;
 
 
     //Static Versions
@@ -30,7 +31,7 @@ public class FXManager : MonoBehaviour
     public static GameObject wallImpactFX;
     public static GameObject wallOilFX;
     public static GameObject debrisFX;
-
+    public static GameObject ElectricFX;
 
     //Flash
     private static Material flashMaterial;
@@ -59,6 +60,7 @@ public class FXManager : MonoBehaviour
         wallImpactFX = wallImpactFXNS;
         wallOilFX = wallOilFXNS;
         debrisFX = debrisFXNS;
+        ElectricFX = ElectricFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -147,6 +149,15 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(debrisFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "electricity")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(ElectricFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
