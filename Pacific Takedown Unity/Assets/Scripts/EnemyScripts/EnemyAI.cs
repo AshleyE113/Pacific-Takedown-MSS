@@ -34,6 +34,8 @@ public class EnemyAI : MonoBehaviour
     public int recoveryMax = 90;
     public float knockbackDrag;
     private Vector2 direction;
+    //Being Attacked
+    public int combo;
     //Patrolling
     public float detectionRange = 10f;
 
@@ -53,11 +55,14 @@ public class EnemyAI : MonoBehaviour
     public float attackRecoverTime;
     [HideInInspector] public bool canAttack=true;
     bool attackCoroutineStarted = false;
-    public bool canBounce = true;
+    public bool isHeavy;
+    [HideInInspector] public bool canBounce = true;
     public Vector2 launchDirection;
     //Animations
     private Animator animator;
     private string animCurrentState;
+    
+    
     public enum State
     {
         Patrolling,
@@ -92,7 +97,15 @@ public class EnemyAI : MonoBehaviour
         target = GameObject.Find("Player").transform;
         hitPause = GameObject.Find("HitPauseObj").GetComponent<HitStop>();
         Player = GameObject.Find("Player").GetComponent<PlayerController>();
-
+        //Set bounce
+        if (isHeavy)
+        {
+            canBounce = false;
+        }
+        else
+        {
+            canBounce = true;
+        }
     }
 
 
@@ -175,8 +188,17 @@ public class EnemyAI : MonoBehaviour
                         break;
                     case State.Idle:
                         //Stay in place. If player is in range, go towards them
+                        if (isHeavy)
+                        {
+                            canBounce = false;
+                        }
+                        else
+                        {
+                            canBounce = true;
+                        }
                         ResumeAnimation();
                         rb.drag = 3; //Play with this value to test this.
+                        combo = 0;
                         canAttack = true;
                         if (path == null)
                         {
@@ -257,6 +279,7 @@ public class EnemyAI : MonoBehaviour
                             if (Health > 0)
                             {
                                 rb.velocity = rb.velocity * .9f;
+                                ChangeState(State.Idle);
                             }
                         }
                         //Start Couretine to return to Idle State
@@ -425,6 +448,7 @@ public class EnemyAI : MonoBehaviour
     public void Knockback(float knockback, int zRotation, bool bounce, GameObject attack)
     {
         //Debug.Log("Applying Knockback from Hit");
+        recoveryTimer = 0;
         if (!bounce)
         {
             rb.AddForce((attack.transform.up * recievedKnockback), ForceMode2D.Impulse);
@@ -434,6 +458,12 @@ public class EnemyAI : MonoBehaviour
             gameObject.GetComponent<EnemyBounce>().BounceEnemy(rb, PlayerController.lookDir.x, PlayerController.lookDir.y, bounceKnockback);
         }
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+        gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
     }
     #endregion
 }

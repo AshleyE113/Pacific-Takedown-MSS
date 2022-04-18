@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8689547166826927468}
   - component: {fileID: 8689547166826927471}
-  - component: {fileID: 8689547166826927470}
   - component: {fileID: 8689547166826927457}
-  m_Layer: 6
+  - component: {fileID: 1568214449711429846}
+  m_Layer: 13
   m_Name: PosterManta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8689547166826927470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8689547166826927456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bb78e6e0d22ee44ab34e79145af077c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherSprite: {fileID: 8688649198823578531, guid: bbaa7851927130049b07dca67fa99a8c, type: 3}
 --- !u!61 &8689547166826927457
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6146545, y: 2.399969}
   m_EdgeRadius: 0
+--- !u!114 &1568214449711429846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689547166826927456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ca5bbe0ac8fa04a8ef9b7650baf08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherSprite: {fileID: 8688649198823578531, guid: bbaa7851927130049b07dca67fa99a8c, type: 3}

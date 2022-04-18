@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool resetDirCooldownRunning;
     public int playerHealth = 3;
     bool spawned;
+    [SerializeField] AlarmController acScript;
     //Mouse
     private Vector2 mousePos;
     [HideInInspector] public static Vector2 lookDir;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public GameObject rotationObjectNS;
 
     //Combat
+    [Header("Combat")]
     public int attackIndex;
     private bool canCombo;
     public float meleeRange;
@@ -54,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
     public float distanceBetweenImages;
     //FX
+    [Header("FX")]
     private bool fxSpawned;
     public int flashingTime;
     private int flickerTimer = 0;
@@ -362,28 +365,40 @@ public class PlayerController : MonoBehaviour
             if (other.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
             {
                 var obstacleSprite = other.gameObject.GetComponent<HitSpriteChange>();
-             obstacleSprite?.ChangeSprite();
+                obstacleSprite?.ChangeSprite();
             }
+       
         }
     }
     private void OnTriggerEnter2D(Collider2D other) //If Hit
     {
-    if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
-    {
-      ChangeState(State.Hit);
-      FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
-      FXManager.flashEffectPlayer(gameObject);
+        if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
+        {
+          ChangeState(State.Hit);
+          FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
+          FXManager.flashEffectPlayer(gameObject);
       
-      playerHealth--;
-      //Change Animation to Player Hit
-      PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
-      //Make THem Invulnerable
-      invulnerable = true;
-      StartCoroutine(InvulnerableTimer());
-      Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
-      rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+          playerHealth--;
+          //Change Animation to Player Hit
+          PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
+          //Make THem Invulnerable
+          invulnerable = true;
+          StartCoroutine(InvulnerableTimer());
+          Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
+          rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+        }
+
+        if( CurrentState == State.Attacking)
+        {
+            if (other.gameObject.tag == "Alarm")
+            {
+                Debug.Log("In here");
+                var alarm = other.gameObject.GetComponent<AlarmController>();
+                alarm.TurnOffAlarm();
+            }
+        }
+       
     }
-  }
   
   private void FlashEffectTimer()
   {

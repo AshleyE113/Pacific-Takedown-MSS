@@ -60,6 +60,26 @@ public class EnemyBounce : MonoBehaviour
          var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
          bounceRB.velocity = direction * Mathf.Max(speed, 0f);
         }
+        if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Computer"))
+        {
+         var speed = last_vel.magnitude/2;
+         var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
+         bounceRB.velocity = direction * Mathf.Max(speed, 0f);
+        }
+        if (isBouncing && other.gameObject.gameObject.CompareTag("Bumper"))
+        {
+         Debug.Log("Bumped Bumper");
+         var speed = last_vel.magnitude*1.2f;
+         var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
+         bounceRB.velocity = direction * Mathf.Max(speed, 0f);
+        }
+        if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+         Debug.Log("Bumped Enemy: "+1*Mathf.RoundToInt(last_vel.magnitude/2));
+         other.gameObject.GetComponent<EnemyAI>().TakeDamage(1*Mathf.RoundToInt(last_vel.magnitude/2));
+         gameObject.GetComponent<EnemyAI>().TakeDamage(1*Mathf.RoundToInt(last_vel.magnitude/2));
+
+        }
      }
 }
 //Scrap work for timer. DO NOT TOUCH!!!
