@@ -182,9 +182,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1494674695
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -274,7 +274,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1494674695
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 6012424985173850296, guid: 3b5879ff4fdd59647b135e54457f5bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -399,6 +399,7 @@ MonoBehaviour:
   playerFacing: {x: 0, y: 0}
   directionResetTime: 0.125
   playerHealth: 3
+  acScript: {fileID: 0}
   cam: {fileID: 0}
   rotationObjectNS: {fileID: 3657015674010336250}
   attackIndex: 0
@@ -435,6 +436,7 @@ GameObject:
   - component: {fileID: 6734542752351984161}
   - component: {fileID: 4258597481442493083}
   - component: {fileID: 1766188729}
+  - component: {fileID: 1447769983758830951}
   m_Layer: 8
   m_Name: SwingPoint
   m_TagString: Untagged
@@ -521,6 +523,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrinkTime: 0.1
+--- !u!114 &1447769983758830951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371670226818428478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b9a10ed3015434ea9674afceb89e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkTime: 0.05
 --- !u!1001 &4552299703310114480
 PrefabInstance:
   m_ObjectHideFlags: 0
