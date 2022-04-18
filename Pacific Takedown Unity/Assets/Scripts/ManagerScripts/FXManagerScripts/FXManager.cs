@@ -16,7 +16,7 @@ public class FXManager : MonoBehaviour
     public GameObject playerHitFXNS;
     public GameObject wallImpactFXNS;
     public GameObject wallOilFXNS;
-
+    public GameObject debrisFXNS;
 
 
     //Static Versions
@@ -29,6 +29,7 @@ public class FXManager : MonoBehaviour
     public static GameObject playerHitFX;
     public static GameObject wallImpactFX;
     public static GameObject wallOilFX;
+    public static GameObject debrisFX;
 
 
     //Flash
@@ -57,6 +58,7 @@ public class FXManager : MonoBehaviour
         playerHitFX = playerHitFXNS;
         wallImpactFX = wallImpactFXNS;
         wallOilFX = wallOilFXNS;
+        debrisFX = debrisFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -141,6 +143,15 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+        if (effect == "debris")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(debrisFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
         if (effect == "explosionEffect")
         {
             var spawnLocation = spawn.transform.position;
@@ -155,6 +166,7 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(wallImpactFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
+            spawnEffect("debris",Effect,Effect.transform,new Quaternion(0f,0f,180f,1),false,new Vector2(0f,0f));
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
@@ -196,6 +208,7 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+        
     }
 
 }

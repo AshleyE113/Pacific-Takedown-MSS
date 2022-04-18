@@ -13163,14 +13163,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1868619658}
-    - target: {fileID: 5833092977437864795, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}
-      propertyPath: wallOilFXNS
-      value: 
-      objectReference: {fileID: 2159858475428378111, guid: 953263ea613faba4481b4b49db86c613, type: 3}
-    - target: {fileID: 5833092977437864795, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}
-      propertyPath: wallImpactFXNS
-      value: 
-      objectReference: {fileID: 2159858475428378111, guid: c5aff6f98bcd0ab45ad8aa1895a376b9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}
 --- !u!1001 &6880577858378540607
