@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public int playerHealth = 3;
     bool spawned;
     [SerializeField] AlarmController acScript;
+    public bool canMove;
     //Mouse
     private Vector2 mousePos;
     [HideInInspector] public static Vector2 lookDir;
@@ -86,6 +87,7 @@ public class PlayerController : MonoBehaviour
       rotationObject = rotationObjectNS;
       spawned = false;
       ChangeState(State.Ready);
+      canMove = true;
     }
 
     // Update is called once per frame
@@ -101,32 +103,34 @@ public class PlayerController : MonoBehaviour
 
        if (playerHealth > 0)
        {
+            if (canMove)
+            {
+                //Grab our Current Input from Input Manager
+                movement = InputManager.directionVector;
+                mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+                lookDir = mousePos - rb.position; //If on Mouse
+                //lookDir = stickDir; //If on GamePad
+                lookDir = lookDir.normalized;
+                angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
 
-            //Grab our Current Input from Input Manager
-            movement = InputManager.directionVector;
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        lookDir = mousePos - rb.position; //If on Mouse
-        //lookDir = stickDir; //If on GamePad
-        lookDir = lookDir.normalized;
-        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+                //Set the Directon we are facing
+                playerFacing.x = Mathf.Round(lookDir.x);
+                playerFacing.y = Mathf.Round(lookDir.y);
 
-        //Set the Directon we are facing
-        playerFacing.x = Mathf.Round(lookDir.x);
-        playerFacing.y = Mathf.Round(lookDir.y);
+                if (movement.x == 0 && movement.y == 0)
+                {
 
-        if (movement.x == 0 && movement.y == 0)
-        {
-
-        }
-        else
-        {
-          //set direction before normalising
-          updatePlayerDir(movement);
-          //Update the Parameters in our Animator
-          animator.SetFloat("Horizontal", movement.x);
-          animator.SetFloat("Vertical", movement.y);
-          animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
+                }
+                else
+                {
+                    //set direction before normalising
+                    updatePlayerDir(movement);
+                    //Update the Parameters in our Animator
+                    animator.SetFloat("Horizontal", movement.x);
+                    animator.SetFloat("Vertical", movement.y);
+                    animator.SetFloat("Speed", movement.sqrMagnitude);
+                }
+            }
      }
   }
   //Update our Player's Direction
@@ -157,67 +161,71 @@ public class PlayerController : MonoBehaviour
   {
         if (playerHealth > 0)
         {
-            animator.SetFloat("MouseHorizontal", lookDir.x);
-            animator.SetFloat("MouseVertical", lookDir.y);
-            //Change Position of Swing Point
-            rotationObject.transform.rotation = Quaternion.Euler(0f, 0f, angle);
-            switch (CurrentState)
+            if (canMove)
             {
-                //State Ready: Player is able to control character
-                case State.Ready:
-                    if (movement.x == 0 && movement.y == 0)
-                    {
-                        ChangeAnimationState("Idle");
-                    }
-                    else
-                    {
-                        //movement
-                        rb.MovePosition(rb.position + (movement) * moveSpeed * Time.fixedDeltaTime);
-                        ChangeAnimationState("Movement");
-                    }
+                animator.SetFloat("MouseHorizontal", lookDir.x);
+                animator.SetFloat("MouseVertical", lookDir.y);
+                //Change Position of Swing Point
+                rotationObject.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                switch (CurrentState)
+                {
+                    //State Ready: Player is able to control character
+                    case State.Ready:
+                        if (movement.x == 0 && movement.y == 0)
+                        {
+                            ChangeAnimationState("Idle");
+                        }
+                        else
+                        {
+                            //movement
+                            rb.MovePosition(rb.position + (movement) * moveSpeed * Time.fixedDeltaTime);
+                            ChangeAnimationState("Movement");
+                        }
 
-                    if (invulnerable)
-                    {
-                      CheckFlicker();
-                    }
-                    break;
-                //State Ready: Player is able to control character
-                case State.Attacking:
-                  
-                    if (invulnerable)
-                    {
-                      CheckFlicker();
-                    }
-                  
-                    if (canCombo) //If we can combo, Make our lunge velocity Zero
-                    {
-                        rb.velocity = Vector2.zero;
-                    }
-                    if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
-                    {
-                        rb.velocity = rb.velocity * .5f;
-                    }
-                    //Cap at 3 Hits
-                    if (attackIndex >= 3)
-                    { attackIndex = 3; }
-                    break;
-                case State.Hit:
-                  FlashEffectTimer();
-                    if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
-                    {
-                        rb.velocity = rb.velocity * .8f; //Ashley: I'm assuming that this is the player knockback after the enemy strikes
-                    }
-                    break;
-                case State.Dashing:
-                  rb.velocity = dashDir.normalized * dashForce;
-                  invulnerable = true;
-                  if (Vector2.Distance(transform.position,lastImagePos) > distanceBetweenImages)
-                  {
-                    PlayerAfterImagePool.Instance.GetFromPool();
-                    lastImagePos = transform.position;
-                  }
-                  break;
+                        if (invulnerable)
+                        {
+                            CheckFlicker();
+                        }
+                        break;
+                    //State Ready: Player is able to control character
+                    case State.Attacking:
+
+                        if (invulnerable)
+                        {
+                            CheckFlicker();
+                        }
+
+                        if (canCombo) //If we can combo, Make our lunge velocity Zero
+                        {
+                            rb.velocity = Vector2.zero;
+                        }
+                        if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
+                        {
+                            rb.velocity = rb.velocity * .5f;
+                        }
+                        //Cap at 3 Hits
+                        if (attackIndex >= 3)
+                        { attackIndex = 3; }
+                        break;
+                    case State.Hit:
+                        FlashEffectTimer();
+                        if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
+                        {
+                            rb.velocity = rb.velocity * .8f; //Ashley: I'm assuming that this is the player knockback after the enemy strikes
+                        }
+                        break;
+                    case State.Dashing:
+                        rb.velocity = dashDir.normalized * dashForce;
+                        invulnerable = true;
+                        if (Vector2.Distance(transform.position, lastImagePos) > distanceBetweenImages)
+                        {
+                            PlayerAfterImagePool.Instance.GetFromPool();
+                            lastImagePos = transform.position;
+                        }
+                        break;
+                }
             }
+           
         }
   }
         

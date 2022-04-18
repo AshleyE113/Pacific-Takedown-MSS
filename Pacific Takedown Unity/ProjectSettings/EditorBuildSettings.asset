@@ -15,15 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/DonoScene/SceneMain/DonoScene3 1.unity
     guid: 5d0e372d1f1c0cd488497e02679aa1f4
   - enabled: 0
-    path: Assets/Scenes/JoshScene/JoshScene4.unity
-    guid: b3d8f2b1989ae2c44b08327a45a8e9f3
-  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
     path: Assets/Scenes/MainGame/StartScene.unity
     guid: c6303a930cca9e14983e5db866793117
   - enabled: 0
     path: Assets/Scenes/MainGame/OLD/Level1.unity
     guid: 6a908a5f3d5ba6d4285b5d5ee641a1d8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainGame/GOver.unity
     guid: ce397f2b4cea0e84fbb99dc92891cc73
   - enabled: 1
