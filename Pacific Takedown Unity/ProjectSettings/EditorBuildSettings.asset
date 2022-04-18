@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainGame/StartScene.unity
     guid: c6303a930cca9e14983e5db866793117
   - enabled: 1
