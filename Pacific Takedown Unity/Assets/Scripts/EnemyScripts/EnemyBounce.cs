@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 
@@ -58,6 +59,11 @@ public class EnemyBounce : MonoBehaviour
         {
          var speed = last_vel.magnitude;
          var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
+         Debug.Log("Bounce Direction:"+direction);
+         if (direction.y <= -0.5f)
+         {
+          FXManager.spawnEffect("wallImpact",gameObject,null,quaternion.identity, false,new Vector2(0f,2.5f));
+         }
          bounceRB.velocity = direction * Mathf.Max(speed, 0f);
         }
         if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Computer"))

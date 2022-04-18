@@ -14,6 +14,7 @@ public class FXManager : MonoBehaviour
     public GameObject bloodEffectNS;
     public GameObject sparkEffectNS;
     public GameObject playerHitFXNS;
+    public GameObject wallImpactFXNS;
 
 
 
@@ -26,6 +27,7 @@ public class FXManager : MonoBehaviour
     public static GameObject bloodEffect;
     public static GameObject sparkEffect;
     public static GameObject playerHitFX;
+    public static GameObject wallImpactFX;
 
 
 
@@ -53,6 +55,7 @@ public class FXManager : MonoBehaviour
         bloodEffect = bloodEffectNS;
         sparkEffect = sparkEffectNS;
         playerHitFX = playerHitFXNS;
+        wallImpactFX = wallImpactFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -142,6 +145,15 @@ public class FXManager : MonoBehaviour
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(explosionEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             Debug.Log("PLAYED");
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "wallImpact")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(wallImpactFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
