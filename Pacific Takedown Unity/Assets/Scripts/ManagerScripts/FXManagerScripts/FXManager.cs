@@ -166,8 +166,8 @@ public class FXManager : MonoBehaviour
         if (effect == "explosionEffect")
         {
             var spawnLocation = spawn.transform.position;
-            var Effect = Instantiate(explosionEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
-            Debug.Log("PLAYED");
+            var Effect = Instantiate(explosionEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, -0.1f), Quaternion.identity);
+            Debug.Log("PLexplosionAYED");
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
