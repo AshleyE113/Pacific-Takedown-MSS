@@ -53,6 +53,15 @@ public class CinematicOpening : MonoBehaviour
             objColor.a = 100f;
     }
 
+    void FadeOut()
+    {
+        Color objColor = this.GetComponent<Image>().color;
+        float fadeSpeed = 0.5f;
+        float fadeVal = objColor.a - (fadeSpeed * Time.deltaTime);
+        objColor = Color.white;
+        this.GetComponent<Image>().color = objColor;
+    }
+
 
     private IEnumerator TextScroll(string lineOfText) //Gives it that one character at a timeffect...
     {
