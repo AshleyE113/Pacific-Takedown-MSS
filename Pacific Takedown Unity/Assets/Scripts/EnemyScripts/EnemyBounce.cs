@@ -50,7 +50,6 @@ public class EnemyBounce : MonoBehaviour
     public void BounceEnemy(Rigidbody2D enemy, float directionX, float directionY, float force)
     {
      enemy.velocity = new Vector2(directionX*force, directionY*force);
-     Debug.Log("Calling Bounce Enemy Poop");
     }
 
     //When it collides with the wall at a certain speed it will hit it, then reflect off of the surface. DON'T TOUCH UNTIL YOU HAVE TO!
@@ -88,10 +87,3 @@ public class EnemyBounce : MonoBehaviour
         }
      }
 }
-//Scrap work for timer. DO NOT TOUCH!!!
-//timer += Time.deltaTime;
-//if (timeStop > timer) //Time
-//{ //}
-
-//rb.drag = 1f;
-//timer = timer = timeStop;

@@ -91,7 +91,7 @@ public class EnemyCollision : MonoBehaviour
             {
                 script.canBounce = true;
                 script.state = EnemyAI.State.Bounce;
-                script.hitPause.Stop(script.HiPaVal);
+                //script.hitPause.Stop(script.HiPaVal);
                 script.rb.velocity = Vector2.zero;
                 script.Knockback(script.recievedKnockback, direction, true, other.gameObject);
                 script.BouncedOffWall(20);
