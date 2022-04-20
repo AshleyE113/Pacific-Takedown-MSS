@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 
@@ -54,10 +55,15 @@ public class EnemyBounce : MonoBehaviour
 
     //When it collides with the wall at a certain speed it will hit it, then reflect off of the surface. DON'T TOUCH UNTIL YOU HAVE TO!
      void OnCollisionEnter2D(Collision2D other) {
-        if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Obstacle") && !other.gameObject.CompareTag("Bumper"))
         {
          var speed = last_vel.magnitude;
          var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
+         Debug.Log("Bounce Direction:"+direction);
+         if (direction.y <= -0.70f)
+         {
+          FXManager.spawnEffect("wallImpact",gameObject,null,quaternion.identity, false,new Vector2(0f,2.5f));
+         }
          bounceRB.velocity = direction * Mathf.Max(speed, 0f);
         }
         if (isBouncing && other.gameObject.gameObject.layer == LayerMask.NameToLayer("Computer"))

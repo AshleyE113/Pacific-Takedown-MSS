@@ -14,8 +14,10 @@ public class FXManager : MonoBehaviour
     public GameObject bloodEffectNS;
     public GameObject sparkEffectNS;
     public GameObject playerHitFXNS;
-
-
+    public GameObject wallImpactFXNS;
+    public GameObject wallOilFXNS;
+    public GameObject debrisFXNS;
+    public GameObject ElectricFXNS;
 
 
     //Static Versions
@@ -26,8 +28,10 @@ public class FXManager : MonoBehaviour
     public static GameObject bloodEffect;
     public static GameObject sparkEffect;
     public static GameObject playerHitFX;
-
-
+    public static GameObject wallImpactFX;
+    public static GameObject wallOilFX;
+    public static GameObject debrisFX;
+    public static GameObject ElectricFX;
 
     //Flash
     private static Material flashMaterial;
@@ -53,6 +57,10 @@ public class FXManager : MonoBehaviour
         bloodEffect = bloodEffectNS;
         sparkEffect = sparkEffectNS;
         playerHitFX = playerHitFXNS;
+        wallImpactFX = wallImpactFXNS;
+        wallOilFX = wallOilFXNS;
+        debrisFX = debrisFXNS;
+        ElectricFX = ElectricFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -137,11 +145,48 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+        if (effect == "debris")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(debrisFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "electricity")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(ElectricFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
         if (effect == "explosionEffect")
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(explosionEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             Debug.Log("PLAYED");
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "wallImpact")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(wallImpactFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
+            spawnEffect("debris",Effect,Effect.transform,new Quaternion(0f,0f,180f,1),false,new Vector2(0f,0f));
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "wallOil")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(wallOilFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), Quaternion.identity);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
@@ -174,6 +219,7 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+        
     }
 
 }

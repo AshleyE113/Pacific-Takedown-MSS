@@ -1881,6 +1881,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: FXManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
+      propertyPath: debrisFXNS
+      value: 
+      objectReference: {fileID: 2860982736760304430, guid: a54fea0c2ed827f47a5dbfb915201547, type: 3}
+    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
+      propertyPath: wallOilFXNS
+      value: 
+      objectReference: {fileID: 2159858475428378111, guid: 953263ea613faba4481b4b49db86c613, type: 3}
+    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
+      propertyPath: ElectricFXNS
+      value: 
+      objectReference: {fileID: 5016379679559257091, guid: 6d22aad6c5f024e489b10b7b6c4a4f1d, type: 3}
+    - target: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
+      propertyPath: wallImpactFXNS
+      value: 
+      objectReference: {fileID: 2159858475428378111, guid: c5aff6f98bcd0ab45ad8aa1895a376b9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
 --- !u!4 &5833092977437864788 stripped
