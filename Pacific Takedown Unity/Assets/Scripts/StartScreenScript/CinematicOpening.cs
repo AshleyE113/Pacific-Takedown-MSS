@@ -42,24 +42,15 @@ public class CinematicOpening : MonoBehaviour
                     Debug.Log(currentIndex);
                     StartCoroutine(TextScroll(openingLines[currentIndex]));
                     currentIndex += 1;
-
-                    if (currentIndex == 3)
-                    {
-                        Color.Lerp(objColor, col, lerpVal);
-                        lerpVal += Time.deltaTime;
-
-                        if (objColor.a > 0)
-                        {
-                            objColor.a = (alphaVal - 0.9f);
-                        }
-                    }
                 }
-                
 
             }
 
-
         }
+
+        Debug.Log("Hmm");
+        if (objColor.a > 0)
+            objColor.a = 100f;
     }
 
 

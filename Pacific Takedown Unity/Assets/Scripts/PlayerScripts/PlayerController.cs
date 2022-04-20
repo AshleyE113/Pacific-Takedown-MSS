@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 previousFacing;
     public float directionResetTime=0.25f;
     private bool resetDirCooldownRunning;
-    public int playerHealth = 3;
+    
     bool spawned;
     [SerializeField] AlarmController acScript;
     public bool canMove;
@@ -64,6 +64,11 @@ public class PlayerController : MonoBehaviour
     public int flickerRate = 15;
     private int offFlicker = 0;
 
+    [Header("Health Bar")]
+    public int playerHealth = 6; //See it as the max health
+    public HealthBar hb;
+    public int currentHealth;
+
     //Player States
     public enum State
     {
@@ -78,16 +83,18 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
-      rb = gameObject.GetComponent<Rigidbody2D>();
-      playerFacing = new Vector2(0f, -1f);
-      previousFacing = new Vector2(0f, -1f);
-      stickDir = new Vector2(0f, -1f);
-      animator = gameObject.GetComponent<Animator>();
-      mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-      rotationObject = rotationObjectNS;
-      spawned = false;
-      ChangeState(State.Ready);
-      canMove = true;
+          rb = gameObject.GetComponent<Rigidbody2D>();
+          playerFacing = new Vector2(0f, -1f);
+          previousFacing = new Vector2(0f, -1f);
+          stickDir = new Vector2(0f, -1f);
+          animator = gameObject.GetComponent<Animator>();
+          mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+          rotationObject = rotationObjectNS;
+          spawned = false;
+          ChangeState(State.Ready);
+          canMove = true;
+          currentHealth = playerHealth;
+        hb.SetMaxHealth(playerHealth);
     }
 
     // Update is called once per frame
@@ -382,21 +389,28 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("EnemyHitbox") && !invulnerable)
         {
-          ChangeState(State.Hit);
-          FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
-          FXManager.flashEffectPlayer(gameObject);
-      
-          playerHealth--;
-          //Change Animation to Player Hit
-          PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
-          //Make THem Invulnerable
-          invulnerable = true;
-          StartCoroutine(InvulnerableTimer());
-          Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
-          rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
+              ChangeState(State.Hit);
+              FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
+              FXManager.flashEffectPlayer(gameObject);
+            //For HealthBar
+             if (currentHealth > 0)
+            {
+                currentHealth--;
+                 hb.SetHealth(currentHealth);
+               
+            }else
+                Manager.instance.GameOver();
+
+            //Change Animation to Player Hit
+            PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
+              //Make THem Invulnerable
+              invulnerable = true;
+              StartCoroutine(InvulnerableTimer());
+              Vector2 direction = other.transform.parent.GetComponent<EnemyAI>().launchDirection; 
+              rb.AddForce(direction*lungeSpeed,ForceMode2D.Impulse); //Lunge us in said direction
         }
 
-        if( CurrentState == State.Attacking)
+        if(CurrentState == State.Attacking)
         {
             if (other.gameObject.tag == "Alarm")
             {
