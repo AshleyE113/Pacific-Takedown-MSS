@@ -398,8 +398,7 @@ public class PlayerController : MonoBehaviour
                 currentHealth--;
                  hb.SetHealth(currentHealth);
                
-            }else
-                Manager.instance.GameOver();
+            }
 
             //Change Animation to Player Hit
             PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
