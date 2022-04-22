@@ -393,14 +393,12 @@ public class PlayerController : MonoBehaviour
               FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
               FXManager.flashEffectPlayer(gameObject);
             //For HealthBar
-            if (currentHealth > 0)
-            {
+             if (currentHealth > 0)
+             {
                 currentHealth--;
-                hb.SetHealth(currentHealth);
-
-            }
-            else
-                Manager.instance.GameOver();
+                 hb.SetHealth(currentHealth);
+               
+             }
 
             //Change Animation to Player Hit
             PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());
