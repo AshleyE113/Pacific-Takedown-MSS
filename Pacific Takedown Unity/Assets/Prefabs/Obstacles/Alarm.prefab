@@ -133,3 +133,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherSprite: {fileID: -2859458665478016135, guid: 91d3b41d27527ec45a3310ee246948df, type: 3}
+  myAnimator: {fileID: 8898184814406056062}
