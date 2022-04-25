@@ -45,6 +45,7 @@ public class EnemyAI : MonoBehaviour
     public float totalAngle = 360;
     public RaycastHit2D hit;
 
+
     //FX
     public FXManager myFX;
     private bool fxSpawned;
@@ -268,6 +269,7 @@ public class EnemyAI : MonoBehaviour
                         rb.drag = 0; //Play with this value to test this.
                         rb.velocity = rb.velocity * .5f;
                         FlashEffectTimer();
+                        
 
 
                         if (recoveryTimer < recoveryMax)

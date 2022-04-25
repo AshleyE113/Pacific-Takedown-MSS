@@ -84,10 +84,10 @@ public class EnemyCollision : MonoBehaviour
                 new Vector3(3f, 3f, 3f);
             FXManager.spawnEffect("oil",enemy,thisRotationObject.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
             FXManager.spawnEffect("spark",thisRotationObject,thisRotationObject.transform,other.gameObject.transform.rotation, false,new Vector2(0f,0f));
-
+            script.combo += 1;
             script.ChangeAnimationState("Movement");
             FXManager.flashEffect(enemy);
-            if (script.canBounce || script.target.GetComponent<PlayerController>().attackIndex==2)
+            if (script.canBounce || script.GetComponent<EnemyAI>().combo>=3)
             {
                 script.canBounce = true;
                 script.state = EnemyAI.State.Bounce;
