@@ -20,7 +20,7 @@ public class ComputerSpriteChange : MonoBehaviour
     { //if I collide with an enemy
 
         if(myAnimator != null){ //disable animator
-            Debug.Log("ANIMATOR DETECTED");
+           // Debug.Log("ANIMATOR DETECTED");
             myAnimator.enabled = false;
         }
 
