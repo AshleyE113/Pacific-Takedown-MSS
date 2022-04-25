@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
     }
     void Update()
     {
-
+        DontDestroyOnLoad(this.gameObject);
     }
     Vector3 CaptureMousePos()
     {

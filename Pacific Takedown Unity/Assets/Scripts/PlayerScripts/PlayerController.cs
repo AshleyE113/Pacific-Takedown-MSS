@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
           ChangeState(State.Ready);
           canMove = true;
           currentHealth = playerHealth;
+       // cam = (Camera)FindObjectOfType(typeof(Camera));
         hb.SetMaxHealth(playerHealth);
     }
 

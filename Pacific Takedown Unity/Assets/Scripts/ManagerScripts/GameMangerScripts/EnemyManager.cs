@@ -5,44 +5,52 @@ using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
- // Use this for initialization
     int enemiesLeft = 0;
     bool killedAllEnemies = false;
-    GameObject[] enemies;
-     void Start () {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    public GameObject nextSceneLoader;
+    public GameObject[] enemies;
+    void Start()
+    {
+        enemiesLeft = 10; // or whatever;
 
-        enemiesLeft = enemies.Length;// or whatever;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        bool Gameover = true;
+        int totalEnemiesAlive = 0;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemies[i] != null)
+            {
+                Gameover = false;
+                totalEnemiesAlive += 1;
+            }
+        }
+
+        if (Gameover) endGame();
+    }
+
+    void endGame()
+    {
+        killedAllEnemies = true;
+        SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
 
     }
-     
-     // Update is called once per frame
-     void Update () {
 
-         if(enemiesLeft == 0)
-         {
-            GoToNextLevel();
-         }
-     }
-     
-     void GoToNextLevel()
-     {
-         killedAllEnemies = true;
-        SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
-        Debug.Log("Time for level 2!");
-
-     }
-     
-     void OnGUI()
-     {
-         if(killedAllEnemies)
-         {
-         GUI.Label(new Rect (0,0,200,20),"all gone");
-         }
-         else
-         {
-             GUI.Label(new Rect (0,0,200,20),"Enemies Remaining : " + enemiesLeft);
-         }
-     }
+    void OnGUI()
+    {
+        if (killedAllEnemies)
+        {
+            GUI.Label(new Rect(0, 0, 200, 20), "all gone");
+        }
+        else
+        {
+            GUI.Label(new Rect(0, 0, 200, 20), "Enemies Remaining : " + enemiesLeft);
+        }
+    }
 }
 
