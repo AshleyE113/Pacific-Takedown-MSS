@@ -1,31 +1,22 @@
 fileFormatVersion: 2
-guid: d4a216f99b418b14ca545f4374cf4eb6
+guid: fc8f1998464b6134887c844fe3da55cc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7353515168790064060
-    second: computer2_0
+      213: 5378909769135194456
+    second: PinkSparks-Sheet_0
   - first:
-      213: -3212897651041448288
-    second: computer2_2
+      213: -1782906562547700090
+    second: PinkSparks-Sheet_1
   - first:
-      213: -7831578951126108815
-    second: computer2_10
+      213: 6172091553443116751
+    second: PinkSparks-Sheet_2
   - first:
-      213: -3542221548640503126
-    second: computer2_11
+      213: -8774808250183946584
+    second: PinkSparks-Sheet_3
   - first:
-      213: 622124061265260927
-    second: computer2_18
-  - first:
-      213: 1590966511229683872
-    second: computer2_21
-  - first:
-      213: -7202482230418648659
-    second: computer2_22
-  - first:
-      213: 1372580761484010475
-    second: computer2_23
+      213: 6211209148240209700
+    second: PinkSparks-Sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,169 +106,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: computer2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbbad2ed51fec0660800000000000000
-      internalID: 7353515168790064060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aeccf9eb9e7963d0800000000000000
-      internalID: -3212897651041448288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_10
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 175b3bbff64a05390800000000000000
-      internalID: -7831578951126108815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_11
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aaa7c8dd44087dec0800000000000000
-      internalID: -3542221548640503126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: computer2_18
+      name: PinkSparks-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 94
+        height: 93
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7170fd998a32a800800000000000000
-      internalID: 622124061265260927
+      spriteID: 8518e24bfe9b5aa40800000000000000
+      internalID: 5378909769135194456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_21
+      name: PinkSparks-Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 94
         y: 0
-        width: 64
-        height: 64
+        width: 94
+        height: 93
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a84367dc9f341610800000000000000
-      internalID: 1590966511229683872
+      spriteID: 68ea1a77de7d147e0800000000000000
+      internalID: -1782906562547700090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_22
+      name: PinkSparks-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 188
         y: 0
-        width: 32
-        height: 64
+        width: 94
+        height: 93
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da155d26294ab0c90800000000000000
-      internalID: -7202482230418648659
+      spriteID: fc67a24119ca7a550800000000000000
+      internalID: 6172091553443116751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: computer2_23
+      name: PinkSparks-Sheet_3
       rect:
         serializedVersion: 2
-        x: 224
+        x: 282
         y: 0
-        width: 32
-        height: 64
+        width: 94
+        height: 93
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be32ac92ee26c0310800000000000000
-      internalID: 1372580761484010475
+      spriteID: 8ae6e9b236e993680800000000000000
+      internalID: -8774808250183946584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkSparks-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 94
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427a38adfc5a23650800000000000000
+      internalID: 6211209148240209700
       vertices: []
       indices: 
       edges: []
