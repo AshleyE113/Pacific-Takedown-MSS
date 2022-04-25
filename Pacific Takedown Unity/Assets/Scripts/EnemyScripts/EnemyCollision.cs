@@ -22,7 +22,7 @@ public class EnemyCollision : MonoBehaviour
                 //Sound
                 AkSoundEngine.PostEvent("Play_MetalBounce" , enemy);
                 //Change Health Bar
-                enemy.GetComponent<EnemyHealth>()?.TakeDamage(3);
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(2);
 
                 //Add an effect
             }
@@ -52,6 +52,7 @@ public class EnemyCollision : MonoBehaviour
             if (script.state == EnemyAI.State.Bounce)
             {
                 script.BouncedOffWall(3); // subject to change 
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(5);
                 Debug.Log("EnemyXEnemy Action");
             }
         }
@@ -62,8 +63,7 @@ public class EnemyCollision : MonoBehaviour
                 var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
                 compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
                 script.BouncedOffWall(0); //Extra Knockback
-                //Change Health Bar
-                //enemy.GetComponent<EnemyHealth>()?.TakeDamage(25);
+                enemy.GetComponent<EnemyHealth>()?.TakeDamage(2);
             }
         }
     }
