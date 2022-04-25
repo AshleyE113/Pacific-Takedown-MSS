@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
  // Use this for initialization
-     int enemiesLeft = 0;
-     bool killedAllEnemies = false;
-    public GameObject nextSceneLoader;
+    int enemiesLeft = 0;
+    bool killedAllEnemies = false;
     GameObject[] enemies;
      void Start () {
-        enemies = GameObject.FindGameObjectsWithTag("enemy");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         enemiesLeft = enemies.Length;// or whatever;
 
@@ -28,7 +28,8 @@ public class EnemyManager : MonoBehaviour
      void GoToNextLevel()
      {
          killedAllEnemies = true;
-        nextSceneLoader.SetActive(true);
+        SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
+        Debug.Log("Time for level 2!");
 
      }
      

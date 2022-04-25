@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 1345633534}
   m_Layer: 7
   m_Name: FloatingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
