@@ -6,7 +6,7 @@ using UnityEngine;
 public class ComputerSpriteChange : MonoBehaviour
 {
     private SpriteRenderer myRenderer;
-    private bool changed;
+    public bool changed;
     public Sprite otherSprite; //define the sprite that I want to change to
     public Animator myAnimator; //define the animator
 

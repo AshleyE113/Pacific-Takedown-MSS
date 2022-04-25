@@ -599,6 +599,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 531429928}
+  - {fileID: 2005784053}
   - {fileID: 510238954}
   - {fileID: 1423801993}
   m_Father: {fileID: 0}
@@ -627,7 +628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &510238954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -640,7 +641,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371673850}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -660,7 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -701,10 +702,36 @@ MonoBehaviour:
   - My family is gone...
   - Just like the rest of them...
   - And I think I know who took them....
-  - So I'll do everythin' I've fuckin' got to bring everyone back!
+  - A few years ago, the Pacific Sea Mining Corporation moved into our fishing town,
+    in a lighthouse overlooking the water.
+  - 'They promised our families work opportunities and prosperity. '
+  - "Instead, they\u2019ve only given confusion and anger."
+  - People have been going missing.
+  - " We\u2019ve received letters by those who are gone. That they\u2019ve all moved
+    to new offices and towns. "
+  - 'The girls are scared, and as their leader, I have to comfort them.  '
+  - 'We spend less time in our homes and more on the streets. '
+  - 'Wreaking havoc, protesting in the way we know how.  '
+  - With spray paint and blood and baseball bats.
+  - "But somehow\u2026"
+  - "I didn\u2019t think they\u2019d take my family."
+  - "And frankly\u2026"
+  - "\u2026I\u2019m PISSED!"
+  - 'The only people that should cause havoc on the streets and in the town are me
+    and my girls! '
+  - Not some CORPORATION!
+  - "So I\u2019ll do everythin\u2019 I\u2019ve fucking got to bring everyone back! "
+  - 
+  storySprites:
+  - {fileID: 21300000, guid: 0206123c7de48da40887a539d39455fb, type: 3}
+  - {fileID: 21300000, guid: a54d2a4834b88ab469ea5d91e782d6a9, type: 3}
+  - {fileID: 21300000, guid: 4a48b2753d650454db8decc43032a996, type: 3}
+  - {fileID: 21300000, guid: fe215f5ec7782774baa6d9554edf1dee, type: 3}
+  - {fileID: 21300000, guid: 25c3131688e59524e89479beeeaec633, type: 3}
   textHolder: {fileID: 1423801994}
-  goSprite: {fileID: 510238955}
+  BlackBG: {fileID: 0}
   typeSpeed: 0.01
+  currentIndex: 1
 --- !u!1 &531429927
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,11 +939,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371673850}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -474}
   m_SizeDelta: {x: 1317.7913, y: 301.7746}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1423801994
@@ -966,8 +993,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1002,7 +1029,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -2.6533203, y: 0, z: 5.5186768, w: 0}
+  m_margin: {x: -2.6533203, y: 0, z: 5.5186768, w: 165.24088}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1164,3 +1191,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2005784052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005784053}
+  - component: {fileID: 2005784055}
+  - component: {fileID: 2005784054}
+  m_Layer: 5
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2005784053
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005784052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 371673850}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2005784054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005784052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2005784055
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005784052}
+  m_CullTransparentMesh: 1
