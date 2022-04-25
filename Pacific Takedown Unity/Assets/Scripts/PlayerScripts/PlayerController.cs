@@ -100,15 +100,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
   void Update()
   {
-        if (playerHealth <= 0 && spawned == false)
+        /*if (currentHealth < 0 && spawned == false)
         {
             Debug.Log("Here!");
             Manager.instance.GameOver();
             spawned = true;
             
-        }
+        }*/
 
-       if (playerHealth > 0)
+       if (currentHealth > 0)
        {
             if (canMove)
             {
@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
   //Fixed Update
   private void FixedUpdate()
   {
-        if (playerHealth > 0)
+        if (currentHealth > 0)
         {
             if (canMove)
             {
@@ -393,12 +393,12 @@ public class PlayerController : MonoBehaviour
               FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
               FXManager.flashEffectPlayer(gameObject);
             //For HealthBar
-             if (currentHealth > 0)
+             if (currentHealth > 1)
              {
                 currentHealth--;
-                 hb.SetHealth(currentHealth);
-               
-             }
+                hb.SetHealth(currentHealth);
+             } else
+                Manager.instance.GameOver();
 
             //Change Animation to Player Hit
             PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());

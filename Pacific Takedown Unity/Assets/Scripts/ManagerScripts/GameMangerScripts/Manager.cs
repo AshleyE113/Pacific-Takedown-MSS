@@ -30,10 +30,6 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            //RestartScene();
-        }
         DontDestroyOnLoad(this.gameObject);
     }
     public void GameOver()
