@@ -5,20 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
+    // Use this for initialization
     int enemiesLeft = 0;
     bool killedAllEnemies = false;
-    public GameObject nextSceneLoader;
     public GameObject[] enemies;
-    void Start()
-    {
+    void Start () {
         enemiesLeft = 10; // or whatever;
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
     }
-
+     
     // Update is called once per frame
-    void Update()
-    {
+    void Update () {
 
         bool Gameover = true;
         int totalEnemiesAlive = 0;
@@ -37,19 +35,18 @@ public class EnemyManager : MonoBehaviour
     void endGame()
     {
         killedAllEnemies = true;
-        SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+     
     void OnGUI()
     {
-        if (killedAllEnemies)
+        if(killedAllEnemies)
         {
-            GUI.Label(new Rect(0, 0, 200, 20), "all gone");
+            GUI.Label(new Rect (0,0,200,20),"all gone");
         }
         else
         {
-            GUI.Label(new Rect(0, 0, 200, 20), "Enemies Remaining : " + enemiesLeft);
+            GUI.Label(new Rect (0,0,200,20),"Enemies Remaining : " + enemiesLeft);
         }
     }
 }

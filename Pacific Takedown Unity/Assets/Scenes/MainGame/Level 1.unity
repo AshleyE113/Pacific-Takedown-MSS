@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChairUp
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -254,7 +258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -321,6 +325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &15473866 stripped
@@ -338,6 +346,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -400,6 +412,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_Name
       value: ChairDown (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_RootOrder
@@ -630,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -688,6 +704,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
       propertyPath: m_Name
       value: ComputerFront (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
@@ -760,7 +780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -823,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
       propertyPath: m_Name
       value: ComputerFront (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
@@ -888,6 +912,10 @@ PrefabInstance:
     - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
       propertyPath: m_Name
       value: Bumper (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
@@ -955,6 +983,10 @@ PrefabInstance:
     - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
       propertyPath: m_Name
       value: Bumper (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
@@ -1024,6 +1056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!1001 &167072681
@@ -1036,6 +1072,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_Name
       value: ChairDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_RootOrder
@@ -1162,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -1236,6 +1276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &264705192 stripped
@@ -1300,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
@@ -1415,6 +1459,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
       propertyPath: m_Name
       value: ComputerRight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
@@ -1558,6 +1606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFront (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
 --- !u!4 &300405594 stripped
@@ -1633,6 +1685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &341124697 stripped
@@ -1695,6 +1751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFront (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
 --- !u!1001 &357407777
@@ -1707,6 +1767,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -1775,6 +1839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChairLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1836,6 +1904,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
       propertyPath: m_Name
       value: ChairUp (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
       propertyPath: m_RootOrder
@@ -2213,7 +2285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -2271,6 +2343,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
       propertyPath: m_Name
       value: ComputerFront (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
@@ -2387,6 +2463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFront (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
 --- !u!4 &468508827 stripped
@@ -2463,7 +2543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -2522,6 +2602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFront (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
 --- !u!1001 &567743204
@@ -2578,6 +2662,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
       propertyPath: m_Name
       value: ComputerFront (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
@@ -4600,6 +4688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TableVertical
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -4701,6 +4793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!4 &584204778 stripped
@@ -4738,6 +4834,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -4800,6 +4900,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -5110,7 +5214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -5258,7 +5362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -5336,7 +5440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -5409,7 +5513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -5657,6 +5761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFront (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
 --- !u!1001 &903017909
@@ -5669,6 +5777,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -5731,6 +5843,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -5848,6 +5964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!4 &931991088 stripped
@@ -5934,7 +6054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -6007,7 +6127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -6085,7 +6205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -6143,6 +6263,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
       propertyPath: m_Name
       value: ComputerLeft (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
@@ -6206,6 +6330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!1001 &984025783
@@ -6262,6 +6390,10 @@ PrefabInstance:
     - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
       propertyPath: m_Name
       value: Bumper (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
@@ -6325,6 +6457,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerRight (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
 --- !u!1001 &1003728615
@@ -6337,6 +6473,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
       propertyPath: m_Name
       value: PosterManta (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
       propertyPath: m_RootOrder
@@ -6404,6 +6544,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -6557,6 +6701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChairUp (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 14de7184dee8afd4e98316311b5fcb13, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -6671,6 +6819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &1097611649 stripped
@@ -6688,6 +6840,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -6786,6 +6942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChairDown
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -6847,6 +7007,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_Name
       value: TableHorizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_RootOrder
@@ -6953,6 +7117,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
       propertyPath: m_Name
       value: ComputerLeft (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
@@ -11211,11 +11379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.7
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.5
+      value: -26.9
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11274,6 +11442,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -11336,6 +11508,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -11458,6 +11634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &1336374939 stripped
@@ -11519,6 +11699,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
       propertyPath: m_Name
       value: ComputerRight (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
@@ -11693,7 +11877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -11752,6 +11936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!1001 &1409960867
@@ -11764,6 +11952,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -11871,6 +12063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!4 &1417285082 stripped
@@ -11932,6 +12128,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: b07c0640ed4fb3c4f9941392656409f8, type: 3}
       propertyPath: m_Name
       value: ComputerBack (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: b07c0640ed4fb3c4f9941392656409f8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b07c0640ed4fb3c4f9941392656409f8, type: 3}
@@ -12001,7 +12201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -12059,6 +12259,10 @@ PrefabInstance:
     - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
       propertyPath: m_Name
       value: Bumper (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
@@ -12122,6 +12326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!1001 &1438976727
@@ -12134,6 +12342,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
       propertyPath: m_Name
       value: PosterLogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
       propertyPath: m_RootOrder
@@ -12236,6 +12448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerBack (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: b07c0640ed4fb3c4f9941392656409f8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b07c0640ed4fb3c4f9941392656409f8, type: 3}
 --- !u!4 &1462132163 stripped
@@ -12253,6 +12469,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -12315,6 +12535,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_Name
       value: ChairDown (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_RootOrder
@@ -12436,7 +12660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -12450,6 +12674,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_Name
       value: TableHorizontal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_RootOrder
@@ -12512,6 +12740,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_Name
       value: TableHorizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_RootOrder
@@ -12633,7 +12865,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -12698,7 +12930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -12765,6 +12997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &1558191532 stripped
@@ -12826,6 +13062,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
       propertyPath: m_Name
       value: ComputerFront (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
@@ -12903,7 +13143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -12974,6 +13214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChairDown (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 1c74f550c99cae24991f63f1cedbe436, type: 3}
       propertyPath: m_RootOrder
       value: 59
@@ -13035,6 +13279,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_Name
       value: TableHorizontal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 98bbb636d2c51fc44a8465ae94dcc4be, type: 3}
       propertyPath: m_RootOrder
@@ -13205,6 +13453,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
       propertyPath: m_Name
       value: ComputerFront (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
@@ -13522,6 +13774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &1734190565 stripped
@@ -13598,7 +13854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -13671,7 +13927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -13685,6 +13941,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -13792,6 +14052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerLeft (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f671cfa89a432c84b86543b8e6d8fcfe, type: 3}
 --- !u!4 &1782644022 stripped
@@ -13854,6 +14118,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerRight (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
 --- !u!1001 &1790164617
@@ -13910,6 +14178,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
       propertyPath: m_Name
       value: ComputerRight (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
@@ -13973,6 +14245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &1804625002 stripped
@@ -14035,6 +14311,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6104453809145228786, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34245f9357ba4c443b1329deb866c05c, type: 3}
 --- !u!4 &1805710914 stripped
@@ -14096,6 +14376,10 @@ PrefabInstance:
     - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
       propertyPath: m_Name
       value: ComputerRight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
@@ -14247,7 +14531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
@@ -14266,6 +14550,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_Name
       value: ChairLeft (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
@@ -14329,6 +14617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChairLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 6aa25f140fa2af34287efc4adc72393a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -14390,6 +14682,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
       propertyPath: m_Name
       value: TableVertical (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
       propertyPath: m_RootOrder
@@ -14599,6 +14895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PosterLogo (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14779,7 +15079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3006254756446209033, guid: 6ae0fdbf916e7b2409dd800e772fab7f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3006254756446209034, guid: 6ae0fdbf916e7b2409dd800e772fab7f, type: 3}
       propertyPath: m_RootOrder
@@ -14837,6 +15137,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_Name
       value: ChairRight (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2596e21af87149a4089015ef25644a2d, type: 3}
       propertyPath: m_RootOrder
@@ -14899,6 +15203,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
       propertyPath: m_Name
       value: PosterManta (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
       propertyPath: m_RootOrder
@@ -15006,6 +15314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerRight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
 --- !u!1001 &2036159801
@@ -15063,6 +15375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerFront (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 78f35786e7320204ba3207863d17f815, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f35786e7320204ba3207863d17f815, type: 3}
 --- !u!1001 &2042238666
@@ -15075,6 +15391,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
       propertyPath: m_Name
       value: PosterLogo (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: b2506cbe6703f39419a4fd45ad67e845, type: 3}
       propertyPath: m_RootOrder
@@ -15132,6 +15452,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927456, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
       propertyPath: m_Name
       value: PosterManta (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8689547166826927456, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927468, guid: 2d9e2d3f9cfc69c49bf77bca1fc989be, type: 3}
       propertyPath: m_RootOrder
@@ -15352,6 +15676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ComputerRight (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8337623141056328317, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68be74464662ec347ae8b02ef1dbcdf1, type: 3}
 --- !u!1001 &2108373037
@@ -15423,7 +15751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486554, guid: 560481bcdc2248841911630c1efa4283, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 560481bcdc2248841911630c1efa4283, type: 3}
@@ -15551,7 +15879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1196593757928719242, guid: d8dbafa7ffb7ac24ba0dfe37e8c8b193, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8dbafa7ffb7ac24ba0dfe37e8c8b193, type: 3}
