@@ -7,7 +7,7 @@ public class EnemyManager : MonoBehaviour
 {
     // Use this for initialization
     int enemiesLeft = 0;
-    bool killedAllEnemies = false;
+    public static bool killedAllEnemies = false;
     public GameObject[] enemies;
     void Start () {
         enemiesLeft = 10; // or whatever;
@@ -35,7 +35,6 @@ public class EnemyManager : MonoBehaviour
     void endGame()
     {
         killedAllEnemies = true;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
      
     void OnGUI()

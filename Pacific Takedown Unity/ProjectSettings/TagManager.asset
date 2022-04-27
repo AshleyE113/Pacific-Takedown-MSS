@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Alarm
   - HealthBar
+  - LevelTransition
   layers:
   - Default
   - TransparentFX
