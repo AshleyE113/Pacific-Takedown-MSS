@@ -14698,5 +14698,17 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1868619658}
+    - target: {fileID: 5833092977437864795, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}
+      propertyPath: DustRunFXNS
+      value: 
+      objectReference: {fileID: 2055532704022247581, guid: 32dfef79d8140564ca6768bfbe8a9e29, type: 3}
+    - target: {fileID: 5833092977437864795, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}
+      propertyPath: BotCollideFXNS
+      value: 
+      objectReference: {fileID: 8428413732125014877, guid: 8cf277dd4567a204688292a86a145ffa, type: 3}
+    - target: {fileID: 5833092977437864795, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}
+      propertyPath: CompExplodeFXNS
+      value: 
+      objectReference: {fileID: 8125977140629224420, guid: c43618474caf17449ae9ec129cf495da, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f290ff144ff564ca7394488a2bf4d9, type: 3}

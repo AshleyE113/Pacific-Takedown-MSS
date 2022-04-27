@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2614349361340103254}
   - component: {fileID: 7772845789365128518}
   - component: {fileID: 2425351082437969857}
+  - component: {fileID: 1792410191623269761}
   m_Layer: 0
   m_Name: BotCollideExpld
   m_TagString: Untagged
@@ -102,3 +103,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1792410191623269761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8428413732125014877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0293bc3a2554545b0e782779967d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

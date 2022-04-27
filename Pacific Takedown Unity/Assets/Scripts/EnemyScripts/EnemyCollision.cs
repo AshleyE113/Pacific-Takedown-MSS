@@ -22,7 +22,7 @@ public class EnemyCollision : MonoBehaviour
                 //Sound
                 AkSoundEngine.PostEvent("Play_MetalBounce" , enemy);
                 //Change Health Bar
-                enemy.GetComponent<EnemyHealth>()?.TakeDamage(2);
+                enemy.GetComponent<EnemyAI>().TakeDamage(5);
 
                 //Add an effect
             }
@@ -32,11 +32,12 @@ public class EnemyCollision : MonoBehaviour
             if (script.state == EnemyAI.State.Bounce)
             {
                 var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+                FXManager.spawnEffect("compExplode",enemy,enemy.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
                 compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
-                script.BouncedOffWall(25); //Extra Knockback
+                script.BouncedOffWall(); //Extra Knockback
                 CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 //Change Health Bar
-                enemy.GetComponent<EnemyHealth>()?.TakeDamage(25);
+                enemy.GetComponent<EnemyAI>().TakeDamage(25);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && enemy.GetComponent<EnemyBounce>().isBouncing == true)
@@ -44,15 +45,18 @@ public class EnemyCollision : MonoBehaviour
             if (script.state == EnemyAI.State.Bounce)
             {
                 //script.ChangeState(EnemyAI.State.Bounce);
-                script.BouncedOffWall(3); //Bumper damage 
+                script.BouncedOffWall(); //Bumper damage 
+                enemy.GetComponent<EnemyAI>().TakeDamage(3);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") /*&& gameObject.GetComponent<EnemyBounce>().isBouncing == true*/) //Not sure if this works yet. WILL MAKE THIS A FUNCION!!!!
         {
             if (script.state == EnemyAI.State.Bounce)
             {
-                script.BouncedOffWall(3); // subject to change 
-                enemy.GetComponent<EnemyHealth>()?.TakeDamage(5);
+                script.BouncedOffWall(); // subject to change 
+                enemy.GetComponent<EnemyAI>().TakeDamage(25);
+                FXManager.spawnEffect("botCollide",enemy,enemy.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
+
                 Debug.Log("EnemyXEnemy Action");
             }
         }
@@ -62,8 +66,8 @@ public class EnemyCollision : MonoBehaviour
             {
                 var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
                 compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
-                script.BouncedOffWall(0); //Extra Knockback
-                enemy.GetComponent<EnemyHealth>()?.TakeDamage(2);
+                script.BouncedOffWall(); //Extra Knockback
+                enemy.GetComponent<EnemyAI>().TakeDamage(2);
             }
         }
     }
@@ -94,15 +98,16 @@ public class EnemyCollision : MonoBehaviour
                 //script.hitPause.Stop(script.HiPaVal);
                 script.rb.velocity = Vector2.zero;
                 script.Knockback(script.recievedKnockback, direction, true, other.gameObject);
-                script.BouncedOffWall(20);
+                script.BouncedOffWall();
+                enemy.GetComponent<EnemyAI>().TakeDamage(10);
             }
             else
             {
-                script.hitPause.Stop(script.HiPaVal);
+                //script.hitPause.Stop(script.HiPaVal);
                 script.rb.velocity = Vector2.zero;
                 script.Knockback(script.recievedKnockback, direction, false, other.gameObject);
                 script.ChangeState(EnemyAI.State.Hit);
-                script.Health -= 20;
+                enemy.GetComponent<EnemyAI>().TakeDamage(3);
                 script.recoveryTimer = 0;
                 script.FreezeAnimation();
             }

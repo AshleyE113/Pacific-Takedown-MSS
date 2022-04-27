@@ -424,22 +424,17 @@ public class EnemyAI : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         EnemyCollision.specifiedTrigger(other,gameObject);
-        if (other.gameObject.gameObject.layer == LayerMask.NameToLayer("PlayerHitbox"))
-        {
-            gameObject.GetComponent<EnemyHealth>().TakeDamage(20);
-        }
     }
     #endregion
 
     #region Bouncing & Knockback functions
-    public void BouncedOffWall(int damage)
+    public void BouncedOffWall()
     {
         state = State.Bounce;
         //Debug
         gameObject.GetComponent<EnemyBounce>().isBouncing = true;
         hitPause.Stop(HiPaVal);
         //gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
-        Health -= damage;
         recoveryTimer = 0;
         //Change Animation to Drone Hit
         //ChangeAnimationState("DroneIdle");

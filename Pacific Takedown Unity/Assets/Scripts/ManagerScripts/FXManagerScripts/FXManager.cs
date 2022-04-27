@@ -18,8 +18,9 @@ public class FXManager : MonoBehaviour
     public GameObject wallOilFXNS;
     public GameObject debrisFXNS;
     public GameObject ElectricFXNS;
-
-
+    public GameObject DustRunFXNS;
+    public GameObject CompExplodeFXNS;
+    public GameObject BotCollideFXNS;
     //Static Versions
     public static GameObject playerMeleeEffect;
     public static GameObject enemyMeleeEffect;
@@ -32,6 +33,9 @@ public class FXManager : MonoBehaviour
     public static GameObject wallOilFX;
     public static GameObject debrisFX;
     public static GameObject ElectricFX;
+    public static GameObject DustRunFX;
+    public static GameObject CompExplodeFX;
+    public static GameObject BotCollideFX;
 
     //Flash
     private static Material flashMaterial;
@@ -61,6 +65,9 @@ public class FXManager : MonoBehaviour
         wallOilFX = wallOilFXNS;
         debrisFX = debrisFXNS;
         ElectricFX = ElectricFXNS;
+        DustRunFX = DustRunFXNS;
+        CompExplodeFX = CompExplodeFXNS;
+        BotCollideFX = BotCollideFXNS;
     }
 
     public static void flashEffect(GameObject instance)
@@ -196,6 +203,33 @@ public class FXManager : MonoBehaviour
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(oilEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "botCollide")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(BotCollideFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "dustRun")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(DustRunFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+            if (flipped)
+            {
+                Effect.GetComponent<SpriteRenderer>().flipX = true;
+            }
+        }
+        if (effect == "compExplode")
+        {
+            var spawnLocation = spawn.transform.position;
+            var Effect = Instantiate(CompExplodeFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
             if (flipped)
             {
                 Effect.GetComponent<SpriteRenderer>().flipX = true;

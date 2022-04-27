@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     private bool invulnerable = false;
     public float invulnerabilityDuration = 3f;
     public float attackspeed;
+
+    private bool moving = false;
     //Dashing
     [Header("Dashing")]
     public float dashForce=100f;
@@ -179,14 +181,31 @@ public class PlayerController : MonoBehaviour
                 {
                     //State Ready: Player is able to control character
                     case State.Ready:
+
                         if (movement.x == 0 && movement.y == 0)
                         {
-                            ChangeAnimationState("Idle");
+                          ChangeAnimationState("Idle");
+                          moving = false;
                         }
                         else
                         {
+                          if (moving == false)
+                          {
+                            if (movement.x >= 0.5f)
+                            {
+                              Debug.Log("Spawing right");
+
+                              FXManager.spawnEffect("dustRun",gameObject,gameObject.transform,quaternion.identity, true,new Vector2(0f,0.5f));
+                            }
+                            else if (movement.x <= -0.5f)
+                            {
+                              Debug.Log("Spawing Left");
+                              FXManager.spawnEffect("dustRun",gameObject,gameObject.transform,new Quaternion(0f,180,0f,1f), false,new Vector2(0f,0.5f));
+                            }
+                          }
                             //movement
                             rb.MovePosition(rb.position + (movement) * moveSpeed * Time.fixedDeltaTime);
+                            moving = true;
                             ChangeAnimationState("Movement");
                         }
 
