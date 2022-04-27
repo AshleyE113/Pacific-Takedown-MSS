@@ -3,6 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{D0D537CA-C111-4C06-9838-1F190BB53C27}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="G:\Ableton\New Projects\Empty Project\AudioWorkshop\Sounds\GameOff2021\Music\"/>
 				<Property Name="Event Action List\{1B5A0C4E-EE61-4468-BEF2-32AED8E77D5B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4E33A666-BE74-4648-8520-4D9A841267E9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AD295DF5-839E-4A69-AF3B-BB0DE94AD184}\x64_Expand States" Type="string" Value=""/>
@@ -32,6 +33,7 @@
 				<Property Name="Interactive Music\x64_{1F11754E-6727-4EC7-A210-EF2E60A55354} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAMG5AAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{C6C45E17-4E07-4589-8B8C-CDBAEDCFC3B1} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwPwAAAAAAICRAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{DAC0A720-D468-48E0-A2FC-502F190FB946} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP9cl++oCvStAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
+				<Property Name="Interactive Music\x64_{EAFEE04E-5CBC-4F54-9966-C774AB5A08AA} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP83MzMzMDDBAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>

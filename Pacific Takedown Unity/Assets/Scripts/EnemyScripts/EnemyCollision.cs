@@ -47,6 +47,7 @@ public class EnemyCollision : MonoBehaviour
                 //script.ChangeState(EnemyAI.State.Bounce);
                 script.BouncedOffWall(); //Bumper damage 
                 enemy.GetComponent<EnemyAI>().TakeDamage(3);
+                CameraController.Shake(2f, 2f, 0.1f, 0.1f);
             }
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") /*&& gameObject.GetComponent<EnemyBounce>().isBouncing == true*/) //Not sure if this works yet. WILL MAKE THIS A FUNCION!!!!
@@ -56,7 +57,9 @@ public class EnemyCollision : MonoBehaviour
                 script.BouncedOffWall(); // subject to change 
                 enemy.GetComponent<EnemyAI>().TakeDamage(25);
                 FXManager.spawnEffect("botCollide",enemy,enemy.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
-
+                //Sound
+                AkSoundEngine.PostEvent("Play_MetalContact" , enemy);
+                CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 Debug.Log("EnemyXEnemy Action");
             }
         }

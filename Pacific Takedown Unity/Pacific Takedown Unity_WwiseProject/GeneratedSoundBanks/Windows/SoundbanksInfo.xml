@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="394830635">
+		<SoundBank Id="1229948536" Language="SFX" Hash="2555068710">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
@@ -98,6 +98,10 @@
 				</Event>
 				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="249325786" Language="SFX">
+							<ShortName>Nycelly ~ SaveTheCyberSpace.wav</ShortName>
+							<Path>SFX\Nycelly ~ SaveTheCyberSpace_D79FB2B7.wem</Path>
+						</File>
 						<File Id="593210015" Language="SFX">
 							<ShortName>BinaryWorld - Nycelly.wav</ShortName>
 							<Path>SFX\BinaryWorld - Nycelly_D79FB2B7.wem</Path>

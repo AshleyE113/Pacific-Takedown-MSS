@@ -193,6 +193,90 @@
 								</ObjectList>
 							</ObjectLists>
 						</MusicSegment>
+						<MusicSegment Name="Nycelly ~ SaveTheCyberSpace" ID="{EAFEE04E-5CBC-4F54-9966-C774AB5A08AA}" ShortID="932007104">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="60000"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Nycelly ~ SaveTheCyberSpace" ID="{5A50668D-C9B4-4870-84CF-320BD00E211F}" ShortID="510047449">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Nycelly ~ SaveTheCyberSpace" ID="{1787C659-415C-41E7-B073-06B87B9DB9AC}">
+											<Language>SFX</Language>
+											<AudioFile>Nycelly ~ SaveTheCyberSpace.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="249325786"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{175BA439-23A6-46E7-9E34-BC0ADC97AFD4}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{6BD5AA84-E4D0-4682-BB94-122BC4EBABCD}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Nycelly ~ SaveTheCyberSpace" ID="{A5E31EEF-65D4-4ED3-ACC0-AD0C89D0F71F}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="60000"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Nycelly ~ SaveTheCyberSpace" ID="{1787C659-415C-41E7-B073-06B87B9DB9AC}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{4C6D965D-BEFB-46E9-8EDF-915C9146BBAE}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{5700CE84-B56C-491A-B5E1-CAF578888BAE}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="60000"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
 					</ChildrenList>
 					<TransitionList>
 						<MusicTransition Name="Root" ID="{D19A6392-9561-4D54-AF1C-8BA84BFC8632}">
@@ -211,6 +295,13 @@
 					<Playlist>
 						<MusicPlaylistItem Name="" ID="{02122E60-DF75-4B21-BD42-6654A316E8D2}" ShortID="955620135">
 							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{C5D8760E-42CF-4A33-888B-E9F406FC6922}" ShortID="173534542">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Nycelly ~ SaveTheCyberSpace" ID="{EAFEE04E-5CBC-4F54-9966-C774AB5A08AA}"/>
+								</MusicPlaylistItem>
 								<MusicPlaylistItem Name="" ID="{AB5045C3-C92C-481A-8AB9-0BF634D2A200}" ShortID="867970376">
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
