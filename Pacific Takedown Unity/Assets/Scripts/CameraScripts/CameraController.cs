@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
@@ -13,6 +14,13 @@ public class CameraController : MonoBehaviour
     float cameraDist = 3.5f;
 
     float smoothTime = 0.2f, zStart;
+
+    private void Start()
+    {
+        GameObject ourPlayer = GameObject.FindWithTag("Player");
+        player = ourPlayer.transform;
+    }
+
     void LateUpdate()
     {
         target = player.position;
