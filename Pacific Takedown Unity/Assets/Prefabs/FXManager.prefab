@@ -50,6 +50,13 @@ MonoBehaviour:
   bloodEffectNS: {fileID: 2159858475428378111, guid: 25c9f6ceccdd44bdaa581155ff731cc5, type: 3}
   sparkEffectNS: {fileID: 303744141661270310, guid: b3017bff2ddd1480c924537a6fcd7543, type: 3}
   playerHitFXNS: {fileID: 0}
+  wallImpactFXNS: {fileID: 2159858475428378111, guid: c5aff6f98bcd0ab45ad8aa1895a376b9, type: 3}
+  wallOilFXNS: {fileID: 2159858475428378111, guid: 953263ea613faba4481b4b49db86c613, type: 3}
+  debrisFXNS: {fileID: 2860982736760304430, guid: a54fea0c2ed827f47a5dbfb915201547, type: 3}
+  ElectricFXNS: {fileID: 5016379679559257091, guid: 6d22aad6c5f024e489b10b7b6c4a4f1d, type: 3}
+  DustRunFXNS: {fileID: 2055532704022247581, guid: 32dfef79d8140564ca6768bfbe8a9e29, type: 3}
+  CompExplodeFXNS: {fileID: 8125977140629224420, guid: c43618474caf17449ae9ec129cf495da, type: 3}
+  BotCollideFXNS: {fileID: 8428413732125014877, guid: 8cf277dd4567a204688292a86a145ffa, type: 3}
   defaultMaterialNS: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   flashMaterialNS: {fileID: 2100000, guid: 98ee1df0add373448b1babea3b5fafab, type: 2}
   flashDurationNS: 2
