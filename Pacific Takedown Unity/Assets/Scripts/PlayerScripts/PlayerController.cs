@@ -85,9 +85,9 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
-      cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-      hb = GameObject.FindWithTag("HealthBar").GetComponent<HealthBar>();
-      rb = gameObject.GetComponent<Rigidbody2D>();
+          cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+          hb = GameObject.FindWithTag("HealthBar").GetComponent<HealthBar>();
+          rb = gameObject.GetComponent<Rigidbody2D>();
           playerFacing = new Vector2(0f, -1f);
           previousFacing = new Vector2(0f, -1f);
           stickDir = new Vector2(0f, -1f);

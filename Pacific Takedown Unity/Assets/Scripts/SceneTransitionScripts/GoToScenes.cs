@@ -15,6 +15,7 @@ public class GoToScenes : MonoBehaviour
     public void LevelOne()
     {
         SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
+        Debug.Log("Loaded");
     }
     private void Update()
     {
