@@ -7,6 +7,7 @@ public class GoToScenes : MonoBehaviour
 {
     [SerializeField] GameObject DeathCanvas;
     bool _spawned;
+    [SerializeField] LevelManager lvlManager;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class GoToScenes : MonoBehaviour
     public void LevelOne()
     {
         SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
-        Debug.Log("Loaded");
+        
     }
     private void Update()
     {
@@ -27,8 +28,7 @@ public class GoToScenes : MonoBehaviour
     }
     public void RestartScene()
     {
-        SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
-        Debug.Log("Back in Lvl1");
+        SceneManager.LoadScene(lvlManager.sceneName, LoadSceneMode.Single);
         Destroy(DeathCanvas);
     }
 }
