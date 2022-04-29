@@ -7,17 +7,16 @@ using TMPro;
 public class CinematicOpening : MonoBehaviour
 {
     [SerializeField] List<string> openingLines;
-    [SerializeField] List<Sprite> storySprites;
+    List<Image> storySprites;
+    [SerializeField] List<Sprite> tempSpriteHolder;
     [SerializeField] TMP_Text textHolder;
-    [SerializeField] Sprite BlackBG;
-    Sprite goSprite;
     Image img;
     bool isTyping = false;
     bool cancelTyping = false;
     bool goToNext = false;
     public float typeSpeed = 0.3f;
     public int currentIndex = 1;
-    int sceneIndex = 0;
+    [SerializeField] float Speed;
 
     void Start()
     {
@@ -27,13 +26,20 @@ public class CinematicOpening : MonoBehaviour
 
     void Update()
     {
+        for (int i = 0; i < tempSpriteHolder.Count; i++)
+        {
+            storySprites[i].sprite = tempSpriteHolder[i];
+            Debug.Log("For loop");
+        }
+
         if (goToNext == false)
         {
             img.color = Color.black;
             StartCoroutine(TextScroll(openingLines[0]));
-            
             goToNext = true;
         }
+        else
+            img.color = Color.white;
 
         if (goToNext == true)
         {
@@ -44,75 +50,90 @@ public class CinematicOpening : MonoBehaviour
                     if (currentIndex < openingLines.Count)
                     {
                         Debug.Log(currentIndex);
-                        
+
                         StartCoroutine(TextScroll(openingLines[currentIndex]));
 
                         if (currentIndex >= 3 && currentIndex < 8)
                         {
-                            //StartCoroutine(FadeTo(Mathf.Lerp(0f, 1f, 0.5f + Time.deltaTime), 1f));
-                            img.color = Color.white;
-                            
-                            img.sprite = storySprites[0];
-                            
+                            if (img.color.a > 0.5f)
+                            {
+
+                                StartCoroutine(FadeOut());
+                                //storySprites[0].sprite = tempSpriteHolder[0];
+                                img.sprite = storySprites[0].sprite;
+                            }
+                            else
+                                StartCoroutine(FadeIn());
                         }
-                            
                         else if (currentIndex >= 8 && currentIndex < 12)
-                        {
-                            img.sprite = storySprites[1];
 
-                        }
-                        else if (currentIndex == 12)
+                            if (img.color.a > 0.5f)
+                            {
+                                StartCoroutine(FadeOut());
+                                //storySprites[1].sprite = tempSpriteHolder[1];
+                                img.sprite = storySprites[1].sprite;
+                            }
+                            else
+                                StartCoroutine(FadeIn());
+                        else if (currentIndex >= 12 && currentIndex < 16)
                         {
-                            img.sprite = storySprites[2];
-
-                        }
-                        else if (currentIndex > 12 && currentIndex < 16)
-                        {
-                            img.sprite = storySprites[3];
-
+                            if (img.color.a > 0.5f)
+                            {
+                                StartCoroutine(FadeOut());
+                                //storySprites[2].sprite = tempSpriteHolder[2];
+                                img.sprite = storySprites[2].sprite;
+                            }
+                            else
+                                StartCoroutine(FadeIn());
                         }
                         else if (currentIndex >= 16 && currentIndex < openingLines.Count - 1)
                         {
-                            img.sprite = storySprites[4];
-
+                            if (img.color.a > 0.5f)
+                            {
+                                StartCoroutine(FadeOut());
+                               // storySprites[3].sprite = tempSpriteHolder[3];
+                                img.sprite = storySprites[3].sprite;
+                            }
+                            else
+                                StartCoroutine(FadeIn());
                         }
                         currentIndex += 1;
-
                     }
-                    else
-                    {
-                        StartCoroutine(FadeTo(0.001f, 1f));
-                        
-                    }
-                        
-
 
                 }
             }
         }
-        Debug.Log(goToNext);
     }
 
-    void RunThroughText()
-    {
-        
-       
-    }
-
-    private IEnumerator FadeTo(float aValue, float aTime)
+    IEnumerator FadeIn()
     {
         float alpha = GetComponent<Image>().color.a;
-        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        while (alpha < 1)
         {
-            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
-            GetComponent<Image>().color = newColor;
+            alpha += Time.deltaTime * Speed;
+            for (int i = 0; i < storySprites.Count; i++)
+            {
+                storySprites[i].color = new Color(storySprites[i].color.r, storySprites[i].color.g, storySprites[i].color.b, alpha);
+            }
+            yield return null;
+        }
+    }
+    IEnumerator FadeOut()
+    {
+        float alpha = GetComponent<Image>().color.a;
+        while (alpha > 1)
+        {
+            alpha -= Time.deltaTime * Speed;
+            for (int i = 0; i < storySprites.Count; i++)
+            {
+                storySprites[i].color = new Color(storySprites[i].color.r, storySprites[i].color.g, storySprites[i].color.b, alpha);
+            }
             yield return null;
         }
     }
 
 
-
-    private IEnumerator TextScroll(string lineOfText) //Gives it that one character at a timeffect...
+private IEnumerator TextScroll(string lineOfText) //Gives it that one character at a timeffect...
     {
         int letter = 0;
         textHolder.text = "";
