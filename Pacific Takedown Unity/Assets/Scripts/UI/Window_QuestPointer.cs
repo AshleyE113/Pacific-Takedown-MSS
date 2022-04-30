@@ -19,7 +19,7 @@ public class Window_QuestPointer : MonoBehaviour
         roomExity = roomExit.transform.position.y;
 
         targetPosition = new Vector3(roomExitx, roomExity, 0);
-        pointerRectTransform = transform.Find("pointer").GetComponent<RectTransform>();
+        pointerRectTransform = transform.Find("Pointer").GetComponent<RectTransform>();
     }
 
     private void Update()

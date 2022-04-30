@@ -10,6 +10,7 @@ TagManager:
   - HealthBar
   - LevelTransition
   - RoomExit
+  - PointerGO
   layers:
   - Default
   - TransparentFX

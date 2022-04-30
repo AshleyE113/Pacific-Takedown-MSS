@@ -9,10 +9,11 @@ public class EnemyManager : MonoBehaviour
     int enemiesLeft = 0;
     public static bool killedAllEnemies = false;
     public GameObject[] enemies;
-    public GameObject pointer;
+    GameObject pointer;
 
     void Start () {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        pointer = GameObject.FindGameObjectWithTag("PointerGO");
         pointer.SetActive(false);
     }
      
@@ -37,6 +38,8 @@ public class EnemyManager : MonoBehaviour
     {
         killedAllEnemies = true;
         pointer.SetActive(true);
+        
+        Debug.Log("Pointing");
 
     }
      
