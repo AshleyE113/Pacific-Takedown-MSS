@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7147567889002173681}
   - component: {fileID: 4215665248970793683}
   m_Layer: 0
-  m_Name: doors_1
+  m_Name: RDoorHalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4000796787840384384}
   m_Layer: 0
   m_Name: RoomExit
-  m_TagString: Untagged
+  m_TagString: RoomExit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,8 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fec72e922c644f79aa268b2e7ff0479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LDoorHalf: {fileID: 0}
-  RDoorHalf: {fileID: 0}
+  LDoorHalf: {fileID: 6884152356508431460}
+  RDoorHalf: {fileID: 2094208246138064881}
   player: {fileID: 0}
 --- !u!1 &6884152356508431460
 GameObject:
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 7877560789588957924}
   - component: {fileID: 1982602737132773615}
   m_Layer: 0
-  m_Name: doors_0
+  m_Name: LDoorHalf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

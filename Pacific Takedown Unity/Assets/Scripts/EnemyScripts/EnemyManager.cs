@@ -9,10 +9,11 @@ public class EnemyManager : MonoBehaviour
     int enemiesLeft = 0;
     public static bool killedAllEnemies = false;
     public GameObject[] enemies;
-    void Start () {
-        enemiesLeft = 10; // or whatever;
+    public GameObject pointer;
 
+    void Start () {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        pointer.SetActive(false);
     }
      
     // Update is called once per frame
@@ -35,18 +36,9 @@ public class EnemyManager : MonoBehaviour
     void endGame()
     {
         killedAllEnemies = true;
+        pointer.SetActive(true);
+
     }
      
-    void OnGUI()
-    {
-        if(killedAllEnemies)
-        {
-            GUI.Label(new Rect (0,0,200,20),"all gone");
-        }
-        else
-        {
-            GUI.Label(new Rect (0,0,200,20),"Enemies Remaining : " + enemiesLeft);
-        }
-    }
 }
 
