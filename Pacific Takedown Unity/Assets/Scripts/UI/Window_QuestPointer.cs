@@ -6,7 +6,6 @@ using CodeMonkey.Utils;
 public class Window_QuestPointer : MonoBehaviour
 {
     private Camera uiCamera;
-
     private Vector3 targetPosition;
     private RectTransform pointerRectTransform;
     GameObject roomExit;

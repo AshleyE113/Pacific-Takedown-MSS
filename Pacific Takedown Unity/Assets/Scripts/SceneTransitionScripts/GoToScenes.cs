@@ -7,10 +7,11 @@ public class GoToScenes : MonoBehaviour
 {
     [SerializeField] GameObject DeathCanvas;
     bool _spawned;
-    [SerializeField] LevelManager lvlManager;
+    LevelManager lvlManager;
 
     private void Start()
     {
+        lvlManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         _spawned = false;
     }
     public void LevelOne()

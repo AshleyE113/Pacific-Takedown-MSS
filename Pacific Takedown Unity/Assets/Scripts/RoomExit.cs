@@ -10,7 +10,7 @@ public class RoomExit : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.Find("Player");
         LDoorPos = LDoorHalf.transform.position;
         RDoorPos = RDoorHalf.transform.position;
     }

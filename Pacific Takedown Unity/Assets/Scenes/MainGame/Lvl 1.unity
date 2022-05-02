@@ -3287,6 +3287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1748218531, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 716867410694280324, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
       propertyPath: m_Name
       value: DestroyedDependencies
@@ -9226,11 +9230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_LocalScale.x
@@ -9246,11 +9250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94506025
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.32689628
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -9258,7 +9262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3724700611286486561, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 38.161
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6460977604029773935, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_TagString
@@ -9267,6 +9271,10 @@ PrefabInstance:
     - target: {fileID: 9078364439954515954, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
       propertyPath: m_Name
       value: PointerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078364439954515954, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f407248c30c74b4f8ecd86508052278, type: 3}
