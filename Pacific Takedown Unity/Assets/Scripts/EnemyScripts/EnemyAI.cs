@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     //Knockback
     public float recievedKnockback = 5f;
     public int recoveryTimer;
-    public int recoveryMax = 90;
+    public int recoveryMax = 15;
     public float knockbackDrag;
     private Vector2 direction;
     //Being Attacked
