@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7d2392c2135f724c8ab16aee9d43c96
+guid: 175efcb1fc87cd74999a5f5586e6de13
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -9,8 +9,8 @@ TextureImporter:
       213: 5228942566011103145
     second: tablechair_1
   - first:
-      213: -8093818329445246261
-    second: tablechair_3
+      213: 4625881023339013818
+    second: tablechair_2
   - first:
       213: -6960068455369638406
     second: tablechair_4
@@ -18,17 +18,17 @@ TextureImporter:
       213: 1325134438988340810
     second: tablechair_5
   - first:
+      213: -6526206264457530208
+    second: tablechair_6
+  - first:
+      213: -4845372616821072380
+    second: tablechair_7
+  - first:
       213: -5874102322114338479
     second: tablechair_8
   - first:
       213: -677612146441385378
     second: tablechair_9
-  - first:
-      213: -7100151897905905424
-    second: tablechair_10
-  - first:
-      213: -8045958778955445595
-    second: tablechair_11
   - first:
       213: -8220584020517895676
     second: tablechair_12
@@ -134,8 +134,8 @@ TextureImporter:
         y: 96
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
         y: 96
         width: 32
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -169,22 +169,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablechair_3
+      name: tablechair_2
       rect:
         serializedVersion: 2
         x: 64
         y: 96
         width: 64
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcadedcbc1bfcaf80800000000000000
-      internalID: -8093818329445246261
+      spriteID: ab6a751284e623040800000000000000
+      internalID: 4625881023339013818
       vertices: []
       indices: 
       edges: []
@@ -197,7 +197,7 @@ TextureImporter:
         y: 64
         width: 32
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -218,7 +218,7 @@ TextureImporter:
         y: 64
         width: 32
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -232,6 +232,48 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: tablechair_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a47414daf14e65a0800000000000000
+      internalID: -6526206264457530208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tablechair_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e99f1e647c1ccb0800000000000000
+      internalID: -4845372616821072380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: tablechair_8
       rect:
         serializedVersion: 2
@@ -239,7 +281,7 @@ TextureImporter:
         y: 32
         width: 32
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -260,7 +302,7 @@ TextureImporter:
         y: 32
         width: 32
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -274,48 +316,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablechair_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f0c0029771377d90800000000000000
-      internalID: -7100151897905905424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tablechair_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aacceeae13075090800000000000000
-      internalID: -8045958778955445595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tablechair_12
       rect:
         serializedVersion: 2
@@ -323,8 +323,8 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,7 +344,7 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -365,7 +365,7 @@ TextureImporter:
         y: 0
         width: 64
         height: 32
-      alignment: 7
+      alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
