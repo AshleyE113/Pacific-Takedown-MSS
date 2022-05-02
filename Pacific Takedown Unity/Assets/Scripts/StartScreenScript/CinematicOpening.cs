@@ -7,10 +7,10 @@ using TMPro;
 public class CinematicOpening : MonoBehaviour
 {
     [SerializeField] List<string> openingLines;
-    List<Image> storySprites;
     [SerializeField] List<Sprite> tempSpriteHolder;
     [SerializeField] TMP_Text textHolder;
     Image img;
+    Color BaseColor;
     bool isTyping = false;
     bool cancelTyping = false;
     bool goToNext = false;
@@ -22,7 +22,7 @@ public class CinematicOpening : MonoBehaviour
     void Start()
     {
         img = GetComponent<Image>();
-        storySprites = new List<Image>();
+        BaseColor = GetComponent<Image>().color;
         /*
         for (int i = 0; i < tempSpriteHolder.Count; i++)
         {
@@ -57,48 +57,45 @@ public class CinematicOpening : MonoBehaviour
 
                         if (currentIndex >= 3 && currentIndex < 8)
                         {
-                            if (fadeGO.GetComponent<Image>().color.a > 0.5f)
+                            if (img.color.a > 0.5f)
                             {
                                 StartCoroutine(FadeOut(fadeGO));
                                 img.color = Color.white;
                                 //storySprites[0].sprite = tempSpriteHolder[0];
                                 img.sprite = tempSpriteHolder[0];
-                                
+
                             }
-                            else
-                                StartCoroutine(FadeIn(fadeGO));
+                            else StartCoroutine(FadeIn(fadeGO));
 
 
                         }
                         else if (currentIndex >= 8 && currentIndex < 12)
-
-                            if (fadeGO.GetComponent<Image>().color.a > 0.5f)
+                        {
+                            if (img.color.a > 0.5f)
                             {
                                 StartCoroutine(FadeOut(fadeGO));
                                 img.sprite = tempSpriteHolder[1];
-                              
+
                             }
-                            else
-                                StartCoroutine(FadeIn(fadeGO));
+                            else StartCoroutine(FadeIn(fadeGO));
+                        }
                         else if (currentIndex >= 12 && currentIndex < 16)
                         {
-                            if (fadeGO.GetComponent<Image>().color.a > 0.5f)
+                            if (img.color.a > 0.5f)
                             {
                                 StartCoroutine(FadeOut(fadeGO));
                                 img.sprite = tempSpriteHolder[2];
                             }
-                            else
-                                StartCoroutine(FadeIn(fadeGO));
+                            else StartCoroutine(FadeIn(fadeGO));
                         }
                         else if (currentIndex >= 16 && currentIndex < openingLines.Count - 1)
                         {
-                            if (fadeGO.GetComponent<Image>().color.a > 0.5f)
+                            if (img.color.a > 0.5f)
                             {
                                 StartCoroutine(FadeOut(fadeGO));
                                 img.sprite = tempSpriteHolder[3];
                             }
-                            else
-                                StartCoroutine(FadeIn(fadeGO));
+                            else StartCoroutine(FadeIn(fadeGO));
                         }
                         currentIndex += 1;
                     }
@@ -123,7 +120,7 @@ public class CinematicOpening : MonoBehaviour
     IEnumerator FadeOut(GameObject fadeObj)
     {
         float alpha = fadeObj.GetComponent<Image>().color.a;
-        while (alpha > 1)
+        while (alpha > 0)
         {
             alpha -= Time.deltaTime * Speed;
         
