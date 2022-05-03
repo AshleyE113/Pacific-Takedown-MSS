@@ -198,6 +198,7 @@ public class EnemyAI : MonoBehaviour
                             canBounce = true;
                         }
                         ResumeAnimation();
+                        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
                         rb.drag = 3; //Play with this value to test this.
                         combo = 0;
                         canAttack = true;

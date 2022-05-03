@@ -183,6 +183,7 @@ public class PlayerController : MonoBehaviour
                 {
                     //State Ready: Player is able to control character
                     case State.Ready:
+                        gameObject.GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
 
                         if (movement.x == 0 && movement.y == 0)
                         {
@@ -215,6 +216,10 @@ public class PlayerController : MonoBehaviour
                         {
                             CheckFlicker();
                         }
+                        else
+                        {
+                          gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                        }
                         break;
                     //State Ready: Player is able to control character
                     case State.Attacking:
@@ -222,6 +227,10 @@ public class PlayerController : MonoBehaviour
                         if (invulnerable)
                         {
                             CheckFlicker();
+                        }
+                        else
+                        {
+                            gameObject.GetComponent<SpriteRenderer>().enabled = true;
                         }
 
                         if (canCombo) //If we can combo, Make our lunge velocity Zero
@@ -238,6 +247,11 @@ public class PlayerController : MonoBehaviour
                         break;
                     case State.Hit:
                         FlashEffectTimer();
+
+                        if (invulnerable)
+                        {
+                          CheckFlicker();
+                        }
                         if (rb.velocity != Vector2.zero) //Constantly Slow Ss Down
                         {
                             rb.velocity = rb.velocity * .8f; //Ashley: I'm assuming that this is the player knockback after the enemy strikes
@@ -246,6 +260,11 @@ public class PlayerController : MonoBehaviour
                     case State.Dashing:
                         rb.velocity = dashDir.normalized * dashForce;
                         invulnerable = true;
+
+                        if (invulnerable)
+                        {
+                          CheckFlicker();
+                        }
                         if (Vector2.Distance(transform.position, lastImagePos) > distanceBetweenImages)
                         {
                             PlayerAfterImagePool.Instance.GetFromPool();
