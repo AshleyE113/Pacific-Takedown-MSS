@@ -13,8 +13,8 @@ public class EnemyManager : MonoBehaviour
 
     void Start () {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        pointer = GameObject.FindGameObjectWithTag("PointerGO");
-        pointer.SetActive(false);
+        //pointer = GameObject.FindGameObjectWithTag("PointerGO");
+        //pointer.SetActive(false);
     }
      
     // Update is called once per frame
@@ -37,7 +37,7 @@ public class EnemyManager : MonoBehaviour
     void endGame()
     {
         killedAllEnemies = true;
-        pointer.SetActive(true);
+        //pointer.SetActive(true);
         
         Debug.Log("Pointing");
 

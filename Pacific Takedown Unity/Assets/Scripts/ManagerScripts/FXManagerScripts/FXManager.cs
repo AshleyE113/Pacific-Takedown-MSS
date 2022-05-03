@@ -208,7 +208,18 @@ public class FXManager : MonoBehaviour
                 Effect.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
-        if (effect == "botCollide")
+    if (effect == "oilBig")
+    {
+      var spawnLocation = spawn.transform.position;
+      var Effect = Instantiate(oilEffect, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);
+      Effect.GetComponent<DecalRandomizer>().minSize = 1f;
+      Effect.GetComponent<DecalRandomizer>().maxSize = 2.5f;
+      if (flipped)
+      {
+        Effect.GetComponent<SpriteRenderer>().flipX = true;
+      }
+    }
+    if (effect == "botCollide")
         {
             var spawnLocation = spawn.transform.position;
             var Effect = Instantiate(BotCollideFX, new Vector3(spawnLocation.x + offset.x, spawnLocation.y + offset.y, 0f), rotation);

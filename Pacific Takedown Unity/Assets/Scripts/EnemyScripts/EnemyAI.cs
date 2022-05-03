@@ -296,6 +296,7 @@ public class EnemyAI : MonoBehaviour
                     case State.Dead:
                         //if hit 3 or more times by player, destory it
                         FXManager.spawnEffect("explosionEffect", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
+                        FXManager.spawnEffect("oilBig", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
                         //Sound
                         AkSoundEngine.PostEvent("Play_BotExplode" , gameObject);
                         Destroy(gameObject);
