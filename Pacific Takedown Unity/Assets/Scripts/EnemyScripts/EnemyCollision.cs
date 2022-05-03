@@ -32,6 +32,7 @@ public class EnemyCollision : MonoBehaviour
             if (script.state == EnemyAI.State.Bounce)
             {
                 var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+                FXManager.flashEffectObject(other.gameObject);
                 FXManager.spawnEffect("compExplode",enemy,enemy.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
                 compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
                 script.BouncedOffWall(); //Extra Knockback
@@ -40,7 +41,21 @@ public class EnemyCollision : MonoBehaviour
                 enemy.GetComponent<EnemyAI>().TakeDamage(25);
             }
         }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && enemy.GetComponent<EnemyBounce>().isBouncing == true)
+    else if (other.gameObject.layer == LayerMask.NameToLayer("DestructableObject"))
+    {
+      if (script.state == EnemyAI.State.Bounce)
+      {
+        var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
+        FXManager.flashEffectObject(other.gameObject);
+        FXManager.spawnEffect("compExplode", enemy, enemy.transform, PlayerController.rotationObject.transform.rotation, false, new Vector2(0f, 0f));
+        compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
+        script.BouncedOffWall(); //Extra Knockback
+        CameraController.Shake(2f, 2f, 0.1f, 0.1f);
+        //Change Health Bar
+        enemy.GetComponent<EnemyAI>().TakeDamage(25);
+      }
+    }
+    else if (other.gameObject.layer == LayerMask.NameToLayer("Bumper") && enemy.GetComponent<EnemyBounce>().isBouncing == true)
         {
             if (script.state == EnemyAI.State.Bounce)
             {

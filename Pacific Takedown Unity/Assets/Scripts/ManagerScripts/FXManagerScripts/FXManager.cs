@@ -86,7 +86,16 @@ public class FXManager : MonoBehaviour
 
     }
 
-    public static void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)
+
+  public static void flashEffectObject(GameObject instance)
+  {
+    SpriteRenderer myRender = instance.GetComponent<SpriteRenderer>();
+    myRender.material = flashMaterial;
+    instance.GetComponent<ComputerSpriteChange>().flashingTime = flashDuration;
+
+  }
+
+  public static void spawnEffect(String effect, GameObject spawn, Transform target, Quaternion rotation,bool flipped, Vector2 offset)
     {
         if (effect == "playerMeleeEffect1")
         {
