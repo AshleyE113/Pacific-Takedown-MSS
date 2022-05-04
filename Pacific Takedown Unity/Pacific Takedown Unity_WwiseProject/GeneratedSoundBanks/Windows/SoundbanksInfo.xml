@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="747888109">
+		<SoundBank Id="1229948536" Language="SFX" Hash="1262707213">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
@@ -92,6 +92,14 @@
 						<File Id="968946270" Language="SFX">
 							<ShortName>RobotBounce6.wav</ShortName>
 							<Path>SFX\RobotBounce6_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="156979971" Name="Play_LevelClear" ObjectPath="\Events\Default Work Unit\Play_LevelClear" DurationType="OneShot" DurationMin="1.93322" DurationMax="1.93322">
+					<IncludedMemoryFiles>
+						<File Id="879395986" Language="SFX">
+							<ShortName>LevelClear.wav</ShortName>
+							<Path>SFX\LevelClear_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PLAY_BOTCOLLIDE = 1224438937U;
         static const AkUniqueID PLAY_BOTEXPLODE = 2129047272U;
         static const AkUniqueID PLAY_BOTRICHOCHET = 245333712U;
+        static const AkUniqueID PLAY_LEVELCLEAR = 156979971U;
         static const AkUniqueID PLAY_METALBOUNCE = 3786027151U;
         static const AkUniqueID PLAY_METALBOUNCEHIGH = 324747943U;
         static const AkUniqueID PLAY_METALCONTACT = 4122950737U;

@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_BotExplode" ID="{C6590734-FF3A-406D-B69B-20883A871F52}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MetalBounceHigh" ID="{9F1E9040-DB62-40C0-A5D0-900822AA50E6}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_LevelClear" ID="{A12EC979-77F0-4178-8DD6-A309EDAD69BD}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BatSwing" ID="{1B5A0C4E-EE61-4468-BEF2-32AED8E77D5B}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MetalContact" ID="{4E33A666-BE74-4648-8520-4D9A841267E9}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BotRichochet" ID="{B8ECAEFB-E17F-4752-83C1-387A93AD2C10}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}" Origin="Manual" Filter="7"/>

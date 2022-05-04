@@ -82,7 +82,7 @@
 					<ChildrenList>
 						<Action Name="" ID="{D4BF5718-A59D-4B67-A83E-EEE3D5A8E1BB}" ShortID="1051676079">
 							<PropertyList>
-								<Property Name="Probability" Type="Real64" Value="25"/>
+								<Property Name="Probability" Type="Real64" Value="15"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -130,6 +130,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="OilSpill" ID="{C5D040CB-A9D2-4C06-9404-A4C218B874BE}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LevelClear" ID="{A12EC979-77F0-4178-8DD6-A309EDAD69BD}">
+					<ChildrenList>
+						<Action Name="" ID="{CEA50F6F-50A3-4A10-B6C5-A1E153696998}" ShortID="350519788">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LevelClear" ID="{D48B1D90-4F01-4350-8EAE-5320A7F0F3D2}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

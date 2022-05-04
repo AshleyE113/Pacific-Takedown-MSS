@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     int enemiesLeft = 0;
     public static bool killedAllEnemies = false;
     public GameObject[] enemies;
+    private bool soundPlayed;
     GameObject pointer;
 
     void Start () {
@@ -38,7 +39,11 @@ public class EnemyManager : MonoBehaviour
     {
         killedAllEnemies = true;
         //pointer.SetActive(true);
-        
+        if(!soundPlayed)
+        {
+            AkSoundEngine.PostEvent("Play_LevelClear" , gameObject);
+            soundPlayed = true;
+        }
         Debug.Log("Pointing");
 
     }

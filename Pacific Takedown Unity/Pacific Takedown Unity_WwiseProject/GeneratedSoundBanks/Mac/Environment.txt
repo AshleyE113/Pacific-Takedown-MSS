@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	111235887	Play_BatSwing			\Default Work Unit\Play_BatSwing	
+	156979971	Play_LevelClear			\Default Work Unit\Play_LevelClear	
 	245333712	Play_BotRichochet			\Default Work Unit\Play_BotRichochet	
 	324747943	Play_MetalBounceHigh			\Default Work Unit\Play_MetalBounceHigh	
 	1224438937	Play_BotCollide			\Default Work Unit\Play_BotCollide	
@@ -37,6 +38,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	782494090	BatSwing1	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\BatSwing1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing1		76528
 	782744229	RobotBounce4	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\RobotBounce4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BotRichochet\RobotBounce4		61284
 	831750733	BatContactMetal3	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\BatContactMetal3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal3		121340
+	879395986	LevelClear	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\LevelClear_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\LevelClear		341084
 	926207731	BatContactMetal4	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\BatContactMetal4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\MetalContact\BatContactMetal4		121340
 	968946270	RobotBounce6	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\RobotBounce6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BotRichochet\RobotBounce6		68084
 	996614880	BatSwing5	G:\Git\Pacific TakeDown2\Pacific-Takedown-MSS\Pacific Takedown Unity\Pacific Takedown Unity_WwiseProject\.cache\Mac\SFX\BatSwing5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\BatSwing\BatSwing5		81548
