@@ -23,6 +23,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{3D452317-04B1-4238-B061-96415CE16C8E}" ShortID="221412952">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_OilSpill" ID="{083578B2-446D-425C-88E5-C02C77FCAC64}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Play_MetalBounce" ID="{AD295DF5-839E-4A69-AF3B-BB0DE94AD184}">
@@ -31,6 +41,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="MetalBounce" ID="{7B9A2287-1B3F-467E-B3C1-2ED4E6D8B904}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1316F019-AF67-4BE7-9476-31098AD226B0}" ShortID="14080568">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_BotRichochet" ID="{B8ECAEFB-E17F-4752-83C1-387A93AD2C10}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -53,6 +73,63 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BackgroundMusic" ID="{CEBF8929-E895-45EE-8E24-CE5784AF3F4B}" WorkUnitID="{0F1EBEBD-371F-43DA-8762-180168E13FE7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BotRichochet" ID="{B8ECAEFB-E17F-4752-83C1-387A93AD2C10}">
+					<ChildrenList>
+						<Action Name="" ID="{D4BF5718-A59D-4B67-A83E-EEE3D5A8E1BB}" ShortID="1051676079">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BotRichochet" ID="{2373ADCA-6861-43FE-9195-F1ABFF8F4773}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MetalBounceHigh" ID="{9F1E9040-DB62-40C0-A5D0-900822AA50E6}">
+					<ChildrenList>
+						<Action Name="" ID="{17AEE9C8-3600-49DB-B4DD-3E59175E4D2F}" ShortID="760483767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MetalBounceHigh" ID="{72416B4F-F67E-406C-89D2-FA271AA15034}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4DFD19B5-20E4-43F6-969B-FD043D0EEB4C}" ShortID="687856084">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_BotCollide" ID="{4153F39F-F919-4C7A-B028-36C81D61CA34}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BotCollide" ID="{4153F39F-F919-4C7A-B028-36C81D61CA34}">
+					<ChildrenList>
+						<Action Name="" ID="{24DAC64D-D84B-4920-8C06-EFD346079937}" ShortID="907876035">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BotCollide" ID="{C8978D6F-14CD-4C74-BD7D-92EEE03A3EAD}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_OilSpill" ID="{083578B2-446D-425C-88E5-C02C77FCAC64}">
+					<ChildrenList>
+						<Action Name="" ID="{7B429999-CCCB-413A-AD5C-2609E0E1995B}" ShortID="124219697">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="OilSpill" ID="{C5D040CB-A9D2-4C06-9404-A4C218B874BE}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -3,11 +3,15 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{D0D537CA-C111-4C06-9838-1F190BB53C27}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="G:\Ableton\New Projects\Empty Project\AudioWorkshop\Sounds\GameOff2021\Music\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="G:\Ableton\New Projects\Empty Project\AudioWorkshop\GirlBossSounds\AudioShipment#2\MetalBounce\"/>
+				<Property Name="Event Action List\{083578B2-446D-425C-88E5-C02C77FCAC64}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1B5A0C4E-EE61-4468-BEF2-32AED8E77D5B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{4153F39F-F919-4C7A-B028-36C81D61CA34}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4E33A666-BE74-4648-8520-4D9A841267E9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9F1E9040-DB62-40C0-A5D0-900822AA50E6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AD295DF5-839E-4A69-AF3B-BB0DE94AD184}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B2ECAA66-A195-4CDD-A0E8-B8C2AC00510E}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B8ECAEFB-E17F-4752-83C1-387A93AD2C10}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C6590734-FF3A-406D-B69B-20883A871F52}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">

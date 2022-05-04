@@ -72,8 +72,9 @@ public class EnemyCollision : MonoBehaviour
                 script.BouncedOffWall(); // subject to change 
                 enemy.GetComponent<EnemyAI>().TakeDamage(25);
                 FXManager.spawnEffect("botCollide",enemy,enemy.transform,PlayerController.rotationObject.transform.rotation, false,new Vector2(0f,0f));
+                AkSoundEngine.PostEvent("Play_MetalBounceHigh" , enemy);
                 //Sound
-                AkSoundEngine.PostEvent("Play_MetalContact" , enemy);
+                //AkSoundEngine.PostEvent("Play_MetalContact" , enemy);
                 CameraController.Shake(2f, 2f, 0.1f, 0.1f);
                 Debug.Log("EnemyXEnemy Action");
             }

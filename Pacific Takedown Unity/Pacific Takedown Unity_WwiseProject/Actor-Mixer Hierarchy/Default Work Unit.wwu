@@ -507,6 +507,511 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="BotRichochet" ID="{2373ADCA-6861-43FE-9195-F1ABFF8F4773}" ShortID="285463545">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>29</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>660</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2A89A666-3458-48C9-9744-C64B8AB28A69}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="177"/>
+											<Property Name="Min" Type="Real64" Value="-253"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="RobotBounce1" ID="{656E19B2-4136-4FEF-83E2-48AB3C102334}" ShortID="301740961">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotBounce1" ID="{EA677587-7600-4EA3-8377-6318511A72A3}">
+									<Language>SFX</Language>
+									<AudioFile>RobotBounce1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="351146786"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotBounce1" ID="{EA677587-7600-4EA3-8377-6318511A72A3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotBounce2" ID="{B421E2A3-9EC4-4ADA-8C8B-FB395A713D88}" ShortID="474152433">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotBounce2" ID="{94FA1A62-8F8F-40FE-9DD6-2E4ACD20F0A8}">
+									<Language>SFX</Language>
+									<AudioFile>RobotBounce2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="293042866"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotBounce2" ID="{94FA1A62-8F8F-40FE-9DD6-2E4ACD20F0A8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotBounce3" ID="{EE185CB0-465B-4C09-A2EF-811AE86BDA96}" ShortID="825680056">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotBounce3" ID="{5F39177E-7CE4-4247-BA1A-D18253EC25AB}">
+									<Language>SFX</Language>
+									<AudioFile>RobotBounce3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="572975866"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotBounce3" ID="{5F39177E-7CE4-4247-BA1A-D18253EC25AB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotBounce4" ID="{56F5C2CA-CDCC-4389-94B9-7E4A8659FAA3}" ShortID="861012698">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotBounce4" ID="{6611DFE0-0099-4917-92D2-9FB3D7CFA0DD}">
+									<Language>SFX</Language>
+									<AudioFile>RobotBounce4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="782744229"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotBounce4" ID="{6611DFE0-0099-4917-92D2-9FB3D7CFA0DD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotBounce5" ID="{99EA8FA0-1CDD-4495-A78A-CD1F3310358E}" ShortID="78542712">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotBounce5" ID="{08B1DC44-01D1-4996-9FAB-473F1EBE6C58}">
+									<Language>SFX</Language>
+									<AudioFile>RobotBounce5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="133562960"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotBounce5" ID="{08B1DC44-01D1-4996-9FAB-473F1EBE6C58}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="RobotBounce6" ID="{A4DB1240-2945-4BA5-8D09-D12E0452708F}" ShortID="734371974">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="RobotBounce6" ID="{AB802BCA-D31D-4235-8E37-E5C228F1BF8A}">
+									<Language>SFX</Language>
+									<AudioFile>RobotBounce6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="968946270"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="RobotBounce6" ID="{AB802BCA-D31D-4235-8E37-E5C228F1BF8A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="MetalBounceHigh" ID="{72416B4F-F67E-406C-89D2-FA271AA15034}" ShortID="1017557032">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>28</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>830</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1E631EB8-F659-4663-8880-3E64D7D3550D}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="354"/>
+											<Property Name="Min" Type="Real64" Value="-328"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="MetalBounce1" ID="{9F38DF08-F9F3-41B8-8A2D-31EEE497309F}" ShortID="902083630">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalBounce1" ID="{BBD84D15-2551-4EE3-A9C0-753DFFB71434}">
+									<Language>SFX</Language>
+									<AudioFile>MetalBounce1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="462333147"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalBounce1" ID="{BBD84D15-2551-4EE3-A9C0-753DFFB71434}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalBounce2" ID="{7568AAFE-0F24-444E-95AF-1535DB28248E}" ShortID="347726464">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalBounce2" ID="{AF2BD7A5-3F7A-4D75-845B-2C3BC5184698}">
+									<Language>SFX</Language>
+									<AudioFile>MetalBounce2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="217955580"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalBounce2" ID="{AF2BD7A5-3F7A-4D75-845B-2C3BC5184698}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="MetalBounce3" ID="{AF17A1EF-1D1D-4076-93C4-F428D55B3A27}" ShortID="911281249">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="MetalBounce3" ID="{6D6011A4-9C00-459E-AF70-E6227297AE80}">
+									<Language>SFX</Language>
+									<AudioFile>MetalBounce3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="142851640"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="MetalBounce3" ID="{6D6011A4-9C00-459E-AF70-E6227297AE80}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<Sound Name="BotCollide" ID="{C8978D6F-14CD-4C74-BD7D-92EEE03A3EAD}" ShortID="651331974">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{64982F88-2070-4981-BE6C-6A4D9656C4E1}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="76"/>
+											<Property Name="Min" Type="Real64" Value="-51"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="BotCollide" ID="{5ACBE0B6-484A-43B7-A1C5-5ADEEC7A256A}">
+							<Language>SFX</Language>
+							<AudioFile>BotCollide.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="405930013"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="BotCollide" ID="{5ACBE0B6-484A-43B7-A1C5-5ADEEC7A256A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="OilSpill" ID="{C5D040CB-A9D2-4C06-9404-A4C218B874BE}" ShortID="58091281">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7268C4C9-A2C5-4D93-AC4E-40D870CEBE97}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="328"/>
+											<Property Name="Min" Type="Real64" Value="-202"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="4"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="GutsSplatterBlood_SFXB_1378" ID="{94156214-5E00-4C0D-A808-A35BB523CF96}" ShortID="716870465">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="GutsSplatterBlood_SFXB_1378" ID="{9EC97575-4C79-4B96-933F-A994C9E6F9E4}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.008"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>GutsSplatterBlood_SFXB.1378.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="249247619"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="GutsSplatterBlood_SFXB_1378" ID="{9EC97575-4C79-4B96-933F-A994C9E6F9E4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ImpactSkullBlood_S011HO_117" ID="{BE2025CE-C0A6-4DB0-985C-E00B66534B65}" ShortID="824180678">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ImpactSkullBlood_S011HO_117" ID="{F3F9CD0D-1648-4FFB-95C0-282F41FEB072}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0274481074481074"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.49866666666667"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ImpactSkullBlood_S011HO.117.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="781502447"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="ImpactSkullBlood_S011HO_117" ID="{F3F9CD0D-1648-4FFB-95C0-282F41FEB072}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ImpactSkullBlood_S011HO_118" ID="{007EFAB4-AA6F-4171-AFBD-CBC2FC8CA353}" ShortID="797107282">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ImpactSkullBlood_S011HO_118" ID="{319AFBD2-7814-4288-AB51-D6A160D0F0A0}">
+									<Language>SFX</Language>
+									<AudioFile>ImpactSkullBlood_S011HO.118.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="678826465"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="ImpactSkullBlood_S011HO_118" ID="{319AFBD2-7814-4288-AB51-D6A160D0F0A0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BodyImpaledBlood_ZA01_64" ID="{1033C86D-B701-4628-856A-065B40288B55}" ShortID="244800830">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BodyImpaledBlood_ZA01_64" ID="{6619B8C6-E86A-4617-A937-706066F204A5}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0841142857142857"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.04819340659341"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.242637362637363"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.41861978021978"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BodyImpaledBlood_ZA01.64.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="689597633"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="BodyImpaledBlood_ZA01_64" ID="{6619B8C6-E86A-4617-A937-706066F204A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BodySplatFallBlood_ZA01_69" ID="{463CDEDE-2FAF-41B6-AF56-08AD641DD596}" ShortID="79080681">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{48649D2E-605A-4744-9D0D-691843B93E6C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BodySplatFallBlood_ZA01_69" ID="{3D5A9DDE-7BAB-4C68-85E8-BAE4434C1554}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.79634481074481"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.126722344322344"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.115606349206349"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.96975433455434"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>BodySplatFallBlood_ZA01.69.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="307615430"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="BodySplatFallBlood_ZA01_69" ID="{3D5A9DDE-7BAB-4C68-85E8-BAE4434C1554}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
