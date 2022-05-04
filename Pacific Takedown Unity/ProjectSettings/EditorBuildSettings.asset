@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame/Lvl 3.unity
     guid: 73d6fce8a4495a643a69b812af676caa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainGame/Lvl 3.5 Fish Guy.unity
     guid: 0bbf08eb3d6e52149928048eaaa59fac
   - enabled: 1
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame/Lvl 5.unity
     guid: 4558e0482c3e8ec4a85f3651f517eca8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainGame/Lvl 6.5 NFT Guy.unity
     guid: 89bf896bbae80514c878026732d941cc
   - enabled: 1
