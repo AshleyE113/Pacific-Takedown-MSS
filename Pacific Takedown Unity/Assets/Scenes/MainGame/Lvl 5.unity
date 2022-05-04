@@ -1572,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 05 level (rework)
       objectReference: {fileID: 0}
+    - target: {fileID: 5501024892587728026, guid: 1e657090e7abd96429352ce34db4fd6b, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e657090e7abd96429352ce34db4fd6b, type: 3}
 --- !u!1001 &281950731

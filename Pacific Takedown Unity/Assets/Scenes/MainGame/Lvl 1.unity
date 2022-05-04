@@ -3802,6 +3802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 01 tutorial
       objectReference: {fileID: 0}
+    - target: {fileID: 5501024892587728026, guid: ed1b93f296d8f4949b67fda7e76c1439, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed1b93f296d8f4949b67fda7e76c1439, type: 3}
 --- !u!1 &1278820355

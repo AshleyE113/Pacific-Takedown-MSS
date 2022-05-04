@@ -11174,6 +11174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 06 level (rework)
       objectReference: {fileID: 0}
+    - target: {fileID: 5501024892587728026, guid: 4e569af67698b1c4f8a95afad8745c4f, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e569af67698b1c4f8a95afad8745c4f, type: 3}
 --- !u!4 &1408505566 stripped
@@ -13833,15 +13837,15 @@ Transform:
   - {fileID: 808963793}
   - {fileID: 1133662816}
   - {fileID: 5979660}
-  - {fileID: 1233628110}
+  - {fileID: 1805243101}
+  - {fileID: 285816736}
   - {fileID: 1289646794}
   - {fileID: 933885040}
-  - {fileID: 1805243101}
+  - {fileID: 647963817}
   - {fileID: 1619876897}
-  - {fileID: 285816736}
   - {fileID: 969224067}
   - {fileID: 1730070937}
-  - {fileID: 647963817}
+  - {fileID: 1233628110}
   - {fileID: 1541421196}
   - {fileID: 2054098641}
   - {fileID: 1323748655}
@@ -13852,35 +13856,35 @@ Transform:
   - {fileID: 972931583}
   - {fileID: 238412953}
   - {fileID: 503369707}
+  - {fileID: 1816989715}
   - {fileID: 1260673218}
   - {fileID: 1720009221}
   - {fileID: 542202430}
   - {fileID: 1442255012}
-  - {fileID: 1816989715}
+  - {fileID: 1715594502}
   - {fileID: 1717104182}
   - {fileID: 175915021}
   - {fileID: 5833092976133981453}
   - {fileID: 540456083}
-  - {fileID: 1715594502}
   - {fileID: 521633360}
   - {fileID: 1837146277}
   - {fileID: 1178751156}
   - {fileID: 1742466917}
   - {fileID: 1601662780}
   - {fileID: 127063308}
+  - {fileID: 1882665690}
   - {fileID: 1065042210}
   - {fileID: 1434199065}
   - {fileID: 984692714}
+  - {fileID: 2117243035}
   - {fileID: 1891351692}
   - {fileID: 2065161466}
   - {fileID: 1600937843}
   - {fileID: 1819738089}
-  - {fileID: 1882665690}
+  - {fileID: 1509389902}
   - {fileID: 1236210577}
   - {fileID: 1031426503}
   - {fileID: 1001668388}
-  - {fileID: 2117243035}
-  - {fileID: 1509389902}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
