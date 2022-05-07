@@ -426,8 +426,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 817947910}
-        m_TargetAssemblyTypeName: StartbuttonScript, Assembly-CSharp
-        m_MethodName: ToLvlOne
+        m_TargetAssemblyTypeName: ToInstructionsScene, Assembly-CSharp
+        m_MethodName: ToInstructions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 817947911}
   - component: {fileID: 817947910}
   m_Layer: 0
-  m_Name: ToLvl1
+  m_Name: ToInstructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 817947909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9828395eee5d4043ab8996dbb610f57, type: 3}
+  m_Script: {fileID: 11500000, guid: 91fe90d4386d1594ea56de796ca47e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &817947911
