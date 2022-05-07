@@ -7,6 +7,7 @@ EditorUserSettings:
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
 <<<<<<< MergerBranch2
+<<<<<<< MergerBranch2
 =======
 <<<<<<< refs/remotes/origin/JoshBranch4
 <<<<<<< HEAD
@@ -33,24 +34,17 @@ EditorUserSettings:
       flags: 0
 =======
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d61acf53a31f6fe
+=======
+      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d60acb5741eebf43ea9c02f26722c0ce6281d
+>>>>>>> Merged All Branches, Level 3.5 Currently Broken
       flags: 0
->>>>>>> Changed All Levels: Floors are -2 in Sprite Order
     RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d60acf53a31f6fe
       flags: 0
     RecentlyUsedScenePath-2:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d67acf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-3:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d66acf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-4:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d65acf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-5:
-<<<<<<< refs/remotes/origin/JoshBranch4
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d65acb57416c4d376cef2237129370bfb25
       flags: 0
+<<<<<<< MergerBranch2
     RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d64acf53a31f6fe
       flags: 0
@@ -75,6 +69,8 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d62acf53a31f6fe
       flags: 0
 >>>>>>> Changed All Levels: Floors are -2 in Sprite Order
+=======
+>>>>>>> Merged All Branches, Level 3.5 Currently Broken
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
