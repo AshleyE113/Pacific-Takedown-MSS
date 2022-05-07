@@ -9842,18 +9842,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1644988269}
     m_Modifications:
-    - target: {fileID: 6407205619437639016, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407205619437639017, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407205619437639017, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6407205619561486532, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -9901,10 +9889,6 @@ PrefabInstance:
     - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
       propertyPath: m_Name
       value: FloatingEnemy (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407205619561486554, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2593635642ca5f743bfca4f8cd0265d9, type: 3}

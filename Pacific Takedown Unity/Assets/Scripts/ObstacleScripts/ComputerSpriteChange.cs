@@ -9,17 +9,31 @@ public class ComputerSpriteChange : MonoBehaviour
     public bool changed;
     public Sprite otherSprite; //define the sprite that I want to change to
     public Animator myAnimator; //define the animator
+  public int flashingTime;
 
     // Start is called before the first frame update
     void Start()
     {
         myRenderer = GetComponent<SpriteRenderer>(); //getting my sprite renderer
     }
+    public void FixedUpdate()
+    {
+      if (flashingTime <= 0)
+     {
+        gameObject.GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
+      }
+      else if(flashingTime>0)
+     {
+        flashingTime -= 1;
+     }
+    }
+
 
     public void ChangeSprite()
     { //if I collide with an enemy
+      //Flash Duration
 
-        if(myAnimator != null){ //disable animator
+    if (myAnimator != null){ //disable animator
            // Debug.Log("ANIMATOR DETECTED");
             myAnimator.enabled = false;
         }

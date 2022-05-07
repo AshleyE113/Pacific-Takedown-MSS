@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
     //Knockback
     public float recievedKnockback = 5f;
     public int recoveryTimer;
-    public int recoveryMax = 90;
+    public int recoveryMax = 15;
     public float knockbackDrag;
     private Vector2 direction;
     //Being Attacked
@@ -198,6 +198,7 @@ public class EnemyAI : MonoBehaviour
                             canBounce = true;
                         }
                         ResumeAnimation();
+                        gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().material = FXManager.defaultMaterial;
                         rb.drag = 3; //Play with this value to test this.
                         combo = 0;
                         canAttack = true;
@@ -296,6 +297,7 @@ public class EnemyAI : MonoBehaviour
                     case State.Dead:
                         //if hit 3 or more times by player, destory it
                         FXManager.spawnEffect("explosionEffect", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
+                        FXManager.spawnEffect("oilBig", gameObject, gameObject.transform, Quaternion.identity, false, new Vector2(0, 0));
                         //Sound
                         AkSoundEngine.PostEvent("Play_BotExplode" , gameObject);
                         Destroy(gameObject);

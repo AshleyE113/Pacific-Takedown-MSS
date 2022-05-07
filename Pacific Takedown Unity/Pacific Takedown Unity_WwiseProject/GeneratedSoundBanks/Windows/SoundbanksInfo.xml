@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="2555068710">
+		<SoundBank Id="1229948536" Language="SFX" Hash="1262707213">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
@@ -40,6 +40,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1224438937" Name="Play_BotCollide" ObjectPath="\Events\Default Work Unit\Play_BotCollide" DurationType="OneShot" DurationMin="0.721694" DurationMax="0.776626">
+					<IncludedMemoryFiles>
+						<File Id="405930013" Language="SFX">
+							<ShortName>BotCollide.wav</ShortName>
+							<Path>SFX\BotCollide_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="2129047272" Name="Play_BotExplode" ObjectPath="\Events\Default Work Unit\Play_BotExplode" DurationType="OneShot" DurationMin="0.846367" DurationMax="1.015629">
 					<IncludedMemoryFiles>
 						<File Id="450215729" Language="SFX">
@@ -53,6 +61,45 @@
 						<File Id="1069714118" Language="SFX">
 							<ShortName>BotExplosion3.wav</ShortName>
 							<Path>SFX\BotExplosion3_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1502414276" Name="Play_OilSpill" ObjectPath="\Events\Default Work Unit\Play_OilSpill"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="245333712" Name="Play_BotRichochet" ObjectPath="\Events\Default Work Unit\Play_BotRichochet" DurationType="OneShot" DurationMin="0." DurationMax="0.304817">
+					<IncludedMemoryFiles>
+						<File Id="133562960" Language="SFX">
+							<ShortName>RobotBounce5.wav</ShortName>
+							<Path>SFX\RobotBounce5_10C4C929.wem</Path>
+						</File>
+						<File Id="293042866" Language="SFX">
+							<ShortName>RobotBounce2.wav</ShortName>
+							<Path>SFX\RobotBounce2_10C4C929.wem</Path>
+						</File>
+						<File Id="351146786" Language="SFX">
+							<ShortName>RobotBounce1.wav</ShortName>
+							<Path>SFX\RobotBounce1_10C4C929.wem</Path>
+						</File>
+						<File Id="572975866" Language="SFX">
+							<ShortName>RobotBounce3.wav</ShortName>
+							<Path>SFX\RobotBounce3_10C4C929.wem</Path>
+						</File>
+						<File Id="782744229" Language="SFX">
+							<ShortName>RobotBounce4.wav</ShortName>
+							<Path>SFX\RobotBounce4_10C4C929.wem</Path>
+						</File>
+						<File Id="968946270" Language="SFX">
+							<ShortName>RobotBounce6.wav</ShortName>
+							<Path>SFX\RobotBounce6_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="156979971" Name="Play_LevelClear" ObjectPath="\Events\Default Work Unit\Play_LevelClear" DurationType="OneShot" DurationMin="1.93322" DurationMax="1.93322">
+					<IncludedMemoryFiles>
+						<File Id="879395986" Language="SFX">
+							<ShortName>LevelClear.wav</ShortName>
+							<Path>SFX\LevelClear_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -71,6 +118,28 @@
 							<Path>SFX\MetalBounce1_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="245333712" Name="Play_BotRichochet" ObjectPath="\Events\Default Work Unit\Play_BotRichochet"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="324747943" Name="Play_MetalBounceHigh" ObjectPath="\Events\Default Work Unit\Play_MetalBounceHigh" DurationType="OneShot" DurationMin="0.390234" DurationMax="0.578643">
+					<IncludedMemoryFiles>
+						<File Id="142851640" Language="SFX">
+							<ShortName>MetalBounce3.wav</ShortName>
+							<Path>SFX\MetalBounce3_10C4C929.wem</Path>
+						</File>
+						<File Id="217955580" Language="SFX">
+							<ShortName>MetalBounce2.wav</ShortName>
+							<Path>SFX\MetalBounce2_10C4C929.wem</Path>
+						</File>
+						<File Id="462333147" Language="SFX">
+							<ShortName>MetalBounce1.wav</ShortName>
+							<Path>SFX\MetalBounce1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="1224438937" Name="Play_BotCollide" ObjectPath="\Events\Default Work Unit\Play_BotCollide"/>
+					</ActionPostEvent>
 				</Event>
 				<Event Id="4122950737" Name="Play_MetalContact" ObjectPath="\Events\Default Work Unit\Play_MetalContact" DurationType="OneShot" DurationMin="0.595061" DurationMax="0.595061">
 					<IncludedMemoryFiles>
@@ -109,6 +178,30 @@
 						<File Id="610524762" Language="SFX">
 							<ShortName>Nycelly ~ NothingCanStopUs (GameOff2021).wav</ShortName>
 							<Path>SFX\Nycelly ~ NothingCanStopUs (GameOff2021)_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1502414276" Name="Play_OilSpill" ObjectPath="\Events\Default Work Unit\Play_OilSpill" DurationType="OneShot" DurationMin="0.736943" DurationMax="2.083616">
+					<IncludedMemoryFiles>
+						<File Id="249247619" Language="SFX">
+							<ShortName>GutsSplatterBlood_SFXB.1378.wav</ShortName>
+							<Path>SFX\GutsSplatterBlood_SFXB.1378_C2CF9C0D.wem</Path>
+						</File>
+						<File Id="307615430" Language="SFX">
+							<ShortName>BodySplatFallBlood_ZA01.69.wav</ShortName>
+							<Path>SFX\BodySplatFallBlood_ZA01.69_EB146E63.wem</Path>
+						</File>
+						<File Id="678826465" Language="SFX">
+							<ShortName>ImpactSkullBlood_S011HO.118.wav</ShortName>
+							<Path>SFX\ImpactSkullBlood_S011HO.118_10C4C929.wem</Path>
+						</File>
+						<File Id="689597633" Language="SFX">
+							<ShortName>BodyImpaledBlood_ZA01.64.wav</ShortName>
+							<Path>SFX\BodyImpaledBlood_ZA01.64_890BD2E0.wem</Path>
+						</File>
+						<File Id="781502447" Language="SFX">
+							<ShortName>ImpactSkullBlood_S011HO.117.wav</ShortName>
+							<Path>SFX\ImpactSkullBlood_S011HO.117_96958663.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

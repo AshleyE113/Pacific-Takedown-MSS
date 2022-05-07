@@ -459,8 +459,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546710763696787097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.83000183, z: 0}
-  m_LocalScale: {x: 0.28646135, y: 0.17197107, z: 0.30153826}
+  m_LocalPosition: {x: 0, y: -1.017, z: 0}
+  m_LocalScale: {x: 0.11965652, y: 0.07183329, z: 0.12595424}
   m_Children: []
   m_Father: {fileID: 6407205619437639017}
   m_RootOrder: 3
@@ -615,7 +615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7454437419561079001
 Transform:
   m_ObjectHideFlags: 0
@@ -670,7 +670,7 @@ SpriteRenderer:
   m_SortingLayerID: 1494674695
   m_SortingLayer: -1
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2029341112256988656, guid: 1a5b29f2d8acf0743bb49e98a8eb53ce, type: 3}
+  m_Sprite: {fileID: -4503416977833850302, guid: 7006ba2e80a4b4bb19f8ae938e20cda0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -778,7 +778,7 @@ SpriteRenderer:
   m_SortingLayerID: 1494674695
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1854842898435402500, guid: 1a5b29f2d8acf0743bb49e98a8eb53ce, type: 3}
+  m_Sprite: {fileID: -4503416977833850302, guid: 7006ba2e80a4b4bb19f8ae938e20cda0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -836,8 +836,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5349684, y: 0.25959232}
-    oldSize: {x: 2.1875, y: 2.625}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8125, y: 2}
     newSize: {x: 0.24, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -877,7 +877,7 @@ Transform:
   m_GameObject: {fileID: 6407205619561486554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -49.38, y: 45.41, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 6407205619437639017}
   m_Father: {fileID: 0}
