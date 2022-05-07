@@ -778,36 +778,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingLines:
-  - My family is gone...
-  - Just like the rest of them...
-  - And I think I know who took them....
-  - A few years ago, the Pacific Sea Mining Corporation moved into our fishing town,
+  - PRESS SPACE TO START
+  - A few years ago, the Pacific Sea Mining Corporation moved to our fishing town,
     in a lighthouse overlooking the water.
-  - 'They promised our families work opportunities and prosperity. '
-  - "Instead, they\u2019ve only given confusion and anger."
-  - People have been going missing.
-  - " We\u2019ve received letters by those who are gone. That they\u2019ve all moved
-    to new offices and towns. "
-  - 'The girls are scared, and as their leader, I have to comfort them.  '
-  - 'We spend less time in our homes and more on the streets. '
-  - 'Wreaking havoc, protesting in the way we know how.  '
-  - With spray paint and blood and baseball bats.
-  - "But somehow\u2026"
-  - "I didn\u2019t think they\u2019d take my family."
-  - "And frankly\u2026"
-  - "\u2026I\u2019m PISSED!"
-  - 'The only people that should cause havoc on the streets and in the town are me
-    and my girls! '
-  - Not some CORPORATION!
-  - "So I\u2019ll do everythin\u2019 I\u2019ve fucking got to bring everyone back! "
+  - 'They promised to bring jobs and prosperity. '
+  - "Instead, they\u2019ve only caused confusion and anger. "
+  - 'People from the town have been going missing. '
+  - "They say they\u2019ve just moved to new offices, but I don\u2019t think that\u2019s
+    the truth. "
+  - 'At this point, I have to take matters into my own hands. '
+  - 'I have to wreak havoc, protesting the only way I know how.  '
+  - 'With spray paint, and blood, and baseball bats. '
+  - "Because frankly\u2026 I\u2019m PISSED! "
   - 
   tempSpriteHolder:
-  - {fileID: 21300000, guid: 0206123c7de48da40887a539d39455fb, type: 3}
-  - {fileID: 21300000, guid: a54d2a4834b88ab469ea5d91e782d6a9, type: 3}
-  - {fileID: 21300000, guid: fe215f5ec7782774baa6d9554edf1dee, type: 3}
-  - {fileID: 21300000, guid: 25c3131688e59524e89479beeeaec633, type: 3}
+  - {fileID: 21300000, guid: 364715bba340934498ee21a4d6e6ae68, type: 3}
+  - {fileID: 21300000, guid: a9fe6b6a5ceda9c4f995f47a02cfa706, type: 3}
+  - {fileID: 21300000, guid: 347c8452e4c76f6418d8c676c9f74c7d, type: 3}
+  - {fileID: 21300000, guid: 9c0ee7b98f043ab42a73559894ab6631, type: 3}
+  - {fileID: 21300000, guid: 9282e4f1367c55d48a8e84772d26040c, type: 3}
   textHolder: {fileID: 1423801994}
-  typeSpeed: 0.01
+  typeSpeed: 0.025
   currentIndex: 1
   Speed: 1
   fadeGO: {fileID: 1947677556}
@@ -1180,8 +1171,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c852d12f71d559047a63e8dc38e0564d, type: 2}
+  m_sharedMaterial: {fileID: -755945205626364283, guid: c852d12f71d559047a63e8dc38e0564d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1205,15 +1196,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

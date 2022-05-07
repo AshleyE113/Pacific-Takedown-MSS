@@ -75,10 +75,14 @@ MonoBehaviour:
     guid: e897117b976fb549871438bb8df3a047
     GuidInternal: 
 <<<<<<< refs/remotes/origin/AshBranch
+<<<<<<< refs/remotes/origin/AshBranch
     m_lastTime: -8585496494218158967
 =======
     m_lastTime: -8585499301994953677
 >>>>>>> //WIP Fish Guy Talk Zone
+=======
+    m_lastTime: -8585496482465507977
+>>>>>>> Updated intro narrative
     List:
     - name: Environment
       guid: 34e6029aa4526e48ac2a4c4aed579752
@@ -107,10 +111,14 @@ MonoBehaviour:
     guid: 72e74f783ce58a4589901a1b851e08b7
     GuidInternal: 
 <<<<<<< refs/remotes/origin/AshBranch
+<<<<<<< refs/remotes/origin/AshBranch
     m_lastTime: -8585496494288946294
 =======
     m_lastTime: -8585499301999241423
 >>>>>>> //WIP Fish Guy Talk Zone
+=======
+    m_lastTime: -8585496482468398461
+>>>>>>> Updated intro narrative
     List:
     - name: Play_BatSwing
       guid: 4e0c5a1b61ee6844bef232aed8e77d5b
