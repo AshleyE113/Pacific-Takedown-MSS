@@ -10,6 +10,7 @@ public class CinematicOpening : MonoBehaviour
     [SerializeField] List<Sprite> tempSpriteHolder;
     [SerializeField] TMP_Text textHolder;
     Image img;
+    Color imgColor;
     Color BaseColor;
     bool isTyping = false;
     bool cancelTyping = false;
@@ -18,23 +19,17 @@ public class CinematicOpening : MonoBehaviour
     public int currentIndex = 1;
     [SerializeField] float Speed;
     [SerializeField] GameObject fadeGO;
+    bool faded = false;
 
     void Start()
     {
         img = GetComponent<Image>();
+        imgColor = GetComponent<Image>().color;
         BaseColor = GetComponent<Image>().color;
-        /*
-        for (int i = 0; i < tempSpriteHolder.Count; i++)
-        {
-            img.sprite = tempSpriteHolder[i];
-            storySprites.Add(img);
-            Debug.Log("For loop");
-        }*/
     }
 
     void Update()
     {
-
         if (goToNext == false)
         {
             img.color = Color.black;
@@ -44,58 +39,60 @@ public class CinematicOpening : MonoBehaviour
 
         if (goToNext == true)
         {
-
+            
             if (Input.GetKeyDown(KeyCode.Space)) //Allows the player to go through the script.
             {
                 if (!isTyping)
                 {
                     if (currentIndex < openingLines.Count)
                     {
-                        Debug.Log(currentIndex);
-
                         StartCoroutine(TextScroll(openingLines[currentIndex]));
+                        if (currentIndex == openingLines.Count - 1 || currentIndex > openingLines.Count)
+                        {
+                            for (float i = 1f; i >= 0; i -= Time.deltaTime)
+                            {
+                                // set color with i as alpha
+                                img.color = new Color(0, 0, 0, i);
+                   
+                            }
+                            imgColor.a -= Time.deltaTime;
+                            Debug.Log("DONE");
+                        }
+
+                        if (currentIndex == 2 || currentIndex == 7 || currentIndex == 12 || currentIndex == 15)
+                        {
+                            StartCoroutine(FadeImage(fadeGO, false, 1));
+                        }
+                        else if (currentIndex == 3 || currentIndex == 8 || currentIndex == 13 || currentIndex == 16)
+                        {
+                            StartCoroutine(FadeImage(fadeGO, true, 1));
+                        }
+
+                        if (currentIndex == openingLines.Count - 1)
+                        {
+                            StartCoroutine(RemovePanel(fadeGO));
+                        }
 
                         if (currentIndex >= 3 && currentIndex < 8)
                         {
-                            if (img.color.a > 0.5f)
-                            {
-                                StartCoroutine(FadeOut(fadeGO));
-                                img.color = Color.white;
-                                //storySprites[0].sprite = tempSpriteHolder[0];
-                                img.sprite = tempSpriteHolder[0];
-
-                            }
-                            else StartCoroutine(FadeIn(fadeGO));
-
+                            img.color = Color.white;
+                            img.sprite = tempSpriteHolder[0];
 
                         }
                         else if (currentIndex >= 8 && currentIndex < 12)
                         {
-                            if (img.color.a > 0.5f)
-                            {
-                                StartCoroutine(FadeOut(fadeGO));
-                                img.sprite = tempSpriteHolder[1];
+                          img.sprite = tempSpriteHolder[1];
 
-                            }
-                            else StartCoroutine(FadeIn(fadeGO));
                         }
                         else if (currentIndex >= 12 && currentIndex < 16)
                         {
-                            if (img.color.a > 0.5f)
-                            {
-                                StartCoroutine(FadeOut(fadeGO));
-                                img.sprite = tempSpriteHolder[2];
-                            }
-                            else StartCoroutine(FadeIn(fadeGO));
+                         
+                          img.sprite = tempSpriteHolder[2];
                         }
-                        else if (currentIndex >= 16 && currentIndex < openingLines.Count - 1)
+                        else if (currentIndex >= 16)
                         {
-                            if (img.color.a > 0.5f)
-                            {
-                                StartCoroutine(FadeOut(fadeGO));
                                 img.sprite = tempSpriteHolder[3];
-                            }
-                            else StartCoroutine(FadeIn(fadeGO));
+                        
                         }
                         currentIndex += 1;
                     }
@@ -105,32 +102,39 @@ public class CinematicOpening : MonoBehaviour
         }
     }
 
-    IEnumerator FadeIn(GameObject fadeObj)
+    IEnumerator FadeImage(GameObject fadeGO, bool fadeAway, float timeVal)
     {
-        float alpha = fadeObj.GetComponent<Image>().color.a;
-        while (alpha < 1)
+        Image fade = fadeGO.GetComponent<Image>();
+        // fade from opaque to transparent
+        if (fadeAway)
         {
-            alpha += Time.deltaTime * Speed;
-            img.color = new Color(img.color.r, img.color.g, img.color.b, alpha);
-            yield return null;
+            // loop over 1 second backwards
+            for (timeVal = 1f; timeVal >= 0; timeVal -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                fade.color = new Color(0, 0, 0, timeVal);
+                yield return null;
+            }
         }
-        Debug.Log("Fading In");
+        // fade from transparent to opaque
+        else
+        {
+            // loop over 1 second
+            for (timeVal = 1f; timeVal <= 1; timeVal += Time.deltaTime)
+            {
+                // set color with i as alpha
+                fade.color = new Color(0, 0, 0, timeVal);
+                yield return null;
+            }
+        }
     }
-
-    IEnumerator FadeOut(GameObject fadeObj)
+    IEnumerator RemovePanel(GameObject fadeGO)
     {
-        float alpha = fadeObj.GetComponent<Image>().color.a;
-        while (alpha > 0)
-        {
-            alpha -= Time.deltaTime * Speed;
-        
-            img.color = new Color(img.color.r, img.color.g, img.color.b, alpha);
-            yield return null;
-        }
-        Debug.Log("Fading Out");
-
+        StartCoroutine(FadeImage(fadeGO, true, 1));
+        yield return new WaitForSeconds(1.5f);
+        Destroy(fadeGO);
+        this.gameObject.SetActive(false);
     }
-
 
     private IEnumerator TextScroll(string lineOfText) //Gives it that one character at a timeffect...
     {
