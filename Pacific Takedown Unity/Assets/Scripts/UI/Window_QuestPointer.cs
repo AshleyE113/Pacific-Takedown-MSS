@@ -37,7 +37,7 @@ public class Window_QuestPointer : MonoBehaviour
         Vector3 targetPositionScreenPoint = Camera.main.WorldToScreenPoint(targetPosition);
         bool isOffScreen = targetPositionScreenPoint.x <= borderSize || targetPositionScreenPoint.x >= Screen.width - borderSize || targetPositionScreenPoint.y <= borderSize || targetPositionScreenPoint.y >= Screen.height - borderSize;
         isOffScreen = false;
-        print(isOffScreen);
+        //print(isOffScreen);
         if (isOffScreen)
         {
 
@@ -72,6 +72,6 @@ public class Window_QuestPointer : MonoBehaviour
         float angle = UtilsClass.GetAngleFromVectorFloat(dir);
         pointerRectTransform.localEulerAngles = new Vector3(0, 0, angle + pointerAngle);
 
-        print($"Dir:{dir} Angle:{angle}");
+        //print($"Dir:{dir} Angle:{angle}");
     }
 }
