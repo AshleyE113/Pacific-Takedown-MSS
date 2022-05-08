@@ -7882,6 +7882,14 @@ PrefabInstance:
       propertyPath: textBox
       value: 
       objectReference: {fileID: 956752410}
+    - target: {fileID: 3874465264032479094, guid: 63666adbe2a172841a9e975daac2e714, type: 3}
+      propertyPath: thingToSay.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874465264032479094, guid: 63666adbe2a172841a9e975daac2e714, type: 3}
+      propertyPath: thingToSay.Array.data[10]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3874465264032479095, guid: 63666adbe2a172841a9e975daac2e714, type: 3}
       propertyPath: m_Name
       value: NPCTalkZone

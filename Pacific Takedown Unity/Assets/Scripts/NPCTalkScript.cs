@@ -27,8 +27,6 @@ public class NPCTalkScript : MonoBehaviour
 
     private void Update()
     {
-        if (currentSpokenStrings < thingToSay.Length)
-        {
             if (isTalking && Input.GetKeyDown(KeyCode.E))
             {
             Debug.Log("EEEEEEEEEEEEE");
@@ -44,9 +42,6 @@ public class NPCTalkScript : MonoBehaviour
                     NPCdialogue.text = Speak(thingToSay[currentSpokenStrings]);
                 }
             }
-        }
-        else
-            textBox.SetActive(false);
 
         if (repeat)
             currentSpokenStrings = 0;
@@ -54,13 +49,18 @@ public class NPCTalkScript : MonoBehaviour
 
     void NextLine()
     {
-        if (currentSpokenStrings < thingToSay.Length)
+        if (currentSpokenStrings < thingToSay.Length-1)
         {
             currentSpokenStrings++;
             StartCoroutine(TextScroll(Speak(thingToSay[currentSpokenStrings])));
 
         }
-        
+        else if (currentSpokenStrings == thingToSay.Length-1)
+        {
+            textBox.SetActive(false);
+            Debug.Log("PVERBOARD!");
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

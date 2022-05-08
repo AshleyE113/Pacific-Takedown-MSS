@@ -8398,10 +8398,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thingToSay:
   - Nyeh heh heh...
-  - I heard about you from Boss
+  - I heard about you from the Boss's recet memo.
   - He may see you as a threat.
   - But I see you as an opportunity.
-  - I'm sure you know about Project Mantamorphisis already.
+  - I'm sure you know about Project Mantamorphosis already.
   - The value of the company will go down once you and your bloody baseball bat leak
     this confidential info to the public.
   - But thanks to the Unamused Creature NFT series, I will be able to retire 40 years
@@ -8412,6 +8412,7 @@ MonoBehaviour:
   - Sounds good right?
   - Nyeh heh heh... speechless? I don't blame you.
   - Now stop standing there and look at my valuable collection!
+  - 
   repeat: 0
   NPCdialogue: {fileID: 0}
   textBox: {fileID: 1949076673}
