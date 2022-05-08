@@ -76,7 +76,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e897117b976fb549871438bb8df3a047
     GuidInternal: 
-    m_lastTime: -8585496200363453489
+    m_lastTime: -8585496171406711161
     List:
     - name: Environment
       guid: 34e6029aa4526e48ac2a4c4aed579752
@@ -104,7 +104,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 72e74f783ce58a4589901a1b851e08b7
     GuidInternal: 
-    m_lastTime: -8585496197360327938
+    m_lastTime: -8585496171406561560
     List:
     - name: Play_BatSwing
       guid: 4e0c5a1b61ee6844bef232aed8e77d5b
@@ -378,6 +378,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.083616
       minDuration: 0.736943
+    - name: Play_PinballBouncer
+      guid: e779b9fd9e07cb4bbe1e3769d28ad794
+      id: 380006374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_PinballBouncer
+        ObjectType: 3
+        guid: e779b9fd9e07cb4bbe1e3769d28ad794
+      Path: Events\Default Work Unit\Play_PinballBouncer
+      maxAttenuation: 0
+      maxDuration: 0.996759
+      minDuration: 0.346059
     - name: Play_PlayerHurt
       guid: 0a3934fe223e8e46a9048c9ac6907996
       id: 3178286754
@@ -395,6 +412,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.616961
       minDuration: 0.523401
+    - name: Play_RobotAttack
+      guid: eb3b7894b80fd4409d0971df75b2bbe7
+      id: 3063340210
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_RobotAttack
+        ObjectType: 3
+        guid: eb3b7894b80fd4409d0971df75b2bbe7
+      Path: Events\Default Work Unit\Play_RobotAttack
+      maxAttenuation: 0
+      maxDuration: 0.801026
+      minDuration: 0.565103
+    - name: Play_RobotCharge
+      guid: 10de64da8a074241be004d1ffbcc1cdd
+      id: 1856549598
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_RobotCharge
+        ObjectType: 3
+        guid: 10de64da8a074241be004d1ffbcc1cdd
+      Path: Events\Default Work Unit\Play_RobotCharge
+      maxAttenuation: 0
+      maxDuration: 5.169048
+      minDuration: 5.169048
+    - name: Stop_RobotCharge
+      guid: 12bb633cb5b42442be4d91a8a47b4b26
+      id: 402823764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Stop_RobotCharge
+        ObjectType: 3
+        guid: 12bb633cb5b42442be4d91a8a47b4b26
+      Path: Events\Default Work Unit\Stop_RobotCharge
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
