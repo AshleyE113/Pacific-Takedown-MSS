@@ -27,22 +27,40 @@ public class NPCTalkScript : MonoBehaviour
 
     private void Update()
     {
-        if (isTalking && Input.GetKeyDown(KeyCode.E))
+        if (currentSpokenStrings < thingToSay.Length)
         {
+            if (isTalking && Input.GetKeyDown(KeyCode.E))
+            {
             Debug.Log("EEEEEEEEEEEEE");
             EIcon.SetActive(false);
-            if (currentSpokenStrings < thingToSay.Length)
-            {
-                StartCoroutine(TextScroll(Speak(thingToSay[currentSpokenStrings])));
-                currentSpokenStrings++;
+            
+                if (NPCdialogue.text == thingToSay[currentSpokenStrings])
+                {
+                    NextLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    NPCdialogue.text = Speak(thingToSay[currentSpokenStrings]);
+                }
             }
-            else
-            {
-                if (repeat)
-                    currentSpokenStrings = 0;
-            }
+        }
+        else
+            textBox.SetActive(false);
+
+        if (repeat)
+            currentSpokenStrings = 0;
+    }
+
+    void NextLine()
+    {
+        if (currentSpokenStrings < thingToSay.Length)
+        {
+            currentSpokenStrings++;
+            StartCoroutine(TextScroll(Speak(thingToSay[currentSpokenStrings])));
 
         }
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
