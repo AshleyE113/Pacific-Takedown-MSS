@@ -146,6 +146,140 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Footstep" ID="{9B4B9BBE-673A-45B6-BBC9-FD177074DEC3}">
+					<ChildrenList>
+						<Action Name="" ID="{438C7B0D-B0E7-4070-9728-4F8707AF5583}" ShortID="997953903">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep" ID="{14B7F653-2CD5-4401-8E0C-69334FA1586F}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ObjectBroken" ID="{21156067-E1BD-4C14-8DB9-5C0DCAD5B2AE}">
+					<ChildrenList>
+						<Action Name="" ID="{9DD9E091-7AE0-4830-BE76-D1530A5CDF31}" ShortID="763239918">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ObjectBroken" ID="{B2A11CF3-6597-48F8-AA11-6CC8D3637510}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CrabBroken" ID="{022203CC-4956-421E-A67A-9371F1AB8AA1}">
+					<ChildrenList>
+						<Action Name="" ID="{B47A80B7-4227-46C4-A057-A57CFAC5CC00}" ShortID="1045640196">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CrabBroken" ID="{AD9BF45C-66C2-4A6D-9C4C-C30711868091}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0130A19D-1310-49ED-8B3D-33D0827F1D4D}" ShortID="1070293283">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="41"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Play_CrabBrokenCombine" ID="{C4F677AD-EA87-4569-90AC-5A93F1903F0D}" WorkUnitID="{784FE772-E53C-458A-8990-1A1B851E08B7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Dash" ID="{5ACA3BED-FD01-46DD-AB37-1785E058DF28}">
+					<ChildrenList>
+						<Action Name="" ID="{5706BEDE-0F5E-4DD4-8684-ECBEB4D0BA34}" ShortID="429061072">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dash" ID="{728DF6BF-7D37-4666-B42D-FEC34698DC0A}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PlayerHurt" ID="{FE34390A-3E22-468E-A904-8C9AC6907996}">
+					<ChildrenList>
+						<Action Name="" ID="{63E10F06-9A07-4908-B20E-6E11787BB778}" ShortID="483954987">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PlayerHurt" ID="{C6D3C00A-BA9E-4ED4-B56D-34BA3FD2848D}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ObjectBroken_01" ID="{296DD7DA-18A2-4B1A-80EB-0ECD198E993B}">
+					<ChildrenList>
+						<Action Name="" ID="{55C307AA-531A-4EF5-8051-5DD976B453FC}" ShortID="282583491">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ObjectBroken" ID="{BF41A92B-2BC8-40FD-B505-779C0700E187}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CrabBrokenCombine" ID="{C4F677AD-EA87-4569-90AC-5A93F1903F0D}">
+					<ChildrenList>
+						<Action Name="" ID="{0EBEB249-ACC5-4F43-AE8B-7214217DD8BF}" ShortID="16017613">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CrabBrokenCombine" ID="{DDFBDD90-C8D6-41DF-8450-E43C58D35D1B}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PinballBouncer" ID="{FDB979E7-079E-4BCB-BE1E-3769D28AD794}">
+					<ChildrenList>
+						<Action Name="" ID="{5E4B4FD6-227C-4650-BB0D-89CF68F0A031}" ShortID="941876214">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PinballBouncer" ID="{1908D152-05D8-4D2C-A01A-4C96EC713328}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RobotAttack" ID="{94783BEB-0FB8-40D4-9D09-71DF75B2BBE7}">
+					<ChildrenList>
+						<Action Name="" ID="{A91BF7F3-7B21-4B2E-813E-7DD2BE5DD021}" ShortID="349504449">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RobotAttack" ID="{22E3779C-CAD9-4A8F-B4A4-0E9AC92116B7}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RobotCharge" ID="{DA64DE10-078A-4142-BE00-4D1FFBCC1CDD}">
+					<ChildrenList>
+						<Action Name="" ID="{1BA76688-D97B-4051-9008-C0195A54BA9C}" ShortID="538268286">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RobotCharge" ID="{74970563-519B-4B61-B334-CAE036673BB1}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_RobotCharge" ID="{3C63BB12-B4B5-4224-BE4D-91A8A47B4B26}">
+					<ChildrenList>
+						<Action Name="" ID="{23163D30-F1FC-46B9-9F35-94DCA5334E0E}" ShortID="493854947">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RobotCharge" ID="{74970563-519B-4B61-B334-CAE036673BB1}" WorkUnitID="{88F6149F-49B5-4ACD-B2B4-AE8D43C69565}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

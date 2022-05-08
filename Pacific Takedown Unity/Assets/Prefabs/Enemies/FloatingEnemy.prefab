@@ -997,7 +997,7 @@ MonoBehaviour:
   totalAngle: 360
   myFX: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
   flashingTime: 2
-  attackRange: 4
+  attackRange: 8
   attackRecoverTime: 5
   canAttack: 0
   isHeavy: 0

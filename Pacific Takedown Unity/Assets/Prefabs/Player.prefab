@@ -409,7 +409,7 @@ MonoBehaviour:
   attackspeed: 1.25
   dashForce: 75
   dashTime: 0.1
-  dashCooldown: 1
+  dashCooldown: 0.5
   distanceBetweenImages: 0.1
   flashingTime: 0
   flickerRate: 15

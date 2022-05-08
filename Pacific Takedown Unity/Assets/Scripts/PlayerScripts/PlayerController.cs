@@ -359,6 +359,7 @@ public class PlayerController : MonoBehaviour
   private void CommenceDash()
   {
     ChangeState(State.Dashing);
+    AkSoundEngine.PostEvent("Play_Dash" , gameObject);
     PlayerAfterImagePool.Instance.GetFromPool();
     lastImagePos = transform.position;
     StartCoroutine(StopDashing());
@@ -432,6 +433,7 @@ public class PlayerController : MonoBehaviour
         {
               ChangeState(State.Hit);
               FXManager.spawnEffect("blood",gameObject,gameObject.transform,quaternion.identity, false,new Vector2(0f,0f));
+              AkSoundEngine.PostEvent("Play_PlayerHurt" , this.gameObject);
               FXManager.flashEffectPlayer(gameObject);
             //For HealthBar
              if (currentHealth > 1)
@@ -496,6 +498,12 @@ public class PlayerController : MonoBehaviour
     {
       canDash = true;
     }
+  }
+
+  public void playFootstep()
+  {
+    //Sound
+    AkSoundEngine.PostEvent("Play_Footstep" , gameObject);
   }
 
   public void attackDirection() //This Controls what animation plays when we attack

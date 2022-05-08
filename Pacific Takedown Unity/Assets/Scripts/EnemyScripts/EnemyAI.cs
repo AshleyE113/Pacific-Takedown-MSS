@@ -212,6 +212,7 @@ public class EnemyAI : MonoBehaviour
                             //When in Range, Prepare your attack
                             if (canAttack)
                             {
+                                AkSoundEngine.PostEvent("Play_RobotCharge" , gameObject);
                                 state = State.PreparingAttack;
                             }
                         }
@@ -384,7 +385,8 @@ public class EnemyAI : MonoBehaviour
         //animations
         animator.SetFloat("MovementHorizontal", direction.x);
         animator.SetFloat("MovementVertical", direction.y);
-
+        AkSoundEngine.PostEvent("Stop_RobotCharge" , gameObject);
+        AkSoundEngine.PostEvent("Play_RobotAttack" , gameObject);
         rb.AddForce((target.position - transform.position) * (speed / 3));
         Vector2 player = new Vector2(target.transform.position.x, target.transform.position.y);
         launchDirection = (player - rb.position).normalized;

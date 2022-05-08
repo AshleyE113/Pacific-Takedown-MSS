@@ -76,7 +76,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e897117b976fb549871438bb8df3a047
     GuidInternal: 
-    m_lastTime: -8585499608153778415
+    m_lastTime: -8585496200363453489
     List:
     - name: Environment
       guid: 34e6029aa4526e48ac2a4c4aed579752
@@ -104,7 +104,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 72e74f783ce58a4589901a1b851e08b7
     GuidInternal: 
-    m_lastTime: -8585499608153928027
+    m_lastTime: -8585496197360327938
     List:
     - name: Play_BatSwing
       guid: 4e0c5a1b61ee6844bef232aed8e77d5b
@@ -174,6 +174,74 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.304817
       minDuration: 0
+    - name: Play_CrabBroken
+      guid: cc03220256491e42a67a9371f1ab8aa1
+      id: 1609761031
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_CrabBroken
+        ObjectType: 3
+        guid: cc03220256491e42a67a9371f1ab8aa1
+      Path: Events\Default Work Unit\Play_CrabBroken
+      maxAttenuation: 0
+      maxDuration: 2.003036
+      minDuration: 1.730699
+    - name: Play_CrabBrokenCombine
+      guid: ad77f6c487ea694590ac5a93f1903f0d
+      id: 193540430
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_CrabBrokenCombine
+        ObjectType: 3
+        guid: ad77f6c487ea694590ac5a93f1903f0d
+      Path: Events\Default Work Unit\Play_CrabBrokenCombine
+      maxAttenuation: 0
+      maxDuration: 1.580208
+      minDuration: 1.580208
+    - name: Play_Dash
+      guid: ed3bca5a01fddd46ab371785e058df28
+      id: 2211787386
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_Dash
+        ObjectType: 3
+        guid: ed3bca5a01fddd46ab371785e058df28
+      Path: Events\Default Work Unit\Play_Dash
+      maxAttenuation: 0
+      maxDuration: 1.347133
+      minDuration: 1.113982
+    - name: Play_Footstep
+      guid: be9b4b9b3a67b645bbc9fd177074dec3
+      id: 1602358412
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_Footstep
+        ObjectType: 3
+        guid: be9b4b9b3a67b645bbc9fd177074dec3
+      Path: Events\Default Work Unit\Play_Footstep
+      maxAttenuation: 0
+      maxDuration: 0.671739
+      minDuration: 0.343957
     - name: Play_LevelClear
       guid: 79c92ea1f07778418dd6a309edad69bd
       id: 156979971
@@ -259,6 +327,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_ObjectBroken
+      guid: 67601521bde1144c8db95c0dcad5b2ae
+      id: 469739728
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_ObjectBroken
+        ObjectType: 3
+        guid: 67601521bde1144c8db95c0dcad5b2ae
+      Path: Events\Default Work Unit\Play_ObjectBroken
+      maxAttenuation: 0
+      maxDuration: 2.756074
+      minDuration: 1.942096
+    - name: Play_ObjectBroken_01
+      guid: dad76d29a2181a4b80eb0ecd198e993b
+      id: 724468870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_ObjectBroken_01
+        ObjectType: 3
+        guid: dad76d29a2181a4b80eb0ecd198e993b
+      Path: Events\Default Work Unit\Play_ObjectBroken_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_OilSpill
       guid: b27835086d445c4288e5c02c77fcac64
       id: 1502414276
@@ -276,6 +378,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.083616
       minDuration: 0.736943
+    - name: Play_PlayerHurt
+      guid: 0a3934fe223e8e46a9048c9ac6907996
+      id: 3178286754
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 72e74f783ce58a4589901a1b851e08b7
+      - ElementName: Play_PlayerHurt
+        ObjectType: 3
+        guid: 0a3934fe223e8e46a9048c9ac6907996
+      Path: Events\Default Work Unit\Play_PlayerHurt
+      maxAttenuation: 0
+      maxDuration: 0.616961
+      minDuration: 0.523401
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

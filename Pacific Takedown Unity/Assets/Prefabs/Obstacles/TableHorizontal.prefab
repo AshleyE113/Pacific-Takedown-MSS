@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8689547166826927471}
   - component: {fileID: 8689547166826927457}
   - component: {fileID: 6301540640420114149}
+  - component: {fileID: -2746333440951436789}
   m_Layer: 13
   m_Name: TableHorizontal
   m_TagString: Untagged
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_Offset: {x: 0.013755798, y: 0.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 4, y: 2}
     newSize: {x: 4, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -125,3 +126,17 @@ MonoBehaviour:
   changed: 0
   otherSprite: {fileID: 6534470658841840834, guid: 175efcb1fc87cd74999a5f5586e6de13, type: 3}
   myAnimator: {fileID: 0}
+  flashingTime: 0
+--- !u!114 &-2746333440951436789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689547166826927456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b9a10ed3015434ea9674afceb89e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkTime: 0.035

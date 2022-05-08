@@ -74,6 +74,7 @@ public class EnemyBounce : MonoBehaviour
         if (isBouncing && other.gameObject.gameObject.CompareTag("Bumper"))
         {
          Debug.Log("Bumped Bumper");
+         AkSoundEngine.PostEvent("Play_PinballBouncer" , gameObject);
          var speed = last_vel.magnitude*1.2f;
          var direction = Vector3.Reflect(last_vel.normalized, other.contacts[0].normal);
          bounceRB.velocity = direction * Mathf.Max(speed, 0f);

@@ -45,6 +45,7 @@ EditorUserSettings:
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d65acb57416c4d376cef2237129370bfb25
       flags: 0
 <<<<<<< MergerBranch2
+<<<<<<< MergerBranch2
     RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d64acf53a31f6fe
       flags: 0
@@ -71,6 +72,14 @@ EditorUserSettings:
 >>>>>>> Changed All Levels: Floors are -2 in Sprite Order
 =======
 >>>>>>> Merged All Branches, Level 3.5 Currently Broken
+=======
+    RecentlyUsedScenePath-3:
+      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d61acf53a31f6fe
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d66acf53a31f6fe
+      flags: 0
+>>>>>>> Extra Sounds+Juice Implemented
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

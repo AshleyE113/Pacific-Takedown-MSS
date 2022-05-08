@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8689547166826927471}
   - component: {fileID: 8689547166826927457}
   - component: {fileID: 6662981826201948781}
+  - component: {fileID: -1015414871833010642}
   m_Layer: 13
   m_Name: TableVertical
   m_TagString: Untagged
@@ -125,3 +126,17 @@ MonoBehaviour:
   changed: 0
   otherSprite: {fileID: -6526206264457530208, guid: 175efcb1fc87cd74999a5f5586e6de13, type: 3}
   myAnimator: {fileID: 0}
+  flashingTime: 0
+--- !u!114 &-1015414871833010642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689547166826927456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1b9a10ed3015434ea9674afceb89e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkTime: 0.035

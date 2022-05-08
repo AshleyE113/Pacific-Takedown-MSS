@@ -46,7 +46,6 @@ public class EnemyCollision : MonoBehaviour
       if (script.state == EnemyAI.State.Bounce)
       {
         var compSprite = other.gameObject.GetComponent<ComputerSpriteChange>();
-        FXManager.flashEffectObject(other.gameObject);
         FXManager.spawnEffect("compExplode", enemy, enemy.transform, PlayerController.rotationObject.transform.rotation, false, new Vector2(0f, 0f));
         compSprite?.ChangeSprite(); //only do this if there's a sprite in the inspector
         script.BouncedOffWall(); //Extra Knockback
@@ -99,7 +98,7 @@ public class EnemyCollision : MonoBehaviour
         {
             //Sound
             AkSoundEngine.PostEvent("Play_MetalContact" , enemy);
-
+            AkSoundEngine.PostEvent("Stop_RobotCharge" , enemy);
             script.canAttack = false;
             CameraController.Shake(10f, 10f, 0.1f, 0.1f);
             GameObject thisRotationObject = PlayerController.rotationObject.transform.GetChild(1).gameObject;
@@ -112,6 +111,8 @@ public class EnemyCollision : MonoBehaviour
             FXManager.flashEffect(enemy);
             if (script.canBounce || script.GetComponent<EnemyAI>().combo>=3)
             {
+                if(script.GetComponent<EnemyAI>().combo==3){AkSoundEngine.PostEvent("Play_CrabBroken" , other.gameObject);}
+                
                 script.canBounce = true;
                 script.state = EnemyAI.State.Bounce;
                 //script.hitPause.Stop(script.HiPaVal);
