@@ -6,80 +6,17 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-<<<<<<< MergerBranch2
-<<<<<<< MergerBranch2
-=======
-<<<<<<< refs/remotes/origin/JoshBranch4
-<<<<<<< HEAD
-<<<<<<< HEAD
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d61acf53a31f6fe
-=======
-<<<<<<< HEAD
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d6bacf53a31f6fe
-=======
->>>>>>> Changed All Levels: Floors are -2 in Sprite Order
-      value: 22424703114646680e0b0227036c72111f193f2b212d690339280f27d1e33136e7a923e7ee2e26
       flags: 0
     RecentlyUsedScenePath-1:
-<<<<<<< MergerBranch2
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d60acb5741eebf43ea9c02f26722c0ce6281d
-      flags: 0
-    RecentlyUsedScenePath-2:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d61acf53a31f6fe
-=======
-<<<<<<< MergerBranch2
-=======
-      value: 22424703114646680e0b0227036c5e021f041b2f222d69313f205d3ff4b17a2decee22f0
->>>>>>> main
-      flags: 0
-=======
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d61acf53a31f6fe
-=======
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d60acb5741eebf43ea9c02f26722c0ce6281d
->>>>>>> Merged All Branches, Level 3.5 Currently Broken
-      flags: 0
-    RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d60acf53a31f6fe
       flags: 0
     RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d65acb57416c4d376cef2237129370bfb25
       flags: 0
-<<<<<<< MergerBranch2
-<<<<<<< MergerBranch2
-    RecentlyUsedScenePath-6:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d64acf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-7:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d6bacf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-8:
->>>>>>> Changed All Levels: Floors are -2 in Sprite Order
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d62acf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-2:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d60acb5741eebf43ea9c02f26722c0ce6281d
->>>>>>> //WIP Fish Guy Talk Zone
-      flags: 0
-=======
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d64acf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-6:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d6bacf53a31f6fe
-      flags: 0
-    RecentlyUsedScenePath-7:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d62acf53a31f6fe
-      flags: 0
->>>>>>> Changed All Levels: Floors are -2 in Sprite Order
-=======
->>>>>>> Merged All Branches, Level 3.5 Currently Broken
-=======
     RecentlyUsedScenePath-3:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d61acf53a31f6fe
+      value: 22424703114646680e0b0227036c72111f193f2b212d690339280f27d1e33136e7a923e7ee2e26
       flags: 0
-    RecentlyUsedScenePath-4:
-      value: 22424703114646680e0b0227036c72111f193f2b212d691c3b255d66acf53a31f6fe
-      flags: 0
->>>>>>> Extra Sounds+Juice Implemented
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
