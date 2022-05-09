@@ -895,7 +895,7 @@ MonoBehaviour:
   myFX: {fileID: 3946052805937707903, guid: 2f963caca9da95f41a2e026717fecd5f, type: 3}
   flashingTime: 2
   attackRange: 4
-  attackRecoverTime: 5
+  attackRecoverTime: 1
   canAttack: 0
   isHeavy: 1
   canBounce: 0
