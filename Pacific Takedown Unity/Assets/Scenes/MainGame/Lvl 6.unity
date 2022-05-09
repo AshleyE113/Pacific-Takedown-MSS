@@ -1446,6 +1446,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: DestroyedDependencies
       objectReference: {fileID: 0}
+    - target: {fileID: 1553227444790465679, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
+      propertyPath: m_Name
+      value: Pathfinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553227444790465776, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAACYn+vcYiFobQIAACQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMlS4zAQ/ZWUzgMVOwt4bjMmhDkAKcIUF1+E3I5VkSWXFpJA5d+nJdux8ZzS6dfLe90tfxEuTQ3MKr3WPH9UOZCfE+Jt8mPSgw9wpDslt/wTupg3ntvSB9EQ80ItV+iPfJpRFVjN2S+5Ez54ik4neaF0tcp3kCpjDboLKgwgpJX12RJdXxNyxJ+rxKec0IpvvPWJVjKdnNFkIC3oPjS6Ta7jZJEkbUI0v17OF0kc3bR5TZqTTNCqhtxr6LPjZdw1ur0NgRL1tTEeYkoIblpyxJ7qID6ltXEoDQNyTlFsYOS1l8B3pR0nPxeFAdtOQtPTHdc4s6Yq+a2aQVbU7BtmH1Q432c5D5Samo//wVdRgAutqoeubTT1LWzJ2f6Fnhg1djDoofvuO28nD1Ts6buAtxLkk1pr5WSOoNXOpzoD8V3/96IsLYHte39DdeR0dT/wbq/dVr2GcxB/TAWv3j10PW8cW6HCuMMxgMbF/EHC4VRMWwK9nsVfA690N7ypFrjn2liEWpXS03tXTvtQsgoz82qcTZWWENwt6RokFfa0wTJ2vMERNmg7Qu6pfz1t8xbrHsUoJbj7+Ol0BG3U4bIsU6rDI5jy2VnBJfSkPfCEc0qVlM2BDWfSpW2dLigbpO0cz7+fFrmJZslsOWMzmMeLuEiu6CyiaC9ZtEyiOVuQcHtcok4qNg3Rdjy4NdkXl3hn3Udlsta0Dseea3pY889KDUbOZaG2TAPI56bChThobIKPMl/lHAe0BWu5DPsmXxkRiu0hzy6FsqB0dbSaZn2VjNT8Q1nvyUgaviIZ8e7LLW80fHA4+OZdsTM5/wNQSwMEFAAACAgAAJif6xHBVfxsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJK5obGlsZlxsnGqiZGpUZqlbqKxYSKQbZZsaGZpaJJsqhQLVF9SWZDql5ibCtETkFiSkZaZl5KZl67nXpSZ4g4yWim2FgBQSwECLQAUAAAICAAAmJ/r3GIhaG0CAAAkBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rEcFV/GwAAAB4AAAACQAkAAAAAAAAAAAAAAC6AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHEDAAAAAA==
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553227444790465777, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553227444790465777, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8194058843623493623, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
       propertyPath: m_RootOrder
       value: 3
