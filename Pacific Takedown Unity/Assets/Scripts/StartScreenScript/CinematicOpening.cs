@@ -151,6 +151,10 @@ public class CinematicOpening : MonoBehaviour
     IEnumerator RemovePanel(GameObject fadeGO)
     {
         StartCoroutine(FadeImage(fadeGO, true, 1));
+        GameObject ourParent = transform.parent.gameObject;
+        GameObject parentParent = ourParent.transform.parent.gameObject;
+        parentParent.transform.GetChild(1).gameObject.SetActive(true);
+        parentParent.transform.GetChild(2).gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         Destroy(fadeGO);
         this.gameObject.SetActive(false);
