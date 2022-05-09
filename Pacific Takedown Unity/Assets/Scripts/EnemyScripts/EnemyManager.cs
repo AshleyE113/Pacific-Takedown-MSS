@@ -14,6 +14,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start () {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        killedAllEnemies = false;
         //pointer = GameObject.FindGameObjectWithTag("PointerGO");
         //pointer.SetActive(false);
     }
