@@ -8495,10 +8495,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1985342351}
     m_Modifications:
-    - target: {fileID: 5501024892021693449, guid: 8d5b4b4f48655104c94cd5c14b73242f, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 8689547166826927456, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
       propertyPath: m_Name
       value: TableVertical (2)
@@ -8546,6 +8542,10 @@ PrefabInstance:
     - target: {fileID: 8689547166826927468, guid: 4f68374783cd0444cba34777f742c63f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501024892021693449, guid: 8d5b4b4f48655104c94cd5c14b73242f, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d5b4b4f48655104c94cd5c14b73242f, type: 3}
@@ -8862,6 +8862,10 @@ PrefabInstance:
     - target: {fileID: 716867410694280324, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
       propertyPath: m_Name
       value: DestroyedDependencies
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000796787071718452, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5441213229038308785, guid: fa7890b9f09bfbf4a8296855e76d00b1, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
