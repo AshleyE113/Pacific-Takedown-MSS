@@ -66,11 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e897117b976fb549871438bb8df3a047
     GuidInternal: 
-<<<<<<< HEAD
-    m_lastTime: -8585494018440129453
-=======
     m_lastTime: -8585494661658321538
->>>>>>> AshBranch
     List:
     - name: Environment
       guid: 34e6029aa4526e48ac2a4c4aed579752
@@ -98,11 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 72e74f783ce58a4589901a1b851e08b7
     GuidInternal: 
-<<<<<<< HEAD
-    m_lastTime: -8585494018444673799
-=======
     m_lastTime: -8585494661726791440
->>>>>>> AshBranch
     List:
     - name: Play_BatSwing
       guid: 4e0c5a1b61ee6844bef232aed8e77d5b
