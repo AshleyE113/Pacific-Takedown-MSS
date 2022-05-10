@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &48519920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -819,11 +819,11 @@ MonoBehaviour:
   - "Because frankly\u2026 I\u2019m PISSED! "
   - 
   tempSpriteHolder:
-  - {fileID: 21300000, guid: 364715bba340934498ee21a4d6e6ae68, type: 3}
-  - {fileID: 21300000, guid: a9fe6b6a5ceda9c4f995f47a02cfa706, type: 3}
-  - {fileID: 21300000, guid: 347c8452e4c76f6418d8c676c9f74c7d, type: 3}
-  - {fileID: 21300000, guid: 9c0ee7b98f043ab42a73559894ab6631, type: 3}
-  - {fileID: 21300000, guid: 9282e4f1367c55d48a8e84772d26040c, type: 3}
+  - {fileID: 21300000, guid: c56ef0314bf283d4d84d277edab7678d, type: 3}
+  - {fileID: 21300000, guid: face3936b8350ca488b189a3872401fe, type: 3}
+  - {fileID: 21300000, guid: 4be4caf481b0fd44a8f4a3bbf8677470, type: 3}
+  - {fileID: 21300000, guid: c97b35aef97d7dd42beafb6c902a7831, type: 3}
+  - {fileID: 21300000, guid: bd180a424ca1bf54f8736d5066cac7c2, type: 3}
   textHolder: {fileID: 1423801994}
   typeSpeed: 0.025
   currentIndex: 1
@@ -1483,7 +1483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460860706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 4.1, z: 0}
+  m_LocalPosition: {x: -0.06, y: 3.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
