@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="BatSwing" ID="{758A6EB1-3B42-40D2-8717-D803E0DC7D39}" ShortID="940037052">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>230</Value>
@@ -26,6 +27,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -154,6 +158,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="MetalContact" ID="{C0F14B2B-5929-4122-987C-914380888E0F}" ShortID="954539235">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>250</Value>
@@ -170,6 +175,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -298,6 +306,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="MetalBounce" ID="{7B9A2287-1B3F-467E-B3C1-2ED4E6D8B904}" ShortID="52522363">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>250</Value>
@@ -319,6 +328,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -401,6 +413,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="BotExplode" ID="{64AAF65C-22C3-4852-8AE6-D44D42639237}" ShortID="886791982">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>230</Value>
@@ -422,6 +435,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -504,6 +520,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="BotRichochet" ID="{2373ADCA-6861-43FE-9195-F1ABFF8F4773}" ShortID="285463545">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
 								<Value>29</Value>
@@ -532,6 +549,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -683,6 +703,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="MetalBounceHigh" ID="{72416B4F-F67E-406C-89D2-FA271AA15034}" ShortID="1017557032">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
 								<Value>28</Value>
@@ -711,6 +732,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -789,10 +813,14 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{A0E72D84-F3C0-4E58-BE61-387D657F6FFA}"/>
+					</PositioningInfo>
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<Sound Name="BotCollide" ID="{C8978D6F-14CD-4C74-BD7D-92EEE03A3EAD}" ShortID="651331974">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -813,6 +841,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -836,6 +867,7 @@
 				</Sound>
 				<RandomSequenceContainer Name="OilSpill" ID="{C5D040CB-A9D2-4C06-9404-A4C218B874BE}" ShortID="58091281">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -857,6 +889,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1039,6 +1074,7 @@
 				</Sound>
 				<RandomSequenceContainer Name="Footstep" ID="{14B7F653-2CD5-4401-8E0C-69334FA1586F}" ShortID="690229652">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>530</Value>
@@ -1062,6 +1098,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1213,6 +1252,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="ObjectBroken" ID="{B2A11CF3-6597-48F8-AA11-6CC8D3637510}" ShortID="580783852">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -1233,6 +1273,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1338,6 +1381,7 @@
 				</RandomSequenceContainer>
 				<Sound Name="CrabBroken" ID="{AD9BF45C-66C2-4A6D-9C4C-C30711868091}" ShortID="545084297">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -1358,6 +1402,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1381,6 +1428,7 @@
 				</Sound>
 				<Sound Name="Dash" ID="{728DF6BF-7D37-4666-B42D-FEC34698DC0A}" ShortID="856154345">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -1401,6 +1449,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1536,6 +1587,7 @@
 				</RandomSequenceContainer>
 				<Sound Name="CrabBrokenCombine" ID="{DDFBDD90-C8D6-41DF-8450-E43C58D35D1B}" ShortID="206972762">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ValueList>
 								<Value>660</Value>
@@ -1543,6 +1595,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1566,6 +1621,7 @@
 				</Sound>
 				<RandomSequenceContainer Name="PinballBouncer" ID="{1908D152-05D8-4D2C-A01A-4C96EC713328}" ShortID="359499449">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -1587,6 +1643,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1715,6 +1774,7 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="RobotAttack" ID="{22E3779C-CAD9-4A8F-B4A4-0E9AC92116B7}" ShortID="739240350">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -1736,6 +1796,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>
@@ -1817,7 +1880,13 @@
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<Sound Name="RobotCharge" ID="{74970563-519B-4B61-B334-CAE036673BB1}" ShortID="101710323">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="GameObject" ID="{F1E370BB-FACB-472A-8248-6A22D57844F3}" WorkUnitID="{10BBF543-6135-47BA-8508-3EA6E3269D74}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{42765816-7C11-4D46-B557-7AB9A4C6451D}"/>
 						</Reference>

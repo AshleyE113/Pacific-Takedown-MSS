@@ -110,7 +110,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4e0c5a1b61ee6844bef232aed8e77d5b
       Path: Events\Default Work Unit\Play_BatSwing
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.404461
       minDuration: 0.310965
     - name: Play_BotCollide
@@ -127,7 +127,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 9ff3534119f97a4cb02836c81d61ca34
       Path: Events\Default Work Unit\Play_BotCollide
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.776626
       minDuration: 0.721694
     - name: Play_BotExplode
@@ -144,7 +144,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 340759c63aff6d40b69b20883a871f52
       Path: Events\Default Work Unit\Play_BotExplode
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 1.015629
       minDuration: 0.846367
     - name: Play_BotRichochet
@@ -161,7 +161,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: fbaeecb87fe1524783c1387a93ad2c10
       Path: Events\Default Work Unit\Play_BotRichochet
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.304817
       minDuration: 0
     - name: Play_CrabBroken
@@ -178,7 +178,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: cc03220256491e42a67a9371f1ab8aa1
       Path: Events\Default Work Unit\Play_CrabBroken
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 2.003036
       minDuration: 1.730699
     - name: Play_CrabBrokenCombine
@@ -195,7 +195,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: ad77f6c487ea694590ac5a93f1903f0d
       Path: Events\Default Work Unit\Play_CrabBrokenCombine
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 1.580208
       minDuration: 1.580208
     - name: Play_Dash
@@ -212,7 +212,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: ed3bca5a01fddd46ab371785e058df28
       Path: Events\Default Work Unit\Play_Dash
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 1.347133
       minDuration: 1.113982
     - name: Play_Footstep
@@ -229,7 +229,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: be9b4b9b3a67b645bbc9fd177074dec3
       Path: Events\Default Work Unit\Play_Footstep
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.671739
       minDuration: 0.343957
     - name: Play_LevelClear
@@ -263,7 +263,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f55d29ad9e83694aaf3bbb0de94ad184
       Path: Events\Default Work Unit\Play_MetalBounce
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.669309
       minDuration: 0.669309
     - name: Play_MetalBounceHigh
@@ -280,7 +280,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 40901e9f62dbc040a5d0900822aa50e6
       Path: Events\Default Work Unit\Play_MetalBounceHigh
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.578643
       minDuration: 0.390234
     - name: Play_MetalContact
@@ -297,7 +297,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 66a6334e74be484685204d9a841267e9
       Path: Events\Default Work Unit\Play_MetalContact
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.595061
       minDuration: 0.595061
     - name: Play_Music
@@ -331,7 +331,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 67601521bde1144c8db95c0dcad5b2ae
       Path: Events\Default Work Unit\Play_ObjectBroken
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 2.756074
       minDuration: 1.942096
     - name: Play_ObjectBroken_01
@@ -365,7 +365,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: b27835086d445c4288e5c02c77fcac64
       Path: Events\Default Work Unit\Play_OilSpill
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 2.083616
       minDuration: 0.736943
     - name: Play_PinballBouncer
@@ -382,7 +382,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: e779b9fd9e07cb4bbe1e3769d28ad794
       Path: Events\Default Work Unit\Play_PinballBouncer
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.996759
       minDuration: 0.346059
     - name: Play_PlayerHurt
@@ -416,7 +416,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: eb3b7894b80fd4409d0971df75b2bbe7
       Path: Events\Default Work Unit\Play_RobotAttack
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 0.801026
       minDuration: 0.565103
     - name: Play_RobotCharge
@@ -433,7 +433,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 10de64da8a074241be004d1ffbcc1cdd
       Path: Events\Default Work Unit\Play_RobotCharge
-      maxAttenuation: 0
+      maxAttenuation: 35
       maxDuration: 5.169048
       minDuration: 5.169048
     - name: Stop_RobotCharge

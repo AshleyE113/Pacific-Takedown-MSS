@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1229948536" Language="SFX" Hash="2576887455">
+		<SoundBank Id="1229948536" Language="SFX" Hash="3596737830">
 			<ObjectPath>\SoundBanks\Default Work Unit\Environment</ObjectPath>
 			<ShortName>Environment</ShortName>
 			<Path>Environment.bnk</Path>
 			<IncludedEvents>
-				<Event Id="111235887" Name="Play_BatSwing" ObjectPath="\Events\Default Work Unit\Play_BatSwing" DurationType="OneShot" DurationMin="0.310965" DurationMax="0.404461">
+				<Event Id="111235887" Name="Play_BatSwing" ObjectPath="\Events\Default Work Unit\Play_BatSwing" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.310965" DurationMax="0.404461">
 					<IncludedMemoryFiles>
 						<File Id="126449396" Language="SFX">
 							<ShortName>BatSwing4.wav</ShortName>
@@ -40,7 +40,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1224438937" Name="Play_BotCollide" ObjectPath="\Events\Default Work Unit\Play_BotCollide" DurationType="OneShot" DurationMin="0.721694" DurationMax="0.776626">
+				<Event Id="1224438937" Name="Play_BotCollide" ObjectPath="\Events\Default Work Unit\Play_BotCollide" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.721694" DurationMax="0.776626">
 					<IncludedMemoryFiles>
 						<File Id="405930013" Language="SFX">
 							<ShortName>BotCollide.wav</ShortName>
@@ -48,7 +48,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2129047272" Name="Play_BotExplode" ObjectPath="\Events\Default Work Unit\Play_BotExplode" DurationType="OneShot" DurationMin="0.846367" DurationMax="1.015629">
+				<Event Id="2129047272" Name="Play_BotExplode" ObjectPath="\Events\Default Work Unit\Play_BotExplode" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.846367" DurationMax="1.015629">
 					<IncludedMemoryFiles>
 						<File Id="450215729" Language="SFX">
 							<ShortName>BotExplosion1.wav</ShortName>
@@ -67,7 +67,7 @@
 						<ActionPostEventEntry Id="1502414276" Name="Play_OilSpill" ObjectPath="\Events\Default Work Unit\Play_OilSpill"/>
 					</ActionPostEvent>
 				</Event>
-				<Event Id="245333712" Name="Play_BotRichochet" ObjectPath="\Events\Default Work Unit\Play_BotRichochet" DurationType="OneShot" DurationMin="0." DurationMax="0.304817">
+				<Event Id="245333712" Name="Play_BotRichochet" ObjectPath="\Events\Default Work Unit\Play_BotRichochet" MaxAttenuation="35." DurationType="OneShot" DurationMin="0." DurationMax="0.304817">
 					<IncludedMemoryFiles>
 						<File Id="133562960" Language="SFX">
 							<ShortName>RobotBounce5.wav</ShortName>
@@ -95,7 +95,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1609761031" Name="Play_CrabBroken" ObjectPath="\Events\Default Work Unit\Play_CrabBroken" DurationType="OneShot" DurationMin="1.730699" DurationMax="2.003036">
+				<Event Id="1609761031" Name="Play_CrabBroken" ObjectPath="\Events\Default Work Unit\Play_CrabBroken" MaxAttenuation="35." DurationType="OneShot" DurationMin="1.730699" DurationMax="2.003036">
 					<IncludedMemoryFiles>
 						<File Id="307326917" Language="SFX">
 							<ShortName>CrabBroken.wav</ShortName>
@@ -106,7 +106,7 @@
 						<ActionPostEventEntry Id="193540430" Name="Play_CrabBrokenCombine" ObjectPath="\Events\Default Work Unit\Play_CrabBrokenCombine"/>
 					</ActionPostEvent>
 				</Event>
-				<Event Id="193540430" Name="Play_CrabBrokenCombine" ObjectPath="\Events\Default Work Unit\Play_CrabBrokenCombine" DurationType="OneShot" DurationMin="1.580208" DurationMax="1.580208">
+				<Event Id="193540430" Name="Play_CrabBrokenCombine" ObjectPath="\Events\Default Work Unit\Play_CrabBrokenCombine" MaxAttenuation="35." DurationType="OneShot" DurationMin="1.580208" DurationMax="1.580208">
 					<IncludedMemoryFiles>
 						<File Id="762521264" Language="SFX">
 							<ShortName>ObjectBroken.wav</ShortName>
@@ -114,7 +114,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2211787386" Name="Play_Dash" ObjectPath="\Events\Default Work Unit\Play_Dash" DurationType="OneShot" DurationMin="1.113982" DurationMax="1.347133">
+				<Event Id="2211787386" Name="Play_Dash" ObjectPath="\Events\Default Work Unit\Play_Dash" MaxAttenuation="35." DurationType="OneShot" DurationMin="1.113982" DurationMax="1.347133">
 					<IncludedMemoryFiles>
 						<File Id="646628755" Language="SFX">
 							<ShortName>Dash.wav</ShortName>
@@ -122,7 +122,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1602358412" Name="Play_Footstep" ObjectPath="\Events\Default Work Unit\Play_Footstep" DurationType="OneShot" DurationMin="0.343957" DurationMax="0.671739">
+				<Event Id="1602358412" Name="Play_Footstep" ObjectPath="\Events\Default Work Unit\Play_Footstep" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.343957" DurationMax="0.671739">
 					<IncludedMemoryFiles>
 						<File Id="153730395" Language="SFX">
 							<ShortName>Cement5.wav</ShortName>
@@ -158,7 +158,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3786027151" Name="Play_MetalBounce" ObjectPath="\Events\Default Work Unit\Play_MetalBounce" DurationType="OneShot" DurationMin="0.669309" DurationMax="0.669309">
+				<Event Id="3786027151" Name="Play_MetalBounce" ObjectPath="\Events\Default Work Unit\Play_MetalBounce" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.669309" DurationMax="0.669309">
 					<IncludedMemoryFiles>
 						<File Id="142851640" Language="SFX">
 							<ShortName>MetalBounce3.wav</ShortName>
@@ -177,7 +177,7 @@
 						<ActionPostEventEntry Id="245333712" Name="Play_BotRichochet" ObjectPath="\Events\Default Work Unit\Play_BotRichochet"/>
 					</ActionPostEvent>
 				</Event>
-				<Event Id="324747943" Name="Play_MetalBounceHigh" ObjectPath="\Events\Default Work Unit\Play_MetalBounceHigh" DurationType="OneShot" DurationMin="0.390234" DurationMax="0.578643">
+				<Event Id="324747943" Name="Play_MetalBounceHigh" ObjectPath="\Events\Default Work Unit\Play_MetalBounceHigh" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.390234" DurationMax="0.578643">
 					<IncludedMemoryFiles>
 						<File Id="142851640" Language="SFX">
 							<ShortName>MetalBounce3.wav</ShortName>
@@ -196,7 +196,7 @@
 						<ActionPostEventEntry Id="1224438937" Name="Play_BotCollide" ObjectPath="\Events\Default Work Unit\Play_BotCollide"/>
 					</ActionPostEvent>
 				</Event>
-				<Event Id="4122950737" Name="Play_MetalContact" ObjectPath="\Events\Default Work Unit\Play_MetalContact" DurationType="OneShot" DurationMin="0.595061" DurationMax="0.595061">
+				<Event Id="4122950737" Name="Play_MetalContact" ObjectPath="\Events\Default Work Unit\Play_MetalContact" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.595061" DurationMax="0.595061">
 					<IncludedMemoryFiles>
 						<File Id="203082265" Language="SFX">
 							<ShortName>BatContactMetal5.wav</ShortName>
@@ -236,7 +236,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="469739728" Name="Play_ObjectBroken" ObjectPath="\Events\Default Work Unit\Play_ObjectBroken" DurationType="OneShot" DurationMin="1.942096" DurationMax="2.756074">
+				<Event Id="469739728" Name="Play_ObjectBroken" ObjectPath="\Events\Default Work Unit\Play_ObjectBroken" MaxAttenuation="35." DurationType="OneShot" DurationMin="1.942096" DurationMax="2.756074">
 					<IncludedMemoryFiles>
 						<File Id="358687483" Language="SFX">
 							<ShortName>ObjectBroken3.wav</ShortName>
@@ -256,7 +256,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1502414276" Name="Play_OilSpill" ObjectPath="\Events\Default Work Unit\Play_OilSpill" DurationType="OneShot" DurationMin="0.736943" DurationMax="2.083616">
+				<Event Id="1502414276" Name="Play_OilSpill" ObjectPath="\Events\Default Work Unit\Play_OilSpill" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.736943" DurationMax="2.083616">
 					<IncludedMemoryFiles>
 						<File Id="249247619" Language="SFX">
 							<ShortName>GutsSplatterBlood_SFXB.1378.wav</ShortName>
@@ -280,7 +280,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="380006374" Name="Play_PinballBouncer" ObjectPath="\Events\Default Work Unit\Play_PinballBouncer" DurationType="OneShot" DurationMin="0.346059" DurationMax="0.996759">
+				<Event Id="380006374" Name="Play_PinballBouncer" ObjectPath="\Events\Default Work Unit\Play_PinballBouncer" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.346059" DurationMax="0.996759">
 					<IncludedMemoryFiles>
 						<File Id="4959357" Language="SFX">
 							<ShortName>Bumper4.wav</ShortName>
@@ -324,7 +324,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3063340210" Name="Play_RobotAttack" ObjectPath="\Events\Default Work Unit\Play_RobotAttack" DurationType="OneShot" DurationMin="0.565103" DurationMax="0.801026">
+				<Event Id="3063340210" Name="Play_RobotAttack" ObjectPath="\Events\Default Work Unit\Play_RobotAttack" MaxAttenuation="35." DurationType="OneShot" DurationMin="0.565103" DurationMax="0.801026">
 					<IncludedMemoryFiles>
 						<File Id="221111" Language="SFX">
 							<ShortName>RobotAttack2.wav</ShortName>
@@ -340,7 +340,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1856549598" Name="Play_RobotCharge" ObjectPath="\Events\Default Work Unit\Play_RobotCharge" DurationType="OneShot" DurationMin="5.169048" DurationMax="5.169048">
+				<Event Id="1856549598" Name="Play_RobotCharge" ObjectPath="\Events\Default Work Unit\Play_RobotCharge" MaxAttenuation="35." DurationType="OneShot" DurationMin="5.169048" DurationMax="5.169048">
 					<IncludedMemoryFiles>
 						<File Id="186964156" Language="SFX">
 							<ShortName>RobotCharge.wav</ShortName>

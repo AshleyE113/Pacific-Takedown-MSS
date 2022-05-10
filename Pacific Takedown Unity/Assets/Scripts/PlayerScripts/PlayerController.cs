@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
     }
     // Start is called before the first frame update
     [SerializeField] public static State CurrentState { get; private set; }
+    [SerializeField] public State debugState;
     
     void Start()
     {
@@ -101,6 +102,32 @@ public class PlayerController : MonoBehaviour
           
         hb.SetMaxHealth(playerHealth);
     }
+    
+    public void OnAttack(InputValue input) //When the player presses the Attack Button
+    {
+      if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
+      {
+        //Sound
+        AkSoundEngine.PostEvent("Play_BatSwing" , this.gameObject);
+
+        ChangeState(State.Attacking);
+        attackDirection();
+      }
+      if (CurrentState == State.Attacking) //If already in Attack State, Do Nothing, Unless they Can Combo
+      {
+        if (canCombo && attackIndex < 2)
+        {
+          //Sound
+          AkSoundEngine.PostEvent("Play_BatSwing" , this.gameObject);
+        
+          FXManager.currentPlayerMelee = null;
+          canCombo = false;
+          fxSpawned = false;
+          attackIndex += 1;
+          attackDirection();
+        }
+      }
+    }
 
     // Update is called once per frame
   void Update()
@@ -113,7 +140,7 @@ public class PlayerController : MonoBehaviour
             
         }*/
 
-       if (currentHealth > 0)
+        if (currentHealth > 0)
        {
             if (canMove)
             {
@@ -318,35 +345,12 @@ public class PlayerController : MonoBehaviour
   }
 
   //Change our current state
-  private static void ChangeState(State state)
+  private void ChangeState(State state)
   {
     CurrentState = state;
+    debugState = state;
   }
-  public void OnAttack(InputValue input) //When the player presses the Attack Button
-  {
-    if (CurrentState == State.Ready) //If in the ready state, and they attack. Go to Attack State
-    {
-      //Sound
-      AkSoundEngine.PostEvent("Play_BatSwing" , this.gameObject);
 
-      ChangeState(State.Attacking);
-      attackDirection();
-    }
-    if (CurrentState == State.Attacking) //If already in Attack State, Do Nothing, Unless they Can Combo
-    {
-      if (canCombo && attackIndex < 2)
-      {
-        //Sound
-        AkSoundEngine.PostEvent("Play_BatSwing" , this.gameObject);
-        
-        FXManager.currentPlayerMelee = null;
-        canCombo = false;
-        fxSpawned = false;
-        attackIndex += 1;
-        attackDirection();
-      }
-    }
-  }
 
   public void OnDash(InputValue input) //When the player presses the Dash Button
   {
@@ -401,13 +405,12 @@ public class PlayerController : MonoBehaviour
     public void endAttack()
     {
     //This is Called within our animation to signal our attack has ended
-        if (CurrentState == State.Attacking)
-        {
+
             fxSpawned = false;
             attackIndex = 0;
             canCombo = false;
             ChangeState(State.Ready);
-        }
+        
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
