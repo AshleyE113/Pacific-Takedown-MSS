@@ -47,7 +47,7 @@ public class CinematicOpening : MonoBehaviour
                 if (!isTyping)
                 {
                     if (currentIndex < openingLines.Count)
-                    {
+                    { //copy NPCDialogue portion to make text appear on hit
                         StartCoroutine(TextScroll(openingLines[currentIndex]));
                         if (currentIndex == openingLines.Count - 1 || currentIndex > openingLines.Count)
                         {
@@ -79,11 +79,6 @@ public class CinematicOpening : MonoBehaviour
                         }
 
                         //What image is shown between lines 3 and 7
-
-                        //if (currentIndex >= 0 && currentIndex < 3)
-                        //{
-
-                        //}
 
                         //image 8-11
 
@@ -121,7 +116,19 @@ public class CinematicOpening : MonoBehaviour
             }
         }
     }
-
+    void NextLine() {
+        
+        if (currentIndex < openingLines.Count-1)
+        {
+            currentIndex++;
+            StartCoroutine(TextScroll(openingLines[currentIndex]));
+        }
+        else
+        {
+            RemovePanel(fadeGO);
+        }
+    
+    }
     IEnumerator FadeImage(GameObject fadeGO, bool fadeAway, float timeVal)
     {
         Image fade = fadeGO.GetComponent<Image>();

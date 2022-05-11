@@ -30,6 +30,7 @@ public class NPCTalkScript : MonoBehaviour
     {
             if (isTalking && Input.GetKeyDown(KeyCode.E))
             {
+                player.canMove = false;
                 EIcon.SetActive(false);
             
                 if (NPCdialogue.text == thingToSay[currentSpokenStrings])
@@ -68,7 +69,7 @@ public class NPCTalkScript : MonoBehaviour
         {
             EIcon.SetActive(true);
             isTalking = true;
-            player.canMove = false;
+            
             
             Debug.Log("In it");
         }

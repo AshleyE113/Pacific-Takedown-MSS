@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Escape) && Application.loadedLevelName != "DeathScene")
+       if (Input.GetKeyDown(KeyCode.Escape) && Application.loadedLevelName != "DeathScene"  && Application.loadedLevelName != "To Be Continued")
         {
             if (isPaused)
             {
@@ -25,12 +25,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
+        Debug.Log("PAUSED");
         PauseMenuGO.SetActive(true);
         Time.timeScale = 0.0f;
         isPaused = true;
     }
     public void Resume()
     {
+        Debug.Log("RESUME");
         PauseMenuGO.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
