@@ -11,7 +11,7 @@ public class HitStop : MonoBehaviour
         if (waiting)
             return;
         //Time.timeScale = 0.0f;
-        StartCoroutine(Wait(stopTime));
+        //StartCoroutine(Wait(stopTime));
     }
     
 

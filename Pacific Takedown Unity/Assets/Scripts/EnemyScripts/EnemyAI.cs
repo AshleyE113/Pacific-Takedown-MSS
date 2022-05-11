@@ -439,7 +439,7 @@ public class EnemyAI : MonoBehaviour
         state = State.Bounce;
         //Debug
         gameObject.GetComponent<EnemyBounce>().isBouncing = true;
-        hitPause.Stop(HiPaVal);
+        //hitPause.Stop(HiPaVal);
         //gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
         recoveryTimer = 0;
         //Change Animation to Drone Hit
