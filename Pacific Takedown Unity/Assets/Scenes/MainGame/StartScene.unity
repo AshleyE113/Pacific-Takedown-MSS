@@ -236,7 +236,7 @@ RectTransform:
   - {fileID: 1947677557}
   - {fileID: 1423801993}
   m_Father: {fileID: 371673850}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -361,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &155537115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ RectTransform:
   m_Children:
   - {fileID: 1259895221}
   m_Father: {fileID: 371673850}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -705,9 +705,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 48519920}
   - {fileID: 155537115}
   - {fileID: 996742042}
+  - {fileID: 48519920}
   - {fileID: 1598098476}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -965,6 +965,7 @@ MonoBehaviour:
   Speed: 1
   fadeGO: {fileID: 1947677556}
   skipButton: {fileID: 1598098475}
+  textbox: {fileID: 1423801992}
 --- !u!1 &817947909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &996742042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1040,7 +1041,7 @@ RectTransform:
   m_Children:
   - {fileID: 1425910929}
   m_Father: {fileID: 371673850}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}

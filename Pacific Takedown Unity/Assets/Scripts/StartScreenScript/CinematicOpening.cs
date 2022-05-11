@@ -20,7 +20,8 @@ public class CinematicOpening : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] GameObject fadeGO;
     bool faded = false;
-    [SerializeField] GameObject skipButton;
+    bool notSkipped = false;
+    [SerializeField] GameObject skipButton, textbox;
 
     void Start()
     {
@@ -30,7 +31,8 @@ public class CinematicOpening : MonoBehaviour
     }
     public void SkipOpening()
     {
-        StartCoroutine(TextScroll(openingLines[openingLines.Count - 1]));
+        notSkipped = true;
+        StartCoroutine(TextScroll(openingLines[10]));
         skipButton.SetActive(false);
         for (float i = 0f; i >= 0; i -= Time.deltaTime)
         {
@@ -38,6 +40,7 @@ public class CinematicOpening : MonoBehaviour
             img.color = new Color(0, 0, 0, i);
         }
         StartCoroutine(RemovePanel(fadeGO));
+       
     }
     void Update()
     {
@@ -57,7 +60,7 @@ public class CinematicOpening : MonoBehaviour
             {
                 if (!isTyping)
                 {
-                    if (currentIndex < openingLines.Count)
+                    if (currentIndex < openingLines.Count && !notSkipped)
                     {
                         StartCoroutine(TextScroll(openingLines[currentIndex]));
                         if (currentIndex == openingLines.Count - 1 || currentIndex > openingLines.Count)
@@ -74,12 +77,12 @@ public class CinematicOpening : MonoBehaviour
 
                         // this section handles the fading. At 2, the picture disappers. At 3, the picture appears
 
-                        if (currentIndex == 0 || currentIndex == 3 || currentIndex == 6)// || currentIndex == 5)// || currentIndex == 12 || currentIndex == 15)
+                        if (currentIndex == 0 || currentIndex == 3 || currentIndex == 6 && !notSkipped)// || currentIndex == 5)// || currentIndex == 12 || currentIndex == 15)
                         {
                             StartCoroutine(FadeImage(fadeGO, false, 1));
                         }
                         
-                        else if (currentIndex == 1 || currentIndex == 4 || currentIndex == 7)// || currentIndex == 6)// || currentIndex == 13 || currentIndex == 16)
+                        else if (currentIndex == 1 || currentIndex == 4 || currentIndex == 7 && !notSkipped)// || currentIndex == 6)// || currentIndex == 13 || currentIndex == 16)
                         {
                             StartCoroutine(FadeImage(fadeGO, true, 1));
                         }
@@ -89,16 +92,10 @@ public class CinematicOpening : MonoBehaviour
                             StartCoroutine(RemovePanel(fadeGO));
                         }
 
-                        //What image is shown between lines 3 and 7
-
-                        //if (currentIndex >= 0 && currentIndex < 3)
-                        //{
-
-                        //}
-
+                      
                         //image 8-11
 
-                        else if (currentIndex >= 3 && currentIndex < 4)
+                        else if (currentIndex >= 3 && currentIndex < 4 && !notSkipped)
                         {
                           img.sprite = tempSpriteHolder[1];
 
@@ -106,26 +103,31 @@ public class CinematicOpening : MonoBehaviour
 
                         //image 12-15
 
-                        else if (currentIndex >= 4 && currentIndex < 5)
+                        else if (currentIndex >= 4 && currentIndex < 5 && !notSkipped)
                         {
                           img.sprite = tempSpriteHolder[2];
                         }
 
                         //image 16+
 
-                        else if (currentIndex >= 7 && currentIndex < 9)
+                        else if (currentIndex >= 7 && currentIndex < 9 && !notSkipped)
                         {
                                 img.sprite = tempSpriteHolder[3];
                         
                         }
 
-                        else if (currentIndex >= 9)
+                        else if (currentIndex >= 9 && !notSkipped)
                         {
                                 img.sprite = tempSpriteHolder[4];
                         
                         }
 
                         currentIndex += 1;
+                    }
+                    else
+                    {
+                        currentIndex = openingLines.Count - 1;
+                        SkipOpening();
                     }
 
                 }
@@ -161,6 +163,7 @@ public class CinematicOpening : MonoBehaviour
     }
     IEnumerator RemovePanel(GameObject fadeGO)
     {
+        textbox.SetActive(false);
         StartCoroutine(FadeImage(fadeGO, true, 1));
         GameObject ourParent = transform.parent.gameObject;
         GameObject parentParent = ourParent.transform.parent.gameObject;
@@ -169,10 +172,12 @@ public class CinematicOpening : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         Destroy(fadeGO);
         this.gameObject.SetActive(false);
+        
     }
 
     private IEnumerator TextScroll(string lineOfText) //Gives it that one character at a timeffect...
     {
+     
         int letter = 0;
         textHolder.text = "";
         isTyping = true;

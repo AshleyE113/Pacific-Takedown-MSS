@@ -7,10 +7,11 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject PauseMenuGO;
-   
+
+    [System.Obsolete]
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Escape))
+       if (Input.GetKeyDown(KeyCode.Escape) && Application.loadedLevelName != "DeathScene")
         {
             if (isPaused)
             {
