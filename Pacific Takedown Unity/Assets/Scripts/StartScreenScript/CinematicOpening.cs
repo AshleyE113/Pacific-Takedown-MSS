@@ -20,6 +20,7 @@ public class CinematicOpening : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] GameObject fadeGO;
     bool faded = false;
+    public GameObject textBox;
 
     void Start()
     {
@@ -164,6 +165,8 @@ public class CinematicOpening : MonoBehaviour
         parentParent.transform.GetChild(2).gameObject.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         Destroy(fadeGO);
+        textBox.SetActive(false);
+        Destroy(textBox);
         this.gameObject.SetActive(false);
     }
 
