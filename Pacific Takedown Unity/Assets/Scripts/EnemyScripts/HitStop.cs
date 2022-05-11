@@ -10,7 +10,7 @@ public class HitStop : MonoBehaviour
     {
         if (waiting)
             return;
-        Time.timeScale = 0.0f;
+        //Time.timeScale = 0.0f;
         StartCoroutine(Wait(stopTime));
     }
     
@@ -19,7 +19,7 @@ public class HitStop : MonoBehaviour
     {
         waiting = true;
         yield return new WaitForSecondsRealtime(waitTime);
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
         waiting = false;
     }
 }
