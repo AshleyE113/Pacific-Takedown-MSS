@@ -20,6 +20,7 @@ public class CinematicOpening : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] GameObject fadeGO;
     bool faded = false;
+    [SerializeField] GameObject skipButton;
 
     void Start()
     {
@@ -27,7 +28,17 @@ public class CinematicOpening : MonoBehaviour
         imgColor = GetComponent<Image>().color;
         BaseColor = GetComponent<Image>().color;
     }
-
+    public void SkipOpening()
+    {
+        StartCoroutine(TextScroll(openingLines[openingLines.Count - 1]));
+        skipButton.SetActive(false);
+        for (float i = 0f; i >= 0; i -= Time.deltaTime)
+        {
+            // set color with i as alpha
+            img.color = new Color(0, 0, 0, i);
+        }
+        StartCoroutine(RemovePanel(fadeGO));
+    }
     void Update()
     {
         if (goToNext == false)
