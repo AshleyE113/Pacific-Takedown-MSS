@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
     public int playerHealth = 6; //See it as the max health
     public HealthBar hb;
     public int currentHealth;
+    bool spawnDS = false;
 
     //Player States
     public enum State
@@ -132,13 +133,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
   void Update()
   {
-        /*if (currentHealth < 0 && spawned == false)
-        {
-            Debug.Log("Here!");
-            Manager.instance.GameOver();
-            spawned = true;
-            
-        }*/
 
         if (currentHealth > 0)
        {
@@ -443,8 +437,15 @@ public class PlayerController : MonoBehaviour
              {
                 currentHealth--;
                 hb.SetHealth(currentHealth);
-             } else
-                Manager.instance.GameOver();
+             }
+            else
+            {
+                if (spawnDS == false)
+                {
+                    Manager.instance.GameOver();
+                    spawnDS = true;
+                }
+            }
 
             //Change Animation to Player Hit
             PlayerDirection.callDirection("HitDirection",previousFacing,GetComponent<PlayerController>());

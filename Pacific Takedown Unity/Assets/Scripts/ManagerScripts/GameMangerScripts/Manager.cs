@@ -34,7 +34,7 @@ public class Manager : MonoBehaviour
     }
     public void GameOver()
     {
-        SceneManager.LoadScene("GOver", LoadSceneMode.Single);
+        SceneManager.LoadScene("DeathScene", LoadSceneMode.Single);
     }
 
     public void RestartScene()

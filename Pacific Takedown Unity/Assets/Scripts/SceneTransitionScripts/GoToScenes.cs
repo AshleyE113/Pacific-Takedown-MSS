@@ -19,6 +19,7 @@ public class GoToScenes : MonoBehaviour
         SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         
     }
+    /*
     private void Update()
     {
         if (SceneManager.GetActiveScene().name == "GOver" && _spawned == false)
@@ -26,10 +27,10 @@ public class GoToScenes : MonoBehaviour
             Instantiate(DeathCanvas);
             _spawned = true;
         }
-    }
+    }*/
     public void RestartScene()
     {
         SceneManager.LoadScene(lvlManager.sceneName, LoadSceneMode.Single);
-        Destroy(DeathCanvas);
+        Debug.Log(lvlManager.sceneName);
     }
 }
