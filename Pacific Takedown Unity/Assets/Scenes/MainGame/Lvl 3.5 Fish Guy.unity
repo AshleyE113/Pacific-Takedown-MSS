@@ -8600,11 +8600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3874465264032479089, guid: 63666adbe2a172841a9e975daac2e714, type: 3}
       propertyPath: m_Size.y
-      value: 7.932815
+      value: 4.482356
       objectReference: {fileID: 0}
     - target: {fileID: 3874465264032479089, guid: 63666adbe2a172841a9e975daac2e714, type: 3}
       propertyPath: m_Offset.y
-      value: -2.321911
+      value: -0.5966816
       objectReference: {fileID: 0}
     - target: {fileID: 3874465264032479094, guid: 63666adbe2a172841a9e975daac2e714, type: 3}
       propertyPath: EIcon

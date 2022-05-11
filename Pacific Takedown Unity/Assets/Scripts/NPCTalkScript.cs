@@ -13,14 +13,15 @@ public class NPCTalkScript : MonoBehaviour
     [SerializeField] GameObject textBox, EIcon;
     bool isTyping = false;
     bool cancelTyping = false;
-    bool goToNext = false;
     bool isTalking = false;
     public float typeSpeed = 0.3f;
+    PlayerController player;
 
 
     void Awake()
     {
         NPCdialogue = GameObject.Find("Dialogue").GetComponent<TMP_Text>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
         textBox.SetActive(false);
         EIcon.SetActive(false);
     }
@@ -29,8 +30,7 @@ public class NPCTalkScript : MonoBehaviour
     {
             if (isTalking && Input.GetKeyDown(KeyCode.E))
             {
-            Debug.Log("EEEEEEEEEEEEE");
-            EIcon.SetActive(false);
+                EIcon.SetActive(false);
             
                 if (NPCdialogue.text == thingToSay[currentSpokenStrings])
                 {
@@ -58,7 +58,7 @@ public class NPCTalkScript : MonoBehaviour
         else if (currentSpokenStrings == thingToSay.Length-1)
         {
             textBox.SetActive(false);
-            Debug.Log("PVERBOARD!");
+            player.canMove = true;
         }
 
     }
@@ -68,6 +68,7 @@ public class NPCTalkScript : MonoBehaviour
         {
             EIcon.SetActive(true);
             isTalking = true;
+            player.canMove = false;
             
             Debug.Log("In it");
         }
